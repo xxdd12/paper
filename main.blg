@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: gbt7714-numerical.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 150 items from 100.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ref/gdutthesis-template.bib
+Database file #2: ref/reference.bib
+Warning--empty author in wangfuzhi2011zhouyi
+Warning--empty author and editor in 2009shifutangriji
+Warning--empty author and editor in 1962kangxizidian
+Warning--empty author in 2009information
+Warning--empty author in 1988qizhi
+Warning--empty author in 1977songshi
+Warning--empty author in 2012dublin
+You've used 124 entries,
+            5374 wiz_defined-function locations,
+            1812 strings with 26929 characters,
+and the built_in function-call counts, 518368 in all, are:
+= -- 15795
+> -- 49349
+< -- 69805
++ -- 24210
+- -- 5833
+* -- 4420
+:= -- 76138
+add.period$ -- 451
+call.type$ -- 124
+change.case$ -- 350
+chr.to.int$ -- 20275
+cite$ -- 138
+duplicate$ -- 3086
+empty$ -- 8303
+format.name$ -- 2150
+if$ -- 133467
+int.to.chr$ -- 1
+int.to.str$ -- 125
+missing$ -- 0
+newline$ -- 730
+num.names$ -- 377
+pop$ -- 17460
+preamble$ -- 1
+purify$ -- 124
+quote$ -- 0
+skip$ -- 49194
+stack$ -- 0
+substring$ -- 28814
+swap$ -- 126
+text.length$ -- 2129
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1255
+warning$ -- 7
+while$ -- 2322
+width$ -- 0
+write$ -- 1809
+(There were 7 warnings)

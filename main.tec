@@ -1,8 +1,9 @@
 \contentsline {chapter}{ABSTRACT(IN CHINESE)}{I}{chapter*.3}%
 \contentsline {chapter}{ABSTRACT(IN ENGLISH)}{III}{chapter*.4}%
 \contentsline {chapter}{TABLE OF PHYSICAL QUANTITY NAMES AND SYMBOLS}{V}{chapter*.5}%
-\contentsline {chapter}{CONTENTS(IN CHINESE)}{VI}{chapter*.6}%
-\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VII}{chapter*.7}%
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{VI}{chapter*.6}%
+\contentsline {chapter}{CONTENTS(IN CHINESE)}{VII}{chapter*.7}%
+\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VIII}{chapter*.8}%
 \contentsline {chapter}{\numberline {Chapter\ 1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1} Background and significance of research }{1}{section.1.1}%
 \contentsline {subparagraph}{\numberline {(1)} Background and significance of research }{3}{subparagraph.1.1.0.0.0.1}%
@@ -24,14 +25,14 @@
 \contentsline {subsection}{\numberline {2.1.1}}{11}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}}{11}{subsection.2.1.2}%
 \contentsline {subsubsection}{\numberline {2.1.2.1}}{13}{subsubsection.2.1.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.2.2}}{14}{subsubsection.2.1.2.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.3}}{16}{subsubsection.2.1.2.3}%
-\contentsline {section}{\numberline {2.2}Post-processing Counting Method}{17}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}}{17}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}}{17}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}}{18}{subsubsection.2.2.1.2}%
-\contentsline {chapter}{\numberline {Chapter\ 3}Conclusion and prospect}{19}{chapter.3}%
-\contentsline {chapter}{References}{20}{chapter*.19}%
-\contentsline {chapter}{Publication and patents during study}{31}{chapter*.20}%
-\contentsline {chapter}{Acknowledgements}{32}{chapter*.23}%
-\contentsline {chapter}{\numberline {Appendix\ A}The appendix title}{33}{appendix.A}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}}{16}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}}{17}{subsubsection.2.1.2.3}%
+\contentsline {section}{\numberline {2.2}Post-processing Counting Method}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}}{19}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}}{21}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}}{23}{subsubsection.2.2.1.2}%
+\contentsline {chapter}{\numberline {Chapter\ 3}Conclusion and prospect}{25}{chapter.3}%
+\contentsline {chapter}{References}{26}{chapter*.23}%
+\contentsline {chapter}{Publication and patents during study}{37}{chapter*.24}%
+\contentsline {chapter}{Acknowledgements}{38}{chapter*.27}%
+\contentsline {chapter}{\numberline {Appendix\ A}The appendix title}{39}{appendix.A}%
