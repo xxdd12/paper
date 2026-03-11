@@ -42,11 +42,10 @@ C2PSA 采用 Softmax Attention，其计算公式如下：
 在每个PSABlock\_SASA中，本文将原始Attention替换为SASA模块，以实现选择性激活与抑制。SASA模块在保持全局建模能力的同时，引入L2归一化和可学习温度参数，显著增强了注意力计算中的数值稳定性和区分性，其实现流程如\autoref{fig:fig4}所示。
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{fig4}
+    \includegraphics[width=0.75\textwidth]{fig4}
     \bicaption{选择性激活抑制注意力机制SASA }{Selective Activation Suppression }
     \label{fig:fig4}
-\end{figure}
-设其输入张量为 $x\in R^{B\times C\times H\times W}$，其中 $B$ 为批大小，$H$、$W$ 分别表示输入特征图的高度和宽度，$C$ 为特征维度。
+\end{figure}设其输入张量为 $x\in R^{B\times C\times H\times W}$，其中 $B$ 为批大小，$H$、$W$ 分别表示输入特征图的高度和宽度，$C$ 为特征维度。
 首先展平（Reshape）空间维度并转置（Transpose）为序列形式，其中 $N=H\cdot W$。与C2PSA中使用卷积生成 $q$、$k$、$v$ 不同，SASA模块采用共享线性投影层一次性映射输入特征至三倍通道维度，并在通道维度上划分得到：
 \begin{equation}\label{eq:qkv}
 \left[ q,k,v \right] = {\rm{Linear}}_{qkv}\left( X \right)
@@ -68,11 +67,12 @@ C2PSA 采用 Softmax Attention，其计算公式如下：
 \[y = {\rm{Proj}}\left( {\alpha  \cdot v} \right)\]
 式中y表示当前注意力头输出的特征表示，而Proj(⋅)表示一个投影操作，由一个线性变换（Linear层）和一个Dropout层构成，用于增强模型的表达能力与正则化效果。最终输出通过Transpose与Reshape操作恢复到原始空间维度。
 \subsubsection{重排分组卷积模块 SSConv}{}
+
 YOLO11模型中，Neck部分通常采用串联的两个标准3×3卷积进行下采样，这种结构虽然简单直观，但标准卷积的参数量与计算复杂度较高，不利于模型在边缘设备上的高效运行。标准卷积的感受野较小、通道之间的交互不足，限制了下采样过程中的语义表达能力。卷积过程中仅以固定方式融合所有通道，缺乏动态特征选择和信息重组机制；并且缺少多路径与多尺度结构，导致下采样过程中细节信息容易丢失。
 针对上述问题，本文提出了一种新的轻量化下采样结构——重排分组卷积（SSConv），如\autoref{fig:fig5}所示，
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{fig5}
+    \includegraphics[width=0.75\textwidth]{fig5}
     \bicaption{重排分组卷积模块SSConv }{Shuffle-Split Convolution}
     \label{fig:fig5}
 \end{figure}
@@ -147,15 +147,15 @@ c) 同时检测到上层与下层目标：此为最常见的完整堆叠情况�
 \end{equation}
 \begin{figure}
   \subfloat[缺乏顶层信息]{\label{subfig:fig9a}
-    \includegraphics[width=0.31\textwidth]{9-1.png}
+    \includegraphics[width=0.25\textwidth]{9-1.png}
   }
   \qquad
   \subfloat[顶层满]{\label{subfig:fig9b}
-    \includegraphics[width=0.31\textwidth]{9-2.png}
+    \includegraphics[width=0.23\textwidth]{9-2.png}
   }
   \qquad
   \subfloat[顶层不满]{\label{subfig:fig9c}
-    \includegraphics[width=0.31\textwidth]{9-3.png}
+    \includegraphics[width=0.24\textwidth]{9-3.png}
   }
   \bicaption{立体仓库堆叠货物盘点的三种情况}{Three situations for inventory of stacked goods in a three-dimensional warehouse}
   \label{fig:fig9}
