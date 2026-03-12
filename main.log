@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  12 MAR 2026 16:19
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  12 MAR 2026 18:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2138,9 +2138,7 @@ t;"
 (fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
 
 
- (./main.aux
-\g__glossaries_gls_ref_main_int=\count491
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
@@ -2322,42 +2320,22 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 
  [1
 
-]
-[2] [3
-
-]) (./data/notation.tex [4]
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 5.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 5.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 5.
-LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 5.
-)
-
-Package glossaries Info: Preparing to sort glossary `main' (total number of
-(glossaries)             referenced entries: 2)
-
-[5
-
-] [6
-
-] [7
-
-] (./main.toc [8
-
 ])
+(./data/notation.tex) [2
+
+] (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [9] (./main.tec [10
+ [3
 
-])
+] (./main.tec)
 \tf@tec=\write6
 \openout6 = `main.tec'.
 
- [11] (./data/chap01.tex
+ [4
+
+] (./data/chap01.tex
 第一章
 [1
 
@@ -2365,48 +2343,32 @@ Package glossaries Info: Preparing to sort glossary `main' (total number of
 ] [2] [3] [4]
 File: figure/fig1.pdf Graphic file (type pdf)
 <use figure/fig1.pdf>
- [5] [6]
-File: example-image.pdf Graphic file (type pdf)
-<use example-image.pdf>
-File: example-image.pdf Graphic file (type pdf)
-<use example-image.pdf>
-) (./data/chap02.tex [7]
+) (./data/chap02.tex [5] [6]
 第二章
 File: figure/fig2.png Graphic file (type bmp)
 <figure/fig2.png>
+[7
+
+]
 File: figure/fig3.png Graphic file (type bmp)
 <figure/fig3.png>
-[8
-
-] [9]
+ [8] [9]
 File: figure/fig4.pdf Graphic file (type pdf)
 <use figure/fig4.pdf>
  [10] [11]
 File: figure/fig5.pdf Graphic file (type pdf)
 <use figure/fig5.pdf>
- [12] [13]
+ [12]
 File: figure/fig6.pdf Graphic file (type pdf)
 <use figure/fig6.pdf>
- [14] [15]
+ [13] [14]
 File: figure/fig7-1.png Graphic file (type bmp)
 <figure/fig7-1.png>
 File: figure/fig7-2.png Graphic file (type bmp)
 <figure/fig7-2.png>
 File: figure/fig8.pdf Graphic file (type pdf)
 <use figure/fig8.pdf>
- [16] [17]
-File: figure/9-1.png Graphic file (type bmp)
-<figure/9-1.png>
-File: figure/9-2.png Graphic file (type bmp)
-<figure/9-2.png>
-File: figure/9-3.png Graphic file (type bmp)
-<figure/9-3.png>
- [18] [19]
-File: figure/fig10.png Graphic file (type bmp)
-<figure/fig10.png>
-) (./data/chap04.tex
-[20] [21]
-第三章
+ [15]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2437,15 +2399,36 @@ t;"
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
 t;"
 
+ [16]
+File: figure/9-1.png Graphic file (type bmp)
+<figure/9-1.png>
+File: figure/9-2.png Graphic file (type bmp)
+<figure/9-2.png>
+File: figure/9-3.png Graphic file (type bmp)
+<figure/9-3.png>
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 214.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 214.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 214.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 214.
+ [17]
+File: figure/fig10.png Graphic file (type bmp)
+<figure/fig10.png>
+ [18]) (./data/chap04.tex
+[19] [20]
+第三章
 
 Underfull \hbox (badness 1838) in paragraph at lines 20--21
 []\TU/FandolSong(0)/m/n/12.045 实 验 硬 件 环 境 包 括 \TU/XITS(0)/m/n/12.045 13th Gen 
 Intel(R) Core(TM) i7-13620H CPU@2.40GHz \TU/FandolSong(0)/m/n/12.045 和
  []
 
-[22
+[21
 
-] [23]
+] [22]
 File: figure/fig11-1.png Graphic file (type bmp)
 <figure/fig11-1.png>
 File: figure/fig11-2.png Graphic file (type bmp)
@@ -2458,9 +2441,9 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
- [24] [25] [26] [27]) (./data/conclusion.tex [28]
+ [23] [24] [25] [26]) (./data/conclusion.tex [27]
 第四章
-) (./main.bbl [29
+) (./main.bbl [28
 
 ]
 Underfull \hbox (badness 1210) in paragraph at lines 62--66
@@ -2470,16 +2453,16 @@ Underfull \hbox (badness 1210) in paragraph at lines 62--66
 U/XITS(0)/m/n/12.045 , 2012[2012-11-
  []
 
-[30
+[29
 
-] [31] [32]
+] [30] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 279--284
 [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [
 ] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] []
  [] [] [] [] [] [] [] [] [] [] []
  []
 
-[33] [34] [35] [36]
+[32] [33] [34] [35]
 Underfull \hbox (badness 10000) in paragraph at lines 529--533
 [] [] [] [] [] [] [] [] [] [] [][] [] [] [] [] [] [] [] [] [] [] [] [] [] [] []
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
@@ -2493,30 +2476,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 529--533
 [] [] [] [] [] []
  []
 
-[37] [38] [39]) (./data/result.tex [40]) (./data/acknowledgement.tex [41
+[36] [37] [38]) (./data/result.tex [39]) (./data/acknowledgement.tex [40
 
 ])
-(./data/appendix.tex [42
+(./data/appendix.tex [41
 
 ]
 附录 A
-) [43
+) [42
 
-] (./main.aux)
+]
+
+Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
+ found. (Remove \makenoidxglossaries if you don't want any glossaries.)
+This document will not have a glossary.
+
+(./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/04/10>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BB7DFAFE61571E75F1A2DA96EBD4FB80;4744.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 3D70CA046DA2D117B5804472C2103AF5;3608
+(rerunfilecheck)             After:  2A0D7A9E5113E46BB2DC617426F237B0;4069.
  ) 
 Here is how much of TeX's memory you used:
- 54616 strings out of 468168
- 1169291 string characters out of 5436524
- 1946850 words of memory out of 5000000
- 82461 multiletter control sequences out of 15000+600000
- 635080 words of font info for 181 fonts, out of 8000000 for 9000
+ 54522 strings out of 468168
+ 1164749 string characters out of 5436524
+ 1928331 words of memory out of 5000000
+ 82370 multiletter control sequences out of 15000+600000
+ 635064 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 196i,15n,299p,2763b,2770s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,14n,131p,2763b,2819s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (57 pages).
+Output written on main.pdf (49 pages).

@@ -1,14 +1,15 @@
 ﻿\chapter{基于改进YOLO11-Seg的立体仓库堆叠货物盘点方法}{Method for Stacked Cargo Inventory Based on Improved YOLO11-Seg}
 
+本章围绕立体仓库堆叠货物盘点任务中的检测、分割与计数问题展开研究。首先分析基线模型 YOLO11s-Seg 的结构特点及其在复杂堆叠场景中的局限；其次在此基础上提出改进模型 YOLO11-StackLite，并对其关键模块进行设计说明；最后结合实例分割结果与空间几何关系，构建后处理数量计算方法，为后续实验验证与模型压缩研究奠定基础。
+
 \section{堆叠货物检测与分割}{Stacked Cargo Detection and Segmentation}
+
 \subsection{YOLO11s-Seg基础架构}{}
-为实现立体仓库中堆叠货物的高效自动盘点，实例分割网络需要准确区分堆叠结构中的顶层箱体与非顶层箱体，其识别精度将直接影响最终数量估计结果。考虑到系统部署于边缘计算设备并与仓储管理平台联动，所使用模型必须在保证检测精度的前提下具备良好的轻量化特性与实时推理能力。
+为实现立体仓库中堆叠货物的高效自动盘点，视觉模型不仅需要准确区分堆叠结构中的顶层箱体与非顶层箱体，还需要在边缘部署条件下具备较低的计算开销与较快的推理速度。因此，本文选取兼顾检测效率与实例分割能力的单阶段模型作为研究基础。
 
-基于上述应用需求，本文选取结构紧凑、推理速度快的 YOLO 系列作为基础框架。其中，YOLO11 是 Ultralytics 发布的新一代检测模型，其对应的轻量化实例分割版本 YOLO11s-Seg 在检测精度和推理速度之间取得了较好平衡，具备较强的边缘部署适配性。YOLO11s-Seg 的整体结构主要由主干网络（Backbone）、特征融合网络（Neck）和检测头（Head）构成。
+基于上述需求，本文选择 Ultralytics 发布的 YOLO11s-Seg 作为基线模型。该模型在单阶段框架下集成了目标检测与实例分割能力，在检测精度与推理速度之间取得了较好平衡，具备较强的边缘部署适配性。YOLO11s-Seg 的整体结构主要由主干网络（Backbone）、特征融合网络（Neck）和检测头（Head）构成。
 
-在 YOLO11s-Seg 的 Backbone 与 Neck 中，引入了改进的 C3k2 Fast 模块（CSP Bottleneck with Two Convolution Layers），用于增强浅层特征提取与融合能力。该模块基于跨阶段部分结构（CSP）思想，能够在保持较低计算复杂度的同时提升特征表达能力。
-
-在 Backbone 末端，集成轻量级注意力模块 C2PSA，用于增强模型对关键区域的感知能力，其结构如\autoref{fig:fig2}所示。
+在 YOLO11s-Seg 的 Backbone 与 Neck 中，引入了改进的 C3k2 Fast 模块（CSP Bottleneck with Two Convolution Layers），用于增强浅层特征提取与融合能力。该模块基于跨阶段部分结构思想，能够在保持较低计算复杂度的同时提升特征表达能力。在 Backbone 末端，集成轻量级注意力模块 C2PSA，用于增强模型对关键区域的感知能力，其结构如\autoref{fig:fig2}所示。
 
 \begin{figure}[H]
     \centering
@@ -21,95 +22,132 @@ C2PSA 采用 Softmax Attention，其计算公式如下：
 \begin{equation}\label{eq:attn}
   \mathrm{Attention}(Q,K,V)=\mathrm{softmax}\left(\frac{QK^{\mathsf T}}{\sqrt{d_k}}\right)V
 \end{equation}
-其中，$Q$、$K$、$V$ 分别表示查询、键和值。该 Attention 对所有位置进行匹配，时间复杂度为 $O(N^2)$。在高分辨率特征图上，该机制计算开销较大，且位置编码与 value 的简单相加难以充分建模空间结构，对低相关区域的抑制能力有限，易引入冗余信息。
+其中，$Q$、$K$、$V$ 分别表示查询、键和值。该注意力机制通过计算不同位置之间的相关性实现全局信息建模，其时间复杂度为 $O(N^2)$。尽管该结构能够增强模型对重要区域的关注能力，但在高分辨率特征图上，其计算代价仍然较高。此外，原始注意力机制在复杂堆叠场景中对低相关区域的抑制能力有限，容易引入冗余信息，从而影响对关键结构特征的有效表征。
+
+因此，虽然 YOLO11s-Seg 已具备较好的基础性能，但在复杂堆叠场景下仍存在注意力计算冗余、下采样效率不足以及空间结构建模能力有限等问题，有必要在其基础上进行针对性的结构改进。
 
 \subsection{YOLO11-StackLite架构}{}
-鉴于仓储盘点系统对实时性和资源消耗的敏感性，需要检测精度与计算效率的双重平衡。尽管YOLO11s-Seg在常规场景下已具备良好性能，但在复杂堆叠图像中仍可能出现漏检、误检等问题，且其参数规模和运算复杂度在边缘部署中存在一定局限性。因此，本文在其基础上提出一种结构优化策略，旨在进一步提升堆叠目标的识别精度，并显著压缩模型体积与推理开销，从而满足立体仓库货物自动盘点任务的实际部署需求。 
-改进的实例分割网络模型称为基于通道拆分的YOLO11-StackLite，如\autoref{fig:fig3}所示，
+鉴于仓储盘点系统对识别精度、推理效率与部署资源均具有较高要求，尽管 YOLO11s-Seg 在常规场景下已表现出较好的综合性能，但在复杂堆叠图像中仍可能出现漏检、误检等问题，且其参数规模与计算复杂度在边缘部署场景下仍存在进一步优化空间。为此，本文在 YOLO11s-Seg 的基础上提出改进模型 YOLO11-StackLite，从注意力建模、下采样效率和空间结构表达三个方面对网络进行优化，以提升复杂堆叠场景下的检测与分割性能，并进一步降低模型部署开销。
+
+改进后的实例分割网络模型称为 YOLO11-StackLite，其整体结构如\autoref{fig:fig3}所示。
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig3}
-    \bicaption{YOLO11s-Seg主干与注意力结构示意}{Backbone and attention structure of YOLO11s-Seg}
+    \bicaption{YOLO11-StackLite整体结构}{Overall structure of YOLO11-StackLite}
     \label{fig:fig3}
 \end{figure}
-包含3个改进的新模块，即通道拆分注意力模块C2SASA，重排分组卷积模块SSConv，和带有四向卷积的C3k2\_QDConv模块：
-\par\noindent 1）	用通道拆分式注意力模块C2SASA（\autoref{fig:fig3}右上角所示），具体是在继承原始C2PSA结构优势的基础上，以选择性激活抑制注意力机制SASA替换原有的注意力机制，缓解传统注意力机制中存在的冗余计算问题，提升模型的泛化能力。
-\par\noindent 2）	在 Neck 部分提出了 SSConv 轻量化模块。该模块在保持结构简洁的同时，结合分支融合设计与轻量卷积策略，实现了结构压缩与特征表达增强的平衡，有效提升了模型的整体效率与多尺度特征提取能力。
-\par\noindent 3）	在Neck部分的C2K2模块中用Bottleneck\_QDConv（\autoref{fig:fig3}右上角所示）取代原有的Bottleneck操作，得到新的C3K2-QDConv模块，以应对传统Bottleneck操作在空间几何建模方面的局限。该模块引入四向卷积结构，增强模型对不同空间方向几何特征的感知能力，提升在结构化场景下的检测与分割性能。
+
+围绕上述目标，本文设计了 3 个关键改进模块，即通道拆分注意力模块 C2SASA、重排分组卷积模块 SSConv，以及具有四向卷积结构的 C3k2\_QDConv 模块。三者分别面向关键区域建模、轻量化下采样和方向性空间特征提取，从不同层面增强模型对堆叠货物场景的适应能力。
+
+\par\noindent 1）通道拆分注意力模块 C2SASA：该模块在继承原始注意力结构优势的基础上，通过通道拆分机制与选择性激活抑制策略，降低注意力计算冗余并增强模型对关键区域的表征能力。
+
+\par\noindent 2）重排分组卷积模块 SSConv：该模块面向 Neck 部分的轻量化下采样需求，通过融合像素重排、分支卷积与组卷积等设计，在降低计算复杂度的同时提升多尺度特征提取能力。
+
+\par\noindent 3）具有四向卷积的 C3k2\_QDConv 模块：该模块通过增强对方向性几何结构的感知能力，改善传统 Bottleneck 在复杂结构建模中的不足，从而提高模型在堆叠场景下的检测与分割性能。
 
 \subsubsection{通道拆分注意力模块 C2SASA}{}
-为同时提升模型对显著区域的建模能力并降低计算开销，本文提出通道拆分式选择性激活抑制注意力模块（C2SASA），用于替换Backbone中的C2PSA模块。C2SASA首先通过1×1卷积将输入通道数压缩为原始的一半，并划分为两条分支：一条直接保留残差信息以维持原始特征表达，另一条输入两个堆叠的PSABlock\_SASA进行特征增强。最终通过通道拼接与1×1卷积恢复原通道维度，实现两类特征的融合。
-在每个PSABlock\_SASA中，本文将原始Attention替换为SASA模块，以实现选择性激活与抑制。SASA模块在保持全局建模能力的同时，引入L2归一化和可学习温度参数，显著增强了注意力计算中的数值稳定性和区分性，其实现流程如\autoref{fig:fig4}所示。
+为同时提升模型对显著区域的建模能力并降低计算开销，本文提出通道拆分式选择性激活抑制注意力模块（C2SASA），用于替换 Backbone 中的 C2PSA 模块。该模块首先通过 $1\times1$ 卷积对输入特征进行通道压缩，并将其划分为两条分支：其中一条分支保留残差信息以维持原始特征表达，另一条分支输入改进注意力块进行特征增强，最后通过通道拼接与卷积映射恢复原始维度，实现两类信息的有效融合。
+
+在改进注意力块中，本文将原始 Attention 替换为 SASA 机制，以实现对特征的选择性激活与抑制。SASA 模块在保持全局建模能力的同时，引入 L2 归一化与可学习温度参数，从而增强注意力计算过程中的数值稳定性和特征区分能力，其结构如\autoref{fig:fig4}所示。
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{fig4}
-    \bicaption{选择性激活抑制注意力机制SASA }{Selective Activation Suppression }
+    \bicaption{选择性激活抑制注意力机制 SASA}{Selective activation suppression attention}
     \label{fig:fig4}
-\end{figure}设其输入张量为 $x\in R^{B\times C\times H\times W}$，其中 $B$ 为批大小，$H$、$W$ 分别表示输入特征图的高度和宽度，$C$ 为特征维度。
-首先展平（Reshape）空间维度并转置（Transpose）为序列形式，其中 $N=H\cdot W$。与C2PSA中使用卷积生成 $q$、$k$、$v$ 不同，SASA模块采用共享线性投影层一次性映射输入特征至三倍通道维度，并在通道维度上划分得到：
+\end{figure}
+
+设输入张量为 $x\in R^{B\times C\times H\times W}$，其中 $B$ 为批大小，$H$、$W$ 分别表示输入特征图的高度和宽度，$C$ 为特征维度。首先将空间维度展平并转置为序列形式，其中 $N=H\cdot W$。随后采用共享线性投影层一次性生成 $q$、$k$、$v$：
 \begin{equation}\label{eq:qkv}
-\left[ q,k,v \right] = {\rm{Linear}}_{qkv}\left( X \right)
+[q,k,v] = {\rm{Linear}}_{qkv}(X)
 \end{equation}
-该设计显著降低了参数量并提升了生成效率。为实现多头注意力机制，将通道维度C重构为 h×d，其中h为注意力头数，d=C/h为每个注意力头的嵌入维度。最终得到的q、k、v张量形状如下：
-\[q,k,v \to {R^{B \times h \times N \times d}}\]
-对q与k进行L2归一化，保证它们单位向量化：
-\[q' = \frac{q}{{{{\left\| q \right\|}_2}}},k' = \frac{k}{{{{\left\| k \right\|}_2}}}\]
-式中，q'和k'表示经过L2归一化后的查询向量和键向量；$\|q\|_2$、$\|k\|_2$分别表示查询向量和键向量在最后一个维度上的L2范数，用于将向量标准化到单位长度，从而增强相似度计算的稳定性与鲁棒性。
-将原始点积Attention转化为余弦相似度形式，稳定性更强。为每个注意力头引入可学习的温度缩放因子 $\mathrm{Temp}\in\mathbb{R}^{h\times1\times1}$，用于自适应调节不同头的注意力分布形状。并计算相似度
+为实现多头注意力，将通道维度 $C$ 重构为 $h\times d$，其中 $h$ 为注意力头数，$d=C/h$ 为每个注意力头的嵌入维度。由此得到：
+\[
+q,k,v \to R^{B \times h \times N \times d}
+\]
+对 $q$ 与 $k$ 进行 L2 归一化：
+\[
+q' = \frac{q}{{\left\| q \right\|_2}},\quad
+k' = \frac{k}{{\left\| k \right\|_2}}
+\]
+进一步引入可学习温度参数 $\mathrm{Temp}\in\mathbb{R}^{h\times1\times1}$，得到相似度矩阵：
 \begin{equation}\label{eq:sim}
 \mathrm{sim} = \mathrm{Temp} \cdot q'k'^{\mathsf T}
 \end{equation}
-式中T表示转置操作（Transpose），将键向量的最后两个维度交换，用于与查询向量进行点积相似度计算。
-使用Dropout抑制机制，抑制无效激活，增强鲁棒性；保留投影机制，提升特征重构能力：
-\[\alpha {\rm{ = Dropout}}\left( {{\rm{softmax}}\left( {{\rm{sim}}} \right)} \right)\]
-式中，α表示归一化并经Dropout抑制后的注意力权重矩阵；Softmax为激活函数；
-加权求和输出：
-\[y = {\rm{Proj}}\left( {\alpha  \cdot v} \right)\]
-式中y表示当前注意力头输出的特征表示，而Proj(⋅)表示一个投影操作，由一个线性变换（Linear层）和一个Dropout层构成，用于增强模型的表达能力与正则化效果。最终输出通过Transpose与Reshape操作恢复到原始空间维度。
-\subsubsection{重排分组卷积模块 SSConv}{}
+其中，$\mathsf T$ 表示转置操作。随后通过 Softmax 与 Dropout 获得注意力权重：
+\[
+\alpha = {\rm{Dropout}}\left( {{\rm{softmax}}\left( {{\rm{sim}}} \right)} \right)
+\]
+最后对 $v$ 进行加权求和并投影：
+\[
+y = {\rm{Proj}}\left( {\alpha  \cdot v} \right)
+\]
+最终输出通过 Transpose 与 Reshape 操作恢复到原始空间维度。综上，C2SASA 在保留全局依赖建模能力的基础上，降低了注意力计算的冗余性，并增强了对关键区域的特征区分能力，为复杂堆叠场景下的实例检测与分割提供了更有效的特征表示。
 
-YOLO11模型中，Neck部分通常采用串联的两个标准3×3卷积进行下采样，这种结构虽然简单直观，但标准卷积的参数量与计算复杂度较高，不利于模型在边缘设备上的高效运行。标准卷积的感受野较小、通道之间的交互不足，限制了下采样过程中的语义表达能力。卷积过程中仅以固定方式融合所有通道，缺乏动态特征选择和信息重组机制；并且缺少多路径与多尺度结构，导致下采样过程中细节信息容易丢失。
-针对上述问题，本文提出了一种新的轻量化下采样结构——重排分组卷积（SSConv），如\autoref{fig:fig5}所示，
+\subsubsection{重排分组卷积模块 SSConv}{}
+在 YOLO11 模型中，Neck 部分通常采用串联的标准卷积进行下采样。虽然该结构实现简单，但存在参数量较大、计算开销较高以及通道信息利用不足等问题，不利于模型在边缘设备上的高效运行。与此同时，标准卷积在下采样过程中对局部细节信息和多尺度语义信息的保留能力有限，容易影响复杂堆叠场景中的特征表达效果。
+
+针对上述不足，本文提出重排分组卷积模块 SSConv，以实现下采样阶段的轻量化设计与特征增强。该模块融合了像素重排、分支卷积、组卷积与逐点卷积等结构思想，通过通道重组和双分支处理策略，在降低模型计算成本的同时增强特征提取能力，其结构如\autoref{fig:fig5}所示。
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{fig5}
-    \bicaption{重排分组卷积模块SSConv }{Shuffle-Split Convolution}
+    \bicaption{重排分组卷积模块 SSConv}{Shuffle-split convolution}
     \label{fig:fig5}
 \end{figure}
-用于替换YOLO11-Seg中Neck部分的两个标准3×3卷积下采样模块。
-SSConv（融合了像素重排（PixelShuffle）、分支卷积（Split Convolution）、组卷积（Group Convolution）与逐点卷积（Pointwise Convolution）等结构优势。设输入特征图为X，该模块首先利用PixelShuffle操作将部分空间维度转换为通道维度，从而在保持信息完整性的同时增强通道之间的信息交互。随后，将特征图按通道方向划分为两个子分支X1，X2，它们经历不同的处理策略：
-\[{X_1},{X_2} = {\rm{Split}}\left( {{\rm{PixelShuffle}}\left( X \right),\dim  = 1} \right)\]
-第一分支采用组卷积与逐点卷积的并行结构。组卷积通过将通道划分为多个子组，并在每个组内独立进行卷积操作，有效降低参数量与计算成本。逐点卷积则在保持空间维度不变的基础上对所有通道进行线性变换，有助于跨通道的信息融合，从而提升特征表达能力：
-\[{Y_1} = {\rm{GroupConv}}\left( {{{\rm{X}}_1}} \right){\rm{ + PointwiseConv}}\left( {{{\rm{X}}_1}} \right)\]
-第二分支采用步幅为2的 3×3卷积操作来保持较大的感受野，能够在下采样的同时捕捉更大范围的空间信息，增强模型对全局结构的感知能力：
-\[{Y_2} = {\rm{Conv2}}{{\rm{d}}_{3 \times 3}}\left( {{{\rm{X}}_2}} \right)\]
-最后，将两路分支的特征图沿通道维度拼接，并依次进行Batch Normalization和SiLU激活函数处理，以增强非线性表达能力并加速模型收敛：
-\[Y = {\rm{SiLU}}\left( {{\rm{BN}}\left( {{\rm{Concat}}\left( {{Y_1}{\rm{,}}{Y_2}} \right)} \right)} \right)\]
+
+该模块用于替换 YOLO11-Seg 中 Neck 部分的标准下采样卷积结构，以提高下采样阶段的效率和特征利用能力。设输入特征图为 $X$，首先通过 PixelShuffle 操作增强通道间信息交互，再沿通道维度将特征划分为两个子分支 $X_1$ 和 $X_2$：
+\[
+{X_1},{X_2} = {\rm{Split}}\left( {{\rm{PixelShuffle}}\left( X \right),\dim  = 1} \right)
+\]
+第一条分支采用组卷积与逐点卷积进行轻量化特征提取与跨通道融合：
+\[
+{Y_1} = {\rm{GroupConv}}\left( {{{\rm{X}}_1}} \right)+{\rm{PointwiseConv}}\left( {{{\rm{X}}_1}} \right)
+\]
+第二条分支采用步幅为 2 的 $3\times3$ 卷积，以保持较大的感受野并增强对整体结构的感知能力：
+\[
+{Y_2} = {\rm{Conv2}}{{\rm{d}}_{3 \times 3}}\left( {{{\rm{X}}_2}} \right)
+\]
+最终将两路特征进行拼接并经过归一化与激活：
+\[
+Y = {\rm{SiLU}}\left( {{\rm{BN}}\left( {{\rm{Concat}}\left( {{Y_1}{\rm{,}}{Y_2}} \right)} \right)} \right)
+\]
+因此，SSConv 在降低下采样阶段计算负担的同时，兼顾了局部细节保持与跨通道信息融合能力，有助于提升模型在复杂堆叠场景中的多尺度特征表达效果。
 
 \subsubsection{具有四向卷积的 C3k2\_QDConv 模块}{}
-在YOLO11中C3k2结构与Bottleneck模块被广泛采用以提升特征提取能力并控制模型复杂度。传统的Bottleneck模块主要采用标准卷积与通道压缩的方式进行特征提取与通道重建。然而，标准卷积操作存在方向性建模不足的问题，难以有效感知目标边缘和细粒度结构，特别是在复杂场景下（如库存边界模糊、重叠遮挡等）；卷积核固定且对称，难以捕获长条形、方向变化大的特征结构；尽管通道压缩减少了计算量，但其信息表达能力有限，容易造成细节损失。
-为了解决上述问题，本文提出一种改进的瓶颈结构Bottleneck\_QDConv替换传统Bottleneck，得到的模块称为C3k2\_QDConv，如\autoref{fig:fig3}上方所示。该模块以四向卷积模块QDConv为核心构件，通过方向性感知增强空间建模能力，同时在保持轻量化结构的基础上提升特征表达效果。
-QDConv实现更具方向性的特征提取，模块结构如\autoref{fig:fig6}所示。
+在堆叠货物场景中，箱体边缘、遮挡关系以及方向性几何结构对目标识别具有重要影响。然而，传统 Bottleneck 模块主要依赖标准卷积完成局部特征提取，其对方向性结构和复杂空间关系的建模能力相对有限。尤其在库存边界模糊、局部重叠遮挡等情况下，传统卷积往往难以充分刻画长条形边缘和多方向变化特征，容易造成细节信息损失。
+
+为增强模型对堆叠场景几何特征的感知能力，本文提出 Bottleneck\_QDConv，并构建对应的 C3k2\_QDConv 模块。该模块以四向卷积为核心，通过多个方向上的非对称卷积与显式空间位移操作，加强对不同方向边缘和空间结构变化的建模能力，其结构如\autoref{fig:fig6}所示。
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig6}
-    \bicaption{四向卷积QDConv}{Quad-Direction Convolution (QDConv)}
+    \bicaption{四向卷积模块 QDConv}{Quad-direction convolution module}
     \label{fig:fig6}
 \end{figure}
-设输入特征为 ，输出为 ,定义k为方向卷积大小，s为位移大小（默认1）。首先对输入特征图进行4种非对称方向的 ZeroPadding，得到Xp1、Xp2、Xp3、Xp4，使卷积操作对输入图像的不同边界区域具备不同响应；其次将标准卷积分解为水平方向（Conv 1×k）与垂直方向（Conv k×1）的组合，分别建模不同方向上的特征变化，将Xp1、Xp2输入到水平方向，Xp3、Xp4输入到垂直方向。再次对不同方向的输出执行空间位移（torch.roll），模拟偏置感受野，使得方向信息产生显式的位置偏移，从而模拟出“旋转感知”的特征流动效果；最后将4个方向特征拼接，使用卷积核2×2的融合卷积输出结果，整合多个方向的信息。以上过程可以用数学形式表示为：
-\[Y = Con{v_{(2,2)}}\left( {Concat\left[ \begin{array}{l}
-Roll_{ + 1}^H(Con{v_{1 \times k}}(X_p^1),\\
-Roll_ - ^H(Con{v_{1 \times k}}(X_p^2),\\
-Roll_{ + 1}^W(Con{v_{k \times 1}}(X_p^3),\\
-Roll_{ - 1}^W(Con{v_{k \times 1}}(X_p^4)
-\end{array} \right]} \right)\]
-	Roll+1H、Roll-1H、分别表示对特征图在水平方向（H）进行向右、向左一个像素的位移操作；Roll+1W、Roll-1W分别表示分别表示对特征图在垂直方向（W）进行向下、向上一个像素的位移操作；Conv1×k、Convk×1分别表示核尺寸为1×k的卷积操作，用于水平方向、垂直方向的特征提取。
 
+设输入特征为 $X$，输出为 $Y$，卷积核尺寸为 $k$，位移步长为 $s=1$。首先对输入特征进行零填充，得到四个方向的位移分支 $X_p^1$、$X_p^2$、$X_p^3$ 和 $X_p^4$。随后分别对其施加 $1\times k$ 与 $k\times 1$ 的卷积，并通过显式位移操作进行方向建模，最终表达式为：
+\[
+Y = \mathrm{Conv}_{2\times 2}\left(
+\mathrm{Concat}\left[
+\begin{array}{l}
+\mathrm{Roll}_{+1}^{H}\bigl(\mathrm{Conv}_{1\times k}(X_p^1)\bigr),\\
+\mathrm{Roll}_{-1}^{H}\bigl(\mathrm{Conv}_{1\times k}(X_p^2)\bigr),\\
+\mathrm{Roll}_{+1}^{W}\bigl(\mathrm{Conv}_{k\times 1}(X_p^3)\bigr),\\
+\mathrm{Roll}_{-1}^{W}\bigl(\mathrm{Conv}_{k\times 1}(X_p^4)\bigr)
+\end{array}
+\right]
+\right)
+\]
+其中，$\mathrm{Roll}_{+1}^{H}$、$\mathrm{Roll}_{-1}^{H}$ 表示沿高度方向进行正向和反向位移操作；$\mathrm{Roll}_{+1}^{W}$、$\mathrm{Roll}_{-1}^{W}$ 表示沿宽度方向进行正向和反向位移操作；$\mathrm{Conv}_{1\times k}$、$\mathrm{Conv}_{k\times 1}$ 分别表示核尺寸为 $1\times k$ 和 $k\times 1$ 的卷积操作，用于水平方向和垂直方向的特征提取。
+
+与传统标准卷积相比，QDConv 不仅能够在多个方向上捕获目标的几何变化特征，还能够通过位移操作强化空间关系表达，从而使模型在复杂堆叠结构下获得更丰富的方向性特征表示。由此，C3k2\_QDConv 能够提升模型对复杂空间结构和目标轮廓信息的刻画能力，为后续检测与分割提供更具判别性的特征支撑。
 
 \section{后处理数量计算方法}{Post-processing Counting Method}
+在立体仓库堆叠货物盘点任务中，仅依赖目标检测结果难以准确完成数量估计，其原因在于盘点结果不仅取决于目标是否被识别，还与上下层结构关系及堆叠规则密切相关。由于实例分割结果能够提供更精细的轮廓信息和空间形状信息，本文进一步结合实例分割掩膜设计后处理数量计算方法，以实现对复杂堆叠场景下货物数量的准确推断。
 
 \subsection{计数主体流程}{}
-本文采用“up\_box”和“down\_box”两个类别对每幅图像中的目标进行标注，如\autoref{fig:fig7}所示，
+本文采用“up\_box”和“down\_box”两个类别对每幅图像中的目标进行标注，如\autoref{fig:fig7}所示。
 \begin{figure}
   \subfloat[原图]{\label{subfig:fig7a}
     \includegraphics[width=0.4\textwidth]{fig7-1.png}
@@ -118,83 +156,88 @@ Roll_{ - 1}^W(Con{v_{k \times 1}}(X_p^4)
   \subfloat[标注后]{\label{subfig:fig7b}
     \includegraphics[width=0.4\textwidth]{fig7-2.png}
   }
-  \bicaption{图像标注示例}{Example of Image Annotation}
+  \bicaption{图像标注示例}{Example of image annotation}
   \label{fig:fig7}
 \end{figure}
-其中类别标签1和0分别对应上层货物（up\_box）和下层货物（down\_box）。模型在推理阶段将输出每个目标实例的边界框、类别标签及其对应的掩膜信息。为提升后续计数环节的准确性与鲁棒性，本文根据不同类别的特性，设置了差异化的置信度阈值：仅保留置信度不低0.8的 down\_box 类预测结果，以及置信度不低于0.5的 up\_box 类预测结果参与后续处理。在获得满足阈值条件的实例分割结果后，需进一步通过后处理步骤将有效检测结果转化为最终的货物计数。
-为此，本文设计了一种高效鲁棒的基于实例分割的启发式后处理计数算法，整体流程如\autoref{fig:fig8}所示。
+其中，类别标签 1 和 0 分别对应上层货物与下层货物。模型在推理阶段输出每个目标实例的边界框、类别标签及其对应的掩膜信息。为了提升后续计数环节的准确性与鲁棒性，本文根据不同类别的特性设置差异化的置信度阈值，仅保留满足阈值要求的预测结果参与后续处理。
+
+在获得满足阈值条件的实例分割结果后，本文设计了一种基于实例分割结果的启发式后处理计数方法，其总体流程如\autoref{fig:fig8}所示。根据仓库货物“下一层箱体仅在当前层堆满后方可叠加”的堆叠规则，本文将总货物数量估算划分为下层箱体数量估算与顶层箱体数量推断两个阶段。
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig8}
-    \bicaption{后计数算法流程图}{ Flow chart of post counting algorithm}
+    \bicaption{后计数算法流程图}{Flow chart of post counting algorithm}
     \label{fig:fig8}
 \end{figure}
-根据仓库货物的标准堆叠规则——“下一层的箱体仅在当前层堆满后方可叠加”，因此本文将总货物数量的估算过程划分为两个阶段，分别是下层箱体数量估算与顶层箱体数量推断。
-后计数算法流程见\autoref{fig:fig8}。
-具体计数策略可分为以下三类情况：
-a) 检测结果为空：
-若预测结果中无任何目标（类别数组为空），则认为该图像中无货物，数量计为 0。
-b) 仅检测到下层货物：
-预测结果中仅包含类别0，而无类别1，此时输出num = -1，说明图像中缺乏顶层信息，无法判断整体堆叠结构，如\autoref{subfig:fig9a}所示。此类图像将交由仓储管理系统（WMS）进一步处理。
-c) 同时检测到上层与下层目标：此为最常见的完整堆叠情况，进一步细分为顶层满载和未满载的情况。若顶层判定为满载（\autoref{subfig:fig9b}），则总货物数可近似估算为：
+
+根据预测结果中上下层目标的存在状态，本文将堆叠货物盘点情形划分为以下三类：
+
+a）检测结果为空。若预测结果中未检测到任何目标，即类别数组为空，则可直接判定该图像中无货物，数量记为 0。
+
+b）仅检测到下层货物。若预测结果中仅包含类别 0，而不包含类别 1，则说明图像中缺乏顶层结构信息，无法直接判断完整堆叠关系，如\autoref{subfig:fig9a}所示。此时输出 \texttt{num=-1}，并将该类图像交由仓储管理系统进一步处理。
+
+c）同时检测到上层与下层目标。该情形为最常见的完整堆叠场景，需要进一步区分顶层满载和顶层未满载两种情况。若顶层判定为满载，则总货物数量可依据上下层目标数量关系直接估算：
 \begin{equation}\label{eq:total-full}
 {N_{total}} = {N_{up\_box}} \times ({N_{down\_box}} + 1)
 \end{equation}
-式中，$N_{total}$ 为货物总数量；$N_{up\_box}$ 与 $N_{down\_box}$ 分别为类别1与类别0的目标数量。
-若顶层未满载（\autoref{subfig:fig9c}），无法简单通过乘法估算整体数量。为此，设计了一种基于掩膜关键点的层间面积比估计算法，结合分割掩膜形状与空间位置关系，推理出完整的堆叠结构，并估算每层下层箱体数量 $N_{layer}$，最终总货物数量表示为：
+式中，$N_{total}$ 为货物总数量，$N_{up\_box}$ 与 $N_{down\_box}$ 分别为上层和下层目标数量。若顶层未满载，则需进一步结合掩膜关键点与几何关系推理完整堆叠结构，并估算每层下层箱体数量 $N_{layer}$，最终总货物数量表示为：
 \begin{equation}\label{eq:total-unfull}
 {N_{total}} = {N_{up\_box}} + ({N_{layer}} \times {N_{down\_box}})
 \end{equation}
+
 \begin{figure}
   \subfloat[缺乏顶层信息]{\label{subfig:fig9a}
     \includegraphics[width=0.25\textwidth]{9-1.png}
   }
   \qquad
-  \subfloat[顶层满]{\label{subfig:fig9b}
+  \subfloat[顶层满载]{\label{subfig:fig9b}
     \includegraphics[width=0.23\textwidth]{9-2.png}
   }
   \qquad
-  \subfloat[顶层不满]{\label{subfig:fig9c}
+  \subfloat[顶层未满载]{\label{subfig:fig9c}
     \includegraphics[width=0.24\textwidth]{9-3.png}
   }
   \bicaption{立体仓库堆叠货物盘点的三种情况}{Three situations for inventory of stacked goods in a three-dimensional warehouse}
   \label{fig:fig9}
 \end{figure}
-接下来，本文将对顶层满载检测算法与基于掩膜关键点的层间面积比估计算法的具体设计与实现原理进行详细介绍
+
+下面将分别对顶层满载检测算法以及基于掩膜关键点的层间面积比估计算法进行介绍，以说明本文后处理数量计算方法的具体实现过程。
+
 \subsubsection{基于几何关系的顶层满载检测算法}{}
-为判断库存中某一箱体顶部是否被上层货物覆盖（即“满载”状态），本文提出了一种基于掩模几何关系的判定算法（见算法1）。首先，对每个实例分割掩模执行轮廓提取，并利用 OpenCV 的凸包（Convex Hull）算法获得边界角点集合，用以近似描述货物的平面外形与空间占位。随后，依据模型预测标签将实例划分为上层货物集合（label=1）与下层货物集合（label=0）。在每个集合中，依据图像坐标系的特性（$y$ 轴向下增大），下层货物的顶部点对应 $y$ 坐标的最小值，而上层货物的底部点对应 $y$ 坐标的最大值。算法选取下层货物中“最高点”（即最小 $y$）和上层货物中“最低点”（即最大 $y$）进行空间关系比较。若上层货物的凸包中心点低于下层货物的最高点（即 $y_{up\_center} < y_{dn\_top}$），说明上层并未完全覆盖下层顶部，判定为“非满载”；反之则为“满载”。
-这种基于几何中心与边界点的比较，能够在无深度信息的情况下，通过2D平面几何关系实现有效的层间遮挡判断。
-算法1 基于几何关系的顶层满载检测算法
-输入：预测标签列表 pred\_labels，掩模图列表 masks
-输出：是否满载（布尔值）
-1:  pts\_list ← []  // 所有实例的凸包角点集合
-2:  for each mask m in masks do
-3:      ctr ← 提取轮廓(m)
-4:      if 面积(ctr) > 阈值 then
-5:          pts ← 计算凸包角点(ctr)
-6:      else
-7:          pts ← 空
-8:      end if
-9:      追加 pts 至 pts\_list
-10: end for
-11: idx\_up ← pred\_labels == 1
-12: idx\_dn ← pred\_labels == 0
-13: up\_pts ← pts\_list[idx\_up]
-14: dn\_pts ← pts\_list[idx\_dn]
-15: dn\_top\_y ← min\_y(dn\_pts)   // 下层顶部（最高点）
-16: up\_center\_y ← mean\_y(convex\_hull\_center(up\_pts))  // 上层中心点
-17: if up\_center\_y > dn\_top\_y then
-18:     return True   // 满载
-19: else
-20:     return False  // 非满载
+当场景中同时存在上下层目标时，首先需要判断顶层是否处于满载状态。为此，本文提出一种基于掩模几何关系的顶层满载检测算法，其流程见表~\ref{tab:alg_full_load}。该算法首先对实例掩模进行轮廓提取，并利用凸包运算获取边界角点，以近似描述货物的平面外形与空间占位关系。随后，根据模型预测标签将实例划分为上层货物集合与下层货物集合，并依据图像坐标系下的几何位置关系比较二者在垂直方向上的相对位置，从而判断上层目标是否覆盖下层顶部区域。
+
+这种基于几何中心与边界点的比较方式，能够在无深度信息的条件下利用二维平面几何关系实现有效的层间遮挡判断。因此，该算法能够作为后续数量估计的前置判别步骤，为不同盘点情形下的数量推断提供依据。
+
+\begin{table}[H]
+  \bicaption{基于几何关系的顶层满载检测算法}{Top-layer full-load detection algorithm based on geometric relationships}
+  \label{tab:alg_full_load}
+  \centering
+  \begin{tabular}{cl}
+    \toprule
+    步骤 & 具体内容 \\
+    \midrule
+    输入 & 预测标签列表 \texttt{pred\_labels}，掩模列表 \texttt{masks} \\
+    输出 & 是否满载（布尔值） \\
+    1 & 初始化角点集合 \texttt{pts\_list} \\
+    2 & 遍历所有实例掩模并提取轮廓 \\
+    3 & 对有效轮廓计算凸包角点 \texttt{pts} \\
+    4 & 根据预测标签划分上层与下层目标集合 \\
+    5 & 计算下层目标最高点的纵坐标 \texttt{dn\_top\_y} \\
+    6 & 计算上层目标凸包中心的纵坐标 \texttt{up\_center\_y} \\
+    7 & 若 \texttt{up\_center\_y > dn\_top\_y}，则判定为满载 \\
+    8 & 否则判定为未满载 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 \subsubsection{掩膜关键点驱动的层间面积比估计算法}{}
-为了在顶层箱体未满载时估算其下方次顶层箱体数量，本文提出一种基于掩膜关键点驱动的层间面积比估计方法。该方法通过提取上下层掩膜的凸包关键点，构建几何关系以计算交点位置，并结合几何图形的面积比关系估算次顶层箱体数量。具体流程如算法2所示，其关键点示意见\autoref{fig:fig10}。
-在计算过程中，需求解不同掩膜层之间若干候选边的交点（如顶层边 \_F-\_E 与次顶层边 \_C-\_D），以确定特征边界的空间重叠区域。为实现这一目标，可采用线性代数法求解两条边的交点。设任意两条线段分别为 $P_1P_2$ 与 $Q_1Q_2$，其中 $P_1(x_A,y_A)$、$P_2(x_B,y_B)$、$Q_1(x_C,y_C)$、$Q_2(x_D,y_D)$，其斜率可表示为：
+当顶层未满载时，无法直接依据满层假设完成总数量估计，因此需要进一步估算其下方次顶层箱体数量。针对这一问题，本文提出一种基于掩膜关键点驱动的层间面积比估计方法，其流程见表~\ref{tab:alg_area_ratio}，关键点示意见\autoref{fig:fig10}。
+
+在计算过程中，需要求解不同候选边之间的交点，以确定上下层结构之间的空间重叠关系。设任意两条线段分别为 $P_1P_2$ 与 $Q_1Q_2$，其中 $P_1(x_A,y_A)$、$P_2(x_B,y_B)$、$Q_1(x_C,y_C)$、$Q_2(x_D,y_D)$，其斜率可表示为：
 \begin{equation}\label{eq:line-k}
 {k_1} = \frac{{{y_B} - {y_A}}}{{{x_B} - {x_A}}}, \quad
 {k_2} = \frac{{{y_D} - {y_C}}}{{{x_D} - {x_C}}}
 \end{equation}
-根据两条直线的一般式方程 aix + biy + ci = 0，可进一步写为矩阵形式：
+根据两条直线的一般式方程，可进一步写为矩阵形式：
 \begin{equation}\label{eq:line-intersection}
 \left( \begin{array}{l}
 {a_1}{\rm{  }}{b_1}\\
@@ -207,53 +250,37 @@ y
  - {c_2}
 \end{array} \right)
 \end{equation}
+其中，$(x,y)$ 为两条线段的交点坐标。公式\autoref{eq:line-k}和\autoref{eq:line-intersection}用于求解候选边对的交点集合，并为后续面积比估计提供几何基础。
 
-其中 $(x,y)$ 为两条线段的交点坐标 $O$。公式\autoref{eq:line-k}和\autoref{eq:line-intersection}为通用交点计算公式，在算法2第22步“对每组候选边（如\_F-\_E 与 \_C-\_D）”中调用，用于计算所有可能的交点集合 $O$。
-之后，取所有有效交点的平均位置作为顶层交点 $O_2$，并计算顶层单箱体区域 $S_1$ 与次顶层总区域 $S_2$ 的面积比 $N_{layer}=S_2/S_1$，最终依据\autoref{eq:total-unfull}可得出总体箱子数量。
-算法2掩膜关键点驱动的层间面积比算法
+\begin{table}[H]
+  \bicaption{掩膜关键点驱动的层间面积比算法}{Interlayer area-ratio algorithm driven by mask keypoints}
+  \label{tab:alg_area_ratio}
+  \centering
+  \begin{tabular}{cl}
+    \toprule
+    步骤 & 具体内容 \\
+    \midrule
+    输入 & 上层掩膜集合 \texttt{up\_box\_masks}，下层掩膜集合 \texttt{down\_box\_masks} \\
+    输出 & 估算的次顶层箱体数量 \texttt{Nlayer} \\
+    1 & 提取次顶层关键点 $A$、$B$、$C$、$D$、$G$ \\
+    2 & 根据 $AB$ 与 $CD$ 的几何关系求解交点 $O_1$ \\
+    3 & 提取顶层关键点 $\_A$、$\_B$、$\_C$、$\_D$、$\_E$、$\_F$ \\
+    4 & 对候选边对求交，得到顶层交点集合，并取平均位置作为 $O_2$ \\
+    5 & 计算顶层单箱体区域面积 $S_1$ \\
+    6 & 计算次顶层整体区域面积 $S_2$ \\
+    7 & 由面积比得到 $N_{layer}=S_2/S_1$ \\
+    8 & 返回估计结果 \texttt{Nlayer} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-输入：上层掩膜集合 up\_box\_masks，下层掩膜集合 down\_box\_masks
-输出：估算的次顶层箱体数量 count
-// ------ Step 1：提取次顶层关键点 ------
-1:  box\_d1 ← dn\_masks 中 y 最大掩膜
-2:  A ← box\_d1 凸包最左角点
-3:  B ← box\_d1 中最靠近左下角的点
-4:  C ← box\_d1 中 y 最大的点
-5:  box\_d2 ← dn\_masks 中 y 最小掩膜
-6:  D0 ← box\_d2 中 y 最大的点
-7:  D ← D0 周围 20 像素内最右的点
-8:  G ← box\_d1 中 x 最大点
-// ------ Step 2：求交点 O1 ------
-9:  k ← (y\_B - y\_C) / (x\_B - x\_C)
-10:  L1 ← 直线 AB，斜率为 k
-11: L2 ← 直线 CD
-12: 若 L1 与 L2 有交点 O1，则记录；否则标记无效
-// ------ Step 3：提取顶层关键点 ------
-13: box\_u ← up\_masks 中 y 最小掩膜
-14: \_A ← 凸包中最左下角点
-15: \_B ← 凸包中最靠近左下角点
-16: \_C ← 凸包中最靠近右下角点
-17: \_D ← 凸包中 y 最小点
-18: \_E ← 凸包中最靠近右上角点
-19: cctr ← 所有角点的中心点
-20: \_F ← 高于 cctr 的点中最右上角者
-// ------ Step 4：求交点 $O_2$ ------
-21: O ← ∅，t ← 0
-22: 对每组候选边（如 \_F-\_E 与 \_C-\_D）：
-    21.1 若有交点 Oi，则 O ← O ∪ {Oi}
-    21.2 否则跳过
-    21.3 t ← t + 1
-23: 若 O 非空，则：
-        O2 ← (1/|O|) × ∑ Oi ∈ O
-// ------ Step 5：面积比估算 ------
-24: S1 ← 三角形 (\_A, O2, \_E) 的面积（顶层一个箱体）
-25: S2 ← 区域 (A, O1, G) 的面积（次顶层所有箱体）
-26: Nlayer← S2 / S1
-27: 返回Nlayer
+上述方法充分利用了实例分割掩膜所提供的轮廓与几何信息，能够在顶层未满载的情况下提升数量估计的可解释性和准确性，从而增强盘点算法对复杂堆叠场景的适应能力。
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{fig10}
-    \bicaption{目标掩膜凸包点和关键点示意图 }{ Schematic diagram of convex hull points and key points on the target mask}
+    \bicaption{目标掩膜凸包点和关键点示意图}{Schematic diagram of convex hull points and key points on the target mask}
     \label{fig:fig10}
 \end{figure}
+
+本章首先分析了基线模型 YOLO11s-Seg 的结构特点及其在复杂堆叠场景中的局限性，在此基础上提出改进模型 YOLO11-StackLite，并从注意力建模、下采样结构和空间方向感知三个方面对关键模块进行了设计。随后，结合实例分割结果与空间几何关系，构建了面向堆叠货物场景的后处理数量计算方法。上述研究为提升复杂场景下的检测、分割与盘点性能提供了方法基础。然而，为满足边缘部署需求，仍需进一步降低模型的参数量与计算复杂度，因此下一章将围绕模型压缩方法展开研究。

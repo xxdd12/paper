@@ -447,6 +447,12 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dictionar
 INPUT c:/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT c:/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/color.sty
+INPUT ./main.out
+INPUT ./main.out
+INPUT main.out
+INPUT main.out
+INPUT ./main.out
+INPUT ./main.out
 OUTPUT main.out
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
@@ -463,6 +469,9 @@ INPUT data/abstract.tex
 INPUT ./data/notation.tex
 INPUT ./data/notation.tex
 INPUT data/notation.tex
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
 OUTPUT main.toc
 INPUT ./main.tec
 INPUT ./main.tec
@@ -473,12 +482,6 @@ INPUT ./data/chap01.tex
 INPUT data/chap01.tex
 INPUT ./figure/fig1.pdf
 INPUT ./figure/fig1.pdf
-INPUT c:/texlive/2026/texmf-dist/tex/latex/mwe/example-image.pdf
-INPUT c:/texlive/2026/texmf-dist/tex/latex/mwe/example-image.pdf
-INPUT c:/texlive/2026/texmf-dist/tex/latex/mwe/example-image.pdf
-INPUT c:/texlive/2026/texmf-dist/tex/latex/mwe/example-image.pdf
-INPUT c:/texlive/2026/texmf-dist/tex/latex/mwe/example-image.pdf
-INPUT c:/texlive/2026/texmf-dist/tex/latex/mwe/example-image.pdf
 INPUT ./data/chap02.tex
 INPUT ./data/chap02.tex
 INPUT data/chap02.tex
