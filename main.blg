@@ -1,67 +1,25 @@
-This is BibTeX, Version 0.99e (TeX Live 2026)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
-The style file: gbt7714-numerical.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 150 items from 100.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=200001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: ref/gdutthesis-template.bib
-Database file #2: ref/reference.bib
-Warning--empty author in wangfuzhi2011zhouyi
-Warning--empty author and editor in 2009shifutangriji
-Warning--empty author and editor in 1962kangxizidian
-Warning--empty author in 2009information
-Warning--empty author in 1988qizhi
-Warning--empty author in 1977songshi
-Warning--empty author in 2012dublin
-You've used 124 entries,
-            6859 wiz_defined-function locations,
-            1992 strings with 28788 characters,
-and the built_in function-call counts, 3982944 in all, are:
-= -- 409794
-> -- 52679
-< -- 318519
-+ -- 23890
-- -- 9562
-* -- 19747
-:= -- 93739
-add.period$ -- 451
-call.type$ -- 124
-change.case$ -- 1032
-chr.to.int$ -- 275652
-cite$ -- 138
-duplicate$ -- 695562
-empty$ -- 10856
-format.name$ -- 1916
-if$ -- 790846
-int.to.chr$ -- 4778
-int.to.str$ -- 125
-missing$ -- 0
-newline$ -- 730
-num.names$ -- 377
-pop$ -- 71211
-preamble$ -- 1
-purify$ -- 465
-quote$ -- 0
-skip$ -- 112103
-stack$ -- 0
-substring$ -- 597823
-swap$ -- 476257
-text.length$ -- 1725
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 1255
-warning$ -- 7
-while$ -- 9771
-width$ -- 0
-write$ -- 1809
-(There were 7 warnings)
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'main.blg'
+[80] biber-MSWIN64:342> INFO - === 
+[110] Biber.pm:421> INFO - Reading 'main.bcf'
+[218] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[228] Biber.pm:4487> INFO - Processing section 0
+[236] Biber.pm:4678> INFO - Looking for bibtex file 'ref/gdutthesis-template.bib' for section 0
+[292] bibtex.pm:1713> INFO - LaTeX decoding ...
+[372] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/gdutthesis-template.bib'
+[1072] Biber.pm:4678> INFO - Looking for bibtex file 'ref/reference.bib' for section 0
+[1152] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1152] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1152] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1152] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1211] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1291] bbl.pm:779> INFO - Output to main.bbl
+[1291] Biber.pm:132> WARN - legacy year field 'c1980' in entry 'buseckc1980subsolidus' is not an integer - this will probably not sort properly.
+[1291] Biber.pm:132> WARN - incollection entry 'buseckc1980subsolidus' (ref/gdutthesis-template.bib): Invalid format 'c1980' of date field 'date' - ignoring
+[1291] Biber.pm:132> WARN - legacy year field 'c1971' in entry 'fourneyc1971advances' is not an integer - this will probably not sort properly.
+[1291] Biber.pm:132> WARN - inproceedings entry 'fourneyc1971advances' (ref/gdutthesis-template.bib): Invalid format 'c1971' of date field 'date' - ignoring
+[1291] Biber.pm:132> WARN - legacy year field '1957/1990' in entry 'zhongguo1957tushu' is not an integer - this will probably not sort properly.
+[1291] Biber.pm:132> WARN - legacy year field '1865（清同治四年）' in entry 'wangfuzhi1865songlun' is not an integer - this will probably not sort properly.
+[1291] Biber.pm:132> WARN - book entry 'wangfuzhi1865songlun' (ref/gdutthesis-template.bib): Invalid format '1865（清同治四年）' of date field 'date' - ignoring
+[1291] Biber.pm:132> WARN - Data source 'ref/reference.bib' is empty, ignoring
+[1291] Biber.pm:134> INFO - WARNINGS: 8

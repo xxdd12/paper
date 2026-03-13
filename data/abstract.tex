@@ -1,7 +1,23 @@
-\begin{abstract}
-  
+﻿\begin{abstract}
+随着现代物流与智能仓储技术的快速发展，立体仓库库存盘点对自动化、智能化和实时性的要求不断提高。针对传统人工盘点效率低、成本高，且在复杂堆叠场景下易出现漏盘与错盘的问题，本文面向立体仓库堆叠货物盘点任务，围绕复杂场景识别与轻量化应用需求开展研究，主要包括改进实例分割模型、后处理数量计算方法以及模型压缩方法三个方面。
+
+针对立体仓库场景中货物遮挡明显、结构关系复杂、现有实例分割模型易出现漏检与误检的问题，本文以 YOLO11s-Seg 为基线，提出改进模型 YOLO11-StackLite。该模型从注意力建模、下采样效率和空间结构表达三个方面进行优化，设计了通道拆分注意力模块 C2SASA、重排分组卷积模块 SSConv 以及具有四向卷积结构的 C3k2\_QDConv 模块，从而增强模型对复杂堆叠货物场景的检测与分割能力。
+
+针对仅依赖检测结果难以准确完成库存数量推断的问题，本文结合实例分割掩膜信息与仓储场景中的堆叠规则，构建了后处理数量计算方法。该方法通过顶层满载检测算法和基于掩膜关键点的层间面积比估计算法，对堆叠货物的层次结构进行判别与推理，实现货物总数量估算，从而提升库存盘点结果的可解释性与准确性。
+
+考虑到仓储现场通常具有边缘侧应用需求，而高精度实例分割模型存在参数量较大、计算复杂度较高的问题，本文进一步研究了面向边缘部署需求的模型压缩方法。针对 YOLO11-StackLite，采用结构化剪枝降低模型参数量与浮点运算量，并结合知识蒸馏缓解压缩带来的性能退化，以提高模型的部署友好性。
+
+在自建 TBD（Tobacco Box Dataset）数据集上开展的实验结果表明，所提出的 YOLO11-StackLite 在检测精度、分割精度以及库存盘点准确率方面均优于对比模型，并在模型复杂度控制方面取得了较好的平衡。相关结果验证了本文方法在立体仓库堆叠货物盘点任务中的有效性，并为后续面向实际边缘场景的进一步应用提供了方法基础。
 \end{abstract}
 
 \begin{abstract*}
-  
+With the rapid development of modern logistics and intelligent warehousing, higher requirements are being placed on the automation, intelligence, and real-time performance of inventory counting in automated warehouses. Traditional manual inventory counting suffers from low efficiency, high labor cost, and poor reliability in complex stacked scenes. To address these problems, this thesis focuses on the inventory counting task of stacked goods in automated warehouses and studies methods for complex-scene recognition and lightweight deployment. The main work includes an improved instance segmentation model, a post-processing-based quantity estimation method, and a model compression strategy.
+
+To address severe occlusion, complex structural relationships, and frequent missed or false detections in stacked cargo scenes, an improved instance segmentation model named YOLO11-StackLite is proposed based on YOLO11s-Seg. The proposed model is optimized from three aspects, namely attention modeling, downsampling efficiency, and spatial structure representation. Specifically, a channel-splitting attention module C2SASA, a shuffle-split convolution module SSConv, and a quad-direction convolution based module C3k2\_QDConv are designed to enhance the detection and segmentation performance in complex stacked scenes.
+
+Since it is difficult to accurately infer the total quantity of goods only from detection results, a post-processing counting method is further constructed by combining instance segmentation masks with stacking rules in warehouse scenes. The proposed method includes a top-layer full-load detection algorithm and an interlayer area-ratio estimation algorithm driven by mask keypoints, which enable structural reasoning and quantity estimation for stacked goods and improve both the interpretability and accuracy of inventory counting.
+
+Considering the demand for edge-oriented applications in warehouse environments and the relatively high parameter scale and computational complexity of high-accuracy instance segmentation models, a model compression method for YOLO11-StackLite is further studied. Structured pruning is adopted to reduce model parameters and floating-point operations, while knowledge distillation is introduced to alleviate the performance degradation caused by compression, thereby improving the deployment friendliness of the model.
+
+Experiments conducted on the self-built TBD (Tobacco Box Dataset) show that the proposed YOLO11-StackLite outperforms the compared models in detection accuracy, segmentation accuracy, and inventory counting accuracy, while achieving a better balance between performance and model complexity. These results verify the effectiveness of the proposed method for stacked cargo inventory counting in automated warehouses and provide a methodological basis for further application in practical edge scenarios.
 \end{abstract*}

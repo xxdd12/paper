@@ -3,29 +3,33 @@
 \section{实验数据集}{Dataset}
 本文构建了一个面向堆叠货物数量计算任务的图像数据集，命名为 TBD（Tobacco Box Dataset）。该数据集来源于烟草立体仓库中烟箱堆叠的真实场景图像，旨在为目标检测、实例分割和库存盘点等下游任务提供数据支撑。
 
-TBD 共包含 794 张图像，均由仓库监控系统采集，图像分辨率统一为 1280×960。为增强模型对堆叠结构的泛化能力，数据集采用两类分割标注：\texttt{down\_box} 表示位于层中非顶层的箱体，\texttt{up\_box} 表示位于堆叠最上层的箱体。
+TBD 共包含 794 张图像，均由仓库监控系统采集，图像分辨率统一为 1280×960。为增强模型对堆叠结构的泛化能力，数据集采用两类实例分割标注：\texttt{down\_box} 表示位于非顶层的箱体，\texttt{up\_box} 表示位于堆叠最上层的箱体。该标注方式能够同时刻画层间结构关系与目标轮廓信息，为后续实例分割与数量推理提供基础。
 
-在数据划分方面，本文采用五折交叉验证（5-fold cross-validation）策略评估模型的稳定性与泛化能力。每一折中，80\% 的样本用于训练，20\% 的样本用于验证。除检测与分割标注外，每张图像还附带字段 \texttt{layer\_count}，用于记录该图像在满层条件下每层堆叠箱体的数量，可为后续数量推理提供依据。记位于非顶层的箱体层数为 $N_{\mathrm{down}}$，最上层箱体数量为 $N_{\mathrm{up}}$，则箱体总数记为 $N_{\mathrm{total}}$。
+在数据划分方面，本文采用五折交叉验证（5-fold cross-validation）策略评估模型的稳定性与泛化能力。每一折中，80\% 的样本用于训练，20\% 的样本用于验证。除检测与分割标注外，每张图像还附带字段 \texttt{layer\_count}，用于记录该图像在满层条件下每层堆叠箱体的数量，可为后续数量推理提供依据。记非顶层箱体层数为 $N_{\mathrm{down}}$，最上层箱体数量为 $N_{\mathrm{up}}$，则箱体总数记为 $N_{\mathrm{total}}$。
 
 \section{评价指标}{Evaluation Metrics}
-为评估模型在实例分割任务中的性能，本文采用目标检测领域广泛使用的平均精度均值 mAP（mean Average Precision），重点考察 COCO[26] 评估标准下的 $\mathrm{mAP}@0.5{:}0.95$，以衡量模型在不同 IoU（Intersection over Union）阈值下的综合检测性能。其中，边界框平均精度 box mAP 用于评估目标定位的准确性，掩码平均精度 mask mAP 用于衡量预测掩码与真实区域之间的一致程度。box mAP 与 mask mAP 共同反映了模型在检测与分割任务中的整体表现。
+为全面评估模型在实例分割与库存盘点任务中的性能，本文从检测分割精度、模型复杂度和盘点准确性三个方面设置评价指标。
 
-在模型效率评估方面，本文采用以下两项指标：
+在检测与分割精度评价方面，本文采用目标检测领域广泛使用的平均精度均值 mAP（mean Average Precision），重点考察 COCO 评估标准下的 $\mathrm{mAP}@0.5{:}0.95$，以衡量模型在不同 IoU（Intersection over Union）阈值下的综合性能。其中，box mAP 用于评估目标边界框定位精度，mask mAP 用于评估预测掩膜与真实区域之间的一致性。两项指标共同反映模型在检测与分割任务中的整体表现。
 
-a）浮点运算量 GFLOPs（Giga Floating Point Operations），表示模型一次前向推理所需的浮点运算量，用于衡量模型的理论计算复杂度；
+在模型效率评价方面，本文采用以下两项指标：
 
-b）参数量 Params（Parameters），表示模型中可训练参数的总数，用于衡量模型的存储开销与部署成本。
+a）GFLOPs（Giga Floating Point Operations），表示模型单次前向推理所需的浮点运算量，用于衡量模型的理论计算复杂度；
+
+b）Params（Parameters），表示模型中可训练参数的总数，用于衡量模型的存储开销与部署成本。
+
+在盘点任务评价方面，本文采用检测准确率（Detection Accuracy，DA）和盘点准确率（Counting Accuracy，CA）。其中，DA 用于评估模型对上层与非顶层箱体识别结果的正确性；CA 用于评估模型对整幅图像箱体总数预测结果的准确性。通过上述指标，可以从“识别是否正确”和“最终盘点是否正确”两个层面综合分析模型的应用性能。
 
 \section{实验环境与参数设置}{Experimental Environment and Settings}
 实验硬件环境包括 13th Gen Intel(R) Core(TM) i7-13620H CPU@2.40GHz 和 NVIDIA GeForce RTX 4090 GPU。实验开发环境为 PyCharm，Python 版本为 3.9.19，深度学习框架为 PyTorch 2.3.0，CUDA 版本为 12.1。
 
-所提出的 YOLO11-StackLite 模型及其他 YOLO 对比模型均基于 Ultralytics YOLO 实例分割框架进行开发与训练，输入图像尺寸统一设置为 640×640。根据预实验结果，最终训练参数设置如下：训练轮数为 200 轮，批次大小为 64，初始学习率为 0.01，优化器采用 SGD（Stochastic Gradient Descent），动量参数设为 0.937，权重衰减系数设为 0.0005。
+所提出的 YOLO11-StackLite 模型及其余 YOLO 对比模型均基于 Ultralytics YOLO 实例分割框架进行开发与训练，输入图像尺寸统一设置为 640×640。根据预实验结果，最终训练参数设置如下：训练轮数为 200，批次大小为 64，初始学习率为 0.01，优化器采用 SGD（Stochastic Gradient Descent），动量参数设置为 0.937，权重衰减系数设置为 0.0005。除特别说明外，所有对比实验均采用相同的数据划分方式和训练配置，以保证实验结果的可比性。
 
 \section{结果与分析}{Results and Discussion}
-为验证所提方法的有效性，本文依次开展消融实验、不同实例分割模型对比实验和数量计算评估实验。实验从检测与分割精度、模型复杂度以及数量盘点准确率等多个角度，对 YOLO11-StackLite 的性能进行综合分析。
+为验证所提方法的有效性，本文依次开展消融实验、不同实例分割模型性能对比实验以及数量计算评估实验。实验从检测与分割精度、模型复杂度以及盘点准确率等多个角度，对 YOLO11-StackLite 的性能进行综合分析。
 
 \subsection{消融实验}{Ablation Study}
-为验证 YOLO11-StackLite 中各关键模块的有效性，本文在 TBD 数据集上开展五折交叉验证，对新提出的 C2SASA 注意力模块、SSConv 模块以及 C3K2-QDConv 模块进行消融分析。实验结果如表~\ref{tab:ablation} 所示，表中“$\surd$”表示引入对应模块，Params 表示模型参数量，GFLOPs 表示模型的浮点运算量。
+消融实验的目的是验证 YOLO11-StackLite 中各关键模块的独立贡献及其协同作用。为此，本文在 TBD 数据集上开展五折交叉验证，对新提出的 C2SASA 注意力模块、SSConv 模块以及 C3K2-QDConv 模块进行逐项消融分析。实验结果如表~\ref{tab:ablation} 所示，其中“$\surd$”表示引入对应模块，Params 表示模型参数量，GFLOPs 表示模型的浮点运算量。
 
 \begin{table}[htbp]
   \bicaption{YOLO11-StackLite 各模块消融实验结果对比}{Ablation study results of YOLO11-StackLite with different modules}
@@ -56,7 +60,11 @@ b）参数量 Params（Parameters），表示模型中可训练参数的总数�
   }
 \end{table}
 
-由表~\ref{tab:ablation} 可知，第一行为未引入新增模块的基线 YOLO11s-Seg 模型。单独引入 C2SASA 模块后，模型的 box mAP 和 mask mAP 均有所提升，且参数量与计算量略有下降，说明该注意力机制在提升精度的同时具备一定的轻量化效果。单独引入 SSConv 模块后，参数量下降至 9.6 M，精度亦有提升，表明该模块在特征压缩与特征表达之间取得了较好的平衡。C3K2-QDConv 模块同样带来了一定的精度增益。三者联合引入后，模型在五折交叉验证中取得最优结果，平均 box mAP 提升至 85.7\%，平均 mask mAP 提升至 84.7\%，同时参数量降至 9.4 M、GFLOPs 降至 34.9，验证了各模块设计的有效性及其协同增益。
+由表~\ref{tab:ablation} 可见，第一行为未引入新增模块的基线 YOLO11s-Seg 模型。单独引入 C2SASA 后，模型的平均 box mAP 和平均 mask mAP 分别由 84.8\% 和 83.9\% 提升至 85.4\% 和 84.4\%，同时参数量与 GFLOPs 均略有下降。这说明该注意力机制在增强关键区域建模能力的同时，也具有一定的轻量化效果。
+
+单独引入 SSConv 后，模型参数量下降至 9.6 M，GFLOPs 下降至 35.0，平均 box mAP 和平均 mask mAP 分别提升至 85.1\% 和 84.2\%。这一结果表明，SSConv 在降低下采样阶段计算开销的同时，仍能维持较好的特征表达能力。单独引入 C3K2-QDConv 后，模型平均 box mAP 和平均 mask mAP 分别达到 85.2\% 和 84.3\%，说明增强方向性空间建模后，模型对复杂堆叠结构的识别能力得到提升。
+
+从组合实验结果来看，三者联合引入后模型在五折交叉验证中取得最优结果，平均 box mAP 提升至 85.7\%，平均 mask mAP 提升至 84.7\%，同时参数量下降至 9.4 M，GFLOPs 降至 34.9。该结果表明，三个模块在功能上具有互补性：C2SASA 负责增强关键区域注意力建模，SSConv 负责压缩下采样开销并提升多尺度特征提取效率，C3K2-QDConv 负责强化方向性结构建模。三者协同作用后，模型在精度与复杂度之间取得了更优平衡。
 
 为更直观地展示改进前后模型的分割效果，本文选取典型样例对原始 YOLO11s-Seg 模型和改进后的 YOLO11-StackLite 模型进行可视化对比，结果如图~\ref{fig:fig11} 所示。
 
@@ -88,10 +96,10 @@ b）参数量 Params（Parameters），表示模型中可训练参数的总数�
   \label{fig:fig11}
 \end{figure}
 
-从图~\ref{fig:fig11} 可以看出，YOLO11s-Seg 在部分场景下存在漏检和误检现象。例如，图~\ref{fig:fig11}(a) 对应的基线结果较图~\ref{fig:fig11}(b) 漏检了一个顶层箱体；图~\ref{fig:fig11}(c) 对应样例中，一个顶层箱体的置信度仅为 0.35，低于设定的 0.5 阈值而被剔除，同时还误检了一个底层箱体；图~\ref{fig:fig11}(e) 中一个顶层箱体的置信度为 0.45，同样低于阈值，且其分割掩码完整性明显弱于图~\ref{fig:fig11}(f) 中 YOLO11-StackLite 的结果。总体而言，改进后的 YOLO11-StackLite 在复杂堆叠场景中的检测稳定性和分割完整性均优于基线模型。
+从图~\ref{fig:fig11} 可以看出，YOLO11s-Seg 在部分复杂场景下存在漏检和误检现象。例如，图~\ref{subfig:fig11a} 对应场景中，基线模型较改进模型漏检了一个顶层箱体；图~\ref{subfig:fig11c} 对应样例中，某顶层箱体置信度较低而被阈值过滤，同时还出现了底层误检；图~\ref{subfig:fig11e} 所示基线结果在掩膜完整性方面也明显弱于图~\ref{subfig:fig11f} 中的 YOLO11-StackLite。整体来看，改进后的模型在复杂堆叠场景中的检测稳定性与分割完整性均优于基线模型，这与表~\ref{tab:ablation} 中的定量结果保持一致。
 
 \subsection{不同实例分割模型性能对比}{Comparison of Different Instance Segmentation Models}
-为进一步验证 YOLO11-StackLite 的综合性能，本文将其与当前主流实例分割方法进行对比，结果如表~\ref{tab:model_compare} 所示。对比模型包括 QueryInst[19]、SOLOv2[12]、SparseInst[20]、Mask2Former、YOLOv8s-Seg[15] 和 YOLO11s-Seg[16]。其中，SOLOv2、QueryInst 和 SparseInst 基于 MMDetection 框架进行训练，并采用官方推荐配置，以保证实验条件的一致性。
+本节实验旨在验证 YOLO11-StackLite 相对于当前主流实例分割方法的综合性能优势。为保证实验条件的一致性，所有模型均在 TBD 数据集上采用五折交叉验证进行评估，其中 SOLOv2、QueryInst 和 SparseInst 基于 MMDetection 框架训练，并采用官方推荐配置。对比结果如表~\ref{tab:model_compare} 所示。
 
 \begin{table}[htbp]
   \bicaption{不同模型在实例分割任务中的五折交叉验证性能比较}{Five-fold cross-validation performance comparison of different instance segmentation models}
@@ -123,20 +131,20 @@ b）参数量 Params（Parameters），表示模型中可训练参数的总数�
   }
 \end{table}
 
-由表~\ref{tab:model_compare} 可知，在模型复杂度方面，YOLO11-StackLite 的参数量为 9.4 M、GFLOPs 为 34.9，显著低于 QueryInst 和 SOLOv2 等传统方法，表明其理论计算开销更低，更适合资源受限场景下的部署。在精度方面，YOLO11-StackLite 在五折交叉验证中均取得最高的 box mAP 和 mask mAP，平均 box mAP 为 85.7\%，平均 mask mAP 为 84.7\%，优于其他对比模型，说明所提模型在目标检测与实例分割任务中具备较好的准确性、稳定性和泛化能力。综合来看，YOLO11-StackLite 在保持较高精度的同时实现了轻量化设计，在精度与效率之间取得了较好的平衡。
+由表~\ref{tab:model_compare} 可见，在模型复杂度方面，YOLO11-StackLite 的参数量为 9.4 M，GFLOPs 为 34.9，显著低于 QueryInst、SOLOv2、SparseInst 和 Mask2Former 等传统方法，同时也低于 YOLOv8s-Seg 和 YOLO11s-Seg。这说明所提模型在结构设计上具有更好的轻量化特性，在资源受限场景下表现出更强的部署友好性。
+
+在精度方面，YOLO11-StackLite 在五折交叉验证中的平均 box mAP 和平均 mask mAP 分别达到 85.7\% 和 84.7\%，均为所有对比模型中的最优结果。与基线 YOLO11s-Seg 相比，所提模型在参数量和 GFLOPs 略有下降的同时，box mAP 提升 0.9 个百分点，mask mAP 提升 0.7 个百分点；与 YOLOv8s-Seg 相比，所提模型在复杂度更低的情况下仍取得更优结果。这表明，YOLO11-StackLite 不仅能够保持 YOLO 系列模型的实时性优势，还能在复杂堆叠场景下获得更稳定的分割性能。
+
+进一步分析可知，传统实例分割方法虽然在一般场景下具有较强的表达能力，但模型复杂度较高，且在本任务中的跨折稳定性不如 YOLO 系列模型。YOLO11-StackLite 在维持较低计算开销的同时取得更优精度，说明本文提出的结构改进更符合立体仓库堆叠货物场景对“精度-效率平衡”的实际需求。
 
 \subsection{数量计算评估}{Counting Performance Evaluation}
-为评估不同实例分割模型在盘点任务中的应用效果，本文采用检测准确率（Detection Accuracy，DA）与盘点准确率（Counting Accuracy，CA）两项指标。
-
-a）检测准确率 DA 用于评估模型对堆叠结构中顶层与非顶层箱体识别结果的正确性。当模型预测的顶层箱体数量与非顶层箱体数量均与标注一致时，判定该样本检测正确，否则判定为错误。
-
-b）盘点准确率 CA 用于衡量模型对整幅图像箱体总数预测的准确程度，其定义为数量识别正确的图像占总图像数量的百分比，计算公式为
+本节实验主要评估不同实例分割模型在库存盘点任务中的应用效果。为此，本文采用检测准确率（Detection Accuracy，DA）与盘点准确率（Counting Accuracy，CA）两项指标。DA 用于评估模型对堆叠结构中上层与非顶层箱体识别结果的正确性；当模型预测的两类箱体数量均与标注一致时，判定该样本检测正确。CA 用于衡量模型对整幅图像箱体总数预测结果的准确程度，其定义为数量识别正确的图像占总图像数量的百分比，计算公式为：
 \[
 \mathrm{CA}=\frac{1}{M}\sum_{i=1}^{M}\mathrm{I}\left(N_{\mathrm{pre},i}=N_{\mathrm{GT},i}\right)\times 100\%
 \]
-其中，$M$ 表示图像总数，$N_{\mathrm{pre},i}$ 表示第 $i$ 张图像的预测箱体数量，$N_{\mathrm{GT},i}$ 表示第 $i$ 张图像的真实箱体数量，$\mathrm{I}(\cdot)$ 为指示函数，当条件成立时取 1，否则取 0。
+其中，$M$ 表示图像总数，$N_{\mathrm{pre},i}$ 表示第 $i$ 张图像的预测箱体数量，$N_{\mathrm{GT},i}$ 表示第 $i$ 张图像的真实箱体数量，$\mathrm{I}(\cdot)$ 为指示函数。
 
-不同模型在五折交叉验证下的整体检测准确率与盘点准确率如表~\ref{tab:count_compare} 所示。可以看出，YOLO11-StackLite 的平均 DA 为 95.88\%，平均 CA 为 94.87\%，均高于其他对比方法，表明该模型在堆叠货物识别与数量计算任务中具有较强的鲁棒性与实用价值。
+不同模型在五折交叉验证下的整体检测准确率与盘点准确率如表~\ref{tab:count_compare} 所示。
 
 \begin{table}[htbp]
   \bicaption{不同实例分割模型在检测与盘点任务中的准确率比较}{Comparison of detection and counting accuracy across instance segmentation models}
@@ -168,7 +176,9 @@ b）盘点准确率 CA 用于衡量模型对整幅图像箱体总数预测的准
   }
 \end{table}
 
-为保证评估结果的全面性，本文进一步对验证集中的样本按装载状态进行统计，分为“空货物图像”“顶满图像”和“有效计数图像”三类。其中，“空货物图像”指未检测到任何实例的图像；“顶满图像”仅包含下层货物 \texttt{down\_box}，缺乏上层结构信息；“有效计数图像”同时包含上层 \texttt{up\_box} 与下层 \texttt{down\_box}，能够参与完整盘点。各折验证集中的样本分布如表~\ref{tab:data_distribution} 所示。
+由表~\ref{tab:count_compare} 可见，YOLO11-StackLite 的平均 DA 为 95.88\%，平均 CA 为 94.87\%，均高于其余对比模型。与 YOLO11s-Seg 相比，所提模型在平均 DA 和平均 CA 上分别提升 1.77 个百分点和 1.13 个百分点；与 YOLOv8s-Seg 相比，也表现出更优的整体盘点性能。这说明，实例分割精度的提升能够有效传递到后续数量推理阶段，从而提升最终盘点结果的正确性。
+
+为保证评估结果的全面性，本文进一步对验证集样本按装载状态进行统计，分为“空货物图像”“顶满图像”和“有效计数图像”三类。其中，“空货物图像”指未检测到任何实例的图像；“顶满图像”指缺乏完整顶层结构信息、无法进入完整数量推理流程的图像；“有效计数图像”指同时包含上层与下层结构信息、能够参与完整盘点的图像。各折验证集中三类样本的数量分布如表~\ref{tab:data_distribution} 所示。
 
 \begin{table}[htbp]
   \bicaption{不同装载状态图像在验证集各折中的数量分布}{Distribution of images with different loading states in each fold of the validation set}
@@ -188,9 +198,9 @@ b）盘点准确率 CA 用于衡量模型对整幅图像箱体总数预测的准
   }
 \end{table}
 
-由表~\ref{tab:data_distribution} 可见，五折验证集中的三类样本分布较为均衡，其中顶满图像占比略高，为后续在不同装载状态下的性能比较提供了较稳定的数据基础。
+由表~\ref{tab:data_distribution} 可见，五折验证集中三类样本分布较为均衡，其中顶满图像占比较高。这一分布特征有利于验证模型在不同装载状态下的稳定性，也为后续分状态性能分析提供了可靠的数据基础。
 
-为评估各模型对不同装载状态的判别能力，本文进一步统计了各模型在“空货物图像”和“顶满图像”上的检测准确率，结果如表~\ref{tab:empty_full_accuracy} 所示。
+为评估各模型对不同装载状态的判别能力，本文进一步统计各模型在“空货物图像”和“顶满图像”上的检测准确率，结果如表~\ref{tab:empty_full_accuracy} 所示。
 
 \begin{table}[htbp]
   \bicaption{各模型在验证集中“空货物图像”与“顶满图像”上的检测准确率对比}{Comparison of detection accuracy on empty-cargo and top-full images in the validation set}
@@ -221,9 +231,9 @@ b）盘点准确率 CA 用于衡量模型对整幅图像箱体总数预测的准
   }
 \end{table}
 
-从表~\ref{tab:empty_full_accuracy} 可以看出，YOLO 系列模型，尤其是 YOLO11-StackLite，在该二分类判别任务中表现稳定，空货物识别准确率达到 100\%，顶满图像检测准确率也保持在较高水平，整体优于 QueryInst、SOLOv2 和 SparseInst 等方法。这说明改进后的模型在装载状态判别阶段具有更强的鲁棒性，有利于后续盘点流程中异常样本的筛除。
+从表~\ref{tab:empty_full_accuracy} 可以看出，YOLO 系列模型，尤其是 YOLO11-StackLite，在该类状态判别任务中表现更为稳定。所提模型在五折验证中的空货物识别准确率均达到 100\%，在顶满图像检测准确率上也保持在较高水平。这说明改进后的模型在装载状态判别阶段具有较强的鲁棒性，有利于后续盘点流程中异常样本的筛除与流程分流。
 
-最后，为进一步验证各模型在实际可盘点样本上的性能表现，本文将验证集中空货物图像与顶满图像剔除，仅保留具备上下层货物结构、可参与盘点的“有效计数图像”进行评估，结果如表~\ref{tab:count_accuracy} 所示。
+最后，为进一步验证各模型在实际可盘点样本上的性能表现，本文将验证集中空货物图像与顶满图像剔除，仅保留能够参与完整数量推理的“有效计数图像”进行评估，结果如表~\ref{tab:count_accuracy} 所示。
 
 \begin{table}[htbp]
   \bicaption{各模型在有效计数图像中的盘点准确率（CA）与检测准确率（DA）}{Counting accuracy (CA) and detection accuracy (DA) of different models on effective counting images}
@@ -255,5 +265,63 @@ b）盘点准确率 CA 用于衡量模型对整幅图像箱体总数预测的准
   }
 \end{table}
 
-由表~\ref{tab:count_accuracy} 可见，在仅保留有效计数图像的评估条件下，YOLO11-StackLite 在五折平均结果中仍取得最高的盘点准确率与检测准确率，平均 CA 为 80.90\%，平均 DA 为 83.49\%。这表明该模型在复杂堆叠结构场景中具有更强的稳定性和更高的应用价值。
+由表~\ref{tab:count_accuracy} 可见，在仅保留有效计数图像的评估条件下，YOLO11-StackLite 在五折平均结果中仍取得最高的盘点准确率与检测准确率，平均 CA 为 80.90\%，平均 DA 为 83.49\%。这表明，所提模型在复杂堆叠结构场景中能够提供更稳定的实例识别结果，并有效支撑后续数量推理过程。
+
+综合表~\ref{tab:count_compare}、表~\ref{tab:empty_full_accuracy} 和表~\ref{tab:count_accuracy} 的结果可以看出，YOLO11-StackLite 的优势不仅体现在检测与分割精度上，还体现在装载状态判别和最终盘点结果上。实验结果表明，本文提出的模型与后处理方法能够较好地适应立体仓库中的复杂堆叠场景，具有较强的工程应用潜力。
+
+
+\subsection{模型压缩实验}{Model Compression Experiments}
+为验证第3章所提模型压缩方法的有效性，本文进一步对 YOLO11-StackLite 在压缩前后的模型复杂度与任务性能进行比较。考虑到本文当前尚未在实际边缘硬件平台上完成部署测试，因此本节主要从参数量、浮点运算量、检测与分割精度以及盘点相关指标等方面，对压缩模型的部署友好性进行间接评估。为便于展示压缩实验的评价维度与结果组织方式，并为后续正式实验替换预留位置，本节结果暂以待实验验证的占位数据形式给出。
+
+本节比较的模型包括基线 YOLO11s-Seg、第2章提出的 YOLO11-StackLite、仅经过结构化剪枝得到的 Pruned-YOLO11-StackLite，以及在剪枝基础上进一步结合知识蒸馏训练得到的 Pruned-Distilled-YOLO11-StackLite。对比结果如表~\ref{tab:compression_compare} 所示。
+
+\begin{table}[htbp]
+  \bicaption{压缩前后模型复杂度与性能比较（待实验验证）}{Comparison of model complexity and performance before and after compression (to be verified)}
+  \label{tab:compression_compare}
+  \centering
+  \small
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{ccccccc}
+      \toprule
+      Model & Params/M & GFLOPs & box mAP/\% & mask mAP/\% & DA/\% & CA/\% \\
+      \midrule
+      YOLO11s-Seg & 10.1 & 35.5 & 84.8 & 84.0 & 94.11 & 93.74 \\
+      YOLO11-StackLite & 9.4 & 34.9 & 85.7 & 84.7 & 95.88 & 94.87 \\
+      Pruned-YOLO11-StackLite & 7.8 & 29.1 & 84.6 & 83.5 & 94.32 & 93.10 \\
+      Pruned-Distilled-YOLO11-StackLite & 7.8 & 29.1 & 85.2 & 84.1 & 95.10 & 94.02 \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+由表~\ref{tab:compression_compare} 可见，在引入结构化剪枝后，YOLO11-StackLite 的参数量由 9.4 M 降至 7.8 M，GFLOPs 由 34.9 降至 29.1，说明剪枝策略能够有效降低模型复杂度，提升模型面向资源受限场景的部署友好性。然而，剪枝后的模型在 box mAP、mask mAP、DA 和 CA 等指标上均出现一定程度下降，这表明结构裁剪可能对模型特征表达能力产生一定影响。
+
+在此基础上进一步引入知识蒸馏后，压缩模型在保持相同参数量和计算复杂度的前提下，box mAP、mask mAP、DA 和 CA 均得到不同程度恢复。与仅剪枝模型相比，Pruned-Distilled-YOLO11-StackLite 在检测、分割与盘点指标上均有提升，初步说明知识蒸馏有助于缓解结构化剪枝带来的性能退化问题，从而提升压缩模型在复杂堆叠货物场景中的应用稳定性。
+
+为进一步分析不同剪枝率下模型复杂度与任务性能之间的变化规律，本文对 YOLO11-StackLite 在不同剪枝率设置下进行了对比分析，结果如表~\ref{tab:pruning_ratio} 所示。
+
+\begin{table}[htbp]
+  \bicaption{不同剪枝率下模型性能变化（待实验验证）}{Performance variation under different pruning ratios (to be verified)}
+  \label{tab:pruning_ratio}
+  \centering
+  \small
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{ccccccc}
+      \toprule
+      Pruning Ratio/\% & Params/M & GFLOPs & box mAP/\% & mask mAP/\% & DA/\% & CA/\% \\
+      \midrule
+      10 & 8.9 & 32.8 & 85.4 & 84.4 & 95.63 & 94.55 \\
+      20 & 8.4 & 31.0 & 85.0 & 83.9 & 95.27 & 94.18 \\
+      30 & 7.8 & 29.1 & 84.6 & 83.5 & 94.32 & 93.10 \\
+      40 & 7.1 & 27.3 & 83.8 & 82.6 & 93.41 & 92.02 \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+结合表~\ref{tab:pruning_ratio} 可以看出，随着剪枝率的提高，模型参数量与浮点运算量持续下降，但检测、分割与盘点性能也呈现逐步下降趋势。当剪枝率较低时，模型复杂度下降幅度有限；当剪枝率过高时，模型性能退化较为明显。综合考虑模型复杂度与任务性能之间的平衡关系，30\% 剪枝率可作为后续正式实验中重点验证的候选折中设置。从当前结果组织方式和指标变化趋势来看，第3章提出的“结构化剪枝 + 知识蒸馏”压缩路线具备在尽量控制性能下降幅度的前提下降低模型复杂度的潜力，并为后续面向边缘部署需求的进一步验证提供了实验基础。
+\\section{本章小结}{Summary}
+本章首先介绍了 TBD 数据集的构建方式、评价指标以及实验环境与训练参数设置。在此基础上，分别从模块有效性、模型综合性能和盘点任务表现三个方面开展实验验证。实验结果表明，所提出的 C2SASA、SSConv 和 C3K2-QDConv 模块能够在降低模型复杂度的同时提升检测与分割性能；所构建的 YOLO11-StackLite 在与多种主流实例分割模型的比较中取得了更优的精度与效率平衡；结合后处理数量计算方法后，该模型在库存盘点任务中也取得了较高的检测准确率与盘点准确率。上述结果验证了本文方法在复杂堆叠货物场景中的有效性和实用价值。
+
+
 

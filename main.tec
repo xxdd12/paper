@@ -1,7 +1,7 @@
 \contentsline {chapter}{ABSTRACT(IN CHINESE)}{I}{chapter*.3}%
 \contentsline {chapter}{ABSTRACT(IN ENGLISH)}{II}{chapter*.4}%
-\contentsline {chapter}{CONTENTS(IN CHINESE)}{III}{chapter*.5}%
-\contentsline {chapter}{CONTENTS(IN ENGLISH)}{IV}{chapter*.6}%
+\contentsline {chapter}{CONTENTS(IN CHINESE)}{IV}{chapter*.5}%
+\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VI}{chapter*.6}%
 \contentsline {chapter}{\numberline {Chapter\ 1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1} Background and significance of research }{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Analysis of the research status at home and abroad}{2}{section.1.2}%
@@ -20,16 +20,28 @@
 \contentsline {subsection}{\numberline {2.2.1}}{15}{subsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.1}}{17}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}}{18}{subsubsection.2.2.1.2}%
-\contentsline {chapter}{\numberline {Chapter\ 3}Experiments and Results}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Dataset}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Evaluation Metrics}{21}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Experimental Environment and Settings}{22}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Results and Discussion}{22}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Ablation Study}{22}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Comparison of Different Instance Segmentation Models}{24}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Counting Performance Evaluation}{25}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {Chapter\ 4}Conclusion and prospect}{28}{chapter.4}%
-\contentsline {chapter}{References}{29}{chapter*.28}%
-\contentsline {chapter}{Publication and patents during study}{40}{chapter*.29}%
-\contentsline {chapter}{Acknowledgements}{41}{chapter*.32}%
-\contentsline {chapter}{\numberline {Appendix\ A}The appendix title}{42}{appendix.A}%
+\contentsline {chapter}{\numberline {Chapter\ 3}Model Compression Method of YOLO11-StackLite for Edge Deployment}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Analysis of Model Compression Requirements}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Lightweight Method Based on Structured Pruning}{22}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Principle of Structured Pruning}{22}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Selection of Pruning Targets in YOLO11-StackLite}{22}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Pruning Process Design}{22}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Accuracy Recovery Method Based on Knowledge Distillation}{23}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Principle of Knowledge Distillation}{23}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Construction of Teacher and Student Models}{23}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Design of Distillation Loss}{23}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Construction and Training Process of the Compressed Model}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Summary}{24}{section.3.5}%
+\contentsline {chapter}{\numberline {Chapter\ 4}Experiments and Results}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluation Metrics}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Environment and Settings}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Results and Discussion}{27}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Ablation Study}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Comparison of Different Instance Segmentation Models}{28}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Counting Performance Evaluation}{30}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Model Compression Experiments}{33}{subsection.4.4.4}%
+\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{36}{chapter.5}%
+\contentsline {chapter}{References}{38}{chapter*.30}%
+\contentsline {chapter}{Publication and patents during study}{49}{chapter*.31}%
+\contentsline {chapter}{Acknowledgements}{50}{chapter*.34}%

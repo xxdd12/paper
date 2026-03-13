@@ -1,14 +1,14 @@
-%*********************************************************************
-% gdutthesis: 广东工业大学论文模板
+﻿%*********************************************************************
+% gdutthesis: 骞夸笢宸ヤ笟澶у璁烘枃妯℃澘
 % 2024/01/19 v0.1f
 %
-% 重要提示：
-%   1. 请确保使用 UTF-8 编码保存
-%   2. 请使用 XeLaTeX 或 LuaLaTeX 编译
-%   3. 请仔细阅读用户文档和 Wiki
-%   4. 修改、使用、发布本文档请务必遵循 LaTeX Project Public License
-%   5. 不需要的注释可以尽情删除
-%   6. 请使用最新版本的模板并在打印前检查输入信息与学校要求是否一致
+% 閲嶈鎻愮ず锛?
+%   1. 璇风‘淇濅娇鐢?UTF-8 缂栫爜淇濆瓨
+%   2. 璇蜂娇鐢?XeLaTeX 鎴?LuaLaTeX 缂栬瘧
+%   3. 璇蜂粩缁嗛槄璇荤敤鎴锋枃妗ｅ拰 Wiki
+%   4. 淇敼銆佷娇鐢ㄣ€佸彂甯冩湰鏂囨。璇峰姟蹇呴伒寰?LaTeX Project Public License
+%   5. 涓嶉渶瑕佺殑娉ㄩ噴鍙互灏芥儏鍒犻櫎
+%   6. 璇蜂娇鐢ㄦ渶鏂扮増鏈殑妯℃澘骞跺湪鎵撳嵃鍓嶆鏌ヨ緭鍏ヤ俊鎭笌瀛︽牎瑕佹眰鏄惁涓€鑷?
 %*********************************************************************
 \documentclass[
   % type=doctor
@@ -16,7 +16,7 @@
   % type=promaster
 ]{gdutthesis}
 
-% 宏包在这里加载
+% 瀹忓寘鍦ㄨ繖閲屽姞杞?
 \usepackage{siunitx}[=v2]
 \usepackage{zhlipsum,lipsum}
 \usepackage{float}
@@ -48,8 +48,8 @@
     % cjk-font        = {noto},
     % cjk-font        = {windows},
     % cjk-font        = {none},
-    bib-backend     = {bibtex},
-    % bib-backend     = {biblatex},
+    % bib-backend     = {bibtex},
+    bib-backend     = {biblatex},
     bib-resource    = {ref/gdutthesis-template.bib, ref/reference.bib},
     bib-style       = {numerical},
     % bib-style       = {author-year},
@@ -88,26 +88,26 @@
     % qed         = \QED,
   },
   info = {
-    title             = {标题},
-    title*            = {Title},
-    date              = {2020/5/25},
-    author            = {张三},
-    author*           = {ZHANG San},
-    supervisor        = {胡晓敏, 教授},
-    supervisor*       = {HU XIAOMIN},
+    title             = {面向立体仓库堆叠货物盘点的改进实例分割与模型压缩方法研究},
+    title*            = {Research on Improved Instance Segmentation and Model Compression for Inventory Counting of Stacked Goods in Automated Warehouses},
+    date              = {2026/5/25},
+    author            = {胡文轩},
+    author*           = {HU WenXuan},
+    supervisor        = {胡晓敏 教授},
+    supervisor*       = {HU XiaoMin},
     supervisor-two    = {none},
     supervisor-two*   = {none},
     supervisor-three  = {none},
     supervisor-three* = {none},
-    department        = {计算机学院},
+    department        = {自动化学院},
     department*       = {Automation},
-    major             = {计算机技术},
+    major             = {控制科学与工程},
     student-id        = {2112305180},
-    chairman          = {赵六\quad 教授},
-    degree            = {工学硕士},
+    chairman          = {胡晓敏 教授},
+    degree            = {工程硕士},
     degree*           = {Master of Engineering Science},
-    keywords          = {关键词1, 关键词2, 关键词3, 关键词4},
-    keywords*         = {keywords 1, keywords 2, keywords 3, keywords 4},
+    keywords          = {立体仓库, 堆叠货物盘点, 实例分割, 模型压缩},
+    keywords*         = {automated warehouse, stacked goods inventory counting, instance segmentation, model compression},
     secret-level      = {none},
     delay-time        = {none},
   }
@@ -120,9 +120,9 @@
 
 \begin{document}
 
-\gdutstatement% 空白声明页
-% \gdutstatement[日期][作者签名][导师签名]% 签名为图片
-% \gdutstatement*[扫描件]% 扫描件为 A4 大小的 pdf 文件
+\gdutstatement% 绌虹櫧澹版槑椤?
+% \gdutstatement[鏃ユ湡][浣滆€呯鍚峕[瀵煎笀绛惧悕]% 绛惧悕涓哄浘鐗?
+% \gdutstatement*[鎵弿浠禲% 鎵弿浠朵负 A4 澶у皬鐨?pdf 鏂囦欢
 
 \input{data/abstract}
 
@@ -136,13 +136,14 @@
 
 \input{data/chap01.tex}
 \input{data/chap02.tex}
+\input{data/chap03.tex}
 \input{data/chap04.tex}
 
 \input{data/conclusion.tex}
 
 \gdutbackmatter
 
-\nocite{*}% 列出 bib 文件中的全部参考文献
+\nocite{*}% 鍒楀嚭 bib 鏂囦欢涓殑鍏ㄩ儴鍙傝€冩枃鐚?
 \printbibliography
 
 \input{data/result.tex}
@@ -154,3 +155,8 @@
 \input{data/appendix.tex}
 
 \end{document}
+
+
+
+
+
