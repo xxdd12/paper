@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  13 MAR 2026 16:17
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  17 MAR 2026 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2552,10 +2552,6 @@ Package hyperref Info: Link coloring ON on input line 121.
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
 (Font)              scaled to size 12.04628pt on input line 121.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
@@ -2608,7 +2604,7 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 10.53824pt on input line 121.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 7.52731pt on input line 121.
-[1
+ [1
 
 
 ] [2] [3] [4
@@ -2649,8 +2645,8 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 
 ] [2
 
-]) (./data/notation.tex) [3]
-(./main.toc [4
+])
+(./data/notation.tex) [3] (./main.toc [4
 
 ])
 \tf@toc=\write6
@@ -2662,68 +2658,41 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 \tf@tec=\write7
 \openout7 = `main.tec'.
 
- [7] (./data/chap01.tex
+ [7]
+(./data/chap01.tex
 第一章
 [1
 
 
 ] [2] [3] [4]
-
-LaTeX Warning: Reference `fig:fig1' on page 5 undefined on input line 63.
-
 File: figure/fig1.pdf Graphic file (type pdf)
 <use figure/fig1.pdf>
 ) (./data/chap02.tex [5] [6]
 第二章
-
-LaTeX Warning: Reference `fig:fig2' on page 7 undefined on input line 12.
-
 File: figure/fig2.png Graphic file (type bmp)
 <figure/fig2.png>
 [7
 
 ]
-
-LaTeX Warning: Reference `fig:fig3' on page 8 undefined on input line 32.
-
 File: figure/fig3.png Graphic file (type bmp)
 <figure/fig3.png>
-[8] [9]
-
-LaTeX Warning: Reference `fig:fig4' on page 10 undefined on input line 52.
-
+ [8] [9]
 File: figure/fig4.pdf Graphic file (type pdf)
 <use figure/fig4.pdf>
-[10]
-
-LaTeX Warning: Reference `fig:fig5' on page 11 undefined on input line 91.
-
+ [10] [11]
 File: figure/fig5.pdf Graphic file (type pdf)
 <use figure/fig5.pdf>
-[11] [12]
-
-LaTeX Warning: Reference `fig:fig6' on page 13 undefined on input line 121.
-
+ [12]
 File: figure/fig6.pdf Graphic file (type pdf)
 <use figure/fig6.pdf>
-[13] [14]
-
-LaTeX Warning: Reference `fig:fig7' on page 15 undefined on input line 151.
-
+ [13] [14]
 File: figure/fig7-1.png Graphic file (type bmp)
 <figure/fig7-1.png>
 File: figure/fig7-2.png Graphic file (type bmp)
 <figure/fig7-2.png>
-
-LaTeX Warning: Reference `fig:fig8' on page 15 undefined on input line 165.
-
 File: figure/fig8.pdf Graphic file (type pdf)
 <use figure/fig8.pdf>
-[15]
-
-LaTeX Warning: Reference `subfig:fig9a' on page 16 undefined on input line 177.
-
-
+ [15]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2754,18 +2723,13 @@ t;"
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
 t;"
 
-[16]
+ [16]
 File: figure/9-1.png Graphic file (type bmp)
 <figure/9-1.png>
 File: figure/9-2.png Graphic file (type bmp)
 <figure/9-2.png>
 File: figure/9-3.png Graphic file (type bmp)
 <figure/9-3.png>
-
-
-LaTeX Warning: Reference `tab:alg_full_load' on page 17 undefined on input line
- 207.
-
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
 (Font)              scaled to size 7.00075pt on input line 215.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
@@ -2774,30 +2738,17 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 215.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 215.
-
-LaTeX Warning: Reference `tab:alg_area_ratio' on page 17 undefined on input lin
-e 234.
-
-
-LaTeX Warning: Reference `fig:fig10' on page 17 undefined on input line 234.
-
-[17]
-
-LaTeX Warning: Reference `eq:line-k' on page 18 undefined on input line 254.
-
-
-LaTeX Warning: Reference `eq:line-intersection' on page 18 undefined on input l
-ine 254.
-
+ [17]
 File: figure/fig10.png Graphic file (type bmp)
 <figure/fig10.png>
-) (./data/chap03.tex [18] [19] [20]
+ [18]) (./data/chap03.tex
+[19] [20]
 第三章
 [21
 
-] [22] [23] [24]) (./data/chap04.tex [25]
+] [22] [23] [24] [25] [26] [27]) (./data/chap04.tex [28]
 第四章
-[26
+[29
 
 ]
 Underfull \hbox (badness 1838) in paragraph at lines 24--25
@@ -2805,16 +2756,7 @@ Underfull \hbox (badness 1838) in paragraph at lines 24--25
 Intel(R) Core(TM) i7-13620H CPU@2.40GHz \TU/FandolSong(0)/m/n/12.045 和
  []
 
-
-LaTeX Warning: Reference `tab:ablation' on page 27 undefined on input line 32.
-
-
-LaTeX Warning: Reference `tab:ablation' on page 27 undefined on input line 63.
-
-[27]
-
-LaTeX Warning: Reference `fig:fig11' on page 28 undefined on input line 69.
-
+[30]
 File: figure/fig11-1.png Graphic file (type bmp)
 <figure/fig11-1.png>
 File: figure/fig11-2.png Graphic file (type bmp)
@@ -2827,111 +2769,16 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
-
-LaTeX Warning: Reference `fig:fig11' on page 28 undefined on input line 99.
-
-
-LaTeX Warning: Reference `subfig:fig11a' on page 28 undefined on input line 99.
-
-
-
-LaTeX Warning: Reference `subfig:fig11c' on page 28 undefined on input line 99.
-
-
-
-LaTeX Warning: Reference `subfig:fig11e' on page 28 undefined on input line 99.
-
-
-
-LaTeX Warning: Reference `subfig:fig11f' on page 28 undefined on input line 99.
-
-
-
-LaTeX Warning: Reference `tab:ablation' on page 28 undefined on input line 99.
-
-
-LaTeX Warning: Reference `tab:model_compare' on page 28 undefined on input line
- 102.
-
-[28] [29]
-
-LaTeX Warning: Reference `tab:model_compare' on page 30 undefined on input line
- 134.
-
-[30]
-
-LaTeX Warning: Reference `tab:count_compare' on page 31 undefined on input line
- 147.
-
-
-LaTeX Warning: Reference `tab:count_compare' on page 31 undefined on input line
- 179.
-
-
-LaTeX Warning: Reference `tab:data_distribution' on page 31 undefined on input 
-line 181.
-
-
-LaTeX Warning: Reference `tab:data_distribution' on page 31 undefined on input 
-line 201.
-
-[31]
-
-LaTeX Warning: Reference `tab:empty_full_accuracy' on page 32 undefined on inpu
-t line 203.
-
-
-LaTeX Warning: Reference `tab:empty_full_accuracy' on page 32 undefined on inpu
-t line 234.
-
-
-LaTeX Warning: Reference `tab:count_accuracy' on page 32 undefined on input lin
-e 236.
-
-
-LaTeX Warning: Reference `tab:count_accuracy' on page 32 undefined on input lin
-e 268.
-
-[32]
-
-LaTeX Warning: Reference `tab:count_compare' on page 33 undefined on input line
- 270.
-
-
-LaTeX Warning: Reference `tab:empty_full_accuracy' on page 33 undefined on inpu
-t line 270.
-
-
-LaTeX Warning: Reference `tab:count_accuracy' on page 33 undefined on input lin
-e 270.
-
-
-LaTeX Warning: Reference `tab:compression_compare' on page 33 undefined on inpu
-t line 276.
-
-
-LaTeX Warning: Reference `tab:compression_compare' on page 33 undefined on inpu
-t line 297.
-
-[33]
-
-LaTeX Warning: Reference `tab:pruning_ratio' on page 34 undefined on input line
- 301.
-
-
-LaTeX Warning: Reference `tab:pruning_ratio' on page 34 undefined on input line
- 322.
-
-[34]) (./data/conclusion.tex [35]
+ [31] [32] [33] [34] [35] [36] [37]) (./data/conclusion.tex [38]
 第五章
-[36
+[39
 
-]) [37] [38
+]) [40] [41
 
-] [39] [40] [41] [42] [43] [44] [45] [46] [47] (./data/result.tex [48]) (./data
-/acknowledgement.tex [49
+] [42] [43] [44] [45] [46] [47] [48] [49] [50] (./data/result.tex [51]) (./data
+/acknowledgement.tex [52
 
-]) (./data/appendix.tex) [50
+]) (./data/appendix.tex) [53
 
 ]
 
@@ -2944,37 +2791,19 @@ This document will not have a glossary.
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/04/10>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  73DBB9D37621A84FA44233C969985A92;6142.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F004F84B406FD4ACCB61EDE18FCFA3DA;6634.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62403 strings out of 468168
- 1336289 string characters out of 5436524
- 2605575 words of memory out of 5000000
- 90188 multiletter control sequences out of 15000+600000
+ 62411 strings out of 468168
+ 1336344 string characters out of 5436524
+ 2612620 words of memory out of 5000000
+ 90196 multiletter control sequences out of 15000+600000
  635064 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,14n,131p,2763b,7316s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (61 pages).
+Output written on main.pdf (64 pages).
