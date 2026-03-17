@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  17 MAR 2026 11:13
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  17 MAR 2026 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2669,30 +2669,31 @@ File: figure/fig1.pdf Graphic file (type pdf)
 <use figure/fig1.pdf>
  [8]) (./data/chap02.tex [9]
 第二章
-File: figure/fig2.png Graphic file (type bmp)
-<figure/fig2.png>
 [10
 
 ]
+File: figure/fig2.png Graphic file (type bmp)
+<figure/fig2.png>
+ [11]
 File: figure/fig3.png Graphic file (type bmp)
 <figure/fig3.png>
- [11] [12]
+ [12] [13]
 File: figure/fig4.pdf Graphic file (type pdf)
 <use figure/fig4.pdf>
- [13] [14]
+ [14] [15] [16]
 File: figure/fig5.pdf Graphic file (type pdf)
 <use figure/fig5.pdf>
- [15]
+ [17] [18]
 File: figure/fig6.pdf Graphic file (type pdf)
 <use figure/fig6.pdf>
- [16] [17]
+ [19] [20] [21]
 File: figure/fig7-1.png Graphic file (type bmp)
 <figure/fig7-1.png>
 File: figure/fig7-2.png Graphic file (type bmp)
 <figure/fig7-2.png>
 File: figure/fig8.pdf Graphic file (type pdf)
 <use figure/fig8.pdf>
- [18]
+ [22]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2723,31 +2724,33 @@ t;"
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
 t;"
 
- [19]
+ [23]
 File: figure/9-1.png Graphic file (type bmp)
 <figure/9-1.png>
 File: figure/9-2.png Graphic file (type bmp)
 <figure/9-2.png>
 File: figure/9-3.png Graphic file (type bmp)
 <figure/9-3.png>
+ [24]
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 215.
+(Font)              scaled to size 7.00075pt on input line 253.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 215.
+(Font)              scaled to size 5.00053pt on input line 253.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 215.
+(Font)              scaled to size 6.99925pt on input line 253.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 215.
- [20]
+(Font)              scaled to size 4.99947pt on input line 253.
+
+[25] [26]
 File: figure/fig10.png Graphic file (type bmp)
 <figure/fig10.png>
- [21]) (./data/chap03.tex [22] [23]
+) (./data/chap03.tex [27] [28]
 第三章
-[24
+[29
 
-] [25] [26] [27] [28] [29] [30]) (./data/chap04.tex [31]
+] [30] [31] [32] [33] [34] [35]) (./data/chap04.tex [36]
 第四章
-[32
+[37
 
 ]
 Underfull \hbox (badness 1838) in paragraph at lines 30--31
@@ -2755,7 +2758,7 @@ Underfull \hbox (badness 1838) in paragraph at lines 30--31
 Intel(R) Core(TM) i7-13620H CPU@2.40GHz \TU/FandolSong(0)/m/n/12.045 和
  []
 
-[33] [34] [35]
+[38] [39] [40]
 File: figure/fig11-1.png Graphic file (type bmp)
 <figure/fig11-1.png>
 File: figure/fig11-2.png Graphic file (type bmp)
@@ -2768,17 +2771,17 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
- [36] [37] [38] [39] [40] [41] [42] [43]) (./data/conclusion.tex
-[44]
+ [41] [42] [43] [44] [45] [46] [47] [48]) (./data/conclusion.tex
+[49]
 第五章
-[45
+[50
 
-]) [46] [47
+]) [51] [52
 
-] [48] [49] [50] [51] [52] [53] [54] [55] [56] (./data/result.tex [57]) (./data
-/acknowledgement.tex [58
+] [53] [54] [55] [56] [57] [58] [59] [60] [61] (./data/result.tex [62]) (./data
+/acknowledgement.tex [63
 
-]) (./data/appendix.tex) [59
+]) (./data/appendix.tex) [64
 
 ]
 
@@ -2806,4 +2809,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  118i,14n,131p,2763b,7316s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (70 pages).
+Output written on main.pdf (75 pages).

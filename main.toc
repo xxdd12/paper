@@ -12,39 +12,39 @@
 \contentsline {chapter}{\numberline {第二章}基于改进YOLO11-Seg的立体仓库堆叠货物盘点方法}{10}{chapter.2}%
 \contentsline {section}{\numberline {2.1}堆叠货物检测与分割}{10}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}YOLO11s-Seg基础架构}{10}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}YOLO11-StackLite架构}{11}{subsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.1}通道拆分注意力模块 C2SASA}{13}{subsubsection.2.1.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.2.2}重排分组卷积模块 SSConv}{14}{subsubsection.2.1.2.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.3}具有四向卷积的 C3k2\_QDConv 模块}{16}{subsubsection.2.1.2.3}%
-\contentsline {section}{\numberline {2.2}后处理数量计算方法}{18}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}计数主体流程}{18}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}基于几何关系的顶层满载检测算法}{20}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}掩膜关键点驱动的层间面积比估计算法}{21}{subsubsection.2.2.1.2}%
-\contentsline {chapter}{\numberline {第三章}面向边缘部署需求的YOLO11-StackLite模型压缩方法}{24}{chapter.3}%
-\contentsline {section}{\numberline {3.1}模型压缩需求分析}{24}{section.3.1}%
-\contentsline {section}{\numberline {3.2}基于结构化剪枝的轻量化方法}{25}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}结构化剪枝原理}{25}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}YOLO11-StackLite剪枝对象选择}{26}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}通道重要性评估与剪枝率设定}{26}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}剪枝流程设计}{27}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}基于知识蒸馏的精度恢复方法}{28}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}知识蒸馏原理}{28}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}教师模型与学生模型构建}{28}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}蒸馏信息选择与约束方式}{29}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}蒸馏损失设计}{29}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}压缩模型构建与训练流程}{30}{section.3.4}%
-\contentsline {section}{\numberline {3.5}本章小结}{31}{section.3.5}%
-\contentsline {chapter}{\numberline {第四章}实验与结果分析}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}实验数据集}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}评价指标}{32}{section.4.2}%
-\contentsline {section}{\numberline {4.3}实验环境与参数设置}{33}{section.4.3}%
-\contentsline {section}{\numberline {4.4}结果与分析}{34}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}消融实验}{34}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}不同实例分割模型性能对比}{36}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}数量计算评估}{38}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}模型压缩实验}{42}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}本章小结}{44}{section.4.5}%
-\contentsline {chapter}{\numberline {第五章}结论与展望}{45}{chapter.5}%
-\contentsline {chapter}{参考文献}{47}{chapter*.30}%
-\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{58}{chapter*.31}%
-\contentsline {chapter}{致谢}{59}{chapter*.34}%
+\contentsline {subsection}{\numberline {2.1.2}YOLO11-StackLite架构}{12}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}通道拆分注意力模块 C2SASA}{14}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}重排分组卷积模块 SSConv}{16}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}具有四向卷积的 C3k2\_QDConv 模块}{19}{subsubsection.2.1.2.3}%
+\contentsline {section}{\numberline {2.2}后处理数量计算方法}{21}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}计数主体流程}{22}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}基于几何关系的顶层满载检测算法}{24}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}掩膜关键点驱动的层间面积比估计算法}{26}{subsubsection.2.2.1.2}%
+\contentsline {chapter}{\numberline {第三章}面向边缘部署需求的YOLO11-StackLite模型压缩方法}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}模型压缩需求分析}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}基于结构化剪枝的轻量化方法}{30}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}结构化剪枝原理}{30}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}YOLO11-StackLite剪枝对象选择}{31}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}通道重要性评估与剪枝率设定}{31}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}剪枝流程设计}{32}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}基于知识蒸馏的精度恢复方法}{33}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}知识蒸馏原理}{33}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}教师模型与学生模型构建}{33}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}蒸馏信息选择与约束方式}{34}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}蒸馏损失设计}{34}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}压缩模型构建与训练流程}{35}{section.3.4}%
+\contentsline {section}{\numberline {3.5}本章小结}{36}{section.3.5}%
+\contentsline {chapter}{\numberline {第四章}实验与结果分析}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}实验数据集}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}评价指标}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}实验环境与参数设置}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}结果与分析}{39}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}消融实验}{39}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}不同实例分割模型性能对比}{41}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}数量计算评估}{43}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}模型压缩实验}{47}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}本章小结}{49}{section.4.5}%
+\contentsline {chapter}{\numberline {第五章}结论与展望}{50}{chapter.5}%
+\contentsline {chapter}{参考文献}{52}{chapter*.30}%
+\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{63}{chapter*.31}%
+\contentsline {chapter}{致谢}{64}{chapter*.34}%
