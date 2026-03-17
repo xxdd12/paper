@@ -1,25 +1,25 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'main.blg'
-[84] biber-MSWIN64:342> INFO - === 
-[126] Biber.pm:421> INFO - Reading 'main.bcf'
-[237] Biber.pm:999> INFO - Using all citekeys in bib section 0
-[246] Biber.pm:4487> INFO - Processing section 0
-[254] Biber.pm:4678> INFO - Looking for bibtex file 'ref/gdutthesis-template.bib' for section 0
-[325] bibtex.pm:1713> INFO - LaTeX decoding ...
-[403] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/gdutthesis-template.bib'
-[1103] Biber.pm:4678> INFO - Looking for bibtex file 'ref/reference.bib' for section 0
-[1182] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1182] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1182] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1182] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[1243] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1319] bbl.pm:779> INFO - Output to main.bbl
-[1319] Biber.pm:132> WARN - legacy year field '1865（清同治四年）' in entry 'wangfuzhi1865songlun' is not an integer - this will probably not sort properly.
-[1319] Biber.pm:132> WARN - book entry 'wangfuzhi1865songlun' (ref/gdutthesis-template.bib): Invalid format '1865（清同治四年）' of date field 'date' - ignoring
-[1319] Biber.pm:132> WARN - legacy year field 'c1971' in entry 'fourneyc1971advances' is not an integer - this will probably not sort properly.
-[1319] Biber.pm:132> WARN - inproceedings entry 'fourneyc1971advances' (ref/gdutthesis-template.bib): Invalid format 'c1971' of date field 'date' - ignoring
-[1319] Biber.pm:132> WARN - legacy year field 'c1980' in entry 'buseckc1980subsolidus' is not an integer - this will probably not sort properly.
-[1319] Biber.pm:132> WARN - incollection entry 'buseckc1980subsolidus' (ref/gdutthesis-template.bib): Invalid format 'c1980' of date field 'date' - ignoring
-[1319] Biber.pm:132> WARN - legacy year field '1957/1990' in entry 'zhongguo1957tushu' is not an integer - this will probably not sort properly.
-[1320] Biber.pm:132> WARN - Data source 'ref/reference.bib' is empty, ignoring
-[1320] Biber.pm:134> INFO - WARNINGS: 8
+[78] biber-MSWIN64:342> INFO - === 
+[112] Biber.pm:421> INFO - Reading 'main.bcf'
+[217] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[226] Biber.pm:4487> INFO - Processing section 0
+[235] Biber.pm:4678> INFO - Looking for bibtex file 'ref/gdutthesis-template.bib' for section 0
+[288] bibtex.pm:1713> INFO - LaTeX decoding ...
+[372] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/gdutthesis-template.bib'
+[1094] Biber.pm:4678> INFO - Looking for bibtex file 'ref/reference.bib' for section 0
+[1175] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1175] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1175] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1175] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1230] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1300] bbl.pm:779> INFO - Output to main.bbl
+[1300] Biber.pm:132> WARN - legacy year field '1957/1990' in entry 'zhongguo1957tushu' is not an integer - this will probably not sort properly.
+[1301] Biber.pm:132> WARN - legacy year field 'c1980' in entry 'buseckc1980subsolidus' is not an integer - this will probably not sort properly.
+[1301] Biber.pm:132> WARN - incollection entry 'buseckc1980subsolidus' (ref/gdutthesis-template.bib): Invalid format 'c1980' of date field 'date' - ignoring
+[1301] Biber.pm:132> WARN - legacy year field 'c1971' in entry 'fourneyc1971advances' is not an integer - this will probably not sort properly.
+[1301] Biber.pm:132> WARN - inproceedings entry 'fourneyc1971advances' (ref/gdutthesis-template.bib): Invalid format 'c1971' of date field 'date' - ignoring
+[1301] Biber.pm:132> WARN - legacy year field '1865（清同治四年）' in entry 'wangfuzhi1865songlun' is not an integer - this will probably not sort properly.
+[1301] Biber.pm:132> WARN - book entry 'wangfuzhi1865songlun' (ref/gdutthesis-template.bib): Invalid format '1865（清同治四年）' of date field 'date' - ignoring
+[1301] Biber.pm:132> WARN - Data source 'ref/reference.bib' is empty, ignoring
+[1301] Biber.pm:134> INFO - WARNINGS: 8
