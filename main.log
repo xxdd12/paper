@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  17 MAR 2026 11:22
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  18 MAR 2026 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2525,26 +2525,7 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
-(./main.bbl
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'wangfuzhi1865songlun':
-(biblatex)                - book entry 'wangfuzhi1865songlun' (ref/gdutthesis-t
-emplate.bib): Invalid format '1865（清同治四年）' of date field 'date' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'buseckc1980subsolidus':
-(biblatex)                - incollection entry 'buseckc1980subsolidus' (ref/gdu
-tthesis-template.bib): Invalid format 'c1980' of date field 'date' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'fourneyc1971advances':
-(biblatex)                - inproceedings entry 'fourneyc1971advances' (ref/gdu
-tthesis-template.bib): Invalid format 'c1971' of date field 'date' - ignoring.
-
-)
+(./main.bbl)
 Package biblatex Info: Reference section=0 on input line 121.
 Package biblatex Info: Reference segment=0 on input line 121.
 Package hyperref Info: Link coloring ON on input line 121.
@@ -2641,12 +2622,12 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 (fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt
 ;"
 
- [1
+
+[1
 
 ] [2
 
-])
-(./data/notation.tex) [3] (./main.toc [4
+]) (./data/notation.tex) [3] (./main.toc [4
 
 ])
 \tf@toc=\write6
@@ -2658,8 +2639,8 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 \tf@tec=\write7
 \openout7 = `main.tec'.
 
- [7]
-(./data/chap01.tex
+
+[7] (./data/chap01.tex
 第一章
 [1
 
@@ -2778,10 +2759,10 @@ File: figure/fig11-6.png Graphic file (type bmp)
 
 ]) [51] [52
 
-] [53] [54] [55] [56] [57] [58] [59] [60] [61] (./data/result.tex [62]) (./data
-/acknowledgement.tex [63
+] [53] [54] (./data/result.tex [55]) (./data/acknowledgement.tex
+[56
 
-]) (./data/appendix.tex) [64
+]) (./data/appendix.tex) [57
 
 ]
 
@@ -2801,12 +2782,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62420 strings out of 468168
- 1336979 string characters out of 5436524
- 2610623 words of memory out of 5000000
- 90205 multiletter control sequences out of 15000+600000
+ 61969 strings out of 468168
+ 1315124 string characters out of 5436524
+ 2603078 words of memory out of 5000000
+ 89754 multiletter control sequences out of 15000+600000
  635064 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 118i,14n,131p,2763b,7316s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,14n,131p,2763b,7258s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (75 pages).
+Output written on main.pdf (68 pages).

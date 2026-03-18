@@ -2951,11 +2951,54 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">ref/gdutthesis-template.bib</bcf:datasource>
     <bcf:datasource type="file" datatype="bibtex" glob="false">ref/reference.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">low2024asrs</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">wang2010rfidtobacco</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">liu2013cigarettewms</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">vis2006agv</bcf:citekey>
+    <bcf:citekey order="3" intorder="2">xu2018dronebarcode</bcf:citekey>
+    <bcf:citekey order="3" intorder="3">radacsi2022droneinventory</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">zhao2022rgbdwarehouse</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">xu2018dronebarcode</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">carion2020detr</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">zhu2021deformable</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">liu2022dab</bcf:citekey>
+    <bcf:citekey order="6" intorder="3">zhang2022dino</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">he2017maskrcnn</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">bolya2019yolact</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">wang2020solo</bcf:citekey>
+    <bcf:citekey order="8" intorder="3">wang2020solov2</bcf:citekey>
+    <bcf:citekey order="8" intorder="4">fang2021queryinst</bcf:citekey>
+    <bcf:citekey order="8" intorder="5">cheng2022sparseinst</bcf:citekey>
+    <bcf:citekey order="8" intorder="6">cheng2022mask2former</bcf:citekey>
+    <bcf:citekey order="8" intorder="7">ultralytics2025yolo11</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">chattopadhyay2017counting</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">lempitsky2010count</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">zhang2015crossscene</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">cohen2017countception</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">chattopadhyay2017counting</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">han2016deepcompression</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">hinton2015distilling</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">han2015learning</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">luo2017thinet</bcf:citekey>
+    <bcf:citekey order="14" intorder="2">he2017channelpruning</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">luo2017thinet</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">he2017channelpruning</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">hinton2015distilling</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">ultralytics2025yolo11</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">vaswani2017attention</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">shi2016subpixel</bcf:citekey>
+    <bcf:citekey order="19" intorder="2">zhang2018shufflenet</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">luo2017thinet</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">he2017channelpruning</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">hinton2015distilling</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">han2015learning</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">han2016deepcompression</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">luo2017thinet</bcf:citekey>
+    <bcf:citekey order="23" intorder="2">he2017channelpruning</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">hinton2015distilling</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
