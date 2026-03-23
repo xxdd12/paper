@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  18 MAR 2026 12:10
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  23 MAR 2026 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2648,33 +2648,33 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 ] [2] [3] [4] [5] [6] [7]
 File: figure/fig1.pdf Graphic file (type pdf)
 <use figure/fig1.pdf>
- [8]) (./data/chap02.tex [9]
+ [8] [9] [10]) (./data/chap02.tex [11]
 第二章
-[10
+[12
 
 ]
 File: figure/fig2.png Graphic file (type bmp)
 <figure/fig2.png>
- [11]
+ [13]
 File: figure/fig3.png Graphic file (type bmp)
 <figure/fig3.png>
- [12] [13]
+ [14] [15]
 File: figure/fig4.pdf Graphic file (type pdf)
 <use figure/fig4.pdf>
- [14] [15] [16]
+ [16] [17] [18]
 File: figure/fig5.pdf Graphic file (type pdf)
 <use figure/fig5.pdf>
- [17] [18]
+ [19] [20]
 File: figure/fig6.pdf Graphic file (type pdf)
 <use figure/fig6.pdf>
- [19] [20] [21]
+ [21] [22] [23]
 File: figure/fig7-1.png Graphic file (type bmp)
 <figure/fig7-1.png>
 File: figure/fig7-2.png Graphic file (type bmp)
 <figure/fig7-2.png>
 File: figure/fig8.pdf Graphic file (type pdf)
 <use figure/fig8.pdf>
- [22]
+ [24]
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2705,14 +2705,14 @@ t;"
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
 t;"
 
- [23]
+ [25]
 File: figure/9-1.png Graphic file (type bmp)
 <figure/9-1.png>
 File: figure/9-2.png Graphic file (type bmp)
 <figure/9-2.png>
 File: figure/9-3.png Graphic file (type bmp)
 <figure/9-3.png>
- [24]
+ [26]
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
 (Font)              scaled to size 7.00075pt on input line 253.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
@@ -2722,16 +2722,16 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 253.
 
-[25] [26]
+[27] [28]
 File: figure/fig10.png Graphic file (type bmp)
 <figure/fig10.png>
-) (./data/chap03.tex [27] [28]
+) (./data/chap03.tex [29] [30]
 第三章
-[29
+[31
 
-] [30] [31] [32] [33] [34] [35]) (./data/chap04.tex [36]
+] [32] [33] [34] [35] [36] [37]) (./data/chap04.tex [38]
 第四章
-[37
+[39
 
 ]
 Underfull \hbox (badness 1838) in paragraph at lines 30--31
@@ -2739,7 +2739,7 @@ Underfull \hbox (badness 1838) in paragraph at lines 30--31
 Intel(R) Core(TM) i7-13620H CPU@2.40GHz \TU/FandolSong(0)/m/n/12.045 和
  []
 
-[38] [39] [40]
+[40] [41] [42]
 File: figure/fig11-1.png Graphic file (type bmp)
 <figure/fig11-1.png>
 File: figure/fig11-2.png Graphic file (type bmp)
@@ -2752,17 +2752,17 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
- [41] [42] [43] [44] [45] [46] [47] [48]) (./data/conclusion.tex
-[49]
+ [43] [44] [45] [46] [47] [48] [49] [50] [51] [52])
+(./data/conclusion.tex [53]
 第五章
-[50
+[54
 
-]) [51] [52
+]) [55] [56
 
-] [53] [54] (./data/result.tex [55]) (./data/acknowledgement.tex
-[56
+] [57] [58] [59] [60] [61] (./data/result.tex [62])
+(./data/acknowledgement.tex [63
 
-]) (./data/appendix.tex) [57
+]) (./data/appendix.tex) [64
 
 ]
 
@@ -2776,18 +2776,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2020/04/10>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F004F84B406FD4ACCB61EDE18FCFA3DA;6634.
+(rerunfilecheck)             Checksum: C9DEC01E4D03666A383511EA13EF10FD;7354.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61969 strings out of 468168
- 1315124 string characters out of 5436524
- 2603078 words of memory out of 5000000
- 89754 multiletter control sequences out of 15000+600000
+ 62115 strings out of 468168
+ 1322004 string characters out of 5436524
+ 2606117 words of memory out of 5000000
+ 89900 multiletter control sequences out of 15000+600000
  635064 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 118i,14n,131p,2763b,7258s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,14n,131p,2763b,7256s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (68 pages).
+Output written on main.xdv (75 pages, 1293520 bytes).
