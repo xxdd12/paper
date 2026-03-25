@@ -1,8 +1,8 @@
-PWD C:/Users/ASUS/Desktop/paper
+PWD c:/Users/ASUS/Desktop/paper
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt
-INPUT main.tex
+INPUT c:/Users/ASUS/Desktop/paper/main.tex
 OUTPUT main.log
 INPUT ./gdutthesis.cls
 INPUT gdutthesis.cls
