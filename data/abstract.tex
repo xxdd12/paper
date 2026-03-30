@@ -7,7 +7,7 @@
 
 考虑到仓储现场通常具有边缘侧应用需求，而高精度实例分割模型存在参数量较大、计算复杂度较高的问题，本文进一步设计了面向边缘部署需求的模型压缩路线。针对 YOLO11-StackLite，采用基于 Network Slimming 思想的结构化通道剪枝降低模型参数量与浮点运算量，并结合软目标蒸馏与多阶段特征蒸馏缓解压缩带来的性能退化，以提高模型的部署友好性。
 
-在自建 TBD（Tobacco Box Dataset）数据集上开展的实验结果表明，所提出的 YOLO11-StackLite 在检测精度、分割精度以及库存盘点准确率方面均优于对比模型，并在模型复杂度控制方面取得了较好的平衡。相关结果验证了本文方法在立体仓库堆叠货物盘点任务中的有效性，并为后续面向实际边缘场景的进一步应用提供了方法基础。
+在基于文献\cite{hu2025area}中的 Tobacco Cargo Stacking Dataset（TCSD）并经本文整理后得到的 794 张有效图像上开展的实验结果表明，YOLO11-StackLite 在全量验证集上的平均 DA 和平均 CA 分别达到 95.88\% 和 94.87\%，在仅保留顶层未满载有效计数图像的困难场景中，平均 CA 和平均 DA 分别达到 80.90\% 和 83.49\%，均优于对比模型，并在模型复杂度控制方面取得了较好的平衡。相关结果验证了本文方法在立体仓库堆叠货物盘点任务中的有效性，并为后续面向实际边缘场景的进一步应用提供了方法基础。
 \end{abstract}
 
 \begin{abstract*}
@@ -19,5 +19,5 @@ Since it is difficult to accurately infer the total quantity of goods only from 
 
 Considering the demand for edge-oriented applications in warehouse environments and the relatively high parameter scale and computational complexity of high-accuracy instance segmentation models, a model compression route for YOLO11-StackLite is further designed. A Network-Slimming-inspired structured channel pruning strategy is adopted to reduce model parameters and floating-point operations, while soft-target distillation and multi-stage feature distillation are introduced to alleviate the performance degradation caused by compression, thereby improving the deployment friendliness of the model.
 
-Experiments conducted on the self-built TBD (Tobacco Box Dataset) show that the proposed YOLO11-StackLite outperforms the compared models in detection accuracy, segmentation accuracy, and inventory counting accuracy, while achieving a better balance between performance and model complexity. These results verify the effectiveness of the proposed method for stacked cargo inventory counting in automated warehouses and provide a methodological basis for further application in practical edge scenarios.
+Experiments conducted on 794 valid images organized from the Tobacco Cargo Stacking Dataset (TCSD) in \cite{hu2025area} show that YOLO11-StackLite achieves an average DA of 95.88\% and an average CA of 94.87\% on the full validation set. On the more challenging subset containing only effective counting images with a non-full top layer, the average CA and DA reach 80.90\% and 83.49\%, respectively. Both results are better than those of the compared models, while maintaining a better balance between performance and model complexity. These results verify the effectiveness of the proposed method for stacked cargo inventory counting in automated warehouses and provide a methodological basis for further application in practical edge scenarios.
 \end{abstract*}

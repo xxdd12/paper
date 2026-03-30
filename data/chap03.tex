@@ -66,7 +66,7 @@ YOLO11-StackLite 的 Backbone 末端引入了 C2SASA 模块，Neck 中引入了�
 结合上述原则，本文的结构化剪枝流程分为以下四个阶段：
 
 \par\noindent
-（1）训练完整的 YOLO11-StackLite 基线模型。首先在 TBD 数据集上完成原始模型训练，获得性能稳定的教师候选模型，同时记录其 Params、GFLOPs 及各项任务指标，作为后续压缩对比基准。
+（1）训练完整的 YOLO11-StackLite 基线模型。首先在基于文献\cite{hu2025area}中的 TCSD 并经本文整理后的 794 张有效图像上完成原始模型训练，获得性能稳定的教师候选模型，同时记录其 Params、GFLOPs 及各项任务指标，作为后续压缩对比基准。
 
 \par\noindent
 （2）执行稀疏训练。对参与剪枝的卷积层施加基于 BN 缩放因子的 $L_1$ 稀疏约束，使低贡献通道的缩放系数逐渐收缩，为后续结构化裁剪创造条件。
@@ -130,7 +130,7 @@ L_{\mathrm{distill}} = \alpha L_{\mathrm{soft}} + \beta L_{\mathrm{review}}
 综合结构化剪枝与知识蒸馏策略，本文构建的压缩模型训练流程如下：
 
 \par\noindent
-（1）在 TBD 数据集上训练完整 YOLO11-StackLite 模型，获得作为教师模型和压缩基线的高性能网络；
+（1）在基于文献\cite{hu2025area}中的 TCSD 并经本文整理后的 794 张有效图像上训练完整 YOLO11-StackLite 模型，获得作为教师模型和压缩基线的高性能网络；
 
 \par\noindent
 （2）在候选卷积层上施加基于 BN 缩放因子的稀疏约束，执行稀疏训练，使通道重要性差异进一步显现；

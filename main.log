@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  30 MAR 2026 15:43
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  30 MAR 2026 18:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2626,22 +2626,22 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 
 [1
 
-] [2
+] [2] [3
 
-]) (./data/notation.tex) [3] (./main.toc [4
+]) (./data/notation.tex) [4] (./main.toc [5
 
 ])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [5] (./main.tec [6
+ [6] (./main.tec
+[7
 
 ])
 \tf@tec=\write7
 \openout7 = `main.tec'.
 
-
-[7] (./data/chap01.tex
+ [8] (./data/chap01.tex
 第一章
 [1
 
@@ -2754,7 +2754,14 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
- [44] [45] [46] [47] [48] [49]
+ [44] [45] [46] [47] [48]
+Underfull \hbox (badness 1635) in paragraph at lines 262--263
+[]\TU/FandolSong(0)/m/n/12.045 从 表 [][]\TU/XITS(0)/m/n/12.045 4-5[][] \TU/Fando
+lSong(0)/m/n/12.045 可 以 看 出，| \TU/XITS(0)/m/n/12.045 YOLO \TU/FandolSong(0)/m/n
+/12.045 系 列 模 型 在 该 类 状 态 判 别 任 务 中 整 体 更 为 稳 定。|
+ []
+
+[49]
 Underfull \hbox (badness 1024) in paragraph at lines 298--299
 []\TU/FandolSong(0)/m/n/12.045 由 表 [][]\TU/XITS(0)/m/n/12.045 4-6[][] \TU/Fando
 lSong(0)/m/n/12.045 可 见，|  在 仅 保 留 顶 层 未 满 载 有 效 计 数 图 像 的 评 估 条 件 下，| \TU/XITS
@@ -2792,10 +2799,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  62117 strings out of 468168
  1322116 string characters out of 5436524
- 2611091 words of memory out of 5000000
+ 2609091 words of memory out of 5000000
  89902 multiletter control sequences out of 15000+600000
  635064 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,14n,131p,2763b,7256s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (76 pages, 1291484 bytes).
+Output written on main.xdv (77 pages, 1310868 bytes).

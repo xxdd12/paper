@@ -1,0 +1,618 @@
+                                                                                                                                                                            The Twelfth International Conference on Machine Intelligence Theory and Applications
+                                                                                                                                                                            May 20–27, 2025, Naples, Italy
+
+
+                                                                                                                                                                                Area Ratio-Based Box Counting Algorithm for
+                                                                                                                                                                             Intelligent Inventory in Stacked Goods Environments
+                                                                                                                                                                                                                               Xiao-Min Hu, Bing-Hai Wang, Zhuo Yang
+                                                                                                                                                                                                           School of Computer Science and Technology, Guangdong University of Technology
+2025 12th International Conference on Machine Intelligence Theory and Applications (MiTA) | 979-8-3315-4462-1/25/$31.00 ©2025 IEEE | DOI: 10.1109/MITA66017.2025.11100168
+
+
+
+
+                                                                                                                                                                                                                                       Guangzhou, P.R. China
+                                                                                                                                                                                                                                         xmhu@gdut.edu.cn
+
+
+                                                                                                                                                                                Abstracf-lnventory management plays a critical role in                       reducing manual errors and improving the level of automation
+                                                                                                                                                                            modern warehouses, but traditional manual counting methods are                   in warehouses[5].
+                                                                                                                                                                            inefficient and error-prone, especially for large quantities of goods.
+                                                                                                                                                                            With advancements in AI, IoT, and computer vision, automated                         Currently, there are primarily two intelligent inventory
+                                                                                                                                                                            systems have emerged to improve accuracy and efficiency. This                    methods for counting goods in warehouses. The first method is
+                                                                                                                                                                            paper proposes a novel Area Ratio-Based Box Counting                             based on RFID (Radio Frequency Identification)[6], which is
+                                                                                                                                                                            Algorithm (ARBCA) for intelligent inventory in three-                            efficient and convenient. However, the high cost of
+                                                                                                                                                                            dimensional warehouse environments. The algorithm leverages                      implementing and replacing RFID tags is the main barrier to its
+                                                                                                                                                                            instance segmentation to generate masks for stacked goods and                    widespread adoption. The second method involves the use of
+                                                                                                                                                                            uses area ratios for precise counting. We introduce a customized                 UAVs (Unmanned Aerial Vehicles) or AGVs (Automated
+                                                                                                                                                                            dataset, the Tobacco Cargo Stacking Dataset (TCSD), and                          Guided Vehicles) in conjunction with identification codes for
+                                                                                                                                                                            demonstrate the algorithm's effectiveness, achieving an overall                  inventory tasks[7][8]. This method is less expensive than the
+                                                                                                                                                                            inventory accuracy of 93.90% on the TCSD dataset with the                        RFID approach, but it also relies heavily on electronic tags. In
+                                                                                                                                                                            Mask2former model. The method addresses challenges such as                       addition to these methods, some factories employ sensor-based
+                                                                                                                                                                            occlusion and stacking in dark warehouse conditions, showing                     measurements to compare the state of stacked goods before and
+                                                                                                                                                                            promise for real-world applications.                                             after storage, such as visual perception and weight
+                                                                                                                                                                                                                                                             comparison[9].
+                                                                                                                                                                               Keywords-Inventory management, Warehouse automation,
+                                                                                                                                                                            Object counting, Area Ratio-Based Box Counting Algorithm                             In recent years, with the rapid development of computer
+                                                                                                                                                                                                                                                             vision and deep learning technologies, inventory tasks have been
+                                                                                                                                                                                                      I.     INTRODUCTION                                    able to analyze stacked goods images in specific storage
+                                                                                                                                                                                Warehousing plays a critical role in modern supply chains,                   environments through visual algorithms, thus accurately
+                                                                                                                                                                            with inventory tasks being one of the most fundamental                           counting the number of goods. For example, Yin et al. proposed
+                                                                                                                                                                            operations within a warehouse. Traditionally, inventory                          an inventory method based on object detection and post-
+                                                                                                                                                                            methods have relied on manual counting, which can become a                       processing modules, suitable for the uniform lighting conditions
+                                                                                                                                                                            significant workload and result in high error rates when the                     of three-dimensional warehouse environments [10]. However,
+                                                                                                                                                                            quantity of goods is large. Over the past decade, automated                      in actual three-dimensional warehousing, the stacked structure
+                                                                                                                                                                            warehouse inventory technology has made significant progress,                    of goods poses significant challenges to inventory, especially in
+                                                                                                                                                                            especially driven by advancements in Artificial Intelligence (AI),               dark warehouse environments. Dark warehouses typically do
+                                                                                                                                                                            the Internet of Things (IoT), and robotics. AI-driven warehouse                  not turn on lights when not inventorying and only turn on
+                                                                                                                                                                            automation systems have become essential, using machine                          lighting near cameras during inventory, which makes it more
+                                                                                                                                                                            learning algorithms for demand forecasting, and computer                         difficult for inventory algorithms to recognize and count the
+                                                                                                                                                                            vision technology to enhance robots' capabilities in item                        stacked goods structure. In response to this scenario, this paper
+                                                                                                                                                                            recognition and handling tasks, thus improving the accuracy and                  proposes an intelligent inventory method that combines an
+                                                                                                                                                                            efficiency of warehousing operations[!]. Additionally, semi-                     instance segmentation module with a post-processing inventory
+                                                                                                                                                                            automated inventory systems that combine barcodes and                            module, especially optimized for counting stacked goods. The
+                                                                                                                                                                            distributed applications use big data analytics to optimize                      scheme not only adapts to the lighting conditions of dark
+                                                                                                                                                                            decision-making, enhancing the automation and precision of                       warehouses but also reduces energy consumption and labor
+                                                                                                                                                                            inventory tasks[2]. Autonomous warehouse simulation has also                     costs, greatly enhancing inventory efficiency. Overall, the
+                                                                                                                                                                            become a focus of research, optimizing storage and retrieval                     contributions of this paper are as follows:
+                                                                                                                                                                            processes in warehouses through industrial robots and
+                                                                                                                                                                                                                                                                 1) An image dataset of stacked tobacco goods in a three-
+                                                                                                                                                                            programming languages, reducing labor costs and increasing the
+                                                                                                                                                                                                                                                             dimensional warehouse (Tobacco Cargo Stacking Dataset,
+                                                                                                                                                                            return on investment[3]. The application of robotic forklifts has
+                                                                                                                                                                                                                                                             TCSD) was established, and instance segmentation labels were
+                                                                                                                                                                            further expanded the possibilities of automated warehousing,
+                                                                                                                                                                                                                                                             customized for specific scenarios.
+                                                                                                                                                                            with autonomous vehicles being able to plan pathways and
+                                                                                                                                                                            execute tasks in complex environments, significantly enhancing                       2) A new inventory counting algorithm based on area ratios
+                                                                                                                                                                            the warehouse's logistics capabilities[4]. loT technology also                   is proposed, which achieves an overall counting accuracy of up
+                                                                                                                                                                            plays a vital role in warehouse management, with the integration                 to 93.90% on the TCSD dataset, demonstrating the effectiveness
+                                                                                                                                                                            of mobile barcode scanners and smart glasses devices greatly                     of the method.
+
+                                                                                                                                                                            979-8-3315-4462-1/25/$31.00 ©2025 IEEE
+
+                                                                                                                                                                                  Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+                          II.    PRELIMINARY                                         The density method is often used for object counting in
+                                                                                 dense scenes, such as in crowd statistics or congested road traffic
+A. Instance Segmentation                                                         analysis. The core idea of this method is to generate an object
+    Instance segmentation algorithms are used for precise pixel-                 density map, where the pixel values of the density map indicate
+level identification and classification of individual objects in                 the density of objects at that location. By summing all the pixel
+images. These algorithms can not only recognize the objects                      values in the density map, the total number of objects in the
+present in the image but can also accurately segment the                         scene can be obtained. Common density method models include
+contours of each object, achieving object-level segmentation.                    MCNN[20], CP-CNN[21], and SPN[22], among others. The
+Instance segmentation algorithms can be further divided into                     density method performs well in high-density, complex scenes,
+one-stage methods, two-stage methods, and Transformer-based                      but its accuracy depends on the quality of the generated density
+methods.                                                                         map.
+    One-stage instance segmentation methods directly generate                        The detection method relies on object detection techniques
+instance masks without relying on object detection results,                      to identify each object in the image and then determine the total
+exhibiting excellent performance in speed and computational                      number by counting the detected objects. The advantage of this
+efficiency, making them more suitable for real-time or resource-                 method is its high interpretability: each detected object has clear
+constrained tasks. Representative algorithms include YOLACT                      location and boundary information. However, one major
+[11], SOLO[12], and PolarMask[13].                                               challenge faced by the detection method is the issue of occlusion,
+                                                                                 where objects overlapping each other may lead to undercounting.
+    Two-stage instance segmentation methods typically perform
+                                                                                 In addition, when the scene is too dense, detection algorithms
+object detection first and then pixel-level segmentation to obtain
+                                                                                 might falsely detect objects, leading to inaccurate counting
+more accurate segmentation results. The classic Mask R-CNN
+                                                                                 results.
+[14] first uses object detection to locate target areas, then
+generates pixel-level masks for each target. Cascade Mask R-                     C. Convex Hull
+CNN[15] further improves segmentation accuracy in complex                            The convex hull is the smallest convex polygon or convex
+scenes through multi-stage mask optimization, but at a relatively                polyhedron that surrounds a set of points in a plane or higher-
+higher computational cost.                                                       dimensional space. On a two-dimensional plane, the convex hull
+    Transformer-based instance segmentation methods capture                      is the smallest polygon that completely encloses all the given
+long-range dependencies in images through the self-attention                     points; in three-dimensional space, the convex hull is the
+mechanism, thereby achieving more precise segmentation in                        smallest convex polyhedron. The defmition of convex hull
+complex scenes. DETR[16] is the first end-to-end Transformer                     makes it a fundamental problem in computational geometry,
+instance segmentation algorithm that directly regresses target                   with applications in various fields such as pattern recognition,
+bounding boxes and segmentation masks, eliminating the need                      image processing, and robot navigation.
+for non-maximum suppression (NMS). Mask2Former [17]                                  Mathematically, given a set of points P={p,, pz, ... , pn}
+builds on DETR by introducing a mask attention mechanism,                        containing n points, its convex hull CH(P) can be defined as the
+integrating convolutional neural networks with Transformers,                     smallest convex set that contains all the points of the point set.
+and is capable of handling instance segmentation, semantic                       Formally, the convex hull can be represented as the geometry of
+segmentation, and panoptic segmentation tasks in a unified                       all convex combinations, that is:
+manner, achieving outstanding performance on the COCO
+dataset. Swin Transformer[18] employs a hierarchical sliding                                                     n                 n
+window attention mechanism, which reduces computational                                           CH(P) ={L a;P; Ia; ~ 0, La; =1}                        (l)
+complexity while retaining the ability to model global features,                                                 i=l              i=l
+
+making it more suitable for high-resolution image segmentation                   The coefficients ai are non-negative and satisfy the constraint
+tasks.                                                                           that their sum equals 1. This implies that the convex hull is the
+                                                                                 set formed by the convex combinations of all possible points. In
+B. Object counting
+                                                                                 a two-dimensional plane, the convex hull can be constructed as
+    Object counting is a very promising direction in computer                    the smallest convex polygon by connecting the outermost points
+vision and is mainly divided into three methods: regression,                     of the given set.
+density, and detection methods.
+                                                                                     There exist various algorithms for computing the convex
+    The regression method is a technique that directly maps an                   hull, among which the most commonly used are Graham's scan
+image to the number of objects [19]. This method typically                       [23], Jarvis's march (also known as the gift-wrapping algorithm)
+involves training a regression model, which outputs a numeric                    [24], and the divide-and-conquer algorithm [25].
+value representing the number of objects after an image is
+inputted. The advantage of the regression method lies in its                                              III.       METHODOLOGY
+simplicity and computational efficiency, as it does not require                      This section introduces the method proposed in this paper,
+detailed labeling of each object in the image. However, the                      including the setting of labels, the overall process of the
+downside of this method is the lack of interpretability. The                     inventory method, and detailed explanations of each part.
+regression method only provides an overall quantity prediction
+and cannot explain how that number is derived, making it
+difficult to handle complex and diverse scenes.
+
+
+
+
+      Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+A. Instance Segmentation Dataset Label Configuration                                        number ofboxes is directly calculated using the formula:
+    Due to the particularity of the application scenario, the                               (number of"DownBox" + 1) x number of"UpBox".
+instance segmentation dataset labels have been specially                               •    If the topmost box is not fully loaded, a specialized box
+customized. As shown in Fig. 1, each box on the top layer of the                            quantity estimation algorithm, BoxEstimate, is used to
+cargo in the image is treated as an individual object, referred to                          estimate the total number of boxes.
+as an UpBox, as indicated by the pink labels in the figure. Each
+layer below the top is regarded as a single object, referred to as
+a DownBox, as indicated by the blue labels in the figure .
+                                                                                                                       Start
+
+
+
+
+                                                                                                                                             num=O
+
+
+
+                                                                                                                                             num=-1
+
+
+
+                                                                                       mun=ITopBoxl *                                       num=
+       Fig. l. Customized Instance Segmentation Labels for Box Counting                (IDownBoxl +I)                                    BoxEstimateO
+    The formula for calculating the number of boxes
+corresponding to the label is:
+                                                                                                                   returnnum
+
+                 Ntotal   = Ndownbox * Nlayer + Nupbox                    ( 2)
+
+where Ntota/ is the total number of boxes; Ndownbox is the number
+of DownBox labels, indicating how many layers there are                                 Fig. 2. Process of the ARBCA Method in an Automated Warehouse
+excluding the top layer; Niayer is the number of boxes when one
+layer is full (in this scenario, the number of boxes per layer is                      The pseudocode is shown as Algorithm 1.
+consistent, except for the top layer which may be inconsistent),                    Algorithm 1: Box Counting Based on Area Ratio
+and Nupbox is the number of UpBox labels. Based on the above                        Input: Image captured by stacker crane camera;
+inventory formula, the main problem becomes how to calculate
+                                                                                    Output: Estimated number of boxes;
+Niayer.
+                                                                                    1. (masks, categories)+- lnstanceSegmentation(image);
+B. Algorithm Framework                                                              2. if lcategoriesl = 0 then
+    This paper proposes an Area Ratio-Based Box Counting                            3. return O;
+Algorithm (ARBCA), the process of which is shown in Fig. 2.                         4. if "UpBox" ~ categories then;
+Initially, the stacker cranes in the automated warehouse take                       5. return -1;
+pictures of the goods using their onboard cameras and then send                     7. ifTopFullCheck(masks, categories) then
+the images to the central server for processing. Upon receiving                     8. num_boxes +- (count(c in categories where c =
+the data, the server employs an instance segmentation algorithm                     "DownBox") + 1) x count(c in categories where c =
+to process the images, obtaining masks and categories.                              "UpBox");
+Subsequently, a determination is made based on the extracted                        9. else
+categories:                                                                         10. num_boxes +- BoxEstimate(masks, categories);
+   •     If no categories are detected (i.e., lcategoriesl = 0), it                 11. return num boxes;
+         returns 0, indicating no boxes were identified;                           C. Box Estimate Algorithm
+   •     If categories are detected but do not include "UpBox", it                     The pseudocode for the specialized Box Estimate algorithm
+         returns -1, indicating the inability to recognize                         is shown in Algorithm 2. The inputs are the mask set Mand the
+         information related to the upper surface of the goods, and                category set C. The mask set M is a collection of numerical
+         inventory counting cannot be performed;                                   matrices (where the size of each matrix is equal to the
+                                                                                   dimensions of the image), and the values within the matrices can
+   •     If "UpBox" is present, it further examines whether the                    only be 0 or 1, with 0 indicating the absence of a mask at that
+         topmost box is fully loaded (TopFullCheck). If it is                      pixel, and 1 indicating presence. The category set C is a
+         determined that the topmost box is fully loaded, the
+
+
+
+
+        Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+collection of Os and ls, its size is equal to that of the mask set M,            values are the same, then sort by the y-axis value, and then
+with 0 representing DownBox and 1 representing UpBox. The                        assign the first-ranked point to F.
+output is the total count of boxes num_boxes.
+                                                                                  Algorithm 3: CalculateUpBoxArea
+ Algorithm 2: Box Estimate                                                        Input: UpBox convex hull set UH;
+ Input: Masks M, Categories C;                                                    Output: Area SJ;
+ Output: Total box count;                                                         1. ym_hull +-Convex hull with maximum y-value in UH;
+ I. HM+- Compute the convex hull of M;                                             // Sort by x ascending, then y ascending, and assign the
+ 2. UH+-{ HM;I C; =1, i=l...lHMI};                                                  first point to A
+ 3. DH+-{ HM;I C; =0, i=l...lHMI};                                                2. A+- Sort(ym_hull, key=(x, y)) [0];
+ 4. SJ +- CalculateUpBoxArea(U.H);                                                3. B +-Closest point inym_hull to the image's bottom-left
+ 5. S2 +-CalculateDownBoxArea(D.H);                                               comer;
+                                                                                  4. C +- Closest point in ym_hull to the image's bottom-right
+ 6. layer_box+- Ls2 / s1J;                                                        comer;
+ 7. num_boxes +-layer_box *ID.HI+ IU.HI;                                          5. E +- Closest point in ym_ hull to the image's top-right
+ 8. return num boxes;                                                             comer;
+                                                                                   // Sort by y ascending, then x ascending, and assign the
+    Initially, the convex hull of all masks is calculated and                       first point to D
+assigned to HM. The resulting HM is a collection of convex                        6. D +-Sort(ym_hull, key=(y, x)) [0]
+hulls, each of which is a collection of two-dimensional points.
+The convex hull set HM is then divided into UH and DH                             7. center_point +-The mean of the 2D points inym_hull;
+according to the categories of the masks, where UH is the set of                  8. below_center +-{p Eym_hull lp.y > center_point.y };
+convex hulls for the UpBox, and DH is the set for the DownBox.                       // Sort by x descending, then y descending, and assign
+Subsequently, the CalculateUpBoxArea algorithm is used to                            the first point to F
+estimate the surface area S 1 of a single topmost box. The                        9. F +-Sort(below_center, key=(x, y)) [0];
+CalculateDownBoxArea algorithm is used to estimate the                            10. 01 +- FindLinelntersection(D, E, A, C, F, E);
+surface area S2 of the upper surface of the bottom boxes. Then,                   11. 02 +- FindLinelntersection(D, E, A, E, F, C);
+using the ratio of the two estimated areas, the estimated number                  12. 03 +- FindLinelntersection(E, F, C, C, F, E);
+of boxes per layer, layer_box, is calculated. Finally, the total
+                                                                                  13. 0 +-(01 + 02 + 03) / 3;
+number of boxes is calculated based on layer_box, i.e.,
+layer_box * IDHI + IUHI (the estimated number of boxes per                        14. SJ +-IOAI * IOEI;
+layer * the number of layers excluding the topmost layer + the                    15. return SJ;
+number of topmost boxes).
+D. UpBox Area Estimation                                                            The pseudo code from lines 10 to 12 all use the
+                                                                                 FindLinelntersection function, which serves to calculate two
+     The method for estimating the top surface area is shown in                  lines based on given points and then return the intersection of
+pseudo code as Algorithm 3. Before explaining the pseudo code,                   the two lines. Suppose the parameters of the function are given
+frrst understand the pixel coordinate system of the image. The                   in order, namely pl to p6. The first line passes through point p3,
+origin of the image coordinates is located at the top left comer,                with a slope equal to the slope of the line formed by points p 1
+the value of the x-axis increases from left to right, while the                  and p2, while the second line passes through point p6, with a
+value of the y-axis increases from top to bottom. The input of                   slope equal to the slope of the line formed by points p4 and p5.
+the algorithm is the convex hull set of the top box, and the output
+is the estimated area S 1. The algorithm begins by first finding                    In general, 01, 02, and 03 are intersection points of different
+the convex hull in the set UH with the highest y-value, ym_hull.                 lines. Theoretically, if the instance segmentation model predicts
+Then, sort all the points in ym_hull in ascending order, mainly                  the Mask accurately enough, these three points should be very
+by the value of the x-axis; if the x values are the same, then sort              close. In pseudo code line 13, an average of these three points is
+by the y-axis value, giving priority to the point with the smaller               taken, aiming to reduce the impact of prediction errors from the
+y value. After sorting, assign the first-ranked point to A. After                instance segmentation model. In pseudo code line 14, the
+that, calculate the point in ym_hull closest to the bottom left                  estimated area S 1 is obtained by calculating the product of the
+comer of the image and assign it to B ( distance calculations                    lengths of segments OA and OE.
+uniformly use Euclidean distance). Similarly, calculate the
+                                                                                    An illustrative example is shown in Fig. 3, where subfigure
+points in ym_hull closest to the bottom right comer and the top
+                                                                                 (a) is a combination of masks from actual images in a real-world
+right comer and assign them to C and E, respectively. Then,
+similar to A, calculate the point in ym_hull with the smallest y                 scene, and subfigure (b) displays the selected UpBox mask
+                                                                                 (corresponding to the ym_hull convex hull mask in the pseudo
+value and as small an x value as possible, and assign it to D.
+Next, in pseudo code line 7, calculate the center point of ym_hull,              code), within which L 1, L2, and L3 are lines calculated from the
+                                                                                 convex hull points (the figure is cut into segments for clarity).
+center_point. In line 8, filter out all points in ym_hull with y
+                                                                                 Line L1 is constructed through points D, E, and A by calculating
+values greater than the y value of center_point into the set
+                                                                                 the slope of segment DE, and since the line passes through point
+below_center. Then, sort all the points in below_center in
+                                                                                 A, this determines line L 1. The construction of lines L2 and L3
+descending order, prioritizing by the value of the x-axis; if the x
+                                                                                 is similar. Theoretically, the three lines should pass through the
+
+
+
+
+      Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+same point 0, but due to errors in instance segmentation                             A detailed example is shown in Fig. 4. First, based on they-
+algorithm recognition, the intersection points of the three lines                values, find the convex hull and its mask ym_ hull of the
+are averaged to approximate point 0 . Afterwards, the lengths of                 DownBox at the sub-top layer, and the convex hull and its mask
+segments OA and OE are multiplied directly, and the result is                    yn_hull of the DownBox at the bottom layer. Then, in ym_hull,
+used as the estimated value for area S l.ents OA and OE.                         calculate the point A with the smallest x-value and a smaller y-
+                                                                                 value, the point B closest to the bottom-left comer, the point C
+                                                                                 closest to the bottom-right comer, and the point E closest to the
+                                    I)                      C IJpBu x            top-right comer. Additionally, compute the point Din yn_hull
+                                                            i= n m..·nnox
+                                                                                 that is closest to the bottom-right comer. After that, based on the
+                                                             -   LI
+                                                             -   L2
+                                                                                 slope of the BC segment and the point A, calculate the line Ll,
+                                                             -   L3
+                                                                                 and also calculate the line L2 where the DC segment lies. The
+                                                                                 intersection O of L1 and L2 is computed from these two lines.
+                                                                                 Then, the product of the lengths of the segments OA and OE is
+                                                   C                             calculated as the estimated value for S2.
+       (a)                               (b)
+Fig. 3. Convex Hull and Line Construction for UpBox Area Estimation
+                                                                                                                                              E                  IJpBox
+E. DownBox Area Estimation                                                                                                                                          OownBox
+
+    The pseudo-code for the surface area estimation method on                                                        A                                              LI
+
+top of DownBox is shown as Algorithm 4. The input of the                                                  c::::>                                           -        L2
+
+algorithm is the convex hull set DH of the lower box mask, and                                                        B
+the output is the estimated area S2. The algorithm starts by
+calculating the convex hulls in DH with the maximum and
+minimum y-values, respectively assigned to yn_hull and
+ym_ hull. The computation of points A, B, C, and E is similar to                          ( a)                                (b)         D
+
+the corresponding points in Algorithm 2. When yn_hull and                        Fig. 4. Convex Hull and Key Point Selection for DownBox Area Calculation
+ym_hull are not the same convex hull, compute the point in                           A detailed example is shown in Fig. 5, where sub-figure (a)
+yn_hull closest to the bottom-right comer of the image and                       represents a non-full top-level situation. When they-value of the
+assign it to D (using Euclidean distance), and then calculate the                center_point is greater than that ofymin_point, it is determined
+centroid O through points A, B, C, and D. If yn_hull and                         to be a non-full top-level. Sub-figure (b) represents a full top-
+ym_ hull are the same convex hull, then the centroid O is                        level situation. When they-value of the center_point is less than
+calculated through points A, B, and C. Afterward, the estimated                  that ofymin_point, it is determined that the top-level box is full.
+area S2 is obtained by calculating the product of the lengths of                                                                                       _       l/p Rox
+segments OA and OE.                                                                                                                                            OuwnRux
+
+ Algorithm 4: CalculateDownBoxArea                                                                           y mi11_y oi111
+
+ Input: DownBox convex hull set DH;                                                                                       ~                       ce 11terJJo int
+
+ Output: Area S2;
+ l. ym_hull f-The convex hull with the minimum y-value
+                                                                                                                                          -
+                                                                                                                              ---- - - -
+ inDH;
+ 2. yn_hull f-- The convex hull with the maximum y-value
+ inDH;                                                                                           Ca l                               (b)
+ // Sort by x ascending, then y ascending, and assign the first                  Fig. 5. Comparison ofFull and Non-Full Top-Level Cases in Box Stacking
+ point to A                                                                         According to Algorithm 5, the judgment is based on whether
+ 3. A t- Sort(ym_hull, key=(x, y)) [0] ;                                         the top convex hull point of the uppermost DownBox is below
+                                                                                 the center of the convex hull points of the lowermost UpBox.
+ 4. B t-Closest point inym_hull to the image's bottom-left
+ comer;                                                                           Algorithm 5: TopFullCheck
+ 5. Ct-Closest point inym_hull to the image's bottom-right                        Input: Masks M, Categories C;
+ comer;                                                                           Output: Is the top floor full of boxes;
+ 6. E t-Closest point in ym_hull to the image's top-right                         l. HM f-- Compute the convex hull of M;
+ comer;                                                                           2 . UH f-{ HMil Ci =l, i=l...lHMI} ;
+ 7. ifyn_ hull i- ym_ hull then                                                   3. DHt--{HMilC; =O,i=l...lHM I} ;
+ 8.    D t-Closest point inyn_hull to the image's bottom-
+                                                                                  4. up_hull t-The convex hull with the maximum y-value
+             right comer;
+                                                                                  in UH;
+ 9. 0 f- FindLinelntersection(D, C, C, B, C, A);
+                                                                                  5. down_hull f-- The convex hull with the minimum y-
+ 10. else
+                                                                                  value in UD;
+ 11 . 0 f- FindLinelntersection(A, B, C, B, C, A);
+                                                                                  6. center_point f-- The mean of the 2D points in up hull;
+ 12. S2 t-lOAI * IOEI ;
+ 13. return S2;
+
+
+
+
+      Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+ 7. ymin_point +- The point with minimum y-value m                               Xeon(R) Silver 421 OR CPU @ 2.40GHz, 128GB RAM, and 2 x
+ down_hull;                                                                      NVIDIA GeForce 4090 (24GB) GPUs.
+ 8. ifymin_point.y > center_point.y then                                             Due to the limited number of images in the TCSD dataset,
+ 9.   return true;                                                               all instance segmentation models will undergo 5-fold cross-
+ 10. else                                                                        validation. This approach aims to evaluate the model's
+ 11. return false;                                                               performance more effectively and reduce the result bias due to
+                                                                                 insufficient data volume. By dividing the dataset into five
+                IV.     EXPERIMENTS AND RESULTS                                  different subsets, cross-validation ensures that each subset can
+A. Dataset                                                                       serve as a test set once while the other four subsets are used as
+                                                                                 training sets. This method helps the model perform more stably
+    In this work, to address the task of inventory management, a                 and reliably under different data distributions, avoiding
+Tobacco Cargo Stacking Dataset (TCSD) was constructed based                      overfitting or underfitting that could be caused by single training
+on images of tobacco goods in a stereoscopic warehouse. The                      or test set splits.
+dataset comprises a total of 797 images, each with a resolution
+of 1280 by 960 pixels, collected from a real production                          D. Results
+environment. These images of goods were captured in complex                          Segmentation mAP: Table 1 presents the Segmentation
+lighting conditions, leading to issues such as overexposure,                     mAP results from the five-fold cross-validation. From the data
+blurriness, and significant variations in brightness, which pose                 in the table, it is evident that different algorithms performed
+considerable challenges to the inventory task.
+                                                                                 variably across the folds, with some fluctuation.
+B. Evaluation Metrics                                                                In this experiment, Mask2Former outperformed the other
+    The primary objective of this work is to inventory the                       algorithms, achieving an average mAP of0.780, demonstrating
+number of boxes in images, thus Mean Squared Error (MSE)                         stable and exceptional performance across all folds, despite
+and accuracy (ace) are chosen as evaluation metrics. MSE                         slight declines in Fold 4 and Fold 5. Querylnst and SOLOV2
+assesses the discrepancy between the predicted number of boxes                   showed comparable results with average mAPs of 0.738 and
+and the actual number of boxes, while ace evaluates the                          0.745, respectively, and had relatively small standard
+precision of the inventory process. The formulas for both are as                 deviations, indicating consistent performance across data splits.
+follows:                                                                         SOLOV2 had a slight edge over Querylnst, although the
+                                                                                 difference was minimal. Sparselnst performed the weakest,
+                           1 M                          2                        with an average mAP of 0.647, and a notable drop in Fold 5
+              MSE =-I(Npre,i -NGT,J                                              (0.56), suggesting that it may require further optimization.
+                   M i=l                                                (3)      Overall, Mask2Former demonstrated the best performance,
+                    1 M                                                          while Querylnst and SOLOV2 were competitive, and
+             ace= -II(Npre,i = NGT,i)                                            Sparselnst showed the need for improvement.
+                    M i=l
+   Here, M is the number of samples, Npre is the predicted                         TABLE I.         SEGMENTATION MAP RESULTS ON THE TCSD DATASET
+                                                                                                    USING FIVE-FOLD CROSS VALIDATION
+number of boxes, NGr is the actual number of boxes, and I(•)
+is an indicator function that is 1 when the condition is met and 0                Algorithm
+                                                                                                 Fold     Fold    Fold    Fold     Fold
+                                                                                                                                             Mean         Std
+otherwise. MSE evaluates the performance of the algorithm by                                       1        2       3       4         5
+                                                                                Mask2former      0.83     0.82    0.80     0.76     0.69     0.780       0.056
+calculating the squared error between the predicted and actual                  Ouervlnst        0.78     0.76    0.76     0.74     0.66     0.738       0.048
+values. The smaller the error, the more precise the result. In                  SOLOV2           0.79     0.78     0.76    0.75     0.65     0.745       0.053
+addition, Seg mAP@0.5:0.9 is used to assess the performance                     Soarselnst       0.68     0.68     0.67    0.65     0.56     0.647       0.052
+of the instance segmentation network.                                                Model Detection Accuracy: Table 2 presents the model
+                                                                                 detection accuracy of different algorithms during the five-fold
+C. Experimental Setup
+                                                                                 cross-validation, evaluating the accuracy of the instance
+    The accuracy of the Area Ratio-Based Box Counting                            segmentation model's predictions in terms of class and quantity.
+Algorithm (ARBCA) proposed in this paper is sensitive to the                     The table data reveal significant differences in detection
+precision of the instance segmentation model's segmentation.                     accuracy among the algorithms.
+Therefore, multiple groups of different instance segmentation
+                                                                                     Among them, Mask2Former demonstrated superior
+models are set up to test the performance of various models on
+                                                                                 performance with an impressive average accuracy of 0.946,
+the TCSD dataset under instance segmentation. Recently
+proposed representative instance segmentation methods such as                    significantly outperforming other models. Its consistency
+SOLOv2[26],       Mask2Former[l 7],       Sparselnst[27],     and                across all folds, with a slight drop to 0.90 in Fold 5, highlights
+Querylnst[28] are utilized. The Seg mAP metric is used here to                   its robustness and effectiveness in both class and quantity
+evaluate the performance of multiple algorithms in the TCSD                      prediction for instance segmentation. In contrast, QueryInst and
+dataset. These algorithms are implemented using the PyTorch                      SOLOv2 achieved lower average accuracies of0.839 and 0.759,
+framework, following the algorithm settings on the                               respectively, with Querylnst showing notable declines in Fold
+MMDETECTION[29] platform, with the only modification                             2 and Fold 3, and SOLOv2 experiencing a sharp drop to 0.64 in
+being the training epochs set to 200. All deep learning methods                  Fold 5. These fluctuations, along with larger standard
+are run on hardware with the following specifications: an Intel(R)               deviations, indicate weaker stability compared to Mask2Former.
+
+
+
+
+      Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+Sparselnst consistently exhibited the lowest accuracy,                           (11.04). QueryInst achieves the best consistency with a mean
+averaging 0.707, and while its stability was relatively good, its                MSE of0.228, with values close to O across all folds. SOLOV2
+lower performance suggests difficulties in effectively                           shows higher variability, with a mean MSE of 1.506, notably
+predicting both the class and quantity of instances.                             higher in Fold 1 (3.37) and Fold 4 (4.00). Sparselnst has the
+                                                                                 highest mean MSE of 3.956, with a significant error in Fold 3
+  TABLE II.    DETECTION ACCURACY OF DIFFERENT ALGORITHMS IN                     (19.78) and generally low values in other folds, suggesting
+      INSTANCE SEGMENTATION (FIVE-FOLD CROSS-VALIDATION)
+                                                                                 inconsistent performance. Overall, Mask2Former performs best
+  Algorithm     Foldl    Fold2    Fold3    Fold4    Fold5    Mean     Std        in terms of mean MSE, while QueryInst offers the most stable
+                 (%)      (%)      (%)      (%)      (%)      (%)     (%)
+ Mask2former      98       96      96       94       90      94.6     3.2
+                                                                                 results.
+ Ouervlnst        94       83      78       86       79       83.9    6.5
+ SOLOV2           78       83      78       78       64       75.9    7.1          TABLE IV.   COMPARISON OF MEAN SQUARED ERROR (MSE) ACROSS
+ Soarselnst       78      73       69       73       62       70.7    5.8            ALGORITHMS WITH ACCURATE TARGET CATEGORY AND QuANTITY
+                                                                                                          RECOGNITION
+    Overall Inventory Accuracy: Table 3 shows the results of
+the overall inventory accuracy of different algorithms during                     Algorithm
+                                                                                                 Fold    Fold     Fold    Fold    Fold
+                                                                                                                                             Mean        Std
+                                                                                                   1        2       3       4       5
+the five-fold cross-validation. Overall inventory accuracy                     Mask2former       3.57    22.15     0.00    0.39    11.04     7.432       9.347
+reflects the model's recognition ability and the performance of                Ouervlnst         0.00    0.00     0.69    0.00     0.45      0.228       0.324
+the inventory algorithm. A result is considered correct when the               SOLOV2            3.37     0.16    0.00     4.00    0.00      1.506       2.002
+target category and quantity are identified accurately, and the                Snarselnst        0.00    0.00     19.78    0.00    0.00      3.956       8.845
+predicted number of boxes by the inventory algorithm matches                     E. Discussion
+the actual number of boxes. Additionally, situations where the
+                                                                                     This section analyzes factors that affect the inventory results
+!arget category and quantity are correctly identified, but
+                                                                                 of the ARBCA algorithm. Fig. 6 shows the combined masks
+mventory cannot be conducted due to insufficient information
+                                                                                 obtained by different instance segmentation algorithms under
+in the image itself (such as having only the DownBox mask
+                                                                                 two different scenarios.
+without the UpBox mask), are still considered correct as a
+                                                                                     The first row of images in the figure depicts a scenario
+complement to the model's recognition ability.
+                                                                                 where the top layer of boxes is fully loaded. Among the masks
+    From the table data, Mask2Former outperforms all other
+                                                                                 generated by the four algorithms, the mask produced by the
+algorithms in this study, achieving an average accuracy of
+                                                                                 Mask2former model is incorrectly assessed as not fully loaded
+93.9%. Despite a slight dip to 88% in Fold 5, its performance
+                                                                                 by the Top-layer Full Box Check algorithm. The masks
+remains stable and superior, likely due to its effective handling
+                                                                                 generated by Querylnst, SOLOv2, and Sparselnst are correctly
+of target category recognition and missing masks, such as the
+                                                                                 identified as fully loaded. For the mask generated by
+DownBox mask. The algorithm's standard deviation of 3.5%
+                                                                                 Mask2former in figure, it is noticeable that part of the
+reflects its strong stability. Querylnst follows with an average
+                                                                                 uppermost DownBox mask (pink mask) extends into the middle
+accuracy of 83 .4%, but its performance drops in Folds 2 and 3
+                                                                                 of the blue mask. This precisely causes the criterion for
+likely due to sample distribution differences or limitations ~
+                                                                                 determining whether the top layer is fully loaded to fail.
+certain scenarios. Its larger standard deviation (7 .1 % ) suggests
+                                                                                 Therefore, the mask produced by Mask2former is judged as not
+that its accuracy is more influenced by data variations.
+                                                                                 fully loaded at the top layer by the algorithm. Although the
+SOLOV2 ranks third, with an average accuracy of 75.3%. Its
+                                                                                 masks generated by other models (such as SOLOv2) also
+performance is inconsistent, with a sharp decline to 64% in Fold
+                                                                                 exhibit scattered mask fragments, they do not appear within the
+5, indicating potential adaptability issues with the dataset. A
+                                                                                 topmost DownBox target, hence do not affect the accuracy of
+standard deviation of 6.8% further highlights its variability.
+                                                                                 the judgment.
+Sparselnst consistently performs the weakest, with an average
+                                                                                     The second row of images in the figure represents a scenario
+accuracy of 70.2%, and particularly low scores in Folds 3 and
+                                                                                 where the top layer of boxes is not fully loaded. Among the
+5. Although it shows relatively stable performance (6.1 %
+                                                                                 masks generated by the four algorithms, the ARBCA algorithm
+standard deviation), its overall low accuracy indicates the need
+                                                                                 only correctly counts the masks from Mask2former and
+for significant algorithmic improvement.
+                                                                                 SOLOV2, while the counting for Querylnst and Sparselnst is
+    TABLE III.     OVERALL INVENTORY ACCURACY OF DIFFERENT
+                                                                                 erroneous. The reason for Sparselnst's error is easily analyzed;
+ALGORITHMS IN INSTANCE SEGMENTATION (FIVE-FOLD CROSS-VALIDATION)                 part of the background of the image is mistakenly identified as
+  Algorithm     Foldl    Fold2    Fold3    Fold4    Fold5    Mean     Std
+                                                                                 boxes, leading to an incorrect inventory result. The masks
+                 (%)      (%)      (%)      (%)      (%)      (%)     (%)        generated by QueryInst and SOLOV2 are of similar quality; the
+ Mask2former      97       95      96        93       88      93.9    3.5        reason for the incorrect inventory result with Querylnst's mask
+ Ouervlnst        94       83      77        86       78      83.4    7.1        lies in the area ratio calculation error by the algorithm.
+ SOLOV2           77       82      77        76       64      75.3    6.8
+ Soarselnst       78      73       66        73       62      70.2    6.1            In summary, it can be seen that the algorithm proposed in
+    MSE Metric: Under the condition that both the target                         this paper is sensitive to the edges of the masks. When the
+category and quantity are accurately identified, the MSE metric                  masks exhibit significant jitter, discontinuity, or excessive
+is shown in Table 4. From the MSE results, Mask2Former                           shrinkage/expansion, the convex hull points cannot accurately
+demonstrates the lowest mean MSE of7.432, with significant                       depict the true boundaries of the targets, thereby affecting the
+variation across folds, especially in Fold 2 (22.15) and Fold 5                  generation of auxiliary points and the calculation of the center
+
+
+
+
+      Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+                               Origin            Mask2former       QueryInst             SOLOv2            Sparselnst
+                                Fig. 6. Comparison of Combined Masks from Different Instance Segmentation Algorithms
+
+points, leading to deviations in the entire box number                          [1]  Sodiya E 0 , Umoga U J, Amoo O 0, et al. AI-driven warehouse
+                                                                                     automation: A comprehensive review of systems[J]. GSC Advanced
+estimation process. Additionally, the box estimation based on                        Research and Reviews, 2024, 18(2): 272-282.
+the area ratio is prone to errors, resulting in inventory                       [2] Tong C. An Efficient Intelligent Semi-Automated Warehouse Inventory
+inaccuracies. Future work could consider incorporating the                           Stocktaking System[J]. arXiv preprint arXiv:2309.12365, 2023 .
+prediction of an area ratio scaling factor into the network                     [3] Pounraj M. 30 autonomous warehouse simulation by sequential function
+structure to better resolve the issue of goods inventorying.                         chart using CoDeSys V3 . 5[J]. 2022.
+                                                                                [4] Charles, J., Jacobus. , Glenn, J., Beach., Steve, Rowe., Charles, J., Cohen.
+                        V. CONCLUSION                                                Automated warehousing using robotic forklifts or other material handling
+                                                                                     vehicles. (2021).
+    This study proposes an algorithm for inventorying
+                                                                                [5] Vamsi AM, Deepalakshmi P, Nagaraj P, et al. IOT based autonomous
+warehouse goods in specific scenarios, the Area Ratio-Based                          inventory management for warehouses[C]//EAi International Conference
+Box Counting Algorithm (ARBCA), which utilizes mask                                  on Big Data Innovation for Sustainable Cognitive Computing: BDCC
+information generated by instance segmentation models to                             2018. Springer International Publishing, 2020: 371-376.
+accurately count the quantity and category of goods.                            [6] Lim M K, Bahr W, Leung S C H. RFID in the warehouse: A literature
+                                                                                     analysis (1995-2010) of its applications, benefits, challenges and future
+Experimental results show that the inventory algorithm                               trends[J]. International Journal of Production Economics, 2013, 145(1):
+performs excellently on the TCSD dataset, achieving an                               409-430.
+average overall inventory accuracy of 93 .90% on the                            [7] Fernandez-Carames T M, Blanco-Novoa 0 , Froiz-Miguez I, et al.
+Mask2former model, demonstrating its reliability in practical                        Towards an autonomous industry 4.0 warehouse: A UAV and blockchain-
+applications. The inventory algorithm effectively handles the                        based system for inventory and traceability applications in big data-driven
+                                                                                     supply chain management[J]. Sensors, 2019, 19(10): 2394.
+issues of goods stacking and occlusion in complex warehouse
+                                                                                [8] Perez - Grau F J, Ragel R, Caballero F, et al. An architecture for robust
+environments by analyzing the spatial positioning and                                UAV navigation in GPS - denied areas[J]. Journal of Field Robotics,
+hierarchical relationships of the goods. Even when the instance                      2018, 35(1): 121-145.
+segmentation model's masks contain noise, splits, and                           [9] Xiaozhen Y, Changzhun L, Zunpin G, Shuqin H, Ziwei W, Hua T (2017)
+discontinuities, the algorithm maintains high accuracy,                              Exploration and application of intelligent inventory in automatic stereo
+indicating a certain tolerance to mask quality.                                      library. Wuliujishu yuyingyong 22(03):117-118.
+                                                                                [10] Yin H, Chen C, Hao C, etal. A Vision-based inventory method for stacked
+    Error analysis indicates that inventory errors mainly stem                       goods in stereoscopic warehouse[J]. Neural Computing and Applications,
+from issues with mask quality. Improving the fmesse of                               2022, 34(23): 20773-20790.
+instance segmentation models and optimizing the integrity and                   [11] Bolya D, Zhou C, Xiao F, et al. Yolact: Real-time instance
+continuity of masks will help further increase the accuracy of                       segmentation[C]//Proceedings of the IEEE/CVF international conference
+the inventory algorithm. Future work may focus on enhancing                          on computer vision. 2019: 9157-9166.
+the algorithm's robustness to noise and improving the model's                   [12] Wang X, Zhang R, Shen C, et al. Solo: A simple framework for instance
+                                                                                     segmentation[J]. IEEE transactions on pattern analysis and machine
+edge processing capabilities.                                                        intelligence, 2021, 44(11): 8587-8601.
+                                                                                [13] Xie E, Sun P, Song X, et al. Polarmask: Single shot instance segmentation
+                       ACKNOWLEDGMENT
+                                                                                     with polar representation[C]//Proceedings of the IEEE/CVF conference
+                                                                                     on computer vision and pattern recognition. 2020: 12193-12202.
+  This paper is supported by National Research and
+                                                                                [14] He K, Gkioxari G, Dollar P, et al. Mask r-cnn[C]//Proceedings of the
+Development Key Project of China No. 2023YFF0905603 .                                IEEE international conference on computer vision. 2017: 2961-2969.
+                                                                                [15] Cai Z, Vasconcelos N. Cascade R-CNN: High quality object detection
+                            REFERENCES
+                                                                                     and instance segmentation[J]. IEEE transactions on pattern analysis and
+                                                                                     machine intelligence, 2019, 43(5): 1483-1498.
+
+
+
+
+     Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+[16] Zhu X, Su W, Lu L, et al. Deformable detr: Deformable transformers for      [23] Graham R L. An efficient algorithm for determining the convex hull ofa
+     end-to-end object detection[)]. arXiv preprint arXiv:2010.04159, 2020.           finite planar set[J]. Info. Proc. Lett., 1972, 1: 132-133.
+[17] Cheng B, Misra I, Schwing AG, et al. Masked-attention mask transformer      [24] Jarvis RA On the identification of the convex hull ofa finite set of points
+     for universal image segmentation[C]//Proceedings of the IEEE/CVF                 in the plane[J]. Information processing letters, 1973, 2(1): 18-21.
+     conference on computer vision and pattern recognition. 2022: 1290-1299.     [25] Preparata F P, Hong SJ. Convex hulls of finite sets of points in two and
+[18] Liu Z, Lin Y, Cao Y, et al. Swin transformer: Hierarchical vision                three dimensions[)]. Communications of the ACM, 1977, 20(2): 87-93.
+     transformer using shifted windows[C]//Proceedings of the IEEE/CVF           [26] Wang X, Zhang R, Kong T, et al. Solov2: Dynamic and fast instance
+     international conference on computer vision. 2021: 10012-10022.                  segmentation[J]. Advances in Neural information processing systems,
+[19] Chattopadhyay P, Vedantam R, Selvaraju RR, et al. Counting everyday              2020, 33: 17721-17732.
+     objects in everyday scenes[C]//Proceedings of the IEEE conference on        [27] Cheng T, Wang X, Chen S, et al. Sparse instance activation for real-time
+     computer vision and pattern recognition. 2017: 1135-1144.                        instance segmentation[C]//Proceedings of the IEEE/CVF Conference on
+[20] Zhang Y, Zhou D, Chen S, et al. Single-image crowd counting via multi-           Computer Vision and Pattern Recognition. 2022: 4433-4442.
+     column convolutional neural network[C]//Proceedings of the IEEE             [28] Fang Y, Yang S, Wang X, et al. Instances as queries[C]//Proceedings of
+     conference on computer vision and pattern recognition. 2016: 589-597.            the IEEE/CVF international conference on computer vision. 2021: 6910-
+[21] Sindagi VA, Patel V M. Generating high-quality crowd density maps                6919.
+     using contextual pyramid cnns[C]//Proceedings of the IEEE international     [29] Chen K, Wang J, Pang J, et al. MMDetection: Open mmlab detection
+     conference on computer vision. 2017: 1861-1870.                                  toolbox and benchmark[)]. arXiv preprint arXiv:1906.07155, 2019.
+[22] Chen X, Bin Y, Sang N, et al. Scale pyramid network for crowd
+     counting[C]//2019 IEEE winter conference on applications of computer
+     vision (WACV). IEEE, 2019: 1941-1950.
+
+
+
+
+      Authorized licensed use limited to: Guangdong Univ of Tech. Downloaded on December 08,2025 at 02:21:49 UTC from IEEE Xplore. Restrictions apply.
+
