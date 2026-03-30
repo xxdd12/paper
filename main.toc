@@ -20,7 +20,7 @@
 \contentsline {subsubsection}{\numberline {2.1.2.3}具有四向卷积的 C3k2\_QDConv 模块}{21}{subsubsection.2.1.2.3}%
 \contentsline {section}{\numberline {2.2}后处理数量计算方法}{23}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}计数主体流程}{23}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}基于几何关系的顶层满载检测算法}{26}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}基于几何关系的顶层满载检测算法}{27}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}掩膜关键点驱动的层间面积比估计算法}{28}{subsubsection.2.2.1.2}%
 \contentsline {chapter}{\numberline {第三章}面向边缘部署需求的YOLO11-StackLite模型压缩方法}{32}{chapter.3}%
 \contentsline {section}{\numberline {3.1}模型压缩需求分析}{32}{section.3.1}%

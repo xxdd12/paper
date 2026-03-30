@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  30 MAR 2026 18:04
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  30 MAR 2026 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2696,10 +2696,10 @@ File: figure/fig4.pdf Graphic file (type pdf)
  [16] [17] [18]
 File: figure/fig5.pdf Graphic file (type pdf)
 <use figure/fig5.pdf>
- [19] [20]
+ [19] [20] [21]
 File: figure/fig6.pdf Graphic file (type pdf)
 <use figure/fig6.pdf>
- [21] [22]
+ [22]
 File: figure/fig7-1.png Graphic file (type bmp)
 <figure/fig7-1.png>
 File: figure/fig7-2.png Graphic file (type bmp)
@@ -2715,6 +2715,7 @@ File: figure/9-2.png Graphic file (type bmp)
 File: figure/9-3.png Graphic file (type bmp)
 <figure/9-3.png>
  [26]
+[27]
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
 (Font)              scaled to size 7.00075pt on input line 259.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
@@ -2723,8 +2724,7 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 259.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 259.
-
-[27] [28] [29]
+ [28] [29]
 File: figure/fig10.png Graphic file (type bmp)
 <figure/fig10.png>
 ) (./data/chap03.tex [30] [31]
@@ -2797,12 +2797,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 62117 strings out of 468168
- 1322116 string characters out of 5436524
- 2609091 words of memory out of 5000000
- 89902 multiletter control sequences out of 15000+600000
+ 62113 strings out of 468168
+ 1321940 string characters out of 5436524
+ 2609024 words of memory out of 5000000
+ 89898 multiletter control sequences out of 15000+600000
  635064 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,14n,131p,2763b,7256s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (77 pages, 1310868 bytes).
+Output written on main.xdv (77 pages, 1307300 bytes).
