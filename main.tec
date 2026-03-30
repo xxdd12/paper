@@ -19,36 +19,36 @@
 \contentsline {subsubsection}{\numberline {2.1.2.2}}{18}{subsubsection.2.1.2.2}%
 \contentsline {subsubsection}{\numberline {2.1.2.3}}{21}{subsubsection.2.1.2.3}%
 \contentsline {section}{\numberline {2.2}Post-processing Counting Method}{23}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}}{23}{subsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.1}}{26}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}}{28}{subsubsection.2.2.1.2}%
-\contentsline {chapter}{\numberline {Chapter\ 3}Model Compression Method of YOLO11-StackLite for Edge Deployment}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Analysis of Model Compression Requirements}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Lightweight Method Based on Structured Channel Pruning}{32}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Principle of Network Slimming Based Structured Pruning}{32}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Selection of Pruning Targets in YOLO11-StackLite}{33}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}{34}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Pruning Process Design}{35}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Accuracy Recovery Method Based on Knowledge Distillation}{35}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Principle of Knowledge Distillation}{35}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Construction of Teacher and Student Models}{36}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Selection of Distillation Information and Constraint Strategy}{36}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Design of Distillation Loss}{37}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Construction and Training Process of the Compressed Model}{37}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Summary}{38}{section.3.5}%
-\contentsline {chapter}{\numberline {Chapter\ 4}Experiments and Results}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Dataset}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Evaluation Metrics}{39}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experimental Environment and Settings}{40}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Results and Discussion}{41}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Ablation Study}{41}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Comparison of Different Instance Segmentation Models}{43}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Counting Performance Evaluation}{45}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Error Analysis of Counting Results}{49}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Model Compression Experiments}{50}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Deployment Feasibility Analysis of the Compressed Model}{52}{subsection.4.4.6}%
+\contentsline {chapter}{\numberline {Chapter\ 3}Model Compression Method of YOLO11-StackLite for Edge Deployment}{32}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Analysis of Model Compression Requirements}{32}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Lightweight Method Based on Structured Channel Pruning}{33}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Principle of Network Slimming Based Structured Pruning}{33}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Selection of Pruning Targets in YOLO11-StackLite}{34}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}{35}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Pruning Process Design}{36}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Accuracy Recovery Method Based on Knowledge Distillation}{36}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Principle of Knowledge Distillation}{36}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Construction of Teacher and Student Models}{37}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Selection of Distillation Information and Constraint Strategy}{37}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Design of Distillation Loss}{38}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Construction and Training Process of the Compressed Model}{38}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Summary}{39}{section.3.5}%
+\contentsline {chapter}{\numberline {Chapter\ 4}Experiments and Results}{40}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{40}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluation Metrics}{41}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Environment and Settings}{41}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Results and Discussion}{42}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Ablation Study}{43}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Comparison of Different Instance Segmentation Models}{44}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Counting Performance Evaluation}{47}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Error Analysis of Counting Results}{51}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Discussion of the Compression Route}{52}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Deployment Feasibility Analysis of the Compressed Model}{53}{subsection.4.4.6}%
 \contentsline {section}{\numberline {4.5}Summary}{53}{section.4.5}%
-\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{54}{chapter.5}%
-\contentsline {chapter}{References}{56}{chapter*.30}%
-\contentsline {chapter}{Publication and patents during study}{63}{chapter*.31}%
-\contentsline {chapter}{Acknowledgements}{64}{chapter*.34}%
+\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{55}{chapter.5}%
+\contentsline {chapter}{References}{57}{chapter*.28}%
+\contentsline {chapter}{Publication and patents during study}{64}{chapter*.29}%
+\contentsline {chapter}{Acknowledgements}{65}{chapter*.32}%

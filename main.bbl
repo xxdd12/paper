@@ -3368,6 +3368,75 @@
       \endverb
       \keyw{cohen2017countception}
     \endentry
+    \entry{hu2025area}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=a31cf112dbefe327edc36f16327383f4}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Xiao{-}Min},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cb81ebb3719424a74febf489118be8fb}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Bing{-}Hai},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8a4ade68816f802551a223085337fb30}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhuo},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=a31cf112dbefe327edc36f16327383f4}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Xiao{-}Min},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cb81ebb3719424a74febf489118be8fb}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Bing{-}Hai},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8a4ade68816f802551a223085337fb30}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhuo},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{2bb67adb4d1bcf65dd6694aa9c452a3f}
+      \strng{fullhash}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{fullhashraw}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{bibnamehash}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{authorbibnamehash}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{authornamehash}{2bb67adb4d1bcf65dd6694aa9c452a3f}
+      \strng{authorfullhash}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{authorfullhashraw}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{nameabibnamehash}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{nameanamehash}{2bb67adb4d1bcf65dd6694aa9c452a3f}
+      \strng{nameafullhash}{7653c1189e8279ce70b2f38e91425eb9}
+      \strng{nameafullhashraw}{7653c1189e8279ce70b2f38e91425eb9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 12th International Conference on Machine Intelligence Theory and Applications (MiTA)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Area Ratio-Based Box Counting Algorithm for Intelligent Inventory in Stacked Goods Environments}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1109/MiTA66017.2025.11100168
+      \endverb
+      \keyw{hu2025area}
+    \endentry
     \entry{han2016deepcompression}{article}{}{}
       \name{author}{3}{}{%
         {{hash=873e4e07ff73d563d2651d20ffaf99e0}{%
@@ -3811,8 +3880,8 @@
       \strng{nameafullhash}{0a121b842b0f375c1697b2f6e3b9309d}
       \strng{nameafullhashraw}{0a121b842b0f375c1697b2f6e3b9309d}
       \field{extraname}{4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE International Conference on Computer Vision (ICCV)}
@@ -3903,8 +3972,8 @@
       \strng{nameafullhash}{e1bd0a2270b405fcb1f37fac4c645132}
       \strng{nameafullhashraw}{e1bd0a2270b405fcb1f37fac4c645132}
       \field{extraname}{3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -4011,8 +4080,8 @@
       \strng{nameanamehash}{31cab5346bd4b4d26e5c8c3c0061044f}
       \strng{nameafullhash}{a944edb5e812921a74748454236f4d20}
       \strng{nameafullhashraw}{a944edb5e812921a74748454236f4d20}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -4090,8 +4159,8 @@
       \strng{nameafullhash}{4c3f8efe3846dce8bb1fbc3570792640}
       \strng{nameafullhashraw}{4c3f8efe3846dce8bb1fbc3570792640}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -4189,8 +4258,8 @@
       \strng{nameafullhash}{261d47e8e6f02f019a28f860b3a33558}
       \strng{nameafullhashraw}{261d47e8e6f02f019a28f860b3a33558}
       \field{extraname}{4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -4248,8 +4317,8 @@
       \strng{nameafullhash}{1dfcb5dcd8a56e67df10164542e97fbd}
       \strng{nameafullhashraw}{1dfcb5dcd8a56e67df10164542e97fbd}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}

@@ -1,18 +1,17 @@
 # Fdb version 4
-["biber main"] 1774430498.99613 "main.bcf" "main.bbl" "main" 1774433406.39447 0
-  "main.bcf" 1774433404 143160 2762e9e46b808b835ac82994125b36f5 "xelatex"
-  "ref/reference.bib" 1774430492 23085 9a56c566a15396e7b783468334303283 ""
+["biber main"] 1774856259.42881 "main.bcf" "main.bbl" "main" 1774856624.72096 0
+  "main.bcf" 1774856622 144018 0eea9191849053c27fe9f3330a5d6369 "xelatex"
+  "ref/reference.bib" 1774855372 23470 f7ac86efc245fd3fc5e6fd7977be627d ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1774433405.00649 "main.xdv" "main.pdf" "main" 1774433406.40135 0
-  "main.xdv" 1774433404 1289552 16943efbd8c848f234fcd202ca9e94fc "xelatex"
+["xdvipdfmx"] 1774856623.41146 "main.xdv" "main.pdf" "main" 1774856624.76878 0
+  "main.xdv" 1774856622 1291484 c89650c8aaa9a4fa61cd5fc8ef94ecd7 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1774433400.6291 "c:/Users/ASUS/Desktop/paper/main.tex" "main.xdv" "main" 1774433406.39464 0
-  "c:/Users/ASUS/Desktop/paper/main.tex" 1773800825 5078 6bf518b8b04b975983d15dc0ab70a937 ""
+["xelatex"] 1774856617.80818 "main.tex" "main.xdv" "main" 1774856624.7211 0
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1773128062 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1773136008 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1773126197 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -262,14 +261,14 @@
   "c:/texlive/2026/texmf-dist/web2c/texmf.cnf" 1773124382 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "c:/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1773136277 5948913 37843ce6fe80f98e5d2e57854c19ddf4 ""
   "c:/texlive/2026/texmf.cnf" 1773136058 713 e69b156964470283e0530f5060668171 ""
-  "data/abstract.tex" 1774236767 5332 9123813f667dcabc23529ce15833128e ""
+  "data/abstract.tex" 1774856598 5384 d2f929ccb524949680b9d1704915a4bd ""
   "data/acknowledgement.tex" 1773307260 50 68f1dc0925c134058338d4c59447a53c ""
   "data/appendix.tex" 1773389529 229 337cb297b537a2e759f26a6dc36e4881 ""
-  "data/chap01.tex" 1774433230 27385 cb937c0adcb0459d7c2ea0e21306b394 ""
-  "data/chap02.tex" 1773800825 34794 17a55fad07a74a5b495989f6d8534f2d ""
+  "data/chap01.tex" 1774856598 27803 f527d84c8264c00177c157629e62a823 ""
+  "data/chap02.tex" 1774856233 37490 b79fde4038bc528c994ddebec459d202 ""
   "data/chap03.tex" 1774234778 20754 a00b0519d762136594b42c2c706d8ab3 ""
-  "data/chap04.tex" 1774250163 44379 8ee2a20ca466cc495470fb8fd1a15ef4 ""
-  "data/conclusion.tex" 1774236777 4632 58556bb5c1640e6e3aea4fccf09699eb ""
+  "data/chap04.tex" 1774856233 40754 61ddc9359a6c51504bd65baea5b5e759 ""
+  "data/conclusion.tex" 1774856598 4620 6a03cf3656dbc27c599fa637a7d1be78 ""
   "data/glossaries.tex" 1773195944 221 ddac19cbcff7e8f8bddf36db416b4b67 ""
   "data/notation.tex" 1773307140 152 74c689af6d8af3f633341c0ff38439c9 ""
   "data/result.tex" 1773195944 857 07cb2332dccd0e6ce9195ca230b42a69 ""
@@ -293,13 +292,13 @@
   "figure/fig7-2.png" 1773195944 149505 b748bd40df8328b5bcee6959aeb1b12b ""
   "figure/fig8.pdf" 1773195944 95484 3766bd7cfa642d690126178ee3de0b7c ""
   "gdutthesis.cls" 1773195944 71216 6afa2e9bc4962d33e0124a1caa39812d ""
-  "main.aux" 1774433404 40327 347947e78955baf9f8136b28d92c8e64 "xelatex"
-  "main.bbl" 1774430501 212816 bca121dce9b7259626a782553a1568ce "biber main"
-  "main.out" 1774433404 7449 329a253969101d1cb1adf83e266ba95c "xelatex"
-  "main.run.xml" 1774433404 2488 c53653777ad29558d6e68273dd8e8eb5 "xelatex"
-  "main.tec" 1774433404 4950 58e0700a7cee5f02d780cfa2cec653e4 "xelatex"
-  "main.tex" 1773800825 5078 6bf518b8b04b975983d15dc0ab70a937 ""
-  "main.toc" 1774433404 4926 0895c48fdc05708ba33b2f2a213efd2a "xelatex"
+  "main.aux" 1774856622 40326 66b73547236932547e095f4df9db901e "xelatex"
+  "main.bbl" 1774856261 215625 54cf33cf2330fb9c581f70b8bdfb215f "biber main"
+  "main.out" 1774856622 7449 2869fe23cbf6d88f38f9b2df203365c3 "xelatex"
+  "main.run.xml" 1774856622 2488 c53653777ad29558d6e68273dd8e8eb5 "xelatex"
+  "main.tec" 1774856622 4956 ede0b9d2e4112712bf7d45f51af01271 "xelatex"
+  "main.tex" 1774434007 5371 532800786de89be700040691c61e6b4a ""
+  "main.toc" 1774856622 4926 10c90f694ce19e13ad25ef2acd4da050 "xelatex"
   (generated)
   "main.aux"
   "main.bcf"

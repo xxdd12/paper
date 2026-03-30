@@ -19,36 +19,36 @@
 \contentsline {subsubsection}{\numberline {2.1.2.2}重排分组卷积模块 SSConv}{18}{subsubsection.2.1.2.2}%
 \contentsline {subsubsection}{\numberline {2.1.2.3}具有四向卷积的 C3k2\_QDConv 模块}{21}{subsubsection.2.1.2.3}%
 \contentsline {section}{\numberline {2.2}后处理数量计算方法}{23}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}计数主体流程}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}计数主体流程}{23}{subsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.1}基于几何关系的顶层满载检测算法}{26}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}掩膜关键点驱动的层间面积比估计算法}{28}{subsubsection.2.2.1.2}%
-\contentsline {chapter}{\numberline {第三章}面向边缘部署需求的YOLO11-StackLite模型压缩方法}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}模型压缩需求分析}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}基于结构化通道剪枝的轻量化方法}{32}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Network Slimming型结构化剪枝原理}{32}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}YOLO11-StackLite剪枝对象选择}{33}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}面向专用模块的通道重要性评估与剪枝率设定}{34}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}剪枝流程设计}{35}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}基于知识蒸馏的精度恢复方法}{35}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}知识蒸馏原理}{35}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}教师模型与学生模型构建}{36}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}蒸馏信息选择与约束方式}{36}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}蒸馏损失设计}{37}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}压缩模型构建与训练流程}{37}{section.3.4}%
-\contentsline {section}{\numberline {3.5}本章小结}{38}{section.3.5}%
-\contentsline {chapter}{\numberline {第四章}实验与结果分析}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}实验数据集}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}评价指标}{39}{section.4.2}%
-\contentsline {section}{\numberline {4.3}实验环境与参数设置}{40}{section.4.3}%
-\contentsline {section}{\numberline {4.4}结果与分析}{41}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}消融实验}{41}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}不同实例分割模型性能对比}{43}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}数量计算评估}{45}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}计数误差来源分析}{49}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}模型压缩实验}{50}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}压缩模型的部署可行性分析}{52}{subsection.4.4.6}%
+\contentsline {chapter}{\numberline {第三章}面向边缘部署需求的YOLO11-StackLite模型压缩方法}{32}{chapter.3}%
+\contentsline {section}{\numberline {3.1}模型压缩需求分析}{32}{section.3.1}%
+\contentsline {section}{\numberline {3.2}基于结构化通道剪枝的轻量化方法}{33}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Network Slimming型结构化剪枝原理}{33}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}YOLO11-StackLite剪枝对象选择}{34}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}面向专用模块的通道重要性评估与剪枝率设定}{35}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}剪枝流程设计}{36}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}基于知识蒸馏的精度恢复方法}{36}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}知识蒸馏原理}{36}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}教师模型与学生模型构建}{37}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}蒸馏信息选择与约束方式}{37}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}蒸馏损失设计}{38}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}压缩模型构建与训练流程}{38}{section.3.4}%
+\contentsline {section}{\numberline {3.5}本章小结}{39}{section.3.5}%
+\contentsline {chapter}{\numberline {第四章}实验与结果分析}{40}{chapter.4}%
+\contentsline {section}{\numberline {4.1}实验数据集}{40}{section.4.1}%
+\contentsline {section}{\numberline {4.2}评价指标}{41}{section.4.2}%
+\contentsline {section}{\numberline {4.3}实验环境与参数设置}{41}{section.4.3}%
+\contentsline {section}{\numberline {4.4}结果与分析}{42}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}消融实验}{43}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}不同实例分割模型性能对比}{44}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}数量计算评估}{47}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}计数误差来源分析}{51}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}压缩路线讨论}{52}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}压缩模型的部署可行性分析}{53}{subsection.4.4.6}%
 \contentsline {section}{\numberline {4.5}本章小结}{53}{section.4.5}%
-\contentsline {chapter}{\numberline {第五章}结论与展望}{54}{chapter.5}%
-\contentsline {chapter}{参考文献}{56}{chapter*.30}%
-\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{63}{chapter*.31}%
-\contentsline {chapter}{致谢}{64}{chapter*.34}%
+\contentsline {chapter}{\numberline {第五章}结论与展望}{55}{chapter.5}%
+\contentsline {chapter}{参考文献}{57}{chapter*.28}%
+\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{64}{chapter*.29}%
+\contentsline {chapter}{致谢}{65}{chapter*.32}%

@@ -118,6 +118,18 @@
 \setlength{\@fptop}{0pt}
 \makeatother
 
+% Render subsubsections as block headings instead of run-in headings.
+\ctexset{
+  subsubsection = {
+    runin      = false,
+    format     = \zihao{-4}\sffamily\raggedright,
+    aftername  = {~},
+    beforeskip = \baselineskip-\ccwd,
+    afterskip  = 0.5\baselineskip,
+    fixskip    = true,
+  }
+}
+
 \begin{document}
 
 \gdutstatement% 绌虹櫧澹版槑椤?
