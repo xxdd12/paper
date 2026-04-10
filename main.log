@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  10 APR 2026 20:37
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  10 APR 2026 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2789,7 +2789,7 @@ Overfull \vbox (92.86346pt too high) has occurred while \output is active []
 第四章
 [45
 
-] [46] [47] [48]
+] [46] [47] [48] [49]
 File: figure/fig11-1.png Graphic file (type bmp)
 <figure/fig11-1.png>
 File: figure/fig11-2.png Graphic file (type bmp)
@@ -2802,31 +2802,31 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
- [49] [50] [51] [52] [53]
-Underfull \hbox (badness 1635) in paragraph at lines 262--263
+ [50] [51] [52] [53] [54]
+Underfull \hbox (badness 1635) in paragraph at lines 268--269
 []\TU/FandolSong(0)/m/n/12.045 从 表 [][]\TU/XITS(0)/m/n/12.045 4-5[][] \TU/Fando
 lSong(0)/m/n/12.045 可 以 看 出，| \TU/XITS(0)/m/n/12.045 YOLO \TU/FandolSong(0)/m/n
 /12.045 系 列 模 型 在 该 类 状 态 判 别 任 务 中 整 体 较 为 稳 定。|
  []
 
-[54]
-Underfull \hbox (badness 1024) in paragraph at lines 298--299
+
+Underfull \hbox (badness 1024) in paragraph at lines 304--305
 []\TU/FandolSong(0)/m/n/12.045 由 表 [][]\TU/XITS(0)/m/n/12.045 4-6[][] \TU/Fando
 lSong(0)/m/n/12.045 可 见，|  在 仅 保 留 顶 层 未 满 载 有 效 计 数 图 像 的 评 估 条 件 下，| \TU/XITS
 (0)/m/n/12.045 YOLO11-
  []
 
-[55] [56]
-Underfull \hbox (badness 1515) in paragraph at lines 318--319
+[55] [56] [57]
+Underfull \hbox (badness 1515) in paragraph at lines 324--325
 \TU/XITS(0)/m/n/12.045 Pruned-YOLO11-StackLite (FT)\TU/FandolSong(0)/m/n/12.045
  ，|  以 及 在 此 基 础 上 进 一 步 结 合 蒸 馏 恢 复 训 练 得 到 的
  []
 
-[57] [58] [59] [60]) [61] (./data/conclusion.tex [62]
+[58] [59] [60]) [61] (./data/conclusion.tex [62]
 第五章
 [63
 
-] [64]) [65] [66
+]) [64] [65] [66
 
 ] [67] [68] [69] [70] [71] (./data/result.tex [72])
 (./data/acknowledgement.tex [73
@@ -2859,4 +2859,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  118i,15n,131p,2763b,7259s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (85 pages, 1524684 bytes).
+Output written on main.xdv (85 pages, 1528876 bytes).

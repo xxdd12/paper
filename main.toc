@@ -42,7 +42,7 @@
 \contentsline {section}{\numberline {4.1}实验数据集}{45}{section.4.1}%
 \contentsline {section}{\numberline {4.2}评价指标}{46}{section.4.2}%
 \contentsline {section}{\numberline {4.3}实验环境与参数设置}{47}{section.4.3}%
-\contentsline {section}{\numberline {4.4}结果与分析}{47}{section.4.4}%
+\contentsline {section}{\numberline {4.4}结果与分析}{48}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}消融实验}{48}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}不同实例分割模型性能对比}{51}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}数量计算评估}{52}{subsection.4.4.3}%
@@ -50,7 +50,7 @@
 \contentsline {subsection}{\numberline {4.4.5}模型压缩实验}{57}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}压缩结果分析}{59}{subsection.4.4.6}%
 \contentsline {subsection}{\numberline {4.4.7}边缘部署可行性分析}{60}{subsection.4.4.7}%
-\contentsline {section}{\numberline {4.5}本章小结}{61}{section.4.5}%
+\contentsline {section}{\numberline {4.5}本章小结}{62}{section.4.5}%
 \contentsline {chapter}{\numberline {第五章}结论与展望}{63}{chapter.5}%
 \contentsline {chapter}{参考文献}{66}{chapter*.29}%
 \contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{73}{chapter*.30}%
