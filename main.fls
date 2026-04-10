@@ -1,4 +1,4 @@
-PWD C:/Users/ASUS/Desktop/paper
+PWD C:/Users/ASUS/Desktop/论文相关/paper
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt
@@ -337,6 +337,14 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 INPUT c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 INPUT c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/relsize/relsize.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/relsize/relsize.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -538,8 +546,6 @@ OUTPUT main.tec
 INPUT ./data/chap01.tex
 INPUT ./data/chap01.tex
 INPUT data/chap01.tex
-INPUT ./figure/fig1.pdf
-INPUT ./figure/fig1.pdf
 INPUT ./data/chap02.tex
 INPUT ./data/chap02.tex
 INPUT data/chap02.tex

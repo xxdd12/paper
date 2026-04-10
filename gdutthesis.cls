@@ -1945,12 +1945,12 @@
     \vspace*{0.4\baselineskip-1.5pt}
     \begingroup \centering
       \begin{tabular}{>{\zihao{4}}r@{\hspace*{7\ccwd}}>{\zihao{4}\raggedright\arraybackslash}p{6\ccwd}@{\hspace*{5\ccwd}}>{\zihao{4}}p{12\ccwd}}
-        中图分类号：  &        & 学校代号：11845 \\[5pt]
+        中图分类号：  &        & 学校代号：XXX \\[5pt]
         UDC：         & 密级：\bool_if:NT \l__gdut_secret_bool {\l__gdut_info_secret_level_tl} & 学\hspace*{2\ccwd}号：\l__gdut_info_student_id_tl
       \end{tabular}
     \par \endgroup
     \vspace*{1.5\baselineskip+4pt}
-    \begingroup \centering\bfseries\zihao{-2} 广东工业大学 \__gdut_thesis_type 论文\par \endgroup
+    \begingroup \centering\bfseries\zihao{-2} XXX大学 \__gdut_thesis_type 论文\par \endgroup
     \begingroup \centering\zihao{4} （ \l__gdut_info_degree_tl ） \par \endgroup
     \vspace*{0.8\baselineskip+0.75pt}
     \begingroup \centering\sffamily\zihao{2} \l__gdut_info_title_tl\par \endgroup
@@ -2027,13 +2027,13 @@
       \cline{2-2}
       & \l__gdut_info_chairman_clist \\
       \cline{2-2}
-      & \exp_args:No \zhdate{\l__gdut_info_date_tl} \\
+      & xxx \\
       \cline{2-2}
     \end{tabular}
     \par \endgroup
     \newpage
     \begingroup \centering\zihao{3}
-      A~Dissertation~Submitted~to~Guangdong~University~of~Technology\\[-0.15\baselineskip]
+      A~Dissertation~Submitted~to~XXX~University\\[-0.15\baselineskip]
       in~Partial~Fulfillment~of~the~Requirement\\[-0.15\baselineskip]
       for~the~Degree~of~\l__gdut_info_degree_en_tl
     \par \endgroup
@@ -2046,12 +2046,11 @@
       Candidate:~\l__gdut_info_author_en_tl\\
       Supervisor:~\l__gdut_info_supervisor_en_tl
     \par \endgroup
-    \vspace*{8\baselineskip}
+    \vspace*{6\baselineskip}
     \begingroup \centering\zihao{-4}\sffamily\linespread{1.15}\selectfont
       \exp_args:No \engdate{\l__gdut_info_date_tl}\\
       School~of~\l__gdut_info_department_en_tl\\
-      Guangdong~University~of~Technology\\
-      Guangzhou~510006,~Guangdong,~P.~R.~China
+      XXX~University
     \par \endgroup
     \clearpage
     \pagestyle{fancy}

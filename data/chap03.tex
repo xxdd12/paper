@@ -2,15 +2,83 @@
 
 第2章提出的 YOLO11-StackLite 在复杂堆叠货物场景下能够较好地完成目标检测、实例分割与盘点相关任务，但其作为面向复杂场景设计的实例分割模型，仍然包含较多卷积层、多尺度特征融合路径以及专用结构模块。对于边缘设备而言，模型参数量、浮点运算量以及显存占用会直接影响部署成本与响应效率。因此，在尽量保持 box mAP、mask mAP、DA 和 CA 等关键指标稳定的前提下，对 YOLO11-StackLite 进行压缩具有明确的工程价值。
 
-考虑到本文研究重点在于验证模型在资源受限场景中的应用可行性，而非提出新的通用压缩理论，因此本章不重新设计全新的剪枝或蒸馏框架，而是选用已有文献中真实可靠、工程适配性较强的方法，并结合 YOLO11-StackLite 的结构特点进行任务适配。具体而言，本文采用基于 BN 缩放因子的 Network Slimming 型结构化通道剪枝方法对模型进行轻量化处理\cite{liu2017networkslimming,he2017channelpruning,luo2017thinet}，并在剪枝后引入经典软目标蒸馏与基于 ReviewKD 的多阶段特征蒸馏以恢复压缩带来的性能损失\cite{hinton2015distilling,chen2021reviewkd}。由此构建面向堆叠货物盘点任务的“结构化剪枝 + 知识蒸馏”压缩流程。
+需要说明的是，本文当前尚未在目标边缘硬件平台上完成系统化实机部署测试，因此本章研究重点定位于压缩路线设计、任务性能保持能力验证以及部署可行性分析，而非直接给出实际设备上的闭环部署结论。换言之，本章更关注“压缩后模型是否具备进一步部署的条件”，并为后续在具体边缘设备上的时延、资源占用和稳定性测试提供方法基础。
+
+考虑到本文研究重点在于验证模型在资源受限场景中的部署适配潜力，而非提出新的通用压缩理论，因此本章不重新设计全新的剪枝或蒸馏框架，而是选用已有文献中真实可靠、工程适配性较强的方法，并结合 YOLO11-StackLite 的结构特点进行任务适配。具体而言，本文采用基于 BN 缩放因子的 Network Slimming 型结构化通道剪枝方法对模型进行轻量化处理\cite{liu2017networkslimming,he2017channelpruning,luo2017thinet}，并在剪枝后引入经典软目标蒸馏与基于 ReviewKD 的多阶段特征蒸馏，以恢复压缩带来的性能损失\cite{hinton2015distilling,chen2021reviewkd}。据此构建面向堆叠货物盘点任务的“结构化剪枝 + 知识蒸馏”压缩流程。
+
+基于上述研究定位，本文采用面向工程实现的模块感知结构化压缩路线：首先在目标模块上施加稀疏约束训练，以获得具有通道重要性差异的教师网络；随后结合 C2SASA、C3k2\_QDConv 和 SSConv 的结构约束构建紧凑学生模型；最后在紧凑学生模型上引入软目标蒸馏与受 ReviewKD 启发的多层特征蒸馏，以恢复压缩带来的性能损失。由此形成“稀疏约束训练 + 结构化通道压缩 + 蒸馏恢复”的完整技术路线。
+
+为更清晰地说明本章方法设计，图~\ref{fig:fig8a} 给出了本文压缩与恢复路线的整体流程示意。该流程从完整模型出发，依次经历稀疏训练、结构化剪枝、微调恢复和蒸馏增强四个阶段，最终得到兼顾模型复杂度与任务性能的紧凑模型。与直接对原始网络进行统一压缩不同，本文路线强调“先识别冗余，再约束剪枝，最后恢复性能”，其目的在于降低压缩过程对复杂堆叠场景结构表达能力的破坏。
+
+\iffalse
+\begin{figure}[htbp]
+  \centering
+  \resizebox{\textwidth}{!}{%
+  \begin{tikzpicture}[x=1cm,y=1cm,>=latex]
+    \tikzset{
+      flowbox/.style={draw, rounded corners=2pt, align=center, minimum width=3.1cm, minimum height=1.2cm, fill=gray!10},
+      note/.style={draw, rounded corners=2pt, align=center, minimum width=3.1cm, minimum height=1.0cm, fill=blue!8},
+      flowarr/.style={->, thick}
+    }
+    \node[flowbox] (f1) at (0,0) {完整 YOLO11-StackLite\\教师模型训练};
+    \node[flowbox] (f2) at (4.1,0) {稀疏训练\\学习通道重要性差异};
+    \node[flowbox] (f3) at (8.2,0) {结构化通道裁剪\\满足模块整除约束};
+    \node[flowbox] (f4) at (12.3,0) {微调恢复\\重建基础分割能力};
+    \node[flowbox] (f5) at (16.4,0) {蒸馏增强\\恢复结构表达能力};
+    \node[note] (n1) at (4.1,-2.0) {识别冗余通道\\避免盲目压缩};
+    \node[note] (n2) at (8.2,-2.0) {面向 C2SASA、SSConv、C3k2\_QDConv\\实施差异化压缩};
+    \node[note] (n3) at (12.3,-2.0) {缓解裁剪后\\性能骤降问题};
+    \node[note] (n4) at (16.4,-2.0) {获得 Pruned-Distilled\\-YOLO11-StackLite};
+    \draw[flowarr] (f1) -- (f2);
+    \draw[flowarr] (f2) -- (f3);
+    \draw[flowarr] (f3) -- (f4);
+    \draw[flowarr] (f4) -- (f5);
+    \draw[flowarr] (f2) -- (n1);
+    \draw[flowarr] (f3) -- (n2);
+    \draw[flowarr] (f4) -- (n3);
+    \draw[flowarr] (f5) -- (n4);
+  \end{tikzpicture}
+  }
+  \bicaption{模型压缩与蒸馏恢复流程示意}{Overall pipeline of the proposed compression and distillation recovery route}
+  \label{fig:fig8a}
+\end{figure}
+\fi
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm,>=latex, every node/.style={font=\small}]
+    \tikzset{
+      flowbox/.style={draw, align=center, text width=2.6cm, minimum height=1.0cm},
+      note/.style={draw, align=center, text width=7.8cm, minimum height=0.85cm},
+      flowarr/.style={->, thick}
+    }
+    \node[flowbox] (f1) at (0,0) {教师模型训练};
+    \node[flowbox] (f2) at (3.8,0) {稀疏训练};
+    \node[flowbox] (f3) at (7.6,0) {结构化裁剪};
+    \node[flowbox] (f4) at (7.6,-2.4) {微调恢复};
+    \node[flowbox] (f5) at (3.8,-2.4) {蒸馏增强};
+    \node[flowbox] (f6) at (0,-2.4) {压缩模型输出};
+    \node[note] (n1) at (3.8,-4.0) {任务导向压缩路线：识别冗余，结构化裁剪，微调与蒸馏恢复};
+    \draw[flowarr] (f1) -- (f2);
+    \draw[flowarr] (f2) -- (f3);
+    \draw[flowarr] (f3) -- (f4);
+    \draw[flowarr] (f4) -- (f5);
+    \draw[flowarr] (f5) -- (f6);
+    \draw[flowarr] (f5) -- (n1);
+  \end{tikzpicture}
+  \bicaption{模型压缩与蒸馏恢复流程示意}{Overall pipeline of the proposed compression and distillation recovery route}
+  \label{fig:fig8a}
+\end{figure}
+
+若直接对完整模型进行固定比例裁剪，虽然可以较快降低 Params 和 GFLOPs，但也容易同步削弱掩膜边界质量、层次结构判别能力以及后处理盘点稳定性。特别是在本文关注的复杂堆叠场景中，实例分割误差会继续传递到后续状态识别和数量推理环节，因此压缩方法不能仅追求复杂度下降，还需要关注压缩后模型是否仍能稳定服务于盘点任务。基于上述考虑，本文将压缩过程设计为“结构化压缩 + 蒸馏恢复”的两阶段方案，以兼顾部署需求与任务需求。
 
 \section{模型压缩需求分析}{Analysis of Model Compression Requirements}
 
-YOLO11-StackLite 的结构由 Backbone、Neck 和 Segment Head 三部分构成。与常规轻量检测网络相比，该模型在关键区域注意力建模、方向敏感特征提取以及轻量化下采样方面额外引入了 C2SASA、C3k2\_QDConv 和 SSConv 等模块。上述改进提升了复杂遮挡场景中的结构表达能力，但也使模型在通道规模、分支组织和中间特征交互方面具有更高复杂度。若直接将完整模型部署到边缘侧设备，可能面临推理延迟较大、吞吐能力不足以及显存占用偏高等问题。
+YOLO11-StackLite 的结构由 Backbone、Neck 和 Segment Head 三部分构成。与常规轻量检测网络相比，该模型在关键区域注意力建模、方向敏感特征提取以及轻量化下采样方面额外引入了 C2SASA、C3k2\_QDConv 和 SSConv 等模块。上述改进提升了复杂遮挡场景中的结构表达能力，但也使模型在通道规模、分支组织和中间特征交互方面具有更高复杂度。若直接将完整模型部署到边缘侧设备，可能面临推理延迟较大、吞吐量受限以及显存占用偏高等问题。
 
-进一步分析可知，本文的压缩目标并不是简单追求参数量最小化，而是强调多项指标之间的综合平衡。一方面，box mAP 和 mask mAP 反映模型对箱体边界、轮廓及重叠区域的基础识别能力；另一方面，DA 和 CA 反映压缩后的识别结果能否继续支撑后续盘点推理。对于堆叠货物场景而言，若压缩导致高层结构关系建模能力下降，即使检测指标下降有限，也可能在后处理阶段放大计数误差。因此，本章压缩研究的核心要求可以概括为：在保证复杂堆叠场景结构表达能力基本稳定的前提下，尽量降低模型参数规模与计算复杂度。
+进一步分析可知，本文的压缩目标并不是简单追求参数量最小化，而是强调多项指标之间的综合平衡。一方面，box mAP 和 mask mAP 反映模型对箱体边界、轮廓及重叠区域的基础识别能力；另一方面，DA 和 CA 反映压缩后的识别结果能否继续支撑后续盘点推理。对于堆叠货物场景而言，若压缩导致高层结构关系建模能力下降，即使检测指标下降有限，也可能在后处理阶段放大计数误差。综上，本章压缩研究的核心要求可概括为：在保证复杂堆叠场景结构表达能力基本稳定的前提下，尽量降低模型参数规模与计算复杂度。
 
-从部署视角看，非结构化剪枝虽然能够获得较高稀疏率，但其稀疏模式不规则，往往难以直接转化为现有推理框架中的实际加速收益\cite{han2015learning,han2016deepcompression}。相比之下，结构化通道剪枝能够直接删除卷积通道或模块分支，剪枝后的模型拓扑更加规整，更适合在工程系统中继续微调、导出和部署。因此，本文将结构化通道剪枝作为主要压缩手段，再辅以蒸馏策略补偿精度损失，形成更符合本文任务需求的压缩路线。
+从实际部署角度看，非结构化剪枝虽然能够获得较高稀疏率，但其稀疏模式不规则，往往难以直接转化为现有推理框架中的实际加速收益\cite{han2015learning,han2016deepcompression}。相比之下，结构化通道剪枝能够直接删除卷积通道或模块分支，剪枝后的模型拓扑更加规整，更适合在工程系统中继续微调、导出和部署。因此，本文将结构化通道剪枝作为主要压缩手段，再辅以蒸馏策略补偿精度损失，形成更符合任务需求的压缩路线。
 
 \section{基于结构化通道剪枝的轻量化方法}{Lightweight Method Based on Structured Channel Pruning}
 
@@ -37,7 +105,7 @@ L_{\mathrm{sparse}} = L_{\mathrm{task}} + \lambda_s \sum_{l}\sum_{i=1}^{n_l} |\g
 
 \subsection{YOLO11-StackLite剪枝对象选择}{Selection of Pruning Targets in YOLO11-StackLite}
 
-YOLO11-StackLite 的 Backbone 末端引入了 C2SASA 模块，Neck 中引入了多处 C3k2\_QDConv 与 SSConv，Segment Head 则基于 P3、P4 和 P5 三尺度特征输出分割结果。由于不同模块承担的功能不同，其可压缩性也存在明显差异。若对全网络进行无差别激进剪枝，容易破坏复杂遮挡场景下的结构建模能力，导致分割质量与盘点稳定性同步下降。因此，本文采用“主干保守、融合优先、输出轻剪”的选择原则。
+YOLO11-StackLite 的 Backbone 末端引入了 C2SASA 模块，Neck 中引入了多处 C3k2\_QDConv 与 SSConv，Segment Head 则基于 P3、P4 和 P5 三尺度特征输出分割结果。由于不同模块承担的功能不同，其可压缩性也存在明显差异。若对全网络进行无差别激进剪枝，容易破坏复杂遮挡场景下的结构建模能力，导致分割质量与盘点稳定性同步下降。因此，本文采用“主干保守、融合优先、输出轻剪”的选择原则。进一步地，本文的物理剪枝并非面向全网所有层设计通用自动依赖分析器，而是针对 C2SASA、C3k2\_QDConv、SSConv 以及与其直接耦合的 Segment Head 构建专用剪枝与迁移策略。
 
 首先，Neck 中的 C3k2\_QDConv 是主要剪枝对象。该模块位于多尺度融合阶段，承担方向敏感局部几何建模任务，但其前后卷积通道规模较大，且在特征融合过程中存在一定冗余，具有较好的压缩潜力。尤其对于 P3/8 和 P4/16 分支中的 C3k2\_QDConv 块，合理剪枝通常可以显著降低计算量，同时对高层语义表达造成的破坏相对有限。
 
@@ -47,9 +115,11 @@ YOLO11-StackLite 的 Backbone 末端引入了 C2SASA 模块，Neck 中引入了�
 
 最后，Segment Head 不作为主要剪枝对象。原因在于分割头直接影响掩膜系数预测与最终掩膜质量，过度裁剪可能导致 mask mAP 和后续盘点准确率同步波动。为保证输出稳定性，本文对检测分割输出头仅进行轻量保守调整，压缩重点仍放在 Backbone 与 Neck 的中间特征变换部分。
 
+之所以优先针对上述模块设计专用物理剪枝，而未对其余标准模块全部执行同等级别的定制化裁剪，主要基于两点考虑：其一，C2SASA、C3k2\_QDConv 和 SSConv 是本文模型中最关键、最具结构特征且最有可能带来压缩收益的自定义部分，其通道组织方式直接影响多尺度融合、方向敏感建模和关键区域聚焦能力；其二，标准卷积层更多承担通用特征变换功能，若全部为其设计专用物理剪枝与映射规则，会显著提高工程复杂度和实现不稳定性。因此，本文采用“关键模块专用剪枝 + 其余结构保守适配”的策略，以兼顾方法可实现性、结构安全性和压缩收益。
+
 \subsection{面向专用模块的通道重要性评估与剪枝率设定}{Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}
 
-在完成剪枝对象选择后，还需要进一步确定具体的通道重要性评估方式和各层剪枝率。对于包含 BN 的常规卷积层，本文直接采用缩放因子绝对值进行排序，按层内重要性从小到大删除低贡献通道。对于包含专用结构约束的模块，则在重要性排序基础上增加整除约束和分支同步裁剪规则。
+在完成剪枝对象选择后，还需要进一步确定具体的通道重要性评估方式和各层剪枝率。对于包含 BN 的常规卷积层，本文直接采用缩放因子绝对值进行排序，按层内重要性从小到大删除低贡献通道。对于包含专用结构约束的模块，则在重要性排序基础上增加整除约束和分支同步裁剪规则。进一步地，本文将通道选择划分为“输出通道选择”和“内部隐藏通道选择”两个层面：对于输出通道，依据模块输出端 BN 缩放因子绝对值排序保留高重要性通道；对于 C2f 风格模块内部隐藏通道，则依据入口卷积对应 BN 权重进行分支化选择；对于 SSConv，则分别在左右分支上选取保留通道，以避免破坏双分支结构。
 
 对于 C3k2\_QDConv，其内部 QDConv 由四个方向分支共同完成特征提取，并在通道维度拼接后再进行卷积融合。为保证四方向分支输出维度一致，剪枝时不对单一方向分支做独立裁剪，而是对其共享的中间通道规模进行同步缩减，使四个方向分支保持相同宽度。由此，C3k2\_QDConv 的保留通道数应满足 4 的整除关系。
 
@@ -61,9 +131,78 @@ YOLO11-StackLite 的 Backbone 末端引入了 C2SASA 模块，Neck 中引入了�
 
 在剪枝率设置方面，本文不采用全局统一的大比例裁剪，而采用分层分模块的差异化剪枝策略：Backbone 浅层与高语义关键层使用较低剪枝率，以保证底层纹理和高层结构语义稳定；Neck 中多尺度融合相关卷积采用相对更高剪枝率，以释放通道冗余；Segment Head 保持最低剪枝率或不参与主裁剪。该策略既符合 YOLO11-StackLite 的真实结构特点，也有助于在复杂度下降与性能保持之间取得更合理平衡。
 
+从具体实现角度看，结构约束处理是本文物理剪枝能否稳定落地的关键。对于 C3k2\_QDConv，需要保证四向分支等宽同步，避免单一方向分支被独立裁剪后造成拼接失衡；对于 SSConv，需要同时满足二分支通道划分与组卷积整除关系；对于 C2SASA，需要保持注意力映射过程中的维度约束；对于 Segment Head，则需随 P3、P4、P5 三尺度输入通道同步调整分割头和原型分支参数。上述约束使得本文剪枝方案并非简单按比例缩小通道数，而是在重要性评估基础上进一步进行结构对齐。
+
+\begin{algorithm}[H]
+\caption{ModuleAwarePhysicalPruning}
+\label{alg:module_prune}
+\small
+\KwIn{Sparse model $M_{sparse}$, compact structure $M_{pruned}$}
+\KwOut{Initialized compact model $M_{init}$}
+\tcp{阶段1：确定目标模块与保留通道}
+\ForEach{$m \in \{\mathrm{C2SASA}, \mathrm{C3k2\_QDConv}, \mathrm{SSConv}, \mathrm{Segment}\}$}{
+  \tcp{依据输出端 BN 缩放因子绝对值评估输出通道重要性}
+  compute output importance scores from BN scaling factors
+  select output channels with top-ranked scores\tcp*[r]{保留高重要性输出通道}
+  \If{$m$ is C2f-like}{
+    \tcp{对 C2f 风格模块按入口卷积 BN 权重执行分支化隐藏通道选择}
+    select hidden channels from branch-aware input BN weights
+  }
+  \If{$m$ is SSConv}{
+    \tcp{对 SSConv 分别选择左右分支保留通道，避免破坏双分支结构}
+    select left and right branch channels separately
+  }
+  \tcp{按模块结构约束对保留通道数进行对齐}
+  align retained width under module constraints
+  \If{$m$ is C3k2\_QDConv}{
+    keep four directional branches synchronized\tcp*[r]{保证四向分支等宽同步}
+  }
+  \If{$m$ is SSConv}{
+    \tcp{保证二分支结构与组卷积整除关系}
+    keep split branches and grouped-convolution divisibility
+  }
+  \If{$m$ is C2SASA}{
+    keep attention projection dimensions valid\tcp*[r]{保持注意力映射维度约束}
+  }
+}
+\tcp{阶段2：切片并迁移保留权重}
+\tcp{按保留通道索引切片复制卷积层、归一化层和线性层参数}
+slice and copy convolution, normalization, and linear parameters by retained indices
+\tcp{对 backbone、neck、head 的相关输入输出通道进行同步映射}
+map related input and output channels across backbone, neck, and head
+\tcp{根据 P3/P4/P5 保留通道同步调整 Segment 头与原型分支}
+adapt Segment head according to retained P3, P4, and P5 channels
+\tcp{返回可直接继续微调的紧凑模型初始化权重}
+\textbf{return} $M_{init}$
+\end{algorithm}
+
+由算法~\ref{alg:module_prune}可见，本文的物理剪枝并不是仅通过修改网络配置文件获得紧凑结构，而是根据保留通道索引对卷积层、归一化层和分割头参数执行切片复制，并对 backbone、neck、head 的相关输入输出通道进行同步映射。由此得到的紧凑模型不仅在结构上完成真实裁剪，而且具备可直接继续微调的初始化权重，这也是其优于仅构造缩小版 YAML 再重新训练方案的重要原因。
+
 \subsection{剪枝流程设计}{Pruning Process Design}
 
-结合上述原则，本文的结构化剪枝流程分为以下四个阶段：
+结合上述原则，本文的结构化剪枝与恢复流程可归纳为四个阶段。为便于说明压缩模型的完整构建与性能恢复过程，算法~\ref{alg:compression_pipeline}给出了与实际实现相对应的总体流程伪代码。
+
+\begin{algorithm}[H]
+\caption{CompressionDistillationPipeline}
+\label{alg:compression_pipeline}
+\small
+\KwIn{Dense model $M_{dense}$, training set $D$, target ratio setting $R$}
+\KwOut{Distilled compact model $M_{distill}$}
+\tcp{阶段1：训练完整教师模型}
+train $M_{dense}$ on $D$ to obtain teacher model $M_{teacher}$\tcp*[r]{为后续剪枝与蒸馏提供参照}
+\tcp{阶段2：执行稀疏约束训练}
+apply $L_1$ sparsity regularization to candidate BN scaling factors\tcp*[r]{促使低贡献通道的缩放系数收缩}
+train sparse model $M_{sparse}$ on $D$ under sparsity constraint\tcp*[r]{拉开通道重要性差异}
+\tcp{阶段3：构建紧凑结构并完成物理剪枝}
+determine retained channels according to module-aware ratio setting $R$\tcp*[r]{结合模块约束确定保留通道}
+build compact structure $M_{pruned}$ from retained channels\tcp*[r]{生成剪枝后的目标结构}
+transfer retained weights from $M_{sparse}$ to $M_{pruned}$\tcp*[r]{完成物理剪枝与权重迁移}
+\tcp{阶段4：恢复紧凑模型性能}
+fine-tune $M_{pruned}$ on $D$ to obtain $M_{ft}$\tcp*[r]{恢复基础检测与分割能力}
+distill $M_{ft}$ from $M_{teacher}$ using output and feature distillation\tcp*[r]{进一步恢复高层语义与边界细节}
+set $M_{distill} \leftarrow M_{ft}$ after distillation training\tcp*[r]{得到最终紧凑模型}
+\textbf{return} $M_{distill}$
+\end{algorithm}
 
 \par\noindent
 （1）训练完整的 YOLO11-StackLite 基线模型。首先在基于文献\cite{hu2025area}中的 TCSD 并经本文整理后的 794 张有效图像上完成原始模型训练，获得性能稳定的教师候选模型，同时记录其 Params、GFLOPs 及各项任务指标，作为后续压缩对比基准。
@@ -72,12 +211,12 @@ YOLO11-StackLite 的 Backbone 末端引入了 C2SASA 模块，Neck 中引入了�
 （2）执行稀疏训练。对参与剪枝的卷积层施加基于 BN 缩放因子的 $L_1$ 稀疏约束，使低贡献通道的缩放系数逐渐收缩，为后续结构化裁剪创造条件。
 
 \par\noindent
-（3）按照分层规则执行通道裁剪。根据各候选层的重要性排序结果，结合模块整除约束，对 C3k2\_QDConv、SSConv 及部分常规卷积进行结构化删减；对 C2SASA 保守处理；对 Segment Head 仅做轻微调整或保持不变。
+（3）执行结构化物理剪枝与权重迁移。根据各候选层的重要性排序结果，结合模块整除约束，确定各目标层的保留通道集合，并据此构建紧凑模型结构；随后对 C3k2\_QDConv、SSConv、C2SASA 及 Segment Head 相关输入输出通道执行真实物理裁剪，将完整模型中保留通道对应的卷积、归一化和检测分割头权重迁移至紧凑模型。
 
 \par\noindent
-（4）对剪枝后模型进行微调恢复。通道裁剪会改变网络容量与特征分布，因此需在原始任务损失约束下对紧凑模型继续训练，使其重新适应实例分割与盘点任务。
+（4）对剪枝后模型进行微调恢复。通道裁剪会改变网络容量与特征分布，因此需在原始任务损失约束下对已完成权重迁移的紧凑模型继续训练，使其重新适应实例分割与盘点任务。
 
-通过上述流程，可以获得结构更紧凑、计算量更低的 Pruned-YOLO11-StackLite 模型。但仅依靠剪枝往往仍会带来一定精度下降，尤其是在遮挡严重、边界接近和局部纹理相似的堆叠场景中，这种退化会进一步影响后续计数稳定性。因此，下一节在剪枝基础上进一步引入知识蒸馏策略，以恢复压缩后的结构表达能力。
+通过上述流程，可以获得结构更紧凑、计算量更低且具有可训练初始权重的 Pruned-YOLO11-StackLite 模型。但仅依靠剪枝往往仍会带来一定精度下降，尤其是在遮挡严重、边界接近和局部纹理相似的堆叠场景中，这种退化会进一步影响后续计数稳定性。因此，下一节将在物理剪枝和微调恢复的基础上进一步引入知识蒸馏策略，以恢复压缩后的结构表达能力。
 
 \section{基于知识蒸馏的精度恢复方法}{Accuracy Recovery Method Based on Knowledge Distillation}
 
@@ -117,7 +256,7 @@ L_{\mathrm{review}} = \sum_{k=1}^{K} \left\| A_k(F_s^k) - \phi_k(F_t^1,\ldots,F_
 \begin{equation}
 L = L_{\mathrm{task}} + \lambda_d L_{\mathrm{distill}}
 \end{equation}
-其中，$\lambda_d$ 为蒸馏总权重系数。进一步地，
+其中，$\lambda_d$ 为蒸馏总权重系数。进一步可得，
 \begin{equation}
 L_{\mathrm{distill}} = \alpha L_{\mathrm{soft}} + \beta L_{\mathrm{review}}
 \end{equation}
@@ -136,10 +275,10 @@ L_{\mathrm{distill}} = \alpha L_{\mathrm{soft}} + \beta L_{\mathrm{review}}
 （2）在候选卷积层上施加基于 BN 缩放因子的稀疏约束，执行稀疏训练，使通道重要性差异进一步显现；
 
 \par\noindent
-（3）按照“Backbone 保守、Neck 优先、Head 轻剪”的原则，对 C3k2\_QDConv、SSConv 及部分常规卷积层执行结构化通道裁剪，并满足 QDConv 四分支、SSConv 双分支和 C2SASA 多头注意力的整除约束；
+（3）按照“Backbone 保守、Neck 优先、Head 轻剪”的原则，对 C3k2\_QDConv、SSConv 及 C2SASA 等关键模块执行结构化物理剪枝，并同步满足 QDConv 四分支、SSConv 双分支和 C2SASA 多头注意力的整除约束；
 
 \par\noindent
-（4）对剪枝后的紧凑模型进行微调，恢复其基本检测与分割能力，得到初始压缩模型；
+（4）将完整模型中保留通道对应的参数迁移到紧凑模型，对其进行微调恢复，得到具备基础检测与分割能力的物理剪枝模型；
 
 \par\noindent
 （5）以完整模型为教师、以剪枝微调模型为学生，在 P3、P4、P5 以及 C2SASA 输出特征上执行多阶段特征蒸馏，并在输出层引入软目标蒸馏，继续优化学生模型；
@@ -147,10 +286,10 @@ L_{\mathrm{distill}} = \alpha L_{\mathrm{soft}} + \beta L_{\mathrm{review}}
 \par\noindent
 （6）最终获得兼顾模型复杂度与任务性能的 Pruned-Distilled-YOLO11-StackLite。
 
-上述流程体现了“先压缩、后恢复”的设计思路。结构化通道剪枝负责直接降低模型参数量与计算开销，知识蒸馏负责在紧凑结构上恢复语义表达与边缘细节建模能力。由于该流程以真实可复现的经典方法为基础，并针对 C2SASA、C3k2\_QDConv 和 SSConv 的结构特征进行了约束化设计，因此更适合作为本文面向边缘部署的模型压缩方案。
+上述流程体现了“先压缩、后恢复”的设计思路。稀疏训练与结构化物理剪枝负责识别并删除低贡献通道，权重迁移与微调恢复负责在紧凑结构上建立稳定的初始表示，知识蒸馏则进一步恢复语义表达与边缘细节建模能力。从流程功能分工来看，阶段（2）与阶段（3）主要解决“如何在不破坏模块约束的前提下释放模型冗余并构建紧凑结构”的问题，阶段（4）主要解决“如何在压缩后恢复分割与盘点性能”的问题。由算法~\ref{alg:module_prune}与算法~\ref{alg:compression_pipeline}可见，本文压缩方案的关键不在于构造抽象的通用剪枝框架，而在于围绕本文模型中的关键模块建立专用的通道选择、结构对齐和权重迁移规则，从而形成一条能够真实落地、可继续训练且与任务需求保持一致的压缩流程。
 
 \section{本章小结}{Summary}
 
-本章围绕 YOLO11-StackLite 在边缘部署场景下仍存在参数冗余和计算开销较高的问题，构建了面向堆叠货物盘点任务的模型压缩方法。首先，从实例分割与盘点联合任务的角度分析了模型压缩需求，明确本文压缩目标不是单纯追求参数最小化，而是在 Params、GFLOPs、box/mask mAP 以及 DA、CA 等指标之间取得平衡。随后，基于 Network Slimming 的结构化通道剪枝方法，结合 C3k2\_QDConv、SSConv 和 C2SASA 的真实结构约束，设计了更符合 YOLO11-StackLite 特点的差异化剪枝策略。最后，在剪枝基础上引入经典软目标蒸馏与基于 ReviewKD 的多阶段特征蒸馏，以恢复压缩造成的结构表达能力损失。
+本章围绕 YOLO11-StackLite 在边缘部署场景下仍存在参数冗余和计算开销较高的问题，构建了面向堆叠货物盘点任务的模型压缩方法。首先，从实例分割与盘点联合任务的角度分析了模型压缩需求，明确本文压缩目标不是单纯追求参数最小化，而是在 Params、GFLOPs、box/mask mAP 以及 DA、CA 等指标之间取得平衡。随后，基于 Network Slimming 的结构化通道剪枝方法，结合 C3k2\_QDConv、SSConv 和 C2SASA 的真实结构约束，设计了更符合 YOLO11-StackLite 特点的差异化剪枝策略，并通过保留通道权重迁移构建可直接继续训练的物理剪枝模型。最后，在剪枝基础上引入经典软目标蒸馏与基于 ReviewKD 的多阶段特征蒸馏，以恢复压缩造成的结构表达能力损失。
 
-总体而言，本章形成了一个由“稀疏训练、结构化裁剪、微调恢复、蒸馏增强”组成的完整压缩流程。该流程既具有明确的文献依据，又与本文模型结构和任务场景保持一致，为第4章进一步开展压缩模型实验验证提供了方法基础。
+总体而言，本章形成了一个由“稀疏训练、结构化物理剪枝、权重迁移、微调恢复、蒸馏增强”组成的完整压缩流程。该流程既具有明确的文献依据，又与本文模型结构和任务场景保持一致，为第4章进一步开展压缩模型实验验证提供了研究基础。
