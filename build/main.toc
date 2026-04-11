@@ -1,7 +1,7 @@
 \contentsline {chapter}{摘要}{I}{chapter*.3}%
 \contentsline {chapter}{ABSTRACT}{III}{chapter*.4}%
-\contentsline {chapter}{目录}{VI}{chapter*.5}%
-\contentsline {chapter}{CONTENTS}{VIII}{chapter*.6}%
+\contentsline {chapter}{目录}{V}{chapter*.5}%
+\contentsline {chapter}{CONTENTS}{VII}{chapter*.6}%
 \contentsline {chapter}{\numberline {第一章}绪论}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}本课题研究背景及研究意义}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}国内外相关研究现状}{3}{section.1.2}%
@@ -25,7 +25,7 @@
 \contentsline {subsubsection}{\numberline {2.2.1.1}基于几何关系的顶层满载检测算法}{28}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}掩膜关键点驱动的层间面积比估计算法}{29}{subsubsection.2.2.1.2}%
 \contentsline {section}{\numberline {2.3}本章小结}{31}{section.2.3}%
-\contentsline {chapter}{\numberline {第三章}面向边缘部署需求的YOLO11-StackLite轻量化压缩方法}{33}{chapter.3}%
+\contentsline {chapter}{\numberline {第三章}面向边缘部署需求的YOLO11-StackLite模型压缩方法}{33}{chapter.3}%
 \contentsline {section}{\numberline {3.1}模型压缩需求分析}{34}{section.3.1}%
 \contentsline {section}{\numberline {3.2}基于结构化通道剪枝的轻量化方法}{35}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Network Slimming型结构化剪枝原理}{35}{subsection.3.2.1}%
@@ -50,9 +50,9 @@
 \contentsline {subsection}{\numberline {4.4.4}计数误差来源分析}{57}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}模型压缩实验}{59}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}压缩结果分析}{62}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}轻量化效果与部署适配分析}{63}{subsection.4.4.7}%
+\contentsline {subsection}{\numberline {4.4.7}边缘部署可行性分析}{63}{subsection.4.4.7}%
 \contentsline {section}{\numberline {4.5}本章小结}{64}{section.4.5}%
 \contentsline {chapter}{\numberline {第五章}结论与展望}{65}{chapter.5}%
-\contentsline {chapter}{参考文献}{67}{chapter*.31}%
-\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{74}{chapter*.32}%
-\contentsline {chapter}{致谢}{75}{chapter*.35}%
+\contentsline {chapter}{参考文献}{68}{chapter*.31}%
+\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{75}{chapter*.32}%
+\contentsline {chapter}{致谢}{76}{chapter*.35}%

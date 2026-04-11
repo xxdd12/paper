@@ -1,7 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  11 APR 2026 20:24
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  11 APR 2026 17:56
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -1785,11 +1784,11 @@ p;"
 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/XITS(1)/m/n on input line 152.
+(Font)                  OT1/cmr/m/n --> TU/XITS(1)/m/n on input line 149.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/XITS(1)/m/it on input line 152.
+(Font)                  OT1/cmr/m/it --> TU/XITS(1)/m/it on input line 149.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/XITS(1)/b/n on input line 152.
+(Font)                  OT1/cmr/bx/n --> TU/XITS(1)/b/n on input line 149.
 
 Package fontspec Info: 
 (fontspec)             Font family 'texgyreheros(0)' created for font
@@ -1862,10 +1861,10 @@ e=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/texgyreheros(1)/m/n on input line 1
-52.
+49.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/texgyreheros(1)/b/n on input line 
-152.
+149.
 
 Package fontspec Info: 
 (fontspec)             Font family 'texgyrecursor(0)' created for font
@@ -1959,10 +1958,10 @@ ge=dflt;-liga;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/texgyrecursor(1)/m/n on input line 
-152.
+149.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/texgyrecursor(1)/b/n on input line 
-152.
+149.
 
 Package fontspec Info: 
 (fontspec)             Font family 'XITSMath-Regular.otf(0)' created for font
@@ -2000,16 +1999,16 @@ sty=1;"
 (fontspec)             <->"[XITSMath-Bold.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 152.
+(Font)              `operators' in the math version `normal' on input line 149.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/XITSMath-Regular.otf(1)/m/n on input
- line 152.
+ line 149.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 152.
+(Font)              `operators' in the math version `bold' on input line 149.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/XITSMath-Regular.otf(1)/b/n on inpu
-t line 152.
+t line 149.
 
 Package fontspec Info: 
 (fontspec)             XITSMath-Regular scale = 1.0001.
@@ -2063,15 +2062,15 @@ T:script=math;language=dflt;+ssty=1;"
 e=dflt;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 152.
+(Font)              `symbols' in the math version `normal' on input line 149.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/XITSMath-Regular.otf(2)/m/n on inpu
-t line 152.
+t line 149.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 152.
+(Font)              `symbols' in the math version `bold' on input line 149.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/XITSMath-Regular.otf(2)/b/n on inpu
-t line 152.
+t line 149.
 
 Package fontspec Info: 
 (fontspec)             XITSMath-Regular scale = 0.9999.
@@ -2120,16 +2119,16 @@ e=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-52.
+49.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular.otf(3)/m/n on inpu
-t line 152.
+t line 149.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 152
+(Font)              `largesymbols' in the math version `bold' on input line 149
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular.otf(3)/b/n on inpu
-t line 152.
+t line 149.
 
 Package fontspec Info: 
 (fontspec)             Font family 'XITSMath-Regular.otf(4)' created for font
@@ -2154,10 +2153,10 @@ uage=dflt;+ss01;+ssty=1;"
 \sym__um_fam1=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/XITSMath-Regular.otf(4)/m/n --> TU/XITSMath-Regular.
-otf(4)/m/n on input line 152.
+otf(4)/m/n on input line 149.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/XITSMath-Regular.otf(4)/m/n --> TU/XITSMath-Regular.
-otf(4)/b/n on input line 152.
+otf(4)/b/n on input line 149.
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FandolKai/BI" (it probably
@@ -2187,23 +2186,23 @@ Package fontspec Info:
 Package thmtools Info: Key `numberwithin' (with value `chapter')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-no-number' on input line 152.
+(thmtools)             that uses `style=gdut-no-number' on input line 149.
 Package thmtools Info: Key `qed' (with value `\l__gdut_thm_qed_tl ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-no-number' on input line 152.
+(thmtools)             that uses `style=gdut-no-number' on input line 149.
 Package thmtools Info: Key `numbered' (with value `no')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-no-number' on input line 152.
+(thmtools)             that uses `style=gdut-no-number' on input line 149.
 Package thmtools Info: Key `numberwithin' (with value `chapter')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-number' on input line 152.
+(thmtools)             that uses `style=gdut-number' on input line 149.
 Package thmtools Info: Key `qed' (with value `')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-number' on input line 152.
+(thmtools)             that uses `style=gdut-number' on input line 149.
 \c@assertion=\count582
 \c@assumption=\count583
 \c@axiom=\count584
@@ -2310,15 +2309,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip190
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 152.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 149.
 
-Package hyperref Info: Option `psdextra' set `true' on input line 152.
+Package hyperref Info: Option `psdextra' set `true' on input line 149.
 
 (c:/texlive/2026/texmf-dist/tex/latex/hyperref/psdextra.def
 File: psdextra.def 2026-01-29 v7.01p Hyperref: Additions to PDF string support
 )
-Package hyperref Info: Option `unicode' set `true' on input line 152.
-Package hyperref Info: Option `colorlinks' set `true' on input line 152.
+Package hyperref Info: Option `unicode' set `true' on input line 149.
+Package hyperref Info: Option `colorlinks' set `true' on input line 149.
 
 (c:/texlive/2026/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2026/03/06 v5.0 (NLCT)
@@ -2480,29 +2479,29 @@ t;"
 (fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
 
 
- (./main.aux)
+ (build/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -2557,7 +2556,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package bicaption Info: Main language is not set on input line 152.
+Package bicaption Info: Main language is not set on input line 149.
 
 (c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2021-04-17 v2.8e siunitx: Abbreviated units
@@ -2580,26 +2579,30 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
-(./main.bbl)
-Package biblatex Info: Reference section=0 on input line 152.
-Package biblatex Info: Reference segment=0 on input line 152.
-Package hyperref Info: Link coloring ON on input line 152.
- (./main.out) (./main.out)
+(build/main.bbl)
+Package biblatex Info: Reference section=0 on input line 149.
+Package biblatex Info: Reference segment=0 on input line 149.
+Package hyperref Info: Link coloring ON on input line 149.
+ (build/main.out) (build/main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 152.
+(Font)              scaled to size 12.04628pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 9.03471pt on input line 152.
+(Font)              scaled to size 9.03471pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.22777pt on input line 152.
+(Font)              scaled to size 7.22777pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 152.
+(Font)              scaled to size 12.0437pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 9.03278pt on input line 152.
+(Font)              scaled to size 9.03278pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.22623pt on input line 152.
+(Font)              scaled to size 7.22623pt on input line 149.
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2629,18 +2632,18 @@ oldItalicFont={*-Bold},BoldFont={*-Bold},ItalicFont={*-Regular}].
 (fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 14.05399pt on input line 152.
+(Font)              scaled to size 14.05399pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 10.54048pt on input line 152.
+(Font)              scaled to size 10.54048pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.52892pt on input line 152.
+(Font)              scaled to size 7.52892pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 14.05098pt on input line 152.
+(Font)              scaled to size 14.05098pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 10.53824pt on input line 152.
+(Font)              scaled to size 10.53824pt on input line 149.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.52731pt on input line 152.
- [1
+(Font)              scaled to size 7.52731pt on input line 149.
+[1
 
 
 ] [2] [3
@@ -2677,70 +2680,132 @@ oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 (fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt
 ;"
 
-
-[1
+ [1
 
 ] [2] [3
 
-]
-Underfull \hbox (badness 2469) in paragraph at lines 24--25
-[]\TU/XITS(0)/m/n/12.045 (2) An integrated workflow combining instance segmenta
-tion outputs with post-
- []
-
-[4]) (./data/notation.tex) [5] (./main.toc [6
+]) (./data/notation.tex) [4]
+(build/main.toc [5
 
 ])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [7] (./main.tec [8
+ [6] (build/main.tec [7
 
 ])
 \tf@tec=\write7
 \openout7 = `main.tec'.
 
- [9]
-(./data/chap01.tex
+ [8] (./data/chap01.tex
 第一章
 [1
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11]) (./data/chap02.tex [12] [13]
+] [2] [3] [4] [5]
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolFang-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolFang(0)' created for font
+(fontspec)             'FandolFang' with options
+(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},B
+oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
+t;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
+t;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[FandolFang-Regular.otf]/OT:script=hani;language=dfl
+t;"
+
+ [6] [7] [8] [9] [10]
+
+LaTeX Warning: Reference `fig:fig1' on page 11 undefined on input line 111.
+
+
+LaTeX Warning: Reference `fig:fig1' on page 11 undefined on input line 149.
+
+[11]) (./data/chap02.tex [12] [13]
 第二章
 [14
 
 ]
+
+LaTeX Warning: Reference `fig:fig2' on page 15 undefined on input line 16.
+
 File: figure/fig2.png Graphic file (type bmp)
 <figure/fig2.png>
- [15]
+[15]
+
+LaTeX Warning: Reference `fig:fig3' on page 16 undefined on input line 40.
+
 File: figure/fig3.png Graphic file (type bmp)
 <figure/fig3.png>
- [16] [17]
+[16] [17]
+
+LaTeX Warning: Reference `fig:fig4' on page 18 undefined on input line 66.
+
 File: figure/fig4.pdf Graphic file (type pdf)
 <use figure/fig4.pdf>
- [18] [19] [20]
+[18] [19] [20]
+
+LaTeX Warning: Reference `fig:fig5' on page 21 undefined on input line 113.
+
 File: figure/fig5.pdf Graphic file (type pdf)
 <use figure/fig5.pdf>
- [21] [22]
+[21] [22]
+
+LaTeX Warning: Reference `fig:fig6' on page 23 undefined on input line 154.
+
 File: figure/fig6.pdf Graphic file (type pdf)
 <use figure/fig6.pdf>
- [23] [24]
+[23] [24]
+
+LaTeX Warning: Reference `fig:fig7' on page 25 undefined on input line 190.
+
 File: figure/fig7-1.png Graphic file (type bmp)
 <figure/fig7-1.png>
 File: figure/fig7-2.png Graphic file (type bmp)
 <figure/fig7-2.png>
- [25]
+
+LaTeX Warning: Reference `fig:fig8' on page 25 undefined on input line 204.
+
+[25]
 File: figure/fig8.pdf Graphic file (type pdf)
 <use figure/fig8.pdf>
- [26] [27]
+ [26]
+
+LaTeX Warning: Reference `subfig:fig9a' on page 27 undefined on input line 220.
+
+
+[27]
 File: figure/9-1.png Graphic file (type bmp)
 <figure/9-1.png>
 File: figure/9-2.png Graphic file (type bmp)
 <figure/9-2.png>
 File: figure/9-3.png Graphic file (type bmp)
 <figure/9-3.png>
- [28]
+
+
+LaTeX Warning: Reference `tab:alg_full_load' on page 28 undefined on input line
+ 255.
+
+[28]
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
 (Font)              scaled to size 7.00075pt on input line 283.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
@@ -2750,22 +2815,76 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 283.
 
-[29] [30]
+
+LaTeX Warning: Reference `tab:alg_area_ratio' on page 29 undefined on input lin
+e 291.
+
+
+LaTeX Warning: Reference `fig:fig10' on page 29 undefined on input line 291.
+
+[29]
+
+LaTeX Warning: Reference `eq:line-k' on page 30 undefined on input line 313.
+
+
+LaTeX Warning: Reference `eq:line-intersection' on page 30 undefined on input l
+ine 313.
+
+[30]
 File: figure/fig10.png Graphic file (type bmp)
 <figure/fig10.png>
-) (./data/chap03.tex [31] [32]
+ [31]) (./data/chap03.tex [32]
 第三章
+
+LaTeX Warning: Reference `fig:fig8a' on page 33 undefined on input line 11.
+
 [33
 
 ] [34] [35] [36] [37] [38]
 Overfull \vbox (92.86346pt too high) has occurred while \output is active []
 
 
-[39] [40] [41] [42] [43]) (./data/chap04.tex [44] [45]
+[39]
+
+LaTeX Warning: Reference `alg:module_prune' on page 40 undefined on input line 
+179.
+
+
+LaTeX Warning: Reference `alg:compression_pipeline' on page 40 undefined on inp
+ut line 183.
+
+[40] [41] [42] [43]
+
+LaTeX Warning: Reference `alg:module_prune' on page 44 undefined on input line 
+289.
+
+
+LaTeX Warning: Reference `alg:compression_pipeline' on page 44 undefined on inp
+ut line 289.
+
+) (./data/chap04.tex [44] [45]
 第四章
+
+LaTeX Warning: Reference `tab:data_distribution' on page 46 undefined on input 
+line 10.
+
 [46
 
-] [47] [48] [49] [50]
+] [47] [48]
+
+LaTeX Warning: Reference `tab:ablation' on page 49 undefined on input line 48.
+
+
+LaTeX Warning: Reference `tab:ablation' on page 49 undefined on input line 81.
+
+[49]
+
+LaTeX Warning: Reference `tab:ablation' on page 50 undefined on input line 89.
+
+[50]
+
+LaTeX Warning: Reference `fig:fig11' on page 51 undefined on input line 91.
+
 File: figure/fig11-1.png Graphic file (type bmp)
 <figure/fig11-1.png>
 File: figure/fig11-2.png Graphic file (type bmp)
@@ -2778,36 +2897,190 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
- [51] [52] [53] [54]
-Underfull \hbox (badness 1635) in paragraph at lines 268--269
-[]\TU/FandolSong(0)/m/n/12.045 从 表 [][]\TU/XITS(0)/m/n/12.045 4-5[][] \TU/Fando
-lSong(0)/m/n/12.045 可 以 看 出，| \TU/XITS(0)/m/n/12.045 YOLO \TU/FandolSong(0)/m/n
-/12.045 系 列 模 型 在 该 类 状 态 判 别 任 务 中 整 体 较 为 稳 定。|
- []
+
+LaTeX Warning: Reference `fig:fig11' on page 51 undefined on input line 121.
+
+
+LaTeX Warning: Reference `subfig:fig11a' on page 51 undefined on input line 121
+.
+
+
+LaTeX Warning: Reference `subfig:fig11c' on page 51 undefined on input line 121
+.
+
+
+LaTeX Warning: Reference `subfig:fig11e' on page 51 undefined on input line 121
+.
+
+
+LaTeX Warning: Reference `subfig:fig11f' on page 51 undefined on input line 121
+.
+
+
+LaTeX Warning: Reference `tab:ablation' on page 51 undefined on input line 121.
+
+
+
+LaTeX Warning: Reference `tab:model_compare' on page 51 undefined on input line
+ 124.
+
+[51]
+
+LaTeX Warning: Reference `tab:model_compare' on page 52 undefined on input line
+ 160.
+
+[52] [53]
+
+LaTeX Warning: Reference `tab:count_compare' on page 54 undefined on input line
+ 177.
+
+
+LaTeX Warning: Reference `tab:count_compare' on page 54 undefined on input line
+ 209.
+
+
+LaTeX Warning: Reference `tab:count_compare' on page 54 undefined on input line
+ 209.
+
+[54]
+
+LaTeX Warning: Reference `tab:data_distribution' on page 55 undefined on input 
+line 213.
+
+
+LaTeX Warning: Reference `tab:data_distribution' on page 55 undefined on input 
+line 233.
+
+
+LaTeX Warning: Reference `tab:empty_full_accuracy' on page 55 undefined on inpu
+t line 237.
 
 [55]
-Underfull \hbox (badness 1024) in paragraph at lines 304--305
-[]\TU/FandolSong(0)/m/n/12.045 由 表 [][]\TU/XITS(0)/m/n/12.045 4-6[][] \TU/Fando
-lSong(0)/m/n/12.045 可 见，|  在 仅 保 留 顶 层 未 满 载 有 效 计 数 图 像 的 评 估 条 件 下，| \TU/XITS
-(0)/m/n/12.045 YOLO11-
+
+LaTeX Warning: Reference `tab:empty_full_accuracy' on page 56 undefined on inpu
+t line 268.
+
+
+LaTeX Warning: Reference `tab:count_accuracy' on page 56 undefined on input lin
+e 272.
+
+
+LaTeX Warning: Reference `tab:count_accuracy' on page 56 undefined on input lin
+e 304.
+
+
+LaTeX Warning: Reference `tab:count_compare' on page 56 undefined on input line
+ 304.
+
+[56]
+
+LaTeX Warning: Reference `tab:count_compare' on page 57 undefined on input line
+ 306.
+
+
+LaTeX Warning: Reference `tab:empty_full_accuracy' on page 57 undefined on inpu
+t line 306.
+
+
+LaTeX Warning: Reference `tab:count_accuracy' on page 57 undefined on input lin
+e 306.
+
+[57]
+
+LaTeX Warning: Reference `tab:count_compare' on page 58 undefined on input line
+ 317.
+
+
+LaTeX Warning: Reference `tab:empty_full_accuracy' on page 58 undefined on inpu
+t line 317.
+
+
+LaTeX Warning: Reference `tab:count_accuracy' on page 58 undefined on input lin
+e 317.
+
+
+LaTeX Warning: Reference `fig:fig11' on page 58 undefined on input line 319.
+
+
+LaTeX Warning: Reference `tab:error_cases' on page 58 undefined on input line 3
+19.
+
+
+LaTeX Warning: Reference `subfig:fig11a' on page 58 undefined on input line 336
+.
+
+
+LaTeX Warning: Reference `subfig:fig11b' on page 58 undefined on input line 336
+.
+
+
+LaTeX Warning: Reference `subfig:fig11c' on page 58 undefined on input line 336
+.
+
+
+LaTeX Warning: Reference `subfig:fig11d' on page 58 undefined on input line 336
+.
+
+
+LaTeX Warning: Reference `subfig:fig11e' on page 58 undefined on input line 336
+.
+
+
+LaTeX Warning: Reference `subfig:fig11f' on page 58 undefined on input line 336
+.
+
+
+LaTeX Warning: Reference `tab:error_cases' on page 58 undefined on input line 3
+39.
+
+[58]
+
+LaTeX Warning: Reference `tab:compression_compare' on page 59 undefined on inpu
+t line 352.
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 352--353
+\TU/XITS(0)/m/n/12.045 Pruned-YOLO11-StackLite (FT)\TU/FandolSong(0)/m/n/12.045
+ ，|  以 及 在 此 基 础 上 进 一 步 结 合 蒸 馏 恢 复 训 练 得 到 的
  []
 
-[56] [57] [58] [59] [60] [61] [62] [63]) (./data/conclusion.tex [64]
+[59]
+
+LaTeX Warning: Reference `tab:compression_compare' on page 60 undefined on inpu
+t line 375.
+
+
+LaTeX Warning: Reference `tab:inference_speed' on page 60 undefined on input li
+ne 395.
+
+[60]
+
+LaTeX Warning: Reference `tab:pruning_ratio' on page 61 undefined on input line
+ 397.
+
+
+LaTeX Warning: Reference `tab:pruning_ratio' on page 61 undefined on input line
+ 418.
+
+[61]
+
+LaTeX Warning: Reference `tab:compression_compare' on page 62 undefined on inpu
+t line 423.
+
+
+LaTeX Warning: Reference `tab:pruning_ratio' on page 62 undefined on input line
+ 423.
+
+[62] [63]) (./data/conclusion.tex [64]
 第五章
 [65
 
-]) [66] [67
+]) [66] [67] [68
 
-] [68] [69] [70] [71] [72] (./data/result.tex [73]
-Underfull \hbox (badness 1127) in paragraph at lines 9--11
-[]\TU/XITS(0)/m/n/12.045 xxx, \TU/XITS(0)/b/n/12.045 xxx\TU/XITS(0)/m/n/12.045 
-, xxx, \TU/FandolSong(0)/m/n/12.045 等\TU/XITS(0)/m/n/12.045 . Lightweight Insta
-nce Segmentation for Stacked Goods Inven-
- []
+] [69] [70] [71] [72] [73] (./data/result.tex [74])
+(./data/acknowledgement.tex [75
 
-) (./data/acknowledgement.tex [74
-
-]) (./data/appendix.tex) [75
+]) (./data/appendix.tex) [76
 
 ]
 
@@ -2815,24 +3088,42 @@ Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
  found. (Remove \makenoidxglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-(./main.aux)
+(build/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/04/10>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0ED5A9CE6C3106CEC497A87189790360;8064.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  9ECD53C8D762814CCC2D6F210ACFA051;8032.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63278 strings out of 468168
- 1342858 string characters out of 5436524
- 2637168 words of memory out of 5000000
- 91047 multiletter control sequences out of 15000+600000
- 635104 words of font info for 184 fonts, out of 8000000 for 9000
+ 63276 strings out of 468168
+ 1342928 string characters out of 5436524
+ 2628425 words of memory out of 5000000
+ 91048 multiletter control sequences out of 15000+600000
+ 635064 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,15n,131p,2763b,7259s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (87 pages, 1596412 bytes).
+Output written on build/main.pdf (87 pages).

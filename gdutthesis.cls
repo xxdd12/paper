@@ -153,11 +153,10 @@
 \tl_const:Nn \c__gdut_auth_decl_text_tl
   {
     本学位论文作者完全了解学校有关保存、使用学位论文的规定：“研究生在
-    广东工业大学学习和工作期间参与广东工业大学研究项目或承担广东工业大
-    学安排的任务所完成的发明创造及其他技术成果，除另有协议外，归广东工
-    业大学享有或特有”。同意授权广东工业大学保留并向国家有关部门或机构
-    送交该论文的印刷本和电子版本，允许该论文被查阅和借阅。同意授权广东
-    工业大学可以将本学位论文的全部或部分内容编入有关数据库进行检索，可
+    xxx学习和工作期间参与xxx研究项目或承担xxx安排的任务所完成的发明创
+    造及其他技术成果，除另有协议外，归xxx享有或特有”。同意授权xxx保留
+    并向国家有关部门或机构送交该论文的印刷本和电子版本，允许该论文被查
+    阅和借阅。同意授权xxx可以将本学位论文的全部或部分内容编入有关数据库进行检索，可
     以采用影印、缩印、扫描或数字化等其他复制手段保存和汇编本学位论文。
     保密论文在解密后遵守此规定。
   }
@@ -897,7 +896,7 @@
 \fancyhf{}
 \fancyfoot[C]{\zihao{-5}\thepage}
 \fancyhead[CO]{\zihao{-5}\gdut@kai\gdutenkai \leftmark}
-\fancyhead[CE]{\zihao{-5}\gdut@kai\gdutenkai 广东工业大学 \__gdut_thesis_type 论文}
+\fancyhead[CE]{\zihao{-5}\gdut@kai\gdutenkai xxx \__gdut_thesis_type 论文}
 \renewcommand{\headrulewidth}{1.5pt}
 \renewcommand{\headruleskip}{6.2pt}
 \newcommand{\myheadrulewidth}{0.8pt}

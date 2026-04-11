@@ -1,9 +1,9 @@
 ﻿\chapter{实验}{Method for Stacked Cargo Inventory Based on Improved YOLO11-Seg}
 
 \section{实验数据集}{Stacked Cargo Detection and Segmentation}
-在本文中，本文构建了一个用于堆叠货物数量计算任务的图像数据集，命名为 TBD（Tobacco Box Dataset），该数据集来源于烟草立体仓库中烟箱堆叠的真实场景图像，旨在支持目标分割与库存计数等下游任务的研究与验证。
-本数据集共包含794张图像，均通过仓库监控系统采集，图像分辨率统一为1280×960。在分割标注方面，考虑到算法对堆叠结构的泛化能力，TBD采用“up_box”和“down_box”两个类别对堆叠箱体进行标注。其中，“down_box”用于表示位于层中非顶层的箱体，“up_box”表示处于堆叠最上层的箱体。
-在数据集划分上，TBD采用五折交叉验证（5-fold cross-validation）策略，以检验模型评估的稳定性与泛化能力。每一折中，将对应子数据集的80%用作训练集，20%用作验证集，确保不同模型阶段均有稳定的性能反馈。TBD不仅适用于实例分割与目标检测任务，每张图像还附带一个名为layer_count的字段，用于记录该图像中每一层满层时堆叠箱体的数量，可用于堆叠货物的数量推理。通过识别位于层中非顶层的箱体层数Ndown_box和最上层的箱体数量Nup_box，可求出箱子的总数Ntotal。
+在本文中，本文采用了用于堆叠货物数量计算任务的图像数据集 TCSD（Tobacco Cargo Stacking Dataset），该数据集来源于烟草立体仓库中烟箱堆叠的真实场景图像，旨在支持目标分割与库存计数等下游任务的研究与验证。
+本数据集共包含794张图像，均通过仓库监控系统采集，图像分辨率统一为1280×960。在分割标注方面，考虑到算法对堆叠结构的泛化能力，TCSD采用“\enid{up\_box}”和“\enid{down\_box}”两个类别对堆叠箱体进行标注。其中，“\enid{down\_box}”用于表示位于层中非顶层的箱体，“\enid{up\_box}”表示处于堆叠最上层的箱体。
+在数据集划分上，TCSD采用五折交叉验证（5-fold cross-validation）策略，以检验模型评估的稳定性与泛化能力。每一折中，将对应子数据集的80%用作训练集，20%用作验证集，确保不同模型阶段均有稳定的性能反馈。TCSD不仅适用于实例分割与目标检测任务，每张图像还附带一个名为\enid{layer\_count}的字段，用于记录该图像中每一层满层时堆叠箱体的数量，可用于堆叠货物的数量推理。通过识别位于层中非顶层的箱体层数$N_{\mathit{down\_box}}$和最上层的箱体数量$N_{\mathit{up\_box}}$，可求出箱子的总数$N_{\mathit{total}}$。
 \begin{table}
   \bicaption{YOLO11-StackLite 各模块消融实验结果对比表}{Ablation study of YOLO11-StackLite on different module configurations}
   \label{tab:ablation}
@@ -53,7 +53,7 @@ b）模型参数量Params（Parameters）：表示模型中可训练参数的总
 \section{结果与讨论}{Stacked Cargo Detection and Segmentation}
 为了说明本文提出的一些关键组成部分的影响，本文首先进行了消融实验。然后对比所提出的YOLO11-StackLite与其他网络在实例分割上的评估指标、推理速度、模型大小和网络复杂度方面的性能。本文还展示了堆叠货物检测与分割的效果图像示例。对于后处理算法，本文使用相同的提出的数量计算算法比较了几种不同检测模型的准确性。
 \subsection{消融实验}{}
-为验证YOLO11-StackLite中各关键模块的有效性，本文设计了消融实验，在TBD数据集上开展了五折交叉验证，对新提出的C2SASA注意力模块、SSConv模块以及C3K2-QDConv模块的性能进行评估。实验结果如表1所示，表中“√”表示引入对应模块，mAP为5折交叉验证结果的百分比平均值，Params表示模型参数量（M）GFLOPs表示浮点计算量。
+为验证YOLO11-StackLite中各关键模块的有效性，本文设计了消融实验，在TCSD数据集上开展了五折交叉验证，对新提出的C2SASA注意力模块、SSConv模块以及C3K2-QDConv模块的性能进行评估。实验结果如表1所示，表中“√”表示引入对应模块，mAP为5折交叉验证结果的百分比平均值，Params表示模型参数量（M）GFLOPs表示浮点计算量。
 表中第一行无引入新模块的方法相当YOLO11s-Seg模型。从结果来看，单独使用C2SASA模块后，模型在box和mask mAP上均取得提升，且参数量和计算复杂度略有下降，说明该注意力机制在提升精度的同时具备一定的轻量化效果。如果只使用SSConv，参数量下降至9.6M，模型精度也有提升，验证了该模块在特征压缩与表达能力之间有改进。C3K2-QDConv模块同样表现出一定的精度改进。将三者联合引入后，模型在五折交叉验证中表现最优，平均box mAP提升至85.7%，mask mAP提升至84.7%，在保持较低参数量（9.4M）与计算量（34.9 GFLOPs）的前提下，实现了精度与效率的双重优化，验证了各模块设计的有效性与协同增益。
 为了更加直观地展示改进算法的实际效果，本文对原始YOLO11s-Seg模型与改进后的YOLO11-StackLite模型在检测与分割任务中的表现进行了可视化对比，如图10所示。
 \begin{figure}
@@ -83,7 +83,7 @@ b）模型参数量Params（Parameters）：表示模型中可训练参数的总
 图10（a）相比图10（b）明显漏检了一个顶层箱子。图10（c）中一个顶层箱子的置信度仅为0.35，低于设定的0.5阈值而被剔除，同时还多检测了一个底层箱子。图10（e）中的一个顶层箱子置信度为0.45，同样低于阈值被剔除，且其分割掩膜明显不如图10（f）中的结果完整。
 综上所述，YOLO11s-Seg模型在堆叠货物的检测场景中存在一定程度的漏检与误检现象，部分目标置信度偏低，且分割精度有限。而改进后的YOLO11-StackLite模型在目标检测与定位方面表现更加优越，不仅显著降低了漏检率，还有效提升了分割结果的完整性与准确性。
 \subsection{不同实例分割模型性能对比}{}
-本文对提出的YOLO11-StackLite模型在TBD数据集上与其他算法的对比结果如表2所示。对比了当前主流实例分割方法，包括QueryInst[19]，SOLOv2[12]，SparseInst[20]，Mask2Former，YOLOv8s-Seg[15]以及YOLO11s-Seg[16]。SOLOv2，QueryInst与SparseInst基于MMDetection框架进行训练，采用其官方推荐配置文件，并统一使用相同的数据集与评估指标，以保证实验条件一致。
+本文对提出的YOLO11-StackLite模型在TCSD数据集上与其他算法的对比结果如表2所示。对比了当前主流实例分割方法，包括QueryInst[19]，SOLOv2[12]，SparseInst[20]，Mask2Former，YOLOv8s-Seg[15]以及YOLO11s-Seg[16]。SOLOv2，QueryInst与SparseInst基于MMDetection框架进行训练，采用其官方推荐配置文件，并统一使用相同的数据集与评估指标，以保证实验条件一致。
 从五折交叉验证结果来看，在模型复杂度方面，YOLO11-StackLite的参数量为9.4M，计算量为34.9GFLOPs，相比QueryInst、SOLOv2等传统方法大幅下降，显著降低了模型在推理部署过程中的资源消耗。基于GFLOPs指标可知，YOLO11-StackLite具有比其他模型更快的推理速度，验证了其高效的实时性。
 YOLO11-StackLite在所有折次中均取得最高的box mAP与mask mAP，平均box mAP为85.7%，mask mAP为84.7%，优于其他对比模型。该结果体现了所提模型在目标检测与实例分割任务中的准确性与鲁棒性，具备良好的泛化能力和稳定性。可见，YOLO11-StackLite在保证高精度的前提下实现了轻量化设计，在精度与效率之间取得良好平衡。\subsection{不同实例分割模型性能对比}{}
 \begin{table}

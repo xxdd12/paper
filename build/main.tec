@@ -1,7 +1,7 @@
 \contentsline {chapter}{ABSTRACT(IN CHINESE)}{I}{chapter*.3}%
 \contentsline {chapter}{ABSTRACT(IN ENGLISH)}{III}{chapter*.4}%
-\contentsline {chapter}{CONTENTS(IN CHINESE)}{VI}{chapter*.5}%
-\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VIII}{chapter*.6}%
+\contentsline {chapter}{CONTENTS(IN CHINESE)}{V}{chapter*.5}%
+\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VII}{chapter*.6}%
 \contentsline {chapter}{\numberline {Chapter\ 1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1} Background and significance of research }{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Analysis of the research status at home and abroad}{3}{section.1.2}%
@@ -25,7 +25,7 @@
 \contentsline {subsubsection}{\numberline {2.2.1.1}}{28}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.2.1.2}}{29}{subsubsection.2.2.1.2}%
 \contentsline {section}{\numberline {2.3}Summary}{31}{section.2.3}%
-\contentsline {chapter}{\numberline {Chapter\ 3}Lightweight Compression Method of YOLO11-StackLite for Edge-oriented Application}{33}{chapter.3}%
+\contentsline {chapter}{\numberline {Chapter\ 3}Model Compression Method of YOLO11-StackLite for Edge Deployment}{33}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Analysis of Model Compression Requirements}{34}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Lightweight Method Based on Structured Channel Pruning}{35}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Principle of Network Slimming Based Structured Pruning}{35}{subsection.3.2.1}%
@@ -50,9 +50,9 @@
 \contentsline {subsection}{\numberline {4.4.4}Error Analysis of Counting Results}{57}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}Model Compression Experiments}{59}{subsection.4.4.5}%
 \contentsline {subsection}{\numberline {4.4.6}Analysis of Compression Results}{62}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Analysis of Lightweight Effect and Deployment Adaptability}{63}{subsection.4.4.7}%
+\contentsline {subsection}{\numberline {4.4.7}Feasibility Analysis for Edge Deployment}{63}{subsection.4.4.7}%
 \contentsline {section}{\numberline {4.5}Summary}{64}{section.4.5}%
 \contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{65}{chapter.5}%
-\contentsline {chapter}{References}{67}{chapter*.31}%
-\contentsline {chapter}{Publication and patents during study}{74}{chapter*.32}%
-\contentsline {chapter}{Acknowledgements}{75}{chapter*.35}%
+\contentsline {chapter}{References}{68}{chapter*.31}%
+\contentsline {chapter}{Publication and patents during study}{75}{chapter*.32}%
+\contentsline {chapter}{Acknowledgements}{76}{chapter*.35}%

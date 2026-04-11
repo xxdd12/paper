@@ -57,6 +57,8 @@ YOLO11-StackLite 的设计并非对原始网络进行简单模块替换，而是
 
 \subsubsection{本文提出的通道拆分注意力模块 C2SASA}{}
 
+\par\noindent\textbf{设计动机：}在立体仓库堆叠货物图像中，顶层箱体边缘、层间交界区域和局部遮挡轮廓往往淹没在大量重复纹理与相似背景之中。原始 C2PSA 虽然具备一定全局建模能力，但对全部通道统一执行注意力计算容易带来计算冗余，也可能使无关背景区域参与相似度建模，削弱模型对关键箱体区域的聚焦效果。针对这一问题，本文希望在不过度增加复杂度的前提下，突出与顶层箱体识别、层次判别和边界恢复更相关的高层语义特征，因此设计了兼顾通道筛选与选择性增强的 C2SASA 模块。
+
 为同时提升模型对显著区域的建模能力并降低计算开销，本文提出通道拆分式选择性激活抑制注意力模块（C2SASA），用于替换 Backbone 中的 C2PSA 模块。该模块首先通过 $1\times1$ 卷积对输入特征进行通道压缩，并将其划分为两条分支：其中一条分支保留残差信息以维持原始特征表达，另一条分支输入改进注意力块进行特征增强，最后通过通道拼接与卷积映射恢复原始维度，实现两类信息的有效融合。
 
 采用通道拆分方式的原因在于，复杂堆叠场景下并非所有通道都需要参与同等强度的注意力计算。若直接对全部特征通道执行全局注意力操作，不仅会增加计算负担，还可能使无关背景信息与低贡献特征一并参与相似度建模，削弱模型对关键区域的聚焦效果。通过在注意力建模前对特征进行拆分，可以将一部分通道保留为稳定的基础语义表达，另一部分通道用于执行更具针对性的注意力增强，从而在减少冗余计算的同时提高有效特征筛选能力。
@@ -101,6 +103,9 @@ y = {\rm{Proj}}\left( {\alpha  \cdot v} \right)
 进一步而言，C2SASA 的作用不仅体现在 mAP 指标提升上，还体现在它为后续盘点任务提供了更稳定的高层语义基础。由于后处理数量计算依赖模型较准确地区分上层与非顶层目标，若高层特征中关键区域表达不足，则后续状态判别和数量推理均会受到影响。因此，C2SASA 可以视为从特征选择层面对盘点任务进行的一种前置优化。
 
 \subsubsection{本文提出的重排分组卷积模块 SSConv}{}
+
+\par\noindent\textbf{设计动机：}堆叠货物盘点任务对掩膜边界连续性和局部结构细节较为敏感，而 Neck 阶段的下采样又是最容易造成细节衰减的环节。若尺度压缩过程中箱体交界边缘、角点或局部可见区域信息被过早削弱，模型便更容易在相邻箱体处产生粘连、漏分和轮廓缺损，进而影响后续满载判别和面积比估计。与此同时，现场部署又要求该部分结构尽量控制复杂度。因此，本文将改进重点放在“降低下采样冗余开销”与“尽量保留对盘点有用的局部结构信息”两方面，并据此设计 SSConv 模块。
+
 在 YOLO11 模型中，Neck 部分通常采用串联的标准卷积进行下采样。虽然该结构实现简单，但存在参数量较大、计算开销较高以及通道信息利用不足等问题，不利于模型在边缘设备上的高效运行。与此同时，标准卷积在下采样过程中对局部细节信息和多尺度语义信息的保留能力有限，容易影响复杂堆叠场景中的特征表达效果。
 
 对于堆叠货物盘点任务而言，下采样阶段的特征损失具有更直接的负面影响。原因在于，箱体边界通常由长直线段和相对规则的角点组成，这些细节信息在尺度压缩过程中若被过度削弱，模型就更容易在相邻箱体交界处出现粘连、漏分或边界不完整等现象。此外，仓储图像中的顶层与非顶层目标往往在局部可见区域上存在差异，若下采样结构不能充分保留这类局部信息，也会影响后续类别区分与数量推理。因此，在保证下采样效率的同时尽量减少关键信息损失，是 Neck 结构改进的重点。
@@ -139,6 +144,9 @@ Y = {\rm{SiLU}}\left( {{\rm{BN}}\left( {{\rm{Concat}}\left( {{Y_1}{\rm{,}}{Y_2}}
 从任务贡献角度看，SSConv 的意义不仅在于压缩模型复杂度，更在于提高了特征融合阶段的信息利用效率。对于本文后续提出的计数方法而言，若实例分割结果在边界连续性和局部形状表达上更加稳定，则满载判别和面积比估计过程也更容易获得可靠输入。因此，SSConv 可以视为连接“模型轻量化需求”和“计数可靠性需求”的关键模块之一。
 
 \subsubsection{本文提出的四向卷积模块 C3k2\_QDConv}{}
+
+\par\noindent\textbf{设计动机：}烟箱堆叠图像中的关键判别线索往往表现为水平或垂直延展的边缘、层间交界线和局部遮挡下的轮廓连续性，而传统 Bottleneck 对这类方向性几何结构的表达能力相对有限。当模型无法稳定感知这些方向性边缘时，容易在箱体接触位置出现实例分离不清、上下层类别混淆和掩膜轮廓不完整等问题。为增强模型对仓储规则堆叠结构的适配能力，本文希望在核心特征提取阶段显式强化水平方向和垂直方向的几何变化建模，因此引入了以四向卷积为核心的 C3k2\_QDConv 模块。
+
 在堆叠货物场景中，箱体边缘、遮挡关系以及方向性几何结构对目标识别具有重要影响。然而，传统 Bottleneck 模块主要依赖标准卷积完成局部特征提取，其对方向性结构和复杂空间关系的建模能力相对有限。尤其在库存边界模糊、局部重叠遮挡等情况下，传统卷积往往难以充分刻画长条形边缘和多方向变化特征，容易造成细节信息损失。
 
 对于烟箱堆叠图像而言，这类方向性结构信息具有更强的任务相关性。由于箱体大多呈规则长方体外形，其边缘通常沿水平或垂直方向分布，堆叠层间关系也常通过这些边缘和角点位置体现出来。当图像中出现部分遮挡、光照变化或背景干扰时，模型是否能够稳定感知这些方向性几何线索，将直接影响其实例分离能力与层次判断能力。因此，仅依赖常规局部卷积往往难以充分满足该类场景对结构表达的需求。
@@ -191,11 +199,11 @@ Y = \mathrm{Conv}_{2\times 2}\left(
   \bicaption{图像标注示例}{Example of image annotation}
   \label{fig:fig7}
 \end{figure}
-其中，类别标签 1 和 0 分别对应 \texttt{up\_box} 与 \texttt{down\_box}。需要特别说明的是，\texttt{up\_box} 表示顶层可见的单个箱体实例，而 \texttt{down\_box} 并非表示每一个非顶层箱体，而是表示顶层以下的单层堆叠区域实例。这一定义与文献\cite{hu2025area}保持一致，其目的在于将“顶层单箱体数量”和“顶层以下完整层数”同时编码到实例分割结果中，从而便于后续数量推理。模型在推理阶段输出每个目标实例的边界框、类别标签及其对应的掩膜信息。为了提升后续计数环节的准确性与鲁棒性，本文根据不同类别的特性设置差异化的置信度阈值，仅保留满足阈值要求的预测结果参与后续处理。
+其中，类别标签 1 和 0 分别对应 \enid{up\_box} 与 \enid{down\_box}。需要特别说明的是，\enid{up\_box} 表示顶层可见的单个箱体实例，而 \enid{down\_box} 并非表示每一个非顶层箱体，而是表示顶层以下的单层堆叠区域实例。这一定义与文献\cite{hu2025area}保持一致，其目的在于将“顶层单箱体数量”和“顶层以下完整层数”同时编码到实例分割结果中，从而便于后续数量推理。模型在推理阶段输出每个目标实例的边界框、类别标签及其对应的掩膜信息。为了提升后续计数环节的准确性与鲁棒性，本文根据不同类别的特性设置差异化的置信度阈值，仅保留满足阈值要求的预测结果参与后续处理。
 
 在获得满足阈值条件的实例分割结果后，本文采用文献\cite{hu2025area}中的面积比计数框架，并结合本文的实例分割标签定义与推理输出完成流程适配，其总体流程如\autoref{fig:fig8}所示。根据仓库货物“下一层箱体仅在当前层堆满后方可叠加”的堆叠规则，总货物数量估算被划分为场景状态判别、顶层满载检测以及未满载场景下面积比估计三个阶段。
 
-为避免符号歧义，本文对后处理流程中的关键量统一定义如下：$N_{total}$ 表示图像对应货位的箱体总数量；$N_{top}$ 表示检测到的 \texttt{up\_box} 数量，即顶层可见单箱体数量；$L_{down}$ 表示检测到的 \texttt{down\_box} 数量，即顶层以下完整堆叠层数；$N_{layer}$ 表示在顶层未满载时由面积比方法估计得到的单层箱体数量。后文中的数量公式均基于上述定义展开。
+为避免符号歧义，本文对后处理流程中的关键量统一定义如下：$N_{\mathit{total}}$ 表示图像对应货位的箱体总数量；$N_{\mathit{top}}$ 表示检测到的 \enid{up\_box} 数量，即顶层可见单箱体数量；$L_{\mathit{down}}$ 表示检测到的 \enid{down\_box} 数量，即顶层以下完整堆叠层数；$N_{\mathit{layer}}$ 表示在顶层未满载时由面积比方法估计得到的单层箱体数量。后文中的数量公式均基于上述定义展开。
 
 这一流程设计体现了“先判别场景状态、后执行数量推理”的思路。原因在于，不同装载状态下可利用的信息并不相同，若不先区分场景类型而直接采用统一的数量计算方式，容易引入系统性误差。例如，空货物图像无需进入后续推理流程；仅包含下层目标的图像由于缺乏完整顶层结构信息，无法直接估算总数量；而完整堆叠图像则需要根据是否顶满选择不同的数量计算路径。通过将盘点流程拆解为若干具有明确业务含义的判断步骤，面积比计数方法在逻辑上更贴近实际仓储盘点规则，也更具可解释性。
 \begin{figure}[htbp]
@@ -209,21 +217,21 @@ Y = \mathrm{Conv}_{2\times 2}\left(
 
 a）检测结果为空。若预测结果中未检测到任何目标，即类别数组为空，则可直接判定该图像中无货物，数量记为 0。
 
-b）仅检测到下层货物。若预测结果中仅包含类别 0，而不包含类别 1，则说明图像中缺乏顶层结构信息，无法直接判断完整堆叠关系，如\autoref{subfig:fig9a}所示。此时输出 \texttt{num=-1}，并将该类图像交由仓储管理系统进一步处理。需要说明的是，\texttt{num=-1} 并不表示系统失效，而是表示在当前单视角视觉证据不足的条件下主动返回“不可判定”状态，以避免在缺乏顶层信息时输出不可靠的数量结果。从工程实现角度看，这是一种面向实际业务的保守回退机制。
+b）仅检测到下层货物。若预测结果中仅包含类别 0，而不包含类别 1，则说明图像中缺乏顶层结构信息，无法直接判断完整堆叠关系，如\autoref{subfig:fig9a}所示。此时输出 \enid{num=-1}，并将该类图像交由仓储管理系统进一步处理。需要说明的是，\enid{num=-1} 并不表示系统失效，而是表示在当前单视角视觉证据不足的条件下主动返回“不可判定”状态，以避免在缺乏顶层信息时输出不可靠的数量结果。从工程实现角度看，这是一种面向实际业务的保守回退机制。
 
 c）同时检测到上层与下层目标。该情形为最常见的完整堆叠场景，需要进一步区分顶层满载和顶层未满载两种情况。若顶层判定为满载，则总货物数量可依据“顶层单箱体数量 $\times$ 总层数”直接估算：
 \begin{equation}\label{eq:total-full}
-{N_{total}} = {N_{top}} \times ({L_{down}} + 1)
+{N_{\mathit{total}}} = {N_{\mathit{top}}} \times ({L_{\mathit{down}}} + 1)
 \end{equation}
-式中，$N_{top}$ 表示当前顶层检测到的单箱体数量，$L_{down}$ 表示顶层以下已完整堆叠的层数。该表达与文献\cite{hu2025area}中的满载情形定义保持一致：当顶层满载时，顶层箱体数可作为每一层的基准箱体数，进而与已完整堆叠的下层层数共同确定总量。若顶层未满载，则需进一步结合掩膜关键点与几何关系估算次顶层单层箱体规模，最终总货物数量表示为：
+式中，$N_{\mathit{top}}$ 表示当前顶层检测到的单箱体数量，$L_{\mathit{down}}$ 表示顶层以下已完整堆叠的层数。该表达与文献\cite{hu2025area}中的满载情形定义保持一致：当顶层满载时，顶层箱体数可作为每一层的基准箱体数，进而与已完整堆叠的下层层数共同确定总量。若顶层未满载，则需进一步结合掩膜关键点与几何关系估算次顶层单层箱体规模，最终总货物数量表示为：
 \begin{equation}\label{eq:total-unfull}
-{N_{total}} = {N_{top}} + ({N_{layer}} \times {L_{down}})
+{N_{\mathit{total}}} = {N_{\mathit{top}}} + ({N_{\mathit{layer}}} \times {L_{\mathit{down}}})
 \end{equation}
-其中，$N_{layer}$ 表示依据面积比估计得到的单层箱体数量。
+其中，$N_{\mathit{layer}}$ 表示依据面积比估计得到的单层箱体数量。
 
 上述两种数量估计方式分别对应规则堆叠场景中的两类典型状态。顶层满载时，堆叠结构相对规则，可直接依据顶层箱体数与完整层数推断总箱体数量；顶层未满载时，当前图像只能部分反映顶层覆盖状态，需要进一步利用掩膜几何关系估算单层箱体规模。正因为如此，本文将“满载检测”设为后处理流程中的关键分支节点，使数量计算过程建立在更稳定的状态判别基础上。需要再次说明的是，这里的状态划分与计数公式沿用自文献\cite{hu2025area} 的面积比计数框架，本文主要完成与改进实例分割结果的适配与系统集成。由此，本文方法对应的是一种“可判定场景自动输出，不可判定场景触发复核”的智能盘点流程，而不是在所有视觉条件下都强制给出自动计数结果。
 
-为便于理解，给出一个简单示例。若某货位图像中检测到 $N_{top}=6$ 个顶层箱体，且检测到 $L_{down}=2$ 个 \texttt{down\_box} 实例，则在顶层满载时可直接得到 $N_{total}=6\times(2+1)=18$。若另一幅图像中检测到 $N_{top}=4$，$L_{down}=2$，且面积比估计得到单层箱体数量 $N_{layer}=6$，则可得到 $N_{total}=4+6\times2=16$。这一示例说明，\texttt{up\_box} 负责提供顶层单箱数量信息，而 \texttt{down\_box} 负责提供完整层数信息，二者共同支撑后处理数量推断。
+为便于理解，给出一个简单示例。若某货位图像中检测到 $N_{\mathit{top}}=6$ 个顶层箱体，且检测到 $L_{\mathit{down}}=2$ 个 \enid{down\_box} 实例，则在顶层满载时可直接得到 $N_{\mathit{total}}=6\times(2+1)=18$。若另一幅图像中检测到 $N_{\mathit{top}}=4$，$L_{\mathit{down}}=2$，且面积比估计得到单层箱体数量 $N_{\mathit{layer}}=6$，则可得到 $N_{\mathit{total}}=4+6\times2=16$。这一示例说明，\enid{up\_box} 负责提供顶层单箱数量信息，而 \enid{down\_box} 负责提供完整层数信息，二者共同支撑后处理数量推断。
 
 \begin{figure}
   \subfloat[缺乏顶层信息]{\label{subfig:fig9a}
@@ -256,27 +264,27 @@ c）同时检测到上层与下层目标。该情形为最常见的完整堆叠�
   \caption{TopLayerFullLoadCheck}
   \label{tab:alg_full_load}
   \small
-  \KwIn{Predicted labels \texttt{pred\_labels}, instance masks \texttt{masks}}
-  \KwOut{Top-layer full-load flag \texttt{is\_full}}
+  \KwIn{Predicted labels \enid{pred\_labels}, instance masks \enid{masks}}
+  \KwOut{Top-layer full-load flag \enid{is\_full}}
   \tcp{阶段1：提取各实例掩膜的几何表示}
-  initialize convex-hull point set \texttt{pts\_list}
-  \ForEach{instance mask \texttt{mask} in \texttt{masks}}{
-    extract contour from \texttt{mask}\tcp*[r]{提取实例轮廓}
-    compute convex-hull points \texttt{pts} for valid contour\tcp*[r]{获得角点集合}
-    append \texttt{pts} to \texttt{pts\_list}
+  initialize convex-hull point set \enid{pts\_list}
+  \ForEach{instance mask \enid{mask} in \enid{masks}}{
+    extract contour from \enid{mask}\tcp*[r]{提取实例轮廓}
+    compute convex-hull points \enid{pts} for valid contour\tcp*[r]{获得角点集合}
+    append \enid{pts} to \enid{pts\_list}
   }
   \tcp{阶段2：划分上下层目标集合}
-  split upper and lower targets according to \texttt{pred\_labels}\tcp*[r]{划分上层与下层候选目标}
+  split upper and lower targets according to \enid{pred\_labels}\tcp*[r]{划分上层与下层候选目标}
   \tcp{阶段3：基于纵向几何关系进行状态判定}
-  compute highest vertical coordinate \texttt{dn\_top\_y} of lower targets
-  compute hull-center vertical coordinate \texttt{up\_center\_y} of upper targets
-  \uIf{\texttt{up\_center\_y > dn\_top\_y}}{
-    set \texttt{is\_full} $\leftarrow$ \texttt{true}\tcp*[r]{判定为顶层满载}
+  compute highest vertical coordinate \enid{dn\_top\_y} of lower targets
+  compute hull-center vertical coordinate \enid{up\_center\_y} of upper targets
+  \uIf{\enid{up\_center\_y > dn\_top\_y}}{
+    set \enid{is\_full} $\leftarrow$ \enid{true}\tcp*[r]{判定为顶层满载}
   }
   \Else{
-    set \texttt{is\_full} $\leftarrow$ \texttt{false}\tcp*[r]{判定为顶层未满载}
+    set \enid{is\_full} $\leftarrow$ \enid{false}\tcp*[r]{判定为顶层未满载}
   }
-  \textbf{return} \texttt{is\_full}
+  \textbf{return} \enid{is\_full}
 \end{algorithm}
 
 \subsubsection{掩膜关键点驱动的层间面积比估计算法}{}
@@ -310,8 +318,8 @@ y
   \caption{MaskKeypointDrivenAreaRatioEstimation}
   \label{tab:alg_area_ratio}
   \small
-  \KwIn{Upper-layer masks \texttt{up\_box\_masks}, lower-layer masks \texttt{down\_box\_masks}}
-  \KwOut{Estimated box number of one layer \texttt{n\_layer}}
+  \KwIn{Upper-layer masks \enid{up\_box\_masks}, lower-layer masks \enid{down\_box\_masks}}
+  \KwOut{Estimated box number of one layer \enid{n\_layer}}
   \tcp{阶段1：提取下层区域关键点}
   extract lower-layer key points $A$, $B$, $C$, $D$, and $G$
   solve intersection point $O_1$ from geometric relation between $AB$ and $CD$\tcp*[r]{确定下层参考交点}
@@ -321,13 +329,13 @@ y
   \tcp{阶段3：计算面积比并估计数量}
   compute single-box area $S_1$ of the upper-layer region\tcp*[r]{估计顶层单箱体面积}
   compute overall area $S_2$ of the lower-layer region\tcp*[r]{估计下层整体面积}
-  set \texttt{n\_layer} $\leftarrow \mathrm{round}(S_2/S_1)$\tcp*[r]{由面积比估计单层数量}
-  \textbf{return} \texttt{n\_layer}
+  set \enid{n\_layer} $\leftarrow \mathrm{round}(S_2/S_1)$\tcp*[r]{由面积比估计单层数量}
+  \textbf{return} \enid{n\_layer}
 \end{algorithm}
 
 上述方法充分利用了实例分割掩膜所提供的轮廓与几何信息，能够在顶层未满载的情况下提升数量估计的可解释性和准确性。实际实现时，为保证输出可用于计数，面积比结果取四舍五入后的正整数值。这样既保留了几何比例信息，也增强了算法在真实仓储场景中的可执行性。
 
-综上可知，本文所集成的后处理数量计算流程形成了“实例识别 - 状态划分 - 几何判定 - 数量估计”的完整链条。其中，实例分割结果提供目标边界与类别信息，满载检测环节负责进行状态分流，面积比估计算法负责处理更复杂的未满载场景，异常回退分支则负责在证据不足时输出不可判定状态并交由系统复核，最终共同构成面向业务场景的库存数量推断流程。与仅依赖检测框数量的简单计数方式相比，该流程更符合实际仓储盘点业务逻辑，也使本文能够在改进实例分割模型的基础上完成可解释的数量估计。就本章贡献边界而言，这一部分的主要价值在于完成既有计数流程与本文视觉模型输出的稳定衔接，为后续实验评估提供统一任务链路。
+综上可知，本文所集成的后处理数量计算流程形成了“实例识别 - 状态划分 - 几何判定 - 数量估计”的完整链条。其中，实例分割结果提供目标边界与类别信息，满载检测环节负责进行状态分流，面积比估计算法负责处理更复杂的未满载场景，异常回退分支则负责在证据不足时输出不可判定状态并交由系统复核，最终共同构成面向业务场景的库存数量推断流程。与仅依赖检测框数量的简单计数方式相比，该流程更符合实际仓储盘点业务逻辑，也使本文能够在改进实例分割模型的基础上完成可解释的数量估计，为后续实验评估提供统一任务链路。
 
 \begin{figure}[htbp]
     \centering
@@ -340,4 +348,4 @@ y
 
 本章首先分析了基线模型 YOLO11s-Seg 的结构特点及其在复杂堆叠场景中的局限性，指出其在关键区域建模、下采样信息保持和方向性空间结构表达方面仍存在改进空间。在此基础上，本文提出改进模型 YOLO11-StackLite，并从注意力机制、特征融合结构和方向性卷积建模三个方面对关键模块进行了设计，形成了面向堆叠货物实例分割任务的改进网络结构。
 
-随后，本文引入前期研究中的面积比后处理计数框架\cite{hu2025area}，并说明了其与实例分割结果的结合方式，使模型输出能够进一步转化为可解释的库存数量信息。由此，本章完成了从视觉识别到数量推理的完整方法集成，为第4章的实验验证提供了技术基础，也为第3章进一步开展模型压缩研究提供了可压缩的高性能基线模型。需要强调的是，本章在数量推理部分的工作重点是任务适配、流程打通和系统验证，而本文的核心原创性仍主要体现在实例分割模型改进与后续压缩路线设计上。
+随后，本文引入前期研究中的面积比后处理计数框架\cite{hu2025area}，并说明了其与实例分割结果的结合方式，使模型输出能够进一步转化为可解释的库存数量信息。由此，本章完成了从视觉识别到数量推理的完整方法集成，为第4章的实验验证提供了技术基础，也为第3章进一步开展模型压缩研究提供了可压缩的高性能基线模型。本章在数量推理部分重点完成了任务适配、流程打通和系统验证。
