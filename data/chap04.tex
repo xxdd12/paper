@@ -118,7 +118,7 @@ b）Params（Parameters），表示模型中可训练参数的总数，用于衡
   \label{fig:fig11}
 \end{figure}
 
-从图~\ref{fig:fig11} 可以看出，YOLO11s-Seg 在部分复杂场景下存在漏检和误检现象。例如，图~\ref{subfig:fig11a} 对应场景中，基线模型较改进模型漏检了一个顶层箱体；图~\ref{subfig:fig11c} 对应样例中，某顶层箱体置信度较低而被阈值过滤，同时还出现了底层误检；图~\ref{subfig:fig11e} 所示基线结果在掩膜完整性方面也明显弱于图~\ref{subfig:fig11f} 中的 YOLO11-StackLite。整体来看，改进后的模型在复杂堆叠场景中的检测稳定性与分割完整性均优于基线模型，这与表~\ref{tab:ablation} 中的定量结果保持一致。
+从图~\ref{fig:fig11} 可以看出，YOLO11s-Seg 在部分复杂场景下存在漏检和误检现象。例如，图~\ref{fig:fig11}中的(a)对应场景中，基线模型较改进模型漏检了一个顶层箱体；图~\ref{fig:fig11}中的(c)对应样例中，某顶层箱体置信度较低而被阈值过滤，同时还出现了底层误检；图~\ref{fig:fig11}中的(e)所示基线结果在掩膜完整性方面也明显弱于图~\ref{fig:fig11}中的(f)所示结果。整体来看，改进后的模型在复杂堆叠场景中的检测稳定性与分割完整性均优于基线模型，这与表~\ref{tab:ablation} 中的定量结果保持一致。
 
 \subsection{不同实例分割模型性能对比}{Comparison of Different Instance Segmentation Models}
 本节实验旨在验证 YOLO11-StackLite 相对于当前主流实例分割方法的综合性能优势。为保证实验条件的一致性，所有模型均在 TCSD 数据集上采用五折交叉验证进行评估，其中 SOLOv2、QueryInst 和 SparseInst 基于 MMDetection 框架训练，并采用官方推荐配置。对比结果如表~\ref{tab:model_compare} 所示。
@@ -328,9 +328,9 @@ b）Params（Parameters），表示模型中可训练参数的总数，用于衡
       \toprule
       样例引用 & 主要误差类型 & 直接原因 & 对盘点结果的影响 \\
       \midrule
-      图~\ref{subfig:fig11a} 与图~\ref{subfig:fig11b} & 漏检误差 & 顶层箱体被遮挡且与相邻结构边界接近，基线模型未稳定识别 & $N_{\mathit{top}}$ 偏小，导致总量估计偏小 \\
-      图~\ref{subfig:fig11c} 与图~\ref{subfig:fig11d} & 误检与层次判别误差 & 顶层目标置信度不足被过滤，同时局部下层区域被误识别 & 状态分流不稳定，可能导致 CA 降低或数量路径选择错误 \\
-      图~\ref{subfig:fig11e} 与图~\ref{subfig:fig11f} & 掩膜缺损引起的层次判别误差 & 掩膜轮廓不完整，结构边界表达不稳定 & 面积比估计偏差增大，$N_{\mathit{layer}}$ 易发生偏移 \\
+      样例组1（a-b） & 漏检误差 & 顶层箱体被遮挡且与相邻结构边界接近，基线模型未稳定识别 & $N_{\mathit{top}}$ 偏小，导致总量估计偏小 \\
+      样例组2（c-d） & 误检与层次判别误差 & 顶层目标置信度不足被过滤，同时局部下层区域被误识别 & 状态分流不稳定，可能导致 CA 降低或数量路径选择错误 \\
+      样例组3（e-f） & 掩膜缺损引起的层次判别误差 & 掩膜轮廓不完整，结构边界表达不稳定 & 面积比估计偏差增大，$N_{\mathit{layer}}$ 易发生偏移 \\
       \bottomrule
     \end{tabular}
   }

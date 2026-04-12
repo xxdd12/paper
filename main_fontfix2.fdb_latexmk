@@ -1,18 +1,17 @@
 # Fdb version 4
-["biber main"] 1775992550.47784 "main.bcf" "main.bbl" "main" 1776000403.0473 0
-  "main.bcf" 1776000401 144275 88f5847b7cd17e4df63e3d62c375e5c2 "xelatex"
+["biber main_fontfix2"] 1775997899.69562 "main_fontfix2.bcf" "main_fontfix2.bbl" "main_fontfix2" 1775997973.6438 0
+  "main_fontfix2.bcf" 1775997971 144275 88f5847b7cd17e4df63e3d62c375e5c2 "xelatex"
   "ref/reference.bib" 1774855372 23470 f7ac86efc245fd3fc5e6fd7977be627d ""
   (generated)
-  "main.bbl"
-  "main.blg"
+  "main_fontfix2.bbl"
+  "main_fontfix2.blg"
   (rewritten before read)
-["xdvipdfmx"] 1776000401.64437 "main.xdv" "main.pdf" "main" 1776000403.05465 0
-  "main.xdv" 1776000401 1605068 80cddb27ce4b638a63eab5b693008564 "xelatex"
+["xdvipdfmx"] 1775997972.10744 "main_fontfix2.xdv" "main_fontfix2.pdf" "main_fontfix2" 1775997973.65068 0
+  "main_fontfix2.xdv" 1775997971 1603272 a66d7101c93c86d1805858005ebb25a1 "xelatex"
   (generated)
-  "main.pdf"
+  "main_fontfix2.pdf"
   (rewritten before read)
-["xelatex"] 1776000396.327 "c:/Users/ASUS/Desktop/论文相关/paper/main.tex" "main.xdv" "main" 1776000403.04745 0
-  "c:/Users/ASUS/Desktop/论文相关/paper/main.tex" 1775996583 6248 655c41b7e77057b445c467c398f8b9f2 ""
+["xelatex"] 1775997964.78236 "main.tex" "main_fontfix2.xdv" "main_fontfix2" 1775997973.64396 0
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1773128062 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1773136008 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1773126197 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -273,7 +272,7 @@
   "data/chap01.tex" 1775992523 33149 807979591d2e1fe6efbf1ed172e55f23 ""
   "data/chap02.tex" 1775997950 41464 60bcfbb6bc7007c537bf6f14b3a44a2f ""
   "data/chap03.tex" 1775997950 32627 0be67588fcc60f8eddc2b27910797a5c ""
-  "data/chap04.tex" 1775998630 56548 3a19fd86528da4398b9a77b0c152f62e ""
+  "data/chap04.tex" 1775997885 56593 07488db7e52197c53447962417632c92 ""
   "data/conclusion.tex" 1775909126 5645 78c3725010bc4e4f0ead82da25775287 ""
   "data/glossaries.tex" 1773195944 221 ddac19cbcff7e8f8bddf36db416b4b67 ""
   "data/notation.tex" 1773307140 152 74c689af6d8af3f633341c0ff38439c9 ""
@@ -296,21 +295,21 @@
   "figure/fig7-1.png" 1773195944 174114 e6bb1e3bc63cc53facdb9256b7eeb00e ""
   "figure/fig7-2.png" 1773195944 149505 b748bd40df8328b5bcee6959aeb1b12b ""
   "figure/fig8.pdf" 1773195944 95484 3766bd7cfa642d690126178ee3de0b7c ""
-  "gdutthesis.cls" 1775998586 70956 48b811af74e63f410159e8202d5112af ""
-  "main.aux" 1776000401 45433 fde5dbc0bbfa61de36b3220bfbc23d97 "xelatex"
-  "main.bbl" 1775992552 210842 662014da30393d08458ad4c708867e88 "biber main"
-  "main.out" 1776000401 8914 0348a13b3fd87be991eded1787291373 "xelatex"
-  "main.run.xml" 1776000401 2488 c53653777ad29558d6e68273dd8e8eb5 "xelatex"
-  "main.tec" 1776000401 5647 1325bf00899c1d43d06a4dc2dda07cdb "xelatex"
+  "gdutthesis.cls" 1775909107 70941 508717705b5b9d6a330013c146ab6e25 ""
   "main.tex" 1775996583 6248 655c41b7e77057b445c467c398f8b9f2 ""
-  "main.toc" 1776000401 5155 988d78604a2b9925b06362d5a663f391 "xelatex"
+  "main_fontfix2.aux" 1775997971 45433 fde5dbc0bbfa61de36b3220bfbc23d97 "xelatex"
+  "main_fontfix2.bbl" 1775997901 210842 662014da30393d08458ad4c708867e88 "biber main_fontfix2"
+  "main_fontfix2.out" 1775997971 8914 0348a13b3fd87be991eded1787291373 "xelatex"
+  "main_fontfix2.run.xml" 1775997971 2551 dd6ab9b9601fcfb44d7150ef1d5c8a84 "xelatex"
+  "main_fontfix2.tec" 1775997971 5647 1325bf00899c1d43d06a4dc2dda07cdb "xelatex"
+  "main_fontfix2.toc" 1775997971 5155 988d78604a2b9925b06362d5a663f391 "xelatex"
   (generated)
-  "main.aux"
-  "main.bcf"
-  "main.log"
-  "main.out"
-  "main.run.xml"
-  "main.tec"
-  "main.toc"
-  "main.xdv"
+  "main_fontfix2.aux"
+  "main_fontfix2.bcf"
+  "main_fontfix2.log"
+  "main_fontfix2.out"
+  "main_fontfix2.run.xml"
+  "main_fontfix2.tec"
+  "main_fontfix2.toc"
+  "main_fontfix2.xdv"
   (rewritten before read)

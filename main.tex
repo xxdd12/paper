@@ -49,14 +49,14 @@
     % font            = {libertinus},
     % font            = {lm},
     % font            = {palatino},
-    font            = {times},
-    % font            = {times*},
+    % font            = {times},
+    font            = {times*},
     % math-font       = {garamond},
     % math-font       = {libertinus},
     % math-font       = {lm},
     % math-font       = {palatino},
-    math-font       = {times},
-    % math-font       = {times*},
+    % math-font       = {times},
+    math-font       = {times*},
     cjk-font        = {fandol},
     % cjk-font        = {founder},
     % cjk-font        = {mac},
@@ -133,6 +133,18 @@
 \makeatletter
 \setlength{\@fptop}{0pt}
 \makeatother
+
+% Use a detector-friendly Latin font setup: keep all Western text families on
+% Times New Roman so headings, TOC entries, and inline identifiers are not
+% switched to Arial/TeX Gyre Heros by the class defaults.
+\ExplSyntaxOn
+\ctex_at_end_preamble:n
+  {
+    \setmainfont{Times~New~Roman}
+    \setsansfont{Times~New~Roman}
+    \setmonofont{Times~New~Roman}
+  }
+\ExplSyntaxOff
 
 % Use Times-style italic for English identifiers appearing in the thesis body.
 \newcommand{\enid}[1]{{\rmfamily\itshape #1}}

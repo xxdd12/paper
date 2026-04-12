@@ -31,28 +31,28 @@
 \contentsline {subsection}{\numberline {3.2.1}Principle of Network Slimming Based Structured Pruning}{34}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Selection of Pruning Targets in YOLO11-StackLite}{35}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}{36}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Pruning Process Design}{37}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.4}Pruning Process Design}{39}{subsection.3.2.4}%
 \contentsline {section}{\numberline {3.3}Accuracy Recovery Method Based on Knowledge Distillation}{40}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Principle of Knowledge Distillation}{40}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Construction of Teacher and Student Models}{40}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Selection of Distillation Information and Constraint Strategy}{40}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Design of Distillation Loss}{41}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.2}Construction of Teacher and Student Models}{41}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Selection of Distillation Information and Constraint Strategy}{41}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Design of Distillation Loss}{42}{subsection.3.3.4}%
 \contentsline {section}{\numberline {3.4}Construction and Training Process of the Compressed Model}{42}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Summary}{43}{section.3.5}%
-\contentsline {chapter}{\numberline {Chapter\ 4}Experiments and Results}{44}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Dataset}{44}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Evaluation Metrics}{45}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experimental Environment and Settings}{46}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Results and Discussion}{47}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Ablation Study}{47}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Comparison of Different Instance Segmentation Models}{50}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Counting Performance Evaluation}{51}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Error Analysis of Counting Results}{55}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Model Compression Experiments}{57}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Analysis of Compression Results}{60}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Analysis of Lightweight Effect and Deployment Adaptability}{61}{subsection.4.4.7}%
-\contentsline {section}{\numberline {4.5}Summary}{62}{section.4.5}%
-\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{63}{chapter.5}%
-\contentsline {chapter}{References}{65}{chapter*.35}%
-\contentsline {chapter}{Publication and patents during study}{72}{chapter*.36}%
-\contentsline {chapter}{Acknowledgements}{73}{chapter*.39}%
+\contentsline {chapter}{\numberline {Chapter\ 4}Experiments and Results}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluation Metrics}{46}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Environment and Settings}{47}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Results and Discussion}{48}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Ablation Study}{48}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Comparison of Different Instance Segmentation Models}{51}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Counting Performance Evaluation}{52}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Error Analysis of Counting Results}{56}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Model Compression Experiments}{58}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Analysis of Compression Results}{61}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}Analysis of Lightweight Effect and Deployment Adaptability}{62}{subsection.4.4.7}%
+\contentsline {section}{\numberline {4.5}Summary}{63}{section.4.5}%
+\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{64}{chapter.5}%
+\contentsline {chapter}{References}{66}{chapter*.31}%
+\contentsline {chapter}{Publication and patents during study}{73}{chapter*.32}%
+\contentsline {chapter}{Acknowledgements}{74}{chapter*.35}%

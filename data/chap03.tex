@@ -133,10 +133,10 @@ YOLO11-StackLite 的 Backbone 末端引入了 C2SASA 模块，Neck 中引入了�
 
 从具体实现角度看，结构约束处理是本文物理剪枝能否稳定落地的关键。对于 C3k2\_QDConv，需要保证四向分支等宽同步，避免单一方向分支被独立裁剪后造成拼接失衡；对于 SSConv，需要同时满足二分支通道划分与组卷积整除关系；对于 C2SASA，需要保持注意力映射过程中的维度约束；对于 Segment Head，则需随 P3、P4、P5 三尺度输入通道同步调整分割头和原型分支参数。上述约束使得本文剪枝方案并非简单按比例缩小通道数，而是在重要性评估基础上进一步进行结构对齐。
 
-\begin{algorithm}[H]
+\begin{algorithm}[htbp]
 \caption{ModuleAwarePhysicalPruning}
 \label{alg:module_prune}
-\small
+\footnotesize
 \KwIn{Sparse model $M_{sparse}$, compact structure $M_{pruned}$}
 \KwOut{Initialized compact model $M_{init}$}
 \tcp{阶段1：确定目标模块与保留通道}
@@ -182,10 +182,10 @@ adapt Segment head according to retained P3, P4, and P5 channels
 
 结合上述原则，本文的结构化剪枝与恢复流程可归纳为四个阶段。为便于说明压缩模型的完整构建与性能恢复过程，算法~\ref{alg:compression_pipeline}给出了与实际实现相对应的总体流程伪代码。
 
-\begin{algorithm}[H]
+\begin{algorithm}[htbp]
 \caption{CompressionDistillationPipeline}
 \label{alg:compression_pipeline}
-\small
+\footnotesize
 \KwIn{Dense model $M_{dense}$, training set $D$, target ratio setting $R$}
 \KwOut{Distilled compact model $M_{distill}$}
 \tcp{阶段1：训练完整教师模型}

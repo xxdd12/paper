@@ -1,0 +1,15 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'main_review.blg'
+[82] biber-MSWIN64:342> INFO - === 
+[128] Biber.pm:421> INFO - Reading 'main_review.bcf'
+[264] Biber.pm:1002> INFO - Found 62 citekeys in bib section 0
+[274] Biber.pm:4487> INFO - Processing section 0
+[282] Biber.pm:4678> INFO - Looking for bibtex file 'ref/reference.bib' for section 0
+[326] bibtex.pm:1713> INFO - LaTeX decoding ...
+[363] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/reference.bib'
+[996] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[996] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[996] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[996] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1032] bbl.pm:676> INFO - Writing 'main_review.bbl' with encoding 'UTF-8'
+[1108] bbl.pm:779> INFO - Output to main_review.bbl
