@@ -1,18 +1,18 @@
 \contentsline {chapter}{ABSTRACT(IN CHINESE)}{I}{chapter*.3}%
 \contentsline {chapter}{ABSTRACT(IN ENGLISH)}{III}{chapter*.4}%
 \contentsline {chapter}{CONTENTS(IN CHINESE)}{VI}{chapter*.5}%
-\contentsline {chapter}{CONTENTS(IN ENGLISH)}{IX}{chapter*.6}%
+\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VII}{chapter*.6}%
 \contentsline {chapter}{\numberline {Chapter\ 1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1} Background and significance of the research }{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Research Status at Home and Abroad}{2}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Object Detection and Instance Segmentation}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Object Counting}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Object Counting}{5}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Model Pruning and Knowledge Distillation}{6}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Summary of Existing Studies and Remaining Problems}{7}{subsection.1.2.4}%
 \contentsline {section}{\numberline {1.3}Main Research Content and Thesis Organization}{8}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Main Research Content}{8}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Thesis Organization}{11}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Summary}{11}{section.1.4}%
+\contentsline {subsection}{\numberline {1.3.2}Thesis Organization}{10}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Summary}{12}{section.1.4}%
 \contentsline {chapter}{\numberline {Chapter\ 2}Inventory Counting Method for Stacked Goods in Automated Warehouse Based on YOLO11-StackLite}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Stacked Cargo Detection and Segmentation}{13}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}YOLO11s-Seg Architecture}{13}{subsection.2.1.1}%
@@ -23,14 +23,14 @@
 \contentsline {section}{\numberline {2.2}Post-processing Counting Method}{23}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Main Counting Workflow}{24}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Top-layer Full-load Detection Based on Geometric Relations}{27}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Interlayer Area-ratio Estimation Driven by Mask Keypoints}{28}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Summary}{30}{section.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Interlayer Area-ratio Estimation Driven by Mask Keypoints}{29}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Summary}{31}{section.2.3}%
 \contentsline {chapter}{\numberline {Chapter\ 3}Lightweight Compression Method of YOLO11-StackLite for Edge-oriented Application}{32}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Analysis of Model Compression Requirements}{33}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Lightweight Method Based on Structured Channel Pruning}{33}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Principle of Network Slimming Based Structured Pruning}{33}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Selection of Pruning Targets in YOLO11-StackLite}{34}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}{35}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}{36}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Pruning Process Design}{37}{subsection.3.2.4}%
 \contentsline {section}{\numberline {3.3}Accuracy Recovery Method Based on Knowledge Distillation}{39}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Principle of Knowledge Distillation}{39}{subsection.3.3.1}%
@@ -53,6 +53,5 @@
 \contentsline {subsection}{\numberline {4.5.2}Analysis of Lightweight Effect and Deployment Adaptability}{61}{subsection.4.5.2}%
 \contentsline {section}{\numberline {4.6}Summary}{63}{section.4.6}%
 \contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{64}{chapter.5}%
-\contentsline {chapter}{References}{66}{chapter*.36}%
-\contentsline {chapter}{Publication and patents during study}{73}{chapter*.37}%
-\contentsline {chapter}{Acknowledgements}{74}{chapter*.40}%
+\contentsline {chapter}{Publication and patents during study}{66}{chapter*.36}%
+\contentsline {chapter}{Acknowledgements}{67}{chapter*.39}%

@@ -1,176 +1,313 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  12 APR 2026 21:26
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.10)  16 APR 2026 19:58
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/ASUS/Desktop/论文相关/paper/main.tex
-(c:/Users/ASUS/Desktop/论文相关/paper/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (./gdutthesis.cls (c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2026-01-19 L3 programming layer (loader) 
- (c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
 \g__graphics_track_int=\count271
 \g__pdfannot_backend_int=\count272
 \g__pdfannot_backend_link_int=\count273
 ))
-Document Class: gdutthesis 2024/01/19 v0.1f Thesis Template for Guangdong University of Technology
+Document Class: gdutthesis 2024/01/19 v0.1f Thesis Template for Guangdong Unive
+rsity of Technology
 (c:/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2025-10-09 L3 Experimental prototype document functions
-) (c:/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 \g__gdut_thesis_type_int=\count274
- (c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexbook.cls (c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexbook.cls
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
 )
-Document Class: ctexbook 2022/07/14 v2.5.10 Chinese adapter for class book (CTEX)
+Document Class: ctexbook 2022/07/14 v2.5.10 Chinese adapter for class book (CTE
+X)
 (c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
-) (c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexpatch.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
-) (c:/texlive/2026/texmf-dist/tex/latex/base/fix-cm.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
- (c:/texlive/2026/texmf-dist/tex/latex/base/ts1enc.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
-LaTeX Encoding Info:    Redeclaring text command \capitalcedilla (encoding TS1) on input line 49.
-LaTeX Encoding Info:    Redeclaring text command \capitalogonek (encoding TS1) on input line 52.
-LaTeX Encoding Info:    Redeclaring text command \capitalgrave (encoding TS1) on input line 55.
-LaTeX Encoding Info:    Redeclaring text command \capitalacute (encoding TS1) on input line 56.
-LaTeX Encoding Info:    Redeclaring text command \capitalcircumflex (encoding TS1) on input line 57.
-LaTeX Encoding Info:    Redeclaring text command \capitaltilde (encoding TS1) on input line 58.
-LaTeX Encoding Info:    Redeclaring text command \capitaldieresis (encoding TS1) on input line 59.
-LaTeX Encoding Info:    Redeclaring text command \capitalhungarumlaut (encoding TS1) on input line 60.
-LaTeX Encoding Info:    Redeclaring text command \capitalring (encoding TS1) on input line 61.
-LaTeX Encoding Info:    Redeclaring text command \capitalcaron (encoding TS1) on input line 62.
-LaTeX Encoding Info:    Redeclaring text command \capitalbreve (encoding TS1) on input line 63.
-LaTeX Encoding Info:    Redeclaring text command \capitalmacron (encoding TS1) on input line 64.
-LaTeX Encoding Info:    Redeclaring text command \capitaldotaccent (encoding TS1) on input line 65.
-LaTeX Encoding Info:    Redeclaring text command \t (encoding TS1) on input line 66.
-LaTeX Encoding Info:    Redeclaring text command \capitaltie (encoding TS1) on input line 67.
-LaTeX Encoding Info:    Redeclaring text command \newtie (encoding TS1) on input line 68.
-LaTeX Encoding Info:    Redeclaring text command \capitalnewtie (encoding TS1) on input line 69.
-LaTeX Encoding Info:    Redeclaring text symbol \textcapitalcompwordmark (encoding TS1) on input line 70.
-LaTeX Encoding Info:    Redeclaring text symbol \textascendercompwordmark (encoding TS1) on input line 71.
-LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightbase (encoding TS1) on input line 72.
-LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightdblbase (encoding TS1) on input line 73.
-LaTeX Encoding Info:    Redeclaring text symbol \texttwelveudash (encoding TS1) on input line 74.
-LaTeX Encoding Info:    Redeclaring text symbol \textthreequartersemdash (encoding TS1) on input line 75.
-LaTeX Encoding Info:    Redeclaring text symbol \textleftarrow (encoding TS1) on input line 76.
-LaTeX Encoding Info:    Redeclaring text symbol \textrightarrow (encoding TS1) on input line 77.
-LaTeX Encoding Info:    Redeclaring text symbol \textblank (encoding TS1) on input line 78.
-LaTeX Encoding Info:    Redeclaring text symbol \textdollar (encoding TS1) on input line 79.
-LaTeX Encoding Info:    Redeclaring text symbol \textquotesingle (encoding TS1) on input line 80.
-LaTeX Encoding Info:    Redeclaring text command \textasteriskcentered (encoding TS1) on input line 81.
-LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphen (encoding TS1) on input line 92.
-LaTeX Encoding Info:    Redeclaring text symbol \textfractionsolidus (encoding TS1) on input line 93.
-LaTeX Encoding Info:    Redeclaring text symbol \textzerooldstyle (encoding TS1) on input line 94.
-LaTeX Encoding Info:    Redeclaring text symbol \textoneoldstyle (encoding TS1) on input line 95.
-LaTeX Encoding Info:    Redeclaring text symbol \texttwooldstyle (encoding TS1) on input line 96.
-LaTeX Encoding Info:    Redeclaring text symbol \textthreeoldstyle (encoding TS1) on input line 97.
-LaTeX Encoding Info:    Redeclaring text symbol \textfouroldstyle (encoding TS1) on input line 98.
-LaTeX Encoding Info:    Redeclaring text symbol \textfiveoldstyle (encoding TS1) on input line 99.
-LaTeX Encoding Info:    Redeclaring text symbol \textsixoldstyle (encoding TS1) on input line 100.
-LaTeX Encoding Info:    Redeclaring text symbol \textsevenoldstyle (encoding TS1) on input line 101.
-LaTeX Encoding Info:    Redeclaring text symbol \texteightoldstyle (encoding TS1) on input line 102.
-LaTeX Encoding Info:    Redeclaring text symbol \textnineoldstyle (encoding TS1) on input line 103.
-LaTeX Encoding Info:    Redeclaring text symbol \textlangle (encoding TS1) on input line 104.
-LaTeX Encoding Info:    Redeclaring text symbol \textminus (encoding TS1) on input line 105.
-LaTeX Encoding Info:    Redeclaring text symbol \textrangle (encoding TS1) on input line 106.
-LaTeX Encoding Info:    Redeclaring text symbol \textmho (encoding TS1) on input line 107.
-LaTeX Encoding Info:    Redeclaring text symbol \textbigcircle (encoding TS1) on input line 108.
-LaTeX Encoding Info:    Redeclaring text command \textcircled (encoding TS1) on input line 109.
-LaTeX Encoding Info:    Redeclaring text symbol \textohm (encoding TS1) on input line 115.
-LaTeX Encoding Info:    Redeclaring text symbol \textlbrackdbl (encoding TS1) on input line 116.
-LaTeX Encoding Info:    Redeclaring text symbol \textrbrackdbl (encoding TS1) on input line 117.
-LaTeX Encoding Info:    Redeclaring text symbol \textuparrow (encoding TS1) on input line 118.
-LaTeX Encoding Info:    Redeclaring text symbol \textdownarrow (encoding TS1) on input line 119.
-LaTeX Encoding Info:    Redeclaring text symbol \textasciigrave (encoding TS1) on input line 120.
-LaTeX Encoding Info:    Redeclaring text symbol \textborn (encoding TS1) on input line 121.
-LaTeX Encoding Info:    Redeclaring text symbol \textdivorced (encoding TS1) on input line 122.
-LaTeX Encoding Info:    Redeclaring text symbol \textdied (encoding TS1) on input line 123.
-LaTeX Encoding Info:    Redeclaring text symbol \textleaf (encoding TS1) on input line 124.
-LaTeX Encoding Info:    Redeclaring text symbol \textmarried (encoding TS1) on input line 125.
-LaTeX Encoding Info:    Redeclaring text symbol \textmusicalnote (encoding TS1) on input line 126.
-LaTeX Encoding Info:    Redeclaring text symbol \texttildelow (encoding TS1) on input line 127.
-LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphenchar (encoding TS1) on input line 128.
-LaTeX Encoding Info:    Redeclaring text symbol \textasciibreve (encoding TS1) on input line 129.
-LaTeX Encoding Info:    Redeclaring text symbol \textasciicaron (encoding TS1) on input line 130.
-LaTeX Encoding Info:    Redeclaring text symbol \textacutedbl (encoding TS1) on input line 131.
-LaTeX Encoding Info:    Redeclaring text symbol \textgravedbl (encoding TS1) on input line 132.
-LaTeX Encoding Info:    Redeclaring text symbol \textdagger (encoding TS1) on input line 133.
-LaTeX Encoding Info:    Redeclaring text symbol \textdaggerdbl (encoding TS1) on input line 134.
-LaTeX Encoding Info:    Redeclaring text symbol \textbardbl (encoding TS1) on input line 135.
-LaTeX Encoding Info:    Redeclaring text symbol \textperthousand (encoding TS1) on input line 136.
-LaTeX Encoding Info:    Redeclaring text symbol \textbullet (encoding TS1) on input line 137.
-LaTeX Encoding Info:    Redeclaring text symbol \textcelsius (encoding TS1) on input line 138.
-LaTeX Encoding Info:    Redeclaring text symbol \textdollaroldstyle (encoding TS1) on input line 139.
-LaTeX Encoding Info:    Redeclaring text symbol \textcentoldstyle (encoding TS1) on input line 140.
-LaTeX Encoding Info:    Redeclaring text symbol \textflorin (encoding TS1) on input line 141.
-LaTeX Encoding Info:    Redeclaring text symbol \textcolonmonetary (encoding TS1) on input line 142.
-LaTeX Encoding Info:    Redeclaring text symbol \textwon (encoding TS1) on input line 143.
-LaTeX Encoding Info:    Redeclaring text symbol \textnaira (encoding TS1) on input line 144.
-LaTeX Encoding Info:    Redeclaring text symbol \textguarani (encoding TS1) on input line 145.
-LaTeX Encoding Info:    Redeclaring text symbol \textpeso (encoding TS1) on input line 146.
-LaTeX Encoding Info:    Redeclaring text symbol \textlira (encoding TS1) on input line 147.
-LaTeX Encoding Info:    Redeclaring text symbol \textrecipe (encoding TS1) on input line 148.
-LaTeX Encoding Info:    Redeclaring text symbol \textinterrobang (encoding TS1) on input line 149.
-LaTeX Encoding Info:    Redeclaring text symbol \textinterrobangdown (encoding TS1) on input line 150.
-LaTeX Encoding Info:    Redeclaring text symbol \textdong (encoding TS1) on input line 151.
-LaTeX Encoding Info:    Redeclaring text symbol \texttrademark (encoding TS1) on input line 152.
-LaTeX Encoding Info:    Redeclaring text symbol \textpertenthousand (encoding TS1) on input line 153.
-LaTeX Encoding Info:    Redeclaring text symbol \textpilcrow (encoding TS1) on input line 154.
-LaTeX Encoding Info:    Redeclaring text symbol \textbaht (encoding TS1) on input line 155.
-LaTeX Encoding Info:    Redeclaring text symbol \textnumero (encoding TS1) on input line 156.
-LaTeX Encoding Info:    Redeclaring text symbol \textdiscount (encoding TS1) on input line 157.
-LaTeX Encoding Info:    Redeclaring text symbol \textestimated (encoding TS1) on input line 158.
-LaTeX Encoding Info:    Redeclaring text symbol \textopenbullet (encoding TS1) on input line 159.
-LaTeX Encoding Info:    Redeclaring text symbol \textservicemark (encoding TS1) on input line 160.
-LaTeX Encoding Info:    Redeclaring text symbol \textlquill (encoding TS1) on input line 161.
-LaTeX Encoding Info:    Redeclaring text symbol \textrquill (encoding TS1) on input line 162.
-LaTeX Encoding Info:    Redeclaring text symbol \textcent (encoding TS1) on input line 163.
-LaTeX Encoding Info:    Redeclaring text symbol \textsterling (encoding TS1) on input line 164.
-LaTeX Encoding Info:    Redeclaring text symbol \textcurrency (encoding TS1) on input line 165.
-LaTeX Encoding Info:    Redeclaring text symbol \textyen (encoding TS1) on input line 166.
-LaTeX Encoding Info:    Redeclaring text symbol \textbrokenbar (encoding TS1) on input line 167.
-LaTeX Encoding Info:    Redeclaring text symbol \textsection (encoding TS1) on input line 168.
-LaTeX Encoding Info:    Redeclaring text symbol \textasciidieresis (encoding TS1) on input line 169.
-LaTeX Encoding Info:    Redeclaring text symbol \textcopyright (encoding TS1) on input line 170.
-LaTeX Encoding Info:    Redeclaring text symbol \textordfeminine (encoding TS1) on input line 171.
-LaTeX Encoding Info:    Redeclaring text symbol \textcopyleft (encoding TS1) on input line 172.
-LaTeX Encoding Info:    Redeclaring text symbol \textlnot (encoding TS1) on input line 173.
-LaTeX Encoding Info:    Redeclaring text symbol \textcircledP (encoding TS1) on input line 174.
-LaTeX Encoding Info:    Redeclaring text symbol \textregistered (encoding TS1) on input line 175.
-LaTeX Encoding Info:    Redeclaring text symbol \textasciimacron (encoding TS1) on input line 176.
-LaTeX Encoding Info:    Redeclaring text symbol \textdegree (encoding TS1) on input line 177.
-LaTeX Encoding Info:    Redeclaring text symbol \textpm (encoding TS1) on input line 178.
-LaTeX Encoding Info:    Redeclaring text symbol \texttwosuperior (encoding TS1) on input line 179.
-LaTeX Encoding Info:    Redeclaring text symbol \textthreesuperior (encoding TS1) on input line 180.
-LaTeX Encoding Info:    Redeclaring text symbol \textasciiacute (encoding TS1) on input line 181.
-LaTeX Encoding Info:    Redeclaring text symbol \textmu (encoding TS1) on input line 182.
-LaTeX Encoding Info:    Redeclaring text symbol \textparagraph (encoding TS1) on input line 183.
-LaTeX Encoding Info:    Redeclaring text symbol \textperiodcentered (encoding TS1) on input line 184.
-LaTeX Encoding Info:    Redeclaring text symbol \textreferencemark (encoding TS1) on input line 185.
-LaTeX Encoding Info:    Redeclaring text symbol \textonesuperior (encoding TS1) on input line 186.
-LaTeX Encoding Info:    Redeclaring text symbol \textordmasculine (encoding TS1) on input line 187.
-LaTeX Encoding Info:    Redeclaring text symbol \textsurd (encoding TS1) on input line 188.
-LaTeX Encoding Info:    Redeclaring text symbol \textonequarter (encoding TS1) on input line 189.
-LaTeX Encoding Info:    Redeclaring text symbol \textonehalf (encoding TS1) on input line 190.
-LaTeX Encoding Info:    Redeclaring text symbol \textthreequarters (encoding TS1) on input line 191.
-LaTeX Encoding Info:    Redeclaring text symbol \texteuro (encoding TS1) on input line 192.
-LaTeX Encoding Info:    Redeclaring text symbol \texttimes (encoding TS1) on input line 193.
-LaTeX Encoding Info:    Redeclaring text symbol \textdiv (encoding TS1) on input line 194.
+LaTeX Encoding Info:    Redeclaring text command \capitalcedilla (encoding TS1)
+ on input line 49.
+LaTeX Encoding Info:    Redeclaring text command \capitalogonek (encoding TS1) 
+on input line 52.
+LaTeX Encoding Info:    Redeclaring text command \capitalgrave (encoding TS1) o
+n input line 55.
+LaTeX Encoding Info:    Redeclaring text command \capitalacute (encoding TS1) o
+n input line 56.
+LaTeX Encoding Info:    Redeclaring text command \capitalcircumflex (encoding T
+S1) on input line 57.
+LaTeX Encoding Info:    Redeclaring text command \capitaltilde (encoding TS1) o
+n input line 58.
+LaTeX Encoding Info:    Redeclaring text command \capitaldieresis (encoding TS1
+) on input line 59.
+LaTeX Encoding Info:    Redeclaring text command \capitalhungarumlaut (encoding
+ TS1) on input line 60.
+LaTeX Encoding Info:    Redeclaring text command \capitalring (encoding TS1) on
+ input line 61.
+LaTeX Encoding Info:    Redeclaring text command \capitalcaron (encoding TS1) o
+n input line 62.
+LaTeX Encoding Info:    Redeclaring text command \capitalbreve (encoding TS1) o
+n input line 63.
+LaTeX Encoding Info:    Redeclaring text command \capitalmacron (encoding TS1) 
+on input line 64.
+LaTeX Encoding Info:    Redeclaring text command \capitaldotaccent (encoding TS
+1) on input line 65.
+LaTeX Encoding Info:    Redeclaring text command \t (encoding TS1) on input lin
+e 66.
+LaTeX Encoding Info:    Redeclaring text command \capitaltie (encoding TS1) on 
+input line 67.
+LaTeX Encoding Info:    Redeclaring text command \newtie (encoding TS1) on inpu
+t line 68.
+LaTeX Encoding Info:    Redeclaring text command \capitalnewtie (encoding TS1) 
+on input line 69.
+LaTeX Encoding Info:    Redeclaring text symbol \textcapitalcompwordmark (encod
+ing TS1) on input line 70.
+LaTeX Encoding Info:    Redeclaring text symbol \textascendercompwordmark (enco
+ding TS1) on input line 71.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightbase (encodin
+g TS1) on input line 72.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightdblbase (enco
+ding TS1) on input line 73.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwelveudash (encoding TS1)
+ on input line 74.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreequartersemdash (encod
+ing TS1) on input line 75.
+LaTeX Encoding Info:    Redeclaring text symbol \textleftarrow (encoding TS1) o
+n input line 76.
+LaTeX Encoding Info:    Redeclaring text symbol \textrightarrow (encoding TS1) 
+on input line 77.
+LaTeX Encoding Info:    Redeclaring text symbol \textblank (encoding TS1) on in
+put line 78.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollar (encoding TS1) on i
+nput line 79.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotesingle (encoding TS1)
+ on input line 80.
+LaTeX Encoding Info:    Redeclaring text command \textasteriskcentered (encodin
+g TS1) on input line 81.
+LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphen (encoding TS1) o
+n input line 92.
+LaTeX Encoding Info:    Redeclaring text symbol \textfractionsolidus (encoding 
+TS1) on input line 93.
+LaTeX Encoding Info:    Redeclaring text symbol \textzerooldstyle (encoding TS1
+) on input line 94.
+LaTeX Encoding Info:    Redeclaring text symbol \textoneoldstyle (encoding TS1)
+ on input line 95.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwooldstyle (encoding TS1)
+ on input line 96.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreeoldstyle (encoding TS
+1) on input line 97.
+LaTeX Encoding Info:    Redeclaring text symbol \textfouroldstyle (encoding TS1
+) on input line 98.
+LaTeX Encoding Info:    Redeclaring text symbol \textfiveoldstyle (encoding TS1
+) on input line 99.
+LaTeX Encoding Info:    Redeclaring text symbol \textsixoldstyle (encoding TS1)
+ on input line 100.
+LaTeX Encoding Info:    Redeclaring text symbol \textsevenoldstyle (encoding TS
+1) on input line 101.
+LaTeX Encoding Info:    Redeclaring text symbol \texteightoldstyle (encoding TS
+1) on input line 102.
+LaTeX Encoding Info:    Redeclaring text symbol \textnineoldstyle (encoding TS1
+) on input line 103.
+LaTeX Encoding Info:    Redeclaring text symbol \textlangle (encoding TS1) on i
+nput line 104.
+LaTeX Encoding Info:    Redeclaring text symbol \textminus (encoding TS1) on in
+put line 105.
+LaTeX Encoding Info:    Redeclaring text symbol \textrangle (encoding TS1) on i
+nput line 106.
+LaTeX Encoding Info:    Redeclaring text symbol \textmho (encoding TS1) on inpu
+t line 107.
+LaTeX Encoding Info:    Redeclaring text symbol \textbigcircle (encoding TS1) o
+n input line 108.
+LaTeX Encoding Info:    Redeclaring text command \textcircled (encoding TS1) on
+ input line 109.
+LaTeX Encoding Info:    Redeclaring text symbol \textohm (encoding TS1) on inpu
+t line 115.
+LaTeX Encoding Info:    Redeclaring text symbol \textlbrackdbl (encoding TS1) o
+n input line 116.
+LaTeX Encoding Info:    Redeclaring text symbol \textrbrackdbl (encoding TS1) o
+n input line 117.
+LaTeX Encoding Info:    Redeclaring text symbol \textuparrow (encoding TS1) on 
+input line 118.
+LaTeX Encoding Info:    Redeclaring text symbol \textdownarrow (encoding TS1) o
+n input line 119.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciigrave (encoding TS1) 
+on input line 120.
+LaTeX Encoding Info:    Redeclaring text symbol \textborn (encoding TS1) on inp
+ut line 121.
+LaTeX Encoding Info:    Redeclaring text symbol \textdivorced (encoding TS1) on
+ input line 122.
+LaTeX Encoding Info:    Redeclaring text symbol \textdied (encoding TS1) on inp
+ut line 123.
+LaTeX Encoding Info:    Redeclaring text symbol \textleaf (encoding TS1) on inp
+ut line 124.
+LaTeX Encoding Info:    Redeclaring text symbol \textmarried (encoding TS1) on 
+input line 125.
+LaTeX Encoding Info:    Redeclaring text symbol \textmusicalnote (encoding TS1)
+ on input line 126.
+LaTeX Encoding Info:    Redeclaring text symbol \texttildelow (encoding TS1) on
+ input line 127.
+LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphenchar (encoding TS
+1) on input line 128.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciibreve (encoding TS1) 
+on input line 129.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciicaron (encoding TS1) 
+on input line 130.
+LaTeX Encoding Info:    Redeclaring text symbol \textacutedbl (encoding TS1) on
+ input line 131.
+LaTeX Encoding Info:    Redeclaring text symbol \textgravedbl (encoding TS1) on
+ input line 132.
+LaTeX Encoding Info:    Redeclaring text symbol \textdagger (encoding TS1) on i
+nput line 133.
+LaTeX Encoding Info:    Redeclaring text symbol \textdaggerdbl (encoding TS1) o
+n input line 134.
+LaTeX Encoding Info:    Redeclaring text symbol \textbardbl (encoding TS1) on i
+nput line 135.
+LaTeX Encoding Info:    Redeclaring text symbol \textperthousand (encoding TS1)
+ on input line 136.
+LaTeX Encoding Info:    Redeclaring text symbol \textbullet (encoding TS1) on i
+nput line 137.
+LaTeX Encoding Info:    Redeclaring text symbol \textcelsius (encoding TS1) on 
+input line 138.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollaroldstyle (encoding T
+S1) on input line 139.
+LaTeX Encoding Info:    Redeclaring text symbol \textcentoldstyle (encoding TS1
+) on input line 140.
+LaTeX Encoding Info:    Redeclaring text symbol \textflorin (encoding TS1) on i
+nput line 141.
+LaTeX Encoding Info:    Redeclaring text symbol \textcolonmonetary (encoding TS
+1) on input line 142.
+LaTeX Encoding Info:    Redeclaring text symbol \textwon (encoding TS1) on inpu
+t line 143.
+LaTeX Encoding Info:    Redeclaring text symbol \textnaira (encoding TS1) on in
+put line 144.
+LaTeX Encoding Info:    Redeclaring text symbol \textguarani (encoding TS1) on 
+input line 145.
+LaTeX Encoding Info:    Redeclaring text symbol \textpeso (encoding TS1) on inp
+ut line 146.
+LaTeX Encoding Info:    Redeclaring text symbol \textlira (encoding TS1) on inp
+ut line 147.
+LaTeX Encoding Info:    Redeclaring text symbol \textrecipe (encoding TS1) on i
+nput line 148.
+LaTeX Encoding Info:    Redeclaring text symbol \textinterrobang (encoding TS1)
+ on input line 149.
+LaTeX Encoding Info:    Redeclaring text symbol \textinterrobangdown (encoding 
+TS1) on input line 150.
+LaTeX Encoding Info:    Redeclaring text symbol \textdong (encoding TS1) on inp
+ut line 151.
+LaTeX Encoding Info:    Redeclaring text symbol \texttrademark (encoding TS1) o
+n input line 152.
+LaTeX Encoding Info:    Redeclaring text symbol \textpertenthousand (encoding T
+S1) on input line 153.
+LaTeX Encoding Info:    Redeclaring text symbol \textpilcrow (encoding TS1) on 
+input line 154.
+LaTeX Encoding Info:    Redeclaring text symbol \textbaht (encoding TS1) on inp
+ut line 155.
+LaTeX Encoding Info:    Redeclaring text symbol \textnumero (encoding TS1) on i
+nput line 156.
+LaTeX Encoding Info:    Redeclaring text symbol \textdiscount (encoding TS1) on
+ input line 157.
+LaTeX Encoding Info:    Redeclaring text symbol \textestimated (encoding TS1) o
+n input line 158.
+LaTeX Encoding Info:    Redeclaring text symbol \textopenbullet (encoding TS1) 
+on input line 159.
+LaTeX Encoding Info:    Redeclaring text symbol \textservicemark (encoding TS1)
+ on input line 160.
+LaTeX Encoding Info:    Redeclaring text symbol \textlquill (encoding TS1) on i
+nput line 161.
+LaTeX Encoding Info:    Redeclaring text symbol \textrquill (encoding TS1) on i
+nput line 162.
+LaTeX Encoding Info:    Redeclaring text symbol \textcent (encoding TS1) on inp
+ut line 163.
+LaTeX Encoding Info:    Redeclaring text symbol \textsterling (encoding TS1) on
+ input line 164.
+LaTeX Encoding Info:    Redeclaring text symbol \textcurrency (encoding TS1) on
+ input line 165.
+LaTeX Encoding Info:    Redeclaring text symbol \textyen (encoding TS1) on inpu
+t line 166.
+LaTeX Encoding Info:    Redeclaring text symbol \textbrokenbar (encoding TS1) o
+n input line 167.
+LaTeX Encoding Info:    Redeclaring text symbol \textsection (encoding TS1) on 
+input line 168.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciidieresis (encoding TS
+1) on input line 169.
+LaTeX Encoding Info:    Redeclaring text symbol \textcopyright (encoding TS1) o
+n input line 170.
+LaTeX Encoding Info:    Redeclaring text symbol \textordfeminine (encoding TS1)
+ on input line 171.
+LaTeX Encoding Info:    Redeclaring text symbol \textcopyleft (encoding TS1) on
+ input line 172.
+LaTeX Encoding Info:    Redeclaring text symbol \textlnot (encoding TS1) on inp
+ut line 173.
+LaTeX Encoding Info:    Redeclaring text symbol \textcircledP (encoding TS1) on
+ input line 174.
+LaTeX Encoding Info:    Redeclaring text symbol \textregistered (encoding TS1) 
+on input line 175.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciimacron (encoding TS1)
+ on input line 176.
+LaTeX Encoding Info:    Redeclaring text symbol \textdegree (encoding TS1) on i
+nput line 177.
+LaTeX Encoding Info:    Redeclaring text symbol \textpm (encoding TS1) on input
+ line 178.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwosuperior (encoding TS1)
+ on input line 179.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreesuperior (encoding TS
+1) on input line 180.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciiacute (encoding TS1) 
+on input line 181.
+LaTeX Encoding Info:    Redeclaring text symbol \textmu (encoding TS1) on input
+ line 182.
+LaTeX Encoding Info:    Redeclaring text symbol \textparagraph (encoding TS1) o
+n input line 183.
+LaTeX Encoding Info:    Redeclaring text symbol \textperiodcentered (encoding T
+S1) on input line 184.
+LaTeX Encoding Info:    Redeclaring text symbol \textreferencemark (encoding TS
+1) on input line 185.
+LaTeX Encoding Info:    Redeclaring text symbol \textonesuperior (encoding TS1)
+ on input line 186.
+LaTeX Encoding Info:    Redeclaring text symbol \textordmasculine (encoding TS1
+) on input line 187.
+LaTeX Encoding Info:    Redeclaring text symbol \textsurd (encoding TS1) on inp
+ut line 188.
+LaTeX Encoding Info:    Redeclaring text symbol \textonequarter (encoding TS1) 
+on input line 189.
+LaTeX Encoding Info:    Redeclaring text symbol \textonehalf (encoding TS1) on 
+input line 190.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreequarters (encoding TS
+1) on input line 191.
+LaTeX Encoding Info:    Redeclaring text symbol \texteuro (encoding TS1) on inp
+ut line 192.
+LaTeX Encoding Info:    Redeclaring text symbol \texttimes (encoding TS1) on in
+put line 193.
+LaTeX Encoding Info:    Redeclaring text symbol \textdiv (encoding TS1) on inpu
+t line 194.
 ))
 \l__ctex_tmp_int=\count275
 \l__ctex_tmp_box=\box53
 \l__ctex_tmp_dim=\dimen148
 \g__ctex_section_depth_int=\count276
 \g__ctex_font_size_int=\count277
- (c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
-) (c:/texlive/2026/texmf-dist/tex/latex/base/book.cls
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
 (c:/texlive/2026/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
@@ -187,9 +324,11 @@ File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen149
-) (c:/texlive/2026/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+)
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
 File: ctex-engine-xetex.def 2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
- (c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
 \l__xeCJK_tmp_int=\count287
 \l__xeCJK_tmp_box=\box54
@@ -251,12 +390,16 @@ LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
 \g__xeCJK_fam_allocation_int=\count297
 \l__xeCJK_verb_case_int=\count298
 \l__xeCJK_verb_exspace_skip=\skip57
- (c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
- (c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
 \l__fontspec_script_int=\count299
 \l__fontspec_language_int=\count300
 \l__fontspec_strnum_int=\count301
@@ -271,33 +414,45 @@ Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpa_dim=\dimen177
 \l__fontspec_tmpb_dim=\dimen178
 \l__fontspec_tmpc_dim=\dimen179
- (c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+)
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
 ))
 \ccwd=\dimen180
 \l__ctex_ccglue_skip=\skip58
 )
 \l__ctex_ziju_dim=\dimen181
- (c:/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
 \l__zhnum_scale_int=\count310
 \l__zhnum_tmp_int=\count311
- (c:/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+
+(c:/texlive/2026/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
 ))
 \l__ctex_heading_skip=\skip59
- (c:/texlive/2026/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-book.def
-File: ctex-scheme-chinese-book.def 2022/07/14 v2.5.10 Chinese scheme for book (CTEX)
- (c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-book.def
+File: ctex-scheme-chinese-book.def 2022/07/14 v2.5.10 Chinese scheme for book (
+CTEX)
+
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
-)) (c:/texlive/2026/texmf-dist/tex/latex/ctex/ctex-cs4size.clo
+))
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctex-cs4size.clo
 File: ctex-cs4size.clo 2022/07/14 v2.5.10 cs4size option (CTEX)
-)) (c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex.cfg
+))
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
-) (c:/texlive/2026/texmf-dist/tex/latex/silence/silence.sty
-Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error messages
+)
+(c:/texlive/2026/texmf-dist/tex/latex/silence/silence.sty
+Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
+sages
 \sl@Save=\count312
 \sl@StateNumber=\count313
 \sl@MessageCount=\count314
@@ -318,18 +473,28 @@ LaTeX Info: Redefining \GenericWarning on input line 433.
 \sl@TempBOE=\toks23
 \sl@BankOfErrors=\toks24
 LaTeX Info: Redefining \GenericError on input line 601.
-) (c:/texlive/2026/texmf-dist/tex/latex/zhlineskip/zhlineskip.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/zhlineskip/zhlineskip.sty
 Package: zhlineskip 2019/05/15 v1.0e Line spacing for CJK documents
- (c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
-) (c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+)
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (c:/texlive/2026/texmf-dist/tex/generic/xint/xintexpr.sty (c:/texlive/2026/texmf-dist/tex/generic/xint/xintfrac.sty (c:/texlive/2026/texmf-dist/tex/generic/xint/xint.sty (c:/texlive/2026/texmf-dist/tex/generic/xint/xintcore.sty (c:/texlive/2026/texmf-dist/tex/generic/xint/xintkernel.sty
+))
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xintexpr.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xintfrac.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xint.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xintcore.sty
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xintkernel.sty
 Package: xintkernel 2025/09/06 v1.4o Paraphernalia for the xint packages (JFB)
 \xint_c_x^v=\count322
 \xint_c_x^viii=\count323
@@ -347,25 +512,38 @@ Package: xintcore 2025/09/06 v1.4o Expandable arithmetic on big integers (JFB)
 Package: xint 2025/09/06 v1.4o Expandable operations on big integers (JFB)
 )
 Package: xintfrac 2025/09/06 v1.4o Expandable operations on fractions (JFB)
-) (c:/texlive/2026/texmf-dist/tex/generic/xint/xinttools.sty
-Package: xinttools 2025/09/06 v1.4o Expandable and non-expandable utilities (JFB)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xinttools.sty
+Package: xinttools 2025/09/06 v1.4o Expandable and non-expandable utilities (JF
+B)
 \XINT_toks=\toks26
-) (c:/texlive/2026/texmf-dist/tex/generic/xint/xintbinhex.sty
-Package: xintbinhex 2025/09/06 v1.4o Expandable radix conversions (2, 8, 10, and 16) (JFB)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xintbinhex.sty
+Package: xintbinhex 2025/09/06 v1.4o Expandable radix conversions (2, 8, 10, an
+d 16) (JFB)
 )
 Package: xintexpr 2025/09/06 v1.4o Expandable expression parser (JFB)
- (c:/texlive/2026/texmf-dist/tex/generic/xint/xinttrig.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xinttrig.sty
 Package: xinttrig 2025/09/06 v1.4o Trigonometrical functions for xintexpr (JFB)
-) (c:/texlive/2026/texmf-dist/tex/generic/xint/xintlog.sty
-Package: xintlog 2025/09/06 v1.4o Logarithms and exponentials for xintexpr (JFB)
- (c:/texlive/2026/texmf-dist/tex/generic/poormanlog/poormanlog.sty
+
+)
+(c:/texlive/2026/texmf-dist/tex/generic/xint/xintlog.sty
+Package: xintlog 2025/09/06 v1.4o Logarithms and exponentials for xintexpr (JFB
+)
+
+(c:/texlive/2026/texmf-dist/tex/generic/poormanlog/poormanlog.sty
 Package: poormanlog 2022/05/25 v0.07 base 10 log and pow with 9 digits (JFB)
- (c:/texlive/2026/texmf-dist/tex/generic/poormanlog/poormanlog.tex)))) (c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/poormanlog/poormanlog.tex))))
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count332
-) (c:/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
- (c:/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count333
 \calc@Bcount=\count334
@@ -377,23 +555,28 @@ LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count335
 \calc@Cskip=\skip62
-) (c:/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
-) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip63
 
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
 \ex@=\dimen184
-)) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen185
-) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count336
@@ -455,19 +638,26 @@ LaTeX Info: Redefining \] on input line 2951.
 \l_MT_below_shortintertext_sep=\dimen199
 \xmathstrut@box=\box58
 \xmathstrut@dim=\dimen256
-)) (c:/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
- (c:/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
-Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLa
+TeX
 \g__um_fam_int=\count349
 \g__um_fonts_used_int=\count350
 \l__um_primecount_int=\count351
 \g__um_primekern_muskip=\muskip18
- (c:/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex))) (c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
+(c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
- (c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count352
@@ -482,23 +672,30 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen263
 \Gm@layoutvoffset=\dimen264
 \Gm@dimlist=\toks32
-) (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
- (c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (c:/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
 \ESO@tempdima=\dimen265
 \ESO@tempdimb=\dimen266
- (c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 274.
- (c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
-) (c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
@@ -507,13 +704,17 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)) (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 106.
@@ -524,7 +725,8 @@ Package graphics Info: Driver file: xetex.def on input line 106.
 \AM@pagewidth=\dimen269
 \AM@pageheight=\dimen270
 \AM@fboxrule=\dimen271
- (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/ppxetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
 )
 \pdfpages@includegraphics@status=\count355
@@ -535,35 +737,53 @@ File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
 \AM@lof@heading=\toks35
 \c@AM@survey=\count357
 \AM@templatesizebox=\box60
-) (c:/texlive/2026/texmf-dist/tex/latex/everypage/everypage-1x.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/everypage/everypage-1x.sty
 Package: everypage-1x 2020/10/10 1.2 Hooks to run on every page
-) (c:/texlive/2026/texmf-dist/tex/latex/background/background.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/background/background.sty
 Package: background 2014/03/04 v2.1 background material
- (c:/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
- (c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2026/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks36
 \XKV@tempa@toks=\toks37
 \XKV@tempb@toks=\toks38
 )
 \XKV@depth=\count358
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+))
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks39
 \pgfutil@tempdima=\dimen272
 \pgfutil@tempdimb=\dimen273
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box61
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks40
 \pgfkeys@temptoks=\toks41
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex
 \pgfkeys@tmptoks=\toks42
 ))
 \pgf@x=\dimen274
@@ -590,32 +810,61 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-xetex.def
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
 File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
 File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
 \pgfsys@objnum=\count364
-))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+)))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfsyssoftpath@smallbuffer@items=\count365
 \pgfsyssoftpath@bigbuffer@items=\count366
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen284
 \pgfmath@count=\count367
 \pgfmath@box=\box62
 \pgfmath@toks=\toks46
 \pgfmath@stack@operand=\toks47
 \pgfmath@stack@operation=\toks48
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count368
-)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picminx=\dimen285
 \pgf@picmaxx=\dimen286
@@ -631,75 +880,109 @@ File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@yy=\dimen296
 \pgf@zx=\dimen297
 \pgf@zy=\dimen298
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@path@lastx=\dimen299
 \pgf@path@lasty=\dimen300
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@shorten@end@additional=\dimen301
 \pgf@shorten@start@additional=\dimen302
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box63
 \pgf@hbox=\box64
 \pgf@layerbox@main=\box65
 \pgf@picture@serial@count=\count369
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgflinewidth=\dimen303
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@pt@x=\dimen304
 \pgf@pt@y=\dimen305
 \pgf@pt@temp=\dimen306
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowsep=\dimen307
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen308
 \pgf@sys@shading@range@num=\count370
 \pgf@shadingcount=\count371
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box66
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodeparttextbox=\box67
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@nodesepstart=\dimen309
 \pgf@nodesepend=\dimen310
-) (c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen311
 \pgffor@skip=\dimen312
 \pgffor@stack=\toks49
 \pgffor@toks=\toks50
-)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count372
 \pgfplotmarksize=\dimen313
@@ -720,22 +1003,28 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikznumberofchildren=\count374
 \tikznumberofcurrentchild=\count375
 \tikz@fig@count=\count376
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmatrixcurrentrow=\count377
 \pgfmatrixcurrentcolumn=\count378
 \pgf@matrix@numberofcolumns=\count379
 )
 \tikz@expandcount=\count380
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2026/texmf-dist/tex/latex/tools/afterpage.sty
+)))
+(c:/texlive/2026/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 \AP@output=\toks51
 \AP@partial=\box72
 \AP@footins=\box73
-)) (c:/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip67
 \f@nch@offset@elh=\skip68
 \f@nch@offset@erh=\skip69
@@ -751,7 +1040,8 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip79
 \f@nch@widthR=\skip80
 \@temptokenb=\toks52
-) (c:/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks53
 \thm@bodyfont=\toks54
@@ -762,31 +1052,41 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip82
 \thm@headsep=\skip83
 \dth@everypar=\toks58
-) (c:/texlive/2026/texmf-dist/tex/latex/thmtools/thmtools.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/thmtools.sty
 Package: thmtools 2023/05/04 v0.76
 \thmt@toks=\toks59
 \c@thmt@dummyctr=\count381
- (c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-patch.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-patch.sty
 Package: thm-patch 2023/05/04 v0.76
- (c:/texlive/2026/texmf-dist/tex/latex/thmtools/parseargs.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/parseargs.sty
 Package: parseargs 2023/05/04 v0.76
 \@parsespec=\toks60
-)) (c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-kv.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-kv.sty
 Package: thm-kv 2023/05/04 v0.76
 Package thm-kv Info: Theorem names will be uppercased on input line 42.
 Package thm-kv Info: kvsetkeys patch (v1.16 or later) on input line 158.
-) (c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-autoref.sty
 Package: thm-autoref 2023/05/04 v0.76
- (c:/texlive/2026/texmf-dist/tex/latex/thmtools/aliasctr.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/aliasctr.sty
 Package: aliasctr 2023/05/04 v0.76
-)) (c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-listof.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-listof.sty
 Package: thm-listof 2023/05/04 v0.76
-) (c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-restate.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-restate.sty
 Package: thm-restate 2023/05/04 v0.76
-) (c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
 Package: thm-amsthm 2023/05/04 v0.76
 \thmt@style@headstyle=\toks61
-)) (c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip84
 \LTright=\skip85
@@ -804,9 +1104,11 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count385
 \c@LT@chunks=\count386
 \LT@p@ftn=\toks62
-) (c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen323
 \captionmargin=\dimen324
@@ -821,14 +1123,18 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count387
 \c@continuedfloat=\count388
 Package caption Info: longtable package is loaded.
- (c:/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)) (c:/texlive/2026/texmf-dist/tex/latex/caption/bicaption.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/caption/bicaption.sty
 Package: bicaption 2023/02/19 v1.6 Bilingual Captions (AR)
 \bicaption@lang=\count389
-) (c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+)
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
 Package: xeCJKfntef 2022/08/05 v3.9.1 xeCJK font effect
- (c:/texlive/2026/texmf-dist/tex/generic/ulem/ulem.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box79
 \UL@hyphenbox=\box80
 \UL@skip=\skip88
@@ -846,9 +1152,11 @@ Package: ulem 2019/11/18
 \l__xeCJK_fntef_box=\box83
 \l__xeCJK_under_symbol_box=\box84
 \c__xeCJK_filll_skip=\skip90
-) (c:/texlive/2026/texmf-dist/tex/latex/xpatch/xpatch.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/xpatch/xpatch.sty
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen335
 \ar@mcellbox=\box85
@@ -857,13 +1165,15 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \extratabsurround=\skip91
 \backup@length=\skip92
 \ar@cellbox=\box86
-) (c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip93
 \multirow@cntb=\count391
 \multirow@dima=\skip94
 \bigstrutjot=\dimen337
-) (c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen338
 \lightrulewidth=\dimen339
@@ -882,7 +1192,8 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count394
 \@lastruleclass=\count395
 \@thisrulewidth=\dimen350
-) (c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip95
 \enit@outerparindent=\dimen351
@@ -890,7 +1201,8 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box87
 \enit@count@id=\count396
 \enitdp@description=\count397
-) (c:/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip96
@@ -929,7 +1241,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip127
 \cfttabindent=\skip128
 \cfttabnumwidth=\skip129
-) (c:/texlive/2026/texmf-dist/tex/latex/subfig/subfig.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@KVtest=\count400
 \sf@farskip=\skip130
@@ -952,10 +1265,12 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \enitdp@gdutenenum=\count408
 \enlabellengthi=\skip138
 \l__gdut_indent_dim=\dimen353
-) (c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
 Rollback for package 'siunitx' requested -> version 'v2'.
          This corresponds to the release introduced on 2010-05-23.
- (c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx-v2.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx-v2.sty
 Package: siunitx 2021-04-17 v2.8e A comprehensive (SI) units package
 \l__siunitx_tmp_box=\box88
 \l__siunitx_tmp_dim=\dimen354
@@ -997,15 +1312,19 @@ Package: siunitx 2021-04-17 v2.8e A comprehensive (SI) units package
 \l__siunitx_table_result_box=\box94
 \l__siunitx_table_number_align_skip=\skip141
 \l__siunitx_table_text_align_skip=\skip142
- (c:/texlive/2026/texmf-dist/tex/latex/translator/translator.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
-))) (c:/texlive/2026/texmf-dist/tex/latex/zhlipsum/zhlipsum.sty
+)))
+(c:/texlive/2026/texmf-dist/tex/latex/zhlipsum/zhlipsum.sty
 Package: zhlipsum 2020/04/10 v1.2.0 Chinese dummy text
 \l__zhlipsum_begin_int=\count426
 \l__zhlipsum_end_int=\count427
 \l__zhlipsum_max_int=\count428
- (c:/texlive/2026/texmf-dist/tex/latex/zhlipsum/zhlipsum-utf8.def
-File: zhlipsum-utf8.def 2020/04/10 v1.2.0 Chinese dummy text with UTF-8 encoding (for zhlipsum)
+
+(c:/texlive/2026/texmf-dist/tex/latex/zhlipsum/zhlipsum-utf8.def
+File: zhlipsum-utf8.def 2020/04/10 v1.2.0 Chinese dummy text with UTF-8 encodin
+g (for zhlipsum)
 \g__zhlipsum_simp_int=\count429
 
 Package zhlipsum Info: Chinese dummy text "simp" is created. It has 50
@@ -1036,31 +1355,148 @@ Package zhlipsum Info: Chinese dummy text "zhufu" is created. It has 110
 Package zhlipsum Info: Chinese dummy text "aspirin" is created. It has 66
 (zhlipsum)             paragraphs.
 
-)) (c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count435
 \l__lipsum_a_int=\count436
 \l__lipsum_b_int=\count437
- (c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count438
 \float@exts=\toks66
 \float@box=\box95
 \@float@everytoks=\toks67
 \@floatcapt=\box96
-) (c:/texlive/2026/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2025/08/14 v1.18.2 Data Visualization (1.18.2)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks68
+\t@pgfplots@tokb=\toks69
+\t@pgfplots@tokc=\toks70
+\pgfplots@tmpa=\dimen366
+\c@pgfplots@coordindex=\count439
+\c@pgfplots@scanlineindex=\count440
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.te
+x))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_loader.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_pgfutil-common-lists.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+cture.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+ctureext.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.co
+de.tex
+\c@pgfplotsarray@tmp=\count441
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.c
+ode.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
+ode.tex
+\c@pgfplotstable@counta=\count442
+\t@pgfplotstable@a=\toks71
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
+de.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.
+tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfsh
+ading.code.tex
+\c@pgfplotslibrarysurf@no=\count443
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-xetex.def
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count444
+))))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.t
+ex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
+))) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.t
+ex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex
+\pgfdecoratedcompleteddistance=\dimen367
+\pgfdecoratedremainingdistance=\dimen368
+\pgfdecoratedinputsegmentcompleteddistance=\dimen369
+\pgfdecoratedinputsegmentremainingdistance=\dimen370
+\pgf@decorate@distancetomove=\dimen371
+\pgf@decorate@repeatstate=\count445
+\pgfdecorationsegmentamplitude=\dimen372
+\pgfdecorationsegmentlength=\dimen373
+)
+\tikz@lib@dec@box=\box97
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathmorphing.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathmorphing.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathreplacing.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathreplacing.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.conto
+urlua.code.tex)
+\pgfplots@numplots=\count446
+\pgfplots@xmin@reg=\dimen374
+\pgfplots@xmax@reg=\dimen375
+\pgfplots@ymin@reg=\dimen376
+\pgfplots@ymax@reg=\dimen377
+\pgfplots@zmin@reg=\dimen378
+\pgfplots@zmax@reg=\dimen379
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.
+tex
+File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (c:/texlive/2026/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count439
+\c@AlgoLine=\count447
 \algocf@hangindent=\skip143
- (c:/texlive/2026/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count440
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty
+\c@checkoddpage=\count448
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-) (c:/texlive/2026/texmf-dist/tex/latex/relsize/relsize.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
 \skiptotal=\skip144
@@ -1071,95 +1507,102 @@ Package: relsize 2013/03/29 ver 4.1
 \skiplength=\skip149
 \algomargin=\skip150
 \skipalgocfslide=\skip151
-\algowidth=\dimen366
-\inoutsize=\dimen367
-\inoutindent=\dimen368
-\interspacetitleruled=\dimen369
-\interspacealgoruled=\dimen370
-\interspacetitleboxruled=\dimen371
+\algowidth=\dimen380
+\inoutsize=\dimen381
+\inoutindent=\dimen382
+\interspacetitleruled=\dimen383
+\interspacealgoruled=\dimen384
+\interspacetitleboxruled=\dimen385
 \algocf@ruledwidth=\skip152
-\algocf@inoutbox=\box97
-\algocf@inputbox=\box98
+\algocf@inoutbox=\box98
+\algocf@inputbox=\box99
 \AlCapSkip=\skip153
 \AlCapHSkip=\skip154
 \algoskipindent=\skip155
-\algocf@nlbox=\box99
-\algocf@hangingbox=\box100
-\algocf@untilbox=\box101
+\algocf@nlbox=\box100
+\algocf@hangingbox=\box101
+\algocf@untilbox=\box102
 \algocf@skipuntil=\skip156
-\algocf@capbox=\box102
+\algocf@capbox=\box103
 \algocf@lcaptionbox=\skip157
 \algoheightruledefault=\skip158
 \algoheightrule=\skip159
 \algotitleheightruledefault=\skip160
 \algotitleheightrule=\skip161
-\c@algocfline=\count441
-\c@algocfproc=\count442
-\c@algocf=\count443
-\algocf@algoframe=\box103
-\algocf@algobox=\box104
-) (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+\c@algocfline=\count449
+\c@algocfproc=\count450
+\c@algocf=\count451
+\algocf@algoframe=\box104
+\algocf@algobox=\box105
+)
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
- (c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
-) (c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count444
- (c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
+\lrq@indent=\count452
+
+(c:/texlive/2026/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip19
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count445
-\c@listtotal=\count446
-\c@listcount=\count447
-\c@liststart=\count448
-\c@liststop=\count449
-\c@citecount=\count450
-\c@citetotal=\count451
-\c@multicitecount=\count452
-\c@multicitetotal=\count453
-\c@instcount=\count454
-\c@maxnames=\count455
-\c@minnames=\count456
-\c@maxitems=\count457
-\c@minitems=\count458
-\c@citecounter=\count459
-\c@maxcitecounter=\count460
-\c@savedcitecounter=\count461
-\c@uniquelist=\count462
-\c@uniquename=\count463
-\c@refsection=\count464
-\c@refsegment=\count465
-\c@maxextratitle=\count466
-\c@maxextratitleyear=\count467
-\c@maxextraname=\count468
-\c@maxextradate=\count469
-\c@maxextraalpha=\count470
-\c@abbrvpenalty=\count471
-\c@highnamepenalty=\count472
-\c@lownamepenalty=\count473
-\c@maxparens=\count474
-\c@parenlevel=\count475
-\blx@tempcnta=\count476
-\blx@tempcntb=\count477
-\blx@tempcntc=\count478
-\c@blx@maxsection=\count479
-\blx@maxsegment@0=\count480
-\blx@notetype=\count481
-\blx@parenlevel@text=\count482
-\blx@parenlevel@foot=\count483
-\blx@sectionciteorder@0=\count484
-\blx@sectionciteorderinternal@0=\count485
-\blx@entrysetcounter=\count486
-\blx@biblioinstance=\count487
+\c@tabx@nest=\count453
+\c@listtotal=\count454
+\c@listcount=\count455
+\c@liststart=\count456
+\c@liststop=\count457
+\c@citecount=\count458
+\c@citetotal=\count459
+\c@multicitecount=\count460
+\c@multicitetotal=\count461
+\c@instcount=\count462
+\c@maxnames=\count463
+\c@minnames=\count464
+\c@maxitems=\count465
+\c@minitems=\count466
+\c@citecounter=\count467
+\c@maxcitecounter=\count468
+\c@savedcitecounter=\count469
+\c@uniquelist=\count470
+\c@uniquename=\count471
+\c@refsection=\count472
+\c@refsegment=\count473
+\c@maxextratitle=\count474
+\c@maxextratitleyear=\count475
+\c@maxextraname=\count476
+\c@maxextradate=\count477
+\c@maxextraalpha=\count478
+\c@abbrvpenalty=\count479
+\c@highnamepenalty=\count480
+\c@lownamepenalty=\count481
+\c@maxparens=\count482
+\c@parenlevel=\count483
+\blx@tempcnta=\count484
+\blx@tempcntb=\count485
+\blx@tempcntc=\count486
+\c@blx@maxsection=\count487
+\blx@maxsegment@0=\count488
+\blx@notetype=\count489
+\blx@parenlevel@text=\count490
+\blx@parenlevel@foot=\count491
+\blx@sectionciteorder@0=\count492
+\blx@sectionciteorderinternal@0=\count493
+\blx@entrysetcounter=\count494
+\blx@biblioinstance=\count495
 \labelnumberwidth=\skip162
 \labelalphawidth=\skip163
 \biblabelsep=\skip164
@@ -1171,86 +1614,87 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read3
 \blx@bcfout=\write4
 \blx@langwohyphens=\language91
-\c@mincomprange=\count488
-\c@maxcomprange=\count489
-\c@mincompwidth=\count490
+\c@mincomprange=\count496
+\c@maxcomprange=\count497
+\c@mincompwidth=\count498
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'gb7714-2015.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count491
-\c@savedafterword=\count492
-\c@annotator=\count493
-\c@savedannotator=\count494
-\c@author=\count495
-\c@savedauthor=\count496
-\c@bookauthor=\count497
-\c@savedbookauthor=\count498
-\c@commentator=\count499
-\c@savedcommentator=\count500
-\c@editor=\count501
-\c@savededitor=\count502
-\c@editora=\count503
-\c@savededitora=\count504
-\c@editorb=\count505
-\c@savededitorb=\count506
-\c@editorc=\count507
-\c@savededitorc=\count508
-\c@foreword=\count509
-\c@savedforeword=\count510
-\c@holder=\count511
-\c@savedholder=\count512
-\c@introduction=\count513
-\c@savedintroduction=\count514
-\c@namea=\count515
-\c@savednamea=\count516
-\c@nameb=\count517
-\c@savednameb=\count518
-\c@namec=\count519
-\c@savednamec=\count520
-\c@translator=\count521
-\c@savedtranslator=\count522
-\c@shortauthor=\count523
-\c@savedshortauthor=\count524
-\c@shorteditor=\count525
-\c@savedshorteditor=\count526
-\c@labelname=\count527
-\c@savedlabelname=\count528
-\c@institution=\count529
-\c@savedinstitution=\count530
-\c@lista=\count531
-\c@savedlista=\count532
-\c@listb=\count533
-\c@savedlistb=\count534
-\c@listc=\count535
-\c@savedlistc=\count536
-\c@listd=\count537
-\c@savedlistd=\count538
-\c@liste=\count539
-\c@savedliste=\count540
-\c@listf=\count541
-\c@savedlistf=\count542
-\c@location=\count543
-\c@savedlocation=\count544
-\c@organization=\count545
-\c@savedorganization=\count546
-\c@origlocation=\count547
-\c@savedoriglocation=\count548
-\c@origpublisher=\count549
-\c@savedorigpublisher=\count550
-\c@publisher=\count551
-\c@savedpublisher=\count552
-\c@language=\count553
-\c@savedlanguage=\count554
-\c@origlanguage=\count555
-\c@savedoriglanguage=\count556
-\c@pageref=\count557
-\c@savedpageref=\count558
+\c@afterword=\count499
+\c@savedafterword=\count500
+\c@annotator=\count501
+\c@savedannotator=\count502
+\c@author=\count503
+\c@savedauthor=\count504
+\c@bookauthor=\count505
+\c@savedbookauthor=\count506
+\c@commentator=\count507
+\c@savedcommentator=\count508
+\c@editor=\count509
+\c@savededitor=\count510
+\c@editora=\count511
+\c@savededitora=\count512
+\c@editorb=\count513
+\c@savededitorb=\count514
+\c@editorc=\count515
+\c@savededitorc=\count516
+\c@foreword=\count517
+\c@savedforeword=\count518
+\c@holder=\count519
+\c@savedholder=\count520
+\c@introduction=\count521
+\c@savedintroduction=\count522
+\c@namea=\count523
+\c@savednamea=\count524
+\c@nameb=\count525
+\c@savednameb=\count526
+\c@namec=\count527
+\c@savednamec=\count528
+\c@translator=\count529
+\c@savedtranslator=\count530
+\c@shortauthor=\count531
+\c@savedshortauthor=\count532
+\c@shorteditor=\count533
+\c@savedshorteditor=\count534
+\c@labelname=\count535
+\c@savedlabelname=\count536
+\c@institution=\count537
+\c@savedinstitution=\count538
+\c@lista=\count539
+\c@savedlista=\count540
+\c@listb=\count541
+\c@savedlistb=\count542
+\c@listc=\count543
+\c@savedlistc=\count544
+\c@listd=\count545
+\c@savedlistd=\count546
+\c@liste=\count547
+\c@savedliste=\count548
+\c@listf=\count549
+\c@savedlistf=\count550
+\c@location=\count551
+\c@savedlocation=\count552
+\c@organization=\count553
+\c@savedorganization=\count554
+\c@origlocation=\count555
+\c@savedoriglocation=\count556
+\c@origpublisher=\count557
+\c@savedorigpublisher=\count558
+\c@publisher=\count559
+\c@savedpublisher=\count560
+\c@language=\count561
+\c@savedlanguage=\count562
+\c@origlanguage=\count563
+\c@savedoriglanguage=\count564
+\c@pageref=\count565
+\c@savedpageref=\count566
 \shorthandwidth=\skip170
 \shortjournalwidth=\skip171
 \shortserieswidth=\skip172
@@ -1267,86 +1711,99 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip183
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-unicode.def)
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count559
-\c@textcitetotal=\count560
-\c@textcitemaxnames=\count561
-\c@biburlbigbreakpenalty=\count562
-\c@biburlbreakpenalty=\count563
-\c@biburlnumpenalty=\count564
-\c@biburlucpenalty=\count565
-\c@biburllcpenalty=\count566
+\c@textcitecount=\count567
+\c@textcitetotal=\count568
+\c@textcitemaxnames=\count569
+\c@biburlbigbreakpenalty=\count570
+\c@biburlbreakpenalty=\count571
+\c@biburlnumpenalty=\count572
+\c@biburlucpenalty=\count573
+\c@biburllcpenalty=\count574
 \biburlbigskip=\muskip20
 \biburlnumskip=\muskip21
 \biburlucskip=\muskip22
 \biburllcskip=\muskip23
-\c@smartand=\count567
+\c@smartand=\count575
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-natbib.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-natbib.def
 File: blx-natbib.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
 )
 Package biblatex Info: Trying to load bibliography style 'gb7714-2015'...
 Package biblatex Info: ... file 'gb7714-2015.bbx' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex-gb7714-2015/gb7714-2015.bbx
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex-gb7714-2015/gb7714-2015.bbx
 File: gb7714-2015.bbx 2025/06/10 v1.1vbiblatex bibliography style
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
 File: numeric-comp.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
 File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count568
-\c@bbx:relatedtotal=\count569
-))) (c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.sty
+\c@bbx:relatedcount=\count576
+\c@bbx:relatedtotal=\count577
+)))
+(c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.sty
 (c:/texlive/2026/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count570
-\xs_countb=\count571
+\xs_counta=\count578
+\xs_countb=\count579
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
 \BracketLift=\skip184
 \footbibmargin=\skip185
 \footbiblabelsep=\skip186
-\c@gbnamefmtcase=\count572
-\c@gbalignlabel=\count573
-\c@gbcitelocalcase=\count574
-\c@gbbiblocalcase=\count575
-\c@lanordernum=\count576
+\c@gbnamefmtcase=\count580
+\c@gbalignlabel=\count581
+\c@gbcitelocalcase=\count582
+\c@gbbiblocalcase=\count583
+\c@lanordernum=\count584
 \bibitemindent=\skip187
 \biblabelextend=\skip188
 \bibextramargin=\skip189
-Package biblatex Info: Delimiter 'finalnamedelim' in context '' already defined, overwriting.
+Package biblatex Info: Delimiter 'finalnamedelim' in context '' already defined
+, overwriting.
 )
 Package biblatex Info: Trying to load citation style 'gb7714-2015'...
 Package biblatex Info: ... file 'gb7714-2015.cbx' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex-gb7714-2015/gb7714-2015.cbx
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex-gb7714-2015/gb7714-2015.cbx
 File: gb7714-2015.cbx a biblatex citation style for GB/T 7714-2015
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count577
-\c@cbx@tempcntb=\count578
-\c@cbx@tempcntc=\count579
-\c@cbx@tempcntd=\count580
+\c@cbx@tempcnta=\count585
+\c@cbx@tempcntb=\count586
+\c@cbx@tempcntc=\count587
+\c@cbx@tempcntd=\count588
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1359,7 +1816,7 @@ Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\smartcites'.
 )
-\c@gbrefcompress=\count581
+\c@gbrefcompress=\count589
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\cbx@textcite'.
@@ -1383,7 +1840,8 @@ Package biblatex Info: ... and expl3
 (biblatex)             2026-01-19 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
 
@@ -1397,22 +1855,27 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
 (fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
-(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
 (fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
 (fontspec)             New
-(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
 (fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
 (fontspec)             <->"Times New
-(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
 (fontspec)             <->"Times New
-(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
 
 
 Package fontspec Info: 
@@ -1442,11 +1905,14 @@ Package fontspec Info:
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 164.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(1)/m/n on input line 1
+66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line 164.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(1)/m/it on input line
+ 166.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(1)/b/n on input line 
+166.
 
 Package fontspec Info: 
 (fontspec)             Font family 'Arial(0)' created for font 'Arial' with
@@ -1456,21 +1922,29 @@ Package fontspec Info:
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;
+"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"Arial/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;+smcp;mapping=tex
+-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
+tex-text;"
 
 
 Package fontspec Info: 
@@ -1498,14 +1972,15 @@ Package fontspec Info:
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Arial(1)/m/n on input line 164.
+(Font)                  OT1/cmss/m/n --> TU/Arial(1)/m/n on input line 166.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Arial(1)/b/n on input line 164.
+(Font)                  OT1/cmss/bx/n --> TU/Arial(1)/b/n on input line 166.
 
 Package fontspec Info: 
 (fontspec)             Font family 'CourierNew(0)' created for font 'Courier
 (fontspec)             New' with options
-(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -1537,20 +2012,24 @@ Package fontspec Info:
 (fontspec)             New/BI/OT:script=latn;language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/m/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/m/n on input line 166
+.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/b/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> TU/CourierNew(1)/b/n on input line 166
+.
 
 Package fontspec Info: 
 (fontspec)             Font family 'XITSMath-Regular.otf(0)' created for font
 (fontspec)             'XITSMath-Regular.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,BoldFont={XITSMath-Bold.otf}].
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,BoldFont={XITSMath-Bold.otf}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[XITSMath-Regular.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->"[XITSMath-Regular.otf]/OT:script=math;language=dflt;
+"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[XITSMath-Bold.otf]/OT:script=math;language=dflt;"
 
@@ -1558,24 +2037,33 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Font family 'XITSMath-Regular.otf(1)' created for font
 (fontspec)             'XITSMath-Regular.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Regular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=MathScriptScript}},BoldFont={XITSMath-Bold.otf}].
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=Mat
+hScriptScript}},BoldFont={XITSMath-Bold.otf}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;language=dflt;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;langu
+age=dflt;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;language=d
+flt;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+s
+sty=1;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[XITSMath-Bold.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 164.
+(Font)              `operators' in the math version `normal' on input line 166.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/XITSMath-Regular.otf(1)/m/n on input line 164.
+(Font)                  OT1/cmr/m/n --> TU/XITSMath-Regular.otf(1)/m/n on input
+ line 166.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 164.
+(Font)              `operators' in the math version `bold' on input line 166.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/XITSMath-Regular.otf(1)/b/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> TU/XITSMath-Regular.otf(1)/b/n on inpu
+t line 166.
 
 Package fontspec Info: 
 (fontspec)             XITSMath-Regular scale = 1.0001.
@@ -1600,7 +2088,11 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Font family 'XITSMath-Regular.otf(2)' created for font
 (fontspec)             'XITSMath-Regular.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Regular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=MathScriptScript}},BoldFont={XITSMath-Bold.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=Mat
+hScriptScript}},BoldFont={XITSMath-Bold.otf},ScaleAgain=1.0001,FontAdjustment={
+\fontdimen
 (fontspec)             8\font =6.9861pt\relax \fontdimen 9\font
 (fontspec)             =5.7816pt\relax \fontdimen 10\font =5.7816pt\relax
 (fontspec)             \fontdimen 11\font =8.4315pt\relax \fontdimen 12\font
@@ -1616,18 +2108,24 @@ Package fontspec Info:
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.539375->s*[1.0001]"[XITSMath-Regular.otf]/OT:script=math;language=dflt;"<8.130375-10.539375>s*[1.0001]"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ssty=0;"<-8.130375>s*[1.0001]"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <10.539375->s*[1.0001]"[XITSMath-Regular.otf]/OT:script=
+math;language=dflt;"<8.130375-10.539375>s*[1.0001]"[XITSMath-Regular.otf]/OT:sc
+ript=math;language=dflt;+ssty=0;"<-8.130375>s*[1.0001]"[XITSMath-Regular.otf]/O
+T:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.0001]"[XITSMath-Bold.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->s*[1.0001]"[XITSMath-Bold.otf]/OT:script=math;languag
+e=dflt;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 164.
+(Font)              `symbols' in the math version `normal' on input line 166.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/XITSMath-Regular.otf(2)/m/n on input line 164.
+(Font)                  OMS/cmsy/m/n --> TU/XITSMath-Regular.otf(2)/m/n on inpu
+t line 166.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 164.
+(Font)              `symbols' in the math version `bold' on input line 166.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/XITSMath-Regular.otf(2)/b/n on input line 164.
+(Font)                  OMS/cmsy/b/n --> TU/XITSMath-Regular.otf(2)/b/n on inpu
+t line 166.
 
 Package fontspec Info: 
 (fontspec)             XITSMath-Regular scale = 0.9999.
@@ -1652,7 +2150,11 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Font family 'XITSMath-Regular.otf(3)' created for font
 (fontspec)             'XITSMath-Regular.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Regular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=MathScriptScript}},BoldFont={XITSMath-Bold.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=Mat
+hScriptScript}},BoldFont={XITSMath-Bold.otf},ScaleAgain=0.9999,FontAdjustment={
+\fontdimen
 (fontspec)             8\font =0.79497pt\relax \fontdimen 9\font
 (fontspec)             =1.80675pt\relax \fontdimen 10\font =1.80675pt\relax
 (fontspec)             \fontdimen 11\font =3.6135pt\relax \fontdimen 12\font
@@ -1662,37 +2164,54 @@ Package fontspec Info:
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.539375->s*[0.9999]"[XITSMath-Regular.otf]/OT:script=math;language=dflt;"<8.130375-10.539375>s*[0.9999]"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ssty=0;"<-8.130375>s*[0.9999]"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             <10.539375->s*[0.9999]"[XITSMath-Regular.otf]/OT:script=
+math;language=dflt;"<8.130375-10.539375>s*[0.9999]"[XITSMath-Regular.otf]/OT:sc
+ript=math;language=dflt;+ssty=0;"<-8.130375>s*[0.9999]"[XITSMath-Regular.otf]/O
+T:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999]"[XITSMath-Bold.otf]/OT:script=math;language=dflt;"
+(fontspec)             <->s*[0.9999]"[XITSMath-Bold.otf]/OT:script=math;languag
+e=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 164.
+(Font)              `largesymbols' in the math version `normal' on input line 1
+66.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular.otf(3)/m/n on input line 164.
+(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular.otf(3)/m/n on inpu
+t line 166.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 164.
+(Font)              `largesymbols' in the math version `bold' on input line 166
+.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular.otf(3)/b/n on input line 164.
+(Font)                  OMX/cmex/m/n --> TU/XITSMath-Regular.otf(3)/b/n on inpu
+t line 166.
 
 Package fontspec Info: 
 (fontspec)             Font family 'XITSMath-Regular.otf(4)' created for font
 (fontspec)             'XITSMath-Regular.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Regular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=MathScriptScript}},BoldFont={XITSMath-Bold.otf},StylisticSet={1}].
+(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script
+=Math,SizeFeatures={{Size=10.539375-},{Size=8.130375-10.539375,Font=XITSMath-Re
+gular.otf,Style=MathScript},{Size=-8.130375,Font=XITSMath-Regular.otf,Style=Mat
+hScriptScript}},BoldFont={XITSMath-Bold.otf},StylisticSet={1}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ss01;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ss01;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;language=dflt;+ss01;+ssty=1;"
+(fontspec)             <10.539375->"[XITSMath-Regular.otf]/OT:script=math;langu
+age=dflt;+ss01;"<8.130375-10.539375>"[XITSMath-Regular.otf]/OT:script=math;lang
+uage=dflt;+ss01;+ssty=0;"<-8.130375>"[XITSMath-Regular.otf]/OT:script=math;lang
+uage=dflt;+ss01;+ssty=1;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[XITSMath-Bold.otf]/OT:script=math;language=dflt;+ss01;"
+(fontspec)             <->"[XITSMath-Bold.otf]/OT:script=math;language=dflt;+ss
+01;"
 
 \sym__um_fam1=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
-(Font)                  TU/XITSMath-Regular.otf(4)/m/n --> TU/XITSMath-Regular.otf(4)/m/n on input line 164.
+(Font)                  TU/XITSMath-Regular.otf(4)/m/n --> TU/XITSMath-Regular.
+otf(4)/m/n on input line 166.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
-(Font)                  TU/XITSMath-Regular.otf(4)/m/n --> TU/XITSMath-Regular.otf(4)/b/n on input line 164.
+(Font)                  TU/XITSMath-Regular.otf(4)/m/n --> TU/XITSMath-Regular.
+otf(4)/b/n on input line 166.
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FandolKai/BI" (it probably
@@ -1722,61 +2241,73 @@ Package fontspec Info:
 Package thmtools Info: Key `numberwithin' (with value `chapter')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-no-number' on input line 164.
+(thmtools)             that uses `style=gdut-no-number' on input line 166.
 Package thmtools Info: Key `qed' (with value `\l__gdut_thm_qed_tl ')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-no-number' on input line 164.
+(thmtools)             that uses `style=gdut-no-number' on input line 166.
 Package thmtools Info: Key `numbered' (with value `no')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-no-number' on input line 164.
+(thmtools)             that uses `style=gdut-no-number' on input line 166.
 Package thmtools Info: Key `numberwithin' (with value `chapter')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-number' on input line 164.
+(thmtools)             that uses `style=gdut-number' on input line 166.
 Package thmtools Info: Key `qed' (with value `')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=gdut-number' on input line 164.
-\c@assertion=\count582
-\c@assumption=\count583
-\c@axiom=\count584
-\c@corollary=\count585
-\c@definition=\count586
-\c@example=\count587
-\c@lemma=\count588
-\c@proposition=\count589
-\c@theorem=\count590
- (c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(thmtools)             that uses `style=gdut-number' on input line 166.
+\c@assertion=\count590
+\c@assumption=\count591
+\c@axiom=\count592
+\c@corollary=\count593
+\c@definition=\count594
+\c@example=\count595
+\c@lemma=\count596
+\c@proposition=\count597
+\c@theorem=\count598
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
- (c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count591
-) (c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+\c@section@level=\count599
 )
-\@linkdim=\dimen372
-\Hy@linkcounter=\count592
-\Hy@pagecounter=\count593
- (c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen386
+\Hy@linkcounter=\count600
+\Hy@pagecounter=\count601
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
-) (c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count594
- (c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+\Hy@SavedSpaceFactor=\count602
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `unicode' set `true' on input line 4072.
@@ -1787,17 +2318,20 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count595
+\c@Hy@tempcnt=\count603
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen373
- (c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+\XeTeXLinkMargin=\dimen387
+
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
-\Fld@menulength=\count596
-\Field@Width=\dimen374
-\Fld@charsize=\dimen375
+\Fld@menulength=\count604
+\Field@Width=\dimen388
+\Fld@charsize=\dimen389
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
@@ -1805,146 +2339,171 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring OFF on input line 6104.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count597
-\c@Item=\count598
-\c@Hfootnote=\count599
+\Hy@abspage=\count605
+\c@Item=\count606
+\c@Hfootnote=\count607
 )
 Package hyperref Info: Driver (autodetected): hxetex.
- (c:/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
 File: hxetex.def 2026-01-29 v7.01p Hyperref driver for XeTeX
-\pdfm@box=\box105
-\c@Hy@AnnotLevel=\count600
-\HyField@AnnotCount=\count601
-\Fld@listcount=\count602
-\c@bookmark@seq@number=\count603
- (c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+\pdfm@box=\box106
+\c@Hy@AnnotLevel=\count608
+\HyField@AnnotCount=\count609
+\Fld@listcount=\count610
+\c@bookmark@seq@number=\count611
+
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
 )
 \Hy@SectionHShift=\skip190
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 164.
-Package hyperref Info: Option `psdextra' set `true' on input line 164.
- (c:/texlive/2026/texmf-dist/tex/latex/hyperref/psdextra.def
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 166.
+
+Package hyperref Info: Option `psdextra' set `true' on input line 166.
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/psdextra.def
 File: psdextra.def 2026-01-29 v7.01p Hyperref: Additions to PDF string support
 )
-Package hyperref Info: Option `unicode' set `true' on input line 164.
-Package hyperref Info: Option `colorlinks' set `true' on input line 164.
- (c:/texlive/2026/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package hyperref Info: Option `unicode' set `true' on input line 166.
+Package hyperref Info: Option `colorlinks' set `true' on input line 166.
+
+(c:/texlive/2026/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2026/03/06 v5.0 (NLCT)
- (c:/texlive/2026/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
-\@glsmfirst=\toks68
-\@glsmrest=\toks69
-) (c:/texlive/2026/texmf-dist/tex/latex/xfor/xfor.sty
+\@glsmfirst=\toks72
+\@glsmrest=\toks73
+)
+(c:/texlive/2026/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
-) (c:/texlive/2026/texmf-dist/tex/latex/tracklang/tracklang.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tracklang/tracklang.sty
 Package: tracklang 2025/03/11 v1.6.6 (NLCT) Track Languages
- (c:/texlive/2026/texmf-dist/tex/generic/tracklang/tracklang.tex)
-Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
-) (c:/texlive/2026/texmf-dist/tex/latex/glossaries-english/glossaries-english.ldf
+
+(c:/texlive/2026/texmf-dist/tex/generic/tracklang/tracklang.tex)
+Package tracklang Info: Tracking dialect `english' (language `english') on inpu
+t line 264.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/glossaries-english/glossaries-english.ldf
 File: glossaries-english.ldf 2014/11/23 v1.0
 ) (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-base.sty
 Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
-\l__datatool_tmpa_int=\count604
-\l__datatool_tmpb_int=\count605
-\l__datatool_tmpc_int=\count606
-\l__datatool_tmpd_int=\count607
-\l__datatool_count_int=\count608
-\l__datatool_tmp_datatype_int=\count609
-\l__datatool_tmpa_dim=\dimen376
-\l__datatool_tmpb_dim=\dimen377
- (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-l3fp.def
+\l__datatool_tmpa_int=\count612
+\l__datatool_tmpb_int=\count613
+\l__datatool_tmpc_int=\count614
+\l__datatool_tmpd_int=\count615
+\l__datatool_count_int=\count616
+\l__datatool_tmp_datatype_int=\count617
+\l__datatool_tmpa_dim=\dimen390
+\l__datatool_tmpb_dim=\dimen391
+
+(c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-l3fp.def
 File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
 )
-\@dtl@toks=\toks70
-\@dtl@tmpcount=\count610
+\@dtl@toks=\toks74
+\@dtl@tmpcount=\count618
 \dtl@tmplength=\skip191
-\l__datatool_measure_box=\box106
-\dtl@sortresult=\count611
- (c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
+\l__datatool_measure_box=\box107
+\dtl@sortresult=\count619
+
+(c:/texlive/2026/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
 File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
 )
-\@dtl@datatype=\count612
-\c_datatool_unknown_int=\count613
-\l__datatool_year_int=\count614
-\l__datatool_month_int=\count615
-\l__datatool_day_int=\count616
-\l__datatool_hour_int=\count617
-\l__datatool_minute_int=\count618
-\l__datatool_second_int=\count619
-\l__datatool_tzhour_int=\count620
-\l__datatool_tzminute_int=\count621
-\l__datatool_julian_int=\count622
-\l__datatool_local_julian_int=\count623
-\l__datatool_prefix_int=\count624
-\l__datatool_suffix_int=\count625
-\@dtl@foreach@level=\count626
- (c:/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english.ldf
+\@dtl@datatype=\count620
+\c_datatool_unknown_int=\count621
+\l__datatool_year_int=\count622
+\l__datatool_month_int=\count623
+\l__datatool_day_int=\count624
+\l__datatool_hour_int=\count625
+\l__datatool_minute_int=\count626
+\l__datatool_second_int=\count627
+\l__datatool_tzhour_int=\count628
+\l__datatool_tzminute_int=\count629
+\l__datatool_julian_int=\count630
+\l__datatool_local_julian_int=\count631
+\l__datatool_prefix_int=\count632
+\l__datatool_suffix_int=\count633
+\@dtl@foreach@level=\count634
+
+(c:/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english.ldf
 File: datatool-english.ldf 2025/03/12 v1.1 (NLCT)
- (c:/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english-utf8.ldf
+
+(c:/texlive/2026/texmf-dist/tex/latex/datatool-english/datatool-english-utf8.ld
+f
 File: datatool-english-utf8.ldf 2025/03/12 v1.1 (NLCT)
 ))
-\dtl@codeA=\count627
-\dtl@codeB=\count628
+\dtl@codeA=\count635
+\dtl@codeB=\count636
 )
-\gls@level=\count629
-\@gls@tmpb=\toks71
+\gls@level=\count637
+\@gls@tmpb=\toks75
 \gls@tmplen=\skip192
-\l__glossaries_tmpa_dim=\dimen378
-\l__glossaries_tmpb_dim=\dimen379
-\glskeylisttok=\toks72
-\glslabeltok=\toks73
-\glsshorttok=\toks74
-\glslongtok=\toks75
- (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
+\l__glossaries_tmpa_dim=\dimen392
+\l__glossaries_tmpb_dim=\dimen393
+\glskeylisttok=\toks76
+\glslabeltok=\toks77
+\glsshorttok=\toks78
+\glslongtok=\toks79
+
+(c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
 Package: glossary-hypernav 2026/03/06 v5.0 (NLCT)
-) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 Package: glossary-list 2026/03/06 v5.0 (NLCT)
 \glslistdottedwidth=\skip193
-) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 Package: glossary-long 2026/03/06 v5.0 (NLCT)
 \glsdescwidth=\skip194
 \glspagelistwidth=\skip195
-) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 Package: glossary-super 2026/03/06 v5.0 (NLCT)
- (c:/texlive/2026/texmf-dist/tex/latex/supertabular/supertabular.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2025/06/26 v4.2d the supertabular environment
-\c@tracingst=\count630
-\ST@wd=\dimen380
+\c@tracingst=\count638
+\ST@wd=\dimen394
 \ST@rightskip=\skip196
 \ST@leftskip=\skip197
 \ST@parfillskip=\skip198
-\ST@pageleft=\dimen381
-\ST@headht=\dimen382
-\ST@tailht=\dimen383
-\ST@pagesofar=\dimen384
-\ST@pboxht=\dimen385
-\ST@rowht=\dimen386
-\ST@prevht=\dimen387
-\ST@toadd=\dimen388
-\ST@dimen=\dimen389
-\ST@pbox=\box107
-)) (c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+\ST@pageleft=\dimen395
+\ST@headht=\dimen396
+\ST@tailht=\dimen397
+\ST@pagesofar=\dimen398
+\ST@pboxht=\dimen399
+\ST@rowht=\dimen400
+\ST@prevht=\dimen401
+\ST@toadd=\dimen402
+\ST@dimen=\dimen403
+\ST@pbox=\box108
+))
+(c:/texlive/2026/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2026/03/06 v5.0 (NLCT)
-\l__glossaries_tree_max_known_level_int=\count631
-\l__glossaries_tree_offset_dim=\dimen390
-\l__glossaries_tree_namewidth_dim=\dimen391
-\l__glossaries_tree_symbolwidth_dim=\dimen392
-\l__glossaries_tree_prenamesym_width_dim=\dimen393
-\l__glossaries_tree_presubnamesym_width_dim=\dimen394
-\l__glossaries_tree_namewidth_padding_dim=\dimen395
-\l__glossaries_tree_symbolwidth_padding_dim=\dimen396
-\l__glossaries_tree_namesymbolwidth_dim=\dimen397
-\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen398
-\l__glossaries_tree_level_int=\count632
+\l__glossaries_tree_max_known_level_int=\count639
+\l__glossaries_tree_offset_dim=\dimen404
+\l__glossaries_tree_namewidth_dim=\dimen405
+\l__glossaries_tree_symbolwidth_dim=\dimen406
+\l__glossaries_tree_prenamesym_width_dim=\dimen407
+\l__glossaries_tree_presubnamesym_width_dim=\dimen408
+\l__glossaries_tree_namewidth_padding_dim=\dimen409
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen410
+\l__glossaries_tree_namesymbolwidth_dim=\dimen411
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen412
+\l__glossaries_tree_level_int=\count640
 \glstreeindent=\skip199
-)) (./data/glossaries.tex)
-\@quotelevel=\count633
-\@quotereset=\count634
+))
+(./data/glossaries.tex)
+\@quotelevel=\count641
+\@quotereset=\count642
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -1956,25 +2515,31 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Font family 'FandolSong(0)' created for font
 (fontspec)             'FandolSong' with options
-(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldItalicFont={*-Bold},BoldFont={*-Bold},ItalicFont={*-Regular}].
+(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},B
+oldItalicFont={*-Bold},BoldFont={*-Bold},ItalicFont={*-Regular}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dfl
+t;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
+
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolSong-Regular.otf]/OT:script=hani;language=dfl
+t;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->"[FandolSong-Bold.otf]/OT:script=hani;language=dflt;"
+
 
 
 Package fontspec Info: 
 (fontspec)             Font family 'TimesNewRoman(2)' created for font 'Times
 (fontspec)             New Roman' with options
-(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace].
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -2018,29 +2583,29 @@ Package fontspec Info:
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
- (./main.aux)
-\openout1 = `main.aux'.
+ (./main_submit.aux)
+\openout1 = `main_submit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -2078,12 +2643,16 @@ LaTeX Font Info:    ... okay on input line 164.
 
 (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
- (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PD
+F (HO)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -2091,45 +2660,52 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package bicaption Info: Main language is not set on input line 164.
- (c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+Package bicaption Info: Main language is not set on input line 166.
+
+(c:/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2021-04-17 v2.8e siunitx: Abbreviated units
-) (c:/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+)
+(c:/texlive/2026/texmf-dist/tex/latex/translator/translator-basic-dictionary-En
+glish.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+(c:/texlive/2026/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `main.bcf'.
+\openout4 = `main_submit.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 164.
-Package biblatex Info: Reference segment=0 on input line 164.
-Package hyperref Info: Link coloring ON on input line 164.
- (./main.out) (./main.out)
+Package biblatex Info: ... file 'main_submit.bbl' found.
+
+(./main_submit.bbl)
+Package biblatex Info: Reference section=0 on input line 166.
+Package biblatex Info: Reference segment=0 on input line 166.
+Package hyperref Info: Link coloring ON on input line 166.
+ (./main_submit.out) (./main_submit.out)
 \@outlinefile=\write5
-\openout5 = `main.out'.
+\openout5 = `main_submit.out'.
 
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 12.04628pt on input line 164.
+(Font)              scaled to size 12.04628pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 9.03471pt on input line 164.
+(Font)              scaled to size 9.03471pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.22777pt on input line 164.
+(Font)              scaled to size 7.22777pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 12.0437pt on input line 164.
+(Font)              scaled to size 12.0437pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 9.03278pt on input line 164.
+(Font)              scaled to size 9.03278pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.22623pt on input line 164.
+(Font)              scaled to size 7.22623pt on input line 166.
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2141,39 +2717,43 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei'
 (fontspec)             with options
-(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldItalicFont={*-Bold},BoldFont={*-Bold},ItalicFont={*-Regular}].
+(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},B
+oldItalicFont={*-Bold},BoldFont={*-Bold},ItalicFont={*-Regular}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt
+;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt
+;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 14.05399pt on input line 164.
+(Font)              scaled to size 14.05399pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 10.54048pt on input line 164.
+(Font)              scaled to size 10.54048pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.52892pt on input line 164.
+(Font)              scaled to size 7.52892pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 14.05098pt on input line 164.
+(Font)              scaled to size 14.05098pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 10.53824pt on input line 164.
+(Font)              scaled to size 10.53824pt on input line 166.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 7.52731pt on input line 164.
+(Font)              scaled to size 7.52731pt on input line 166.
  [1
 
 
 ] [2] [3
 
 
-] (./data/abstract.tex
+]
+(./data/abstract.tex
 
 Package fontspec Info: 
 (fontspec)             Script 'CJK' not explicitly supported within font
@@ -2185,19 +2765,24 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             Font family 'FandolKai(1)' created for font 'FandolKai'
 (fontspec)             with options
-(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
+(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},B
+oldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt
+;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt
+;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt
+;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt
+;"
 
  [1
 
@@ -2205,20 +2790,22 @@ Package fontspec Info:
 
 ]
 Underfull \hbox (badness 2277) in paragraph at lines 24--25
-[]\TU/TimesNewRoman(0)/m/n/12.045 (2) An integrated workflow combining instance segmentation outputs with post-
+[]\TU/TimesNewRoman(0)/m/n/12.045 (2) An integrated workflow combining instance
+ segmentation outputs with post-
  []
 
-[4]) (./data/notation.tex) [5] (./main.toc [6
+[4]) (./data/notation.tex) [5] (./main_submit.toc [6
 
 ] [7])
 \tf@toc=\write6
-\openout6 = `main.toc'.
+\openout6 = `main_submit.toc'.
 
- [8] (./main.tec [9
+ [8]
+(./main_submit.tec [9
 
 ] [10])
 \tf@tec=\write7
-\openout7 = `main.tec'.
+\openout7 = `main_submit.tec'.
 
  [11] (./data/chap01.tex
 第一章
@@ -2272,23 +2859,25 @@ LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 5.99936pt on input line 283.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 283.
- [28] [29]
+
+[28] [29]
 File: figure/fig10.png Graphic file (type bmp)
 <figure/fig10.png>
  [30]) (./data/chap03.tex [31]
 第三章
 [32
 
-] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42]) (./data/chap04.tex [43]
+] [33] [34] [35] [36] [37] [38] [39] [40] [41]) (./data/chap04.tex [42]
+[43]
 第四章
 [44
 
 ] [45] [46]
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 78.
+(Font)              scaled to size 7.00075pt on input line 76.
 LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 78.
- [47] [48]
+(Font)              scaled to size 6.99925pt on input line 76.
+ [47]
 File: figure/fig11-1.png Graphic file (type bmp)
 <figure/fig11-1.png>
 File: figure/fig11-2.png Graphic file (type bmp)
@@ -2301,25 +2890,30 @@ File: figure/fig11-5.png Graphic file (type bmp)
 <figure/fig11-5.png>
 File: figure/fig11-6.png Graphic file (type bmp)
 <figure/fig11-6.png>
- [49] [50] [51] [52]
-Underfull \hbox (badness 1552) in paragraph at lines 268--269
-[]\TU/FandolSong(0)/m/n/12.045 从 表 [][]\TU/TimesNewRoman(0)/m/n/12.045 4-5[][] \TU/FandolSong(0)/m/n/12.045 可 以 看 出，| \TU/TimesNewRoman(0)/m/n/12.045 YOLO \TU/FandolSong(0)/m/n/12.045 系 列 模 型 在 该 类 状 态 判 别 任 务 中 整 体 较 为 稳 定。|
+ [48] [49] [50] [51] [52] [53]
+Underfull \hbox (badness 1552) in paragraph at lines 266--267
+[]\TU/FandolSong(0)/m/n/12.045 从 表 [][]\TU/TimesNewRoman(0)/m/n/12.045 4-5[][] 
+\TU/FandolSong(0)/m/n/12.045 可 以 看 出，| \TU/TimesNewRoman(0)/m/n/12.045 YOLO \TU
+/FandolSong(0)/m/n/12.045 系 列 模 型 在 该 类 状 态 判 别 任 务 中 整 体 较 为 稳 定。|
  []
 
-[53]
-Underfull \hbox (badness 1005) in paragraph at lines 304--305
-[]\TU/FandolSong(0)/m/n/12.045 由 表 [][]\TU/TimesNewRoman(0)/m/n/12.045 4-6[][] \TU/FandolSong(0)/m/n/12.045 可 见，|  在 仅 保 留 顶 层 未 满 载 有 效 计 数 图 像 的 评 估 条 件 下，| \TU/TimesNewRoman(0)/m/n/12.045 YOLO11-
+
+Underfull \hbox (badness 1005) in paragraph at lines 302--303
+[]\TU/FandolSong(0)/m/n/12.045 由 表 [][]\TU/TimesNewRoman(0)/m/n/12.045 4-6[][] 
+\TU/FandolSong(0)/m/n/12.045 可 见，|  在 仅 保 留 顶 层 未 满 载 有 效 计 数 图 像 的 评 估 条 件 下，|
+ \TU/TimesNewRoman(0)/m/n/12.045 YOLO11-
  []
 
-[54] [55] [56] [57] [58] [59] [60] [61]) (./data/conclusion.tex [62]
+[54] [55] [56] [57] [58] [59] [60] [61] [62]) (./data/conclusion.tex [63]
 第五章
-[63
+[64
 
-]) [64] [65
+]) [65] [66
 
-] [66] [67] [68] [69] [70] (./data/result.tex [71]) (./data/acknowledgement.tex [72
+] [67] [68] [69] [70] [71] (./data/result.tex [72])
+(./data/acknowledgement.tex [73
 
-]) (./data/appendix.tex) [73
+]) (./data/appendix.tex) [74
 
 ]
 
@@ -2327,24 +2921,24 @@ Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
  found. (Remove \makenoidxglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-(./main.aux)
+(./main_submit.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/04/10>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0348A13B3FD87BE991EDED1787291373;8914.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
+Package rerunfilecheck Info: File `main_submit.out' has not changed.
+(rerunfilecheck)             Checksum: BB089BA83D061ADE4EEAF1DE93CCB9A8;9033.
+Package logreq Info: Writing requests to 'main_submit.run.xml'.
+\openout1 = `main_submit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 63365 strings out of 468168
- 1345831 string characters out of 5436524
- 2639083 words of memory out of 5000000
- 91104 multiletter control sequences out of 15000+600000
- 636481 words of font info for 212 fonts, out of 8000000 for 9000
+ 73777 strings out of 468168
+ 1697409 string characters out of 5436524
+ 3072564 words of memory out of 5000000
+ 101372 multiletter control sequences out of 15000+600000
+ 636521 words of font info for 217 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 118i,15n,131p,2796b,7259s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,19n,131p,2763b,7259s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (87 pages, 1605068 bytes).
+Output written on main_submit.xdv (88 pages, 1619744 bytes).
