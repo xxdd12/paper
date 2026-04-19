@@ -49,10 +49,10 @@
 \contentsline {subsection}{\numberline {4.4.3}数量计算评估}{51}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}计数误差来源分析}{55}{subsection.4.4.4}%
 \contentsline {section}{\numberline {4.5}模型压缩实验结果与分析}{57}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}压缩结果分析}{60}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.1}压缩结果分析}{59}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}轻量化效果与部署适配分析}{61}{subsection.4.5.2}%
-\contentsline {section}{\numberline {4.6}本章小结}{63}{section.4.6}%
-\contentsline {chapter}{\numberline {第五章}结论与展望}{64}{chapter.5}%
-\contentsline {chapter}{参考文献}{66}{chapter*.36}%
-\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{73}{chapter*.37}%
-\contentsline {chapter}{致谢}{74}{chapter*.40}%
+\contentsline {section}{\numberline {4.6}本章小结}{62}{section.4.6}%
+\contentsline {chapter}{\numberline {第五章}结论与展望}{63}{chapter.5}%
+\contentsline {chapter}{参考文献}{65}{chapter*.36}%
+\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{72}{chapter*.37}%
+\contentsline {chapter}{致谢}{73}{chapter*.40}%

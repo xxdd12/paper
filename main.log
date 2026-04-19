@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.14)  19 APR 2026 17:37
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.14)  19 APR 2026 17:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2484,23 +2484,23 @@ Underfull \hbox (badness 1005) in paragraph at lines 302--303
 
 [60]
 
-[61]
+[61]) (./data/conclusion.tex
 
-[62]) (./data/conclusion.tex
-
-[63]
+[62]
 第五章
 
 
-[64
+[63
 
 ]) (./main.bbl
 
-[65]
+[64]
 
-[66
+[65
 
 ]
+
+[66]
 
 [67]
 
@@ -2508,17 +2508,15 @@ Underfull \hbox (badness 1005) in paragraph at lines 302--303
 
 [69]
 
-[70]
+[70]) (./data/result.tex
 
-[71]) (./data/result.tex
+[71]) (./data/acknowledgement.tex
 
-[72]) (./data/acknowledgement.tex
-
-[73
+[72
 
 ]) (./data/appendix.tex)
 
-[74
+[73
 
 ]
 
@@ -2535,12 +2533,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BB089BA83D061ADE4EEAF1DE93CCB9A8;9033.
  ) 
 Here is how much of TeX's memory you used:
- 65224 strings out of 473832
- 1508940 string characters out of 5733158
- 2349635 words of memory out of 5000000
- 87220 multiletter control sequences out of 15000+600000
+ 65223 strings out of 473832
+ 1508920 string characters out of 5733158
+ 2349064 words of memory out of 5000000
+ 87219 multiletter control sequences out of 15000+600000
  567637 words of font info for 213 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,19n,131p,2763b,2768s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (88 pages, 1610560 bytes).
+Output written on main.xdv (87 pages, 1602476 bytes).
