@@ -2,7 +2,7 @@
 
 本章针对 YOLO11-StackLite 在资源受限场景下参数量较大、计算复杂度较高、部署开销偏大的问题，提出面向边缘部署的轻量化压缩方法，在尽量保持 box mAP、mask mAP、DA 和 CA 等关键指标稳定的前提下，降低模型复杂度并提升部署适配性。
 
-本章的具体思路如下：首先采用基于 BN 缩放因子的 Network Slimming 型结构化通道剪枝方法识别冗余通道\cite{liu2017networkslimming,he2017channelpruning,luo2017thinet}；其次结合 C2SASA、C3k2\_QDConv 和 SSConv 的结构约束执行结构化物理剪枝与权重迁移，构建紧凑模型；最后通过微调恢复以及经典软目标蒸馏、基于 ReviewKD 的多阶段特征蒸馏补偿压缩带来的性能损失\cite{hinton2015distilling,chen2021reviewkd}。由此形成“稀疏约束训练 + 结构化通道压缩 + 蒸馏恢复”的轻量化技术路线。
+本章的具体思路如下：首先采用基于批量归一化（Batch Normalization，BN）缩放因子的 Network Slimming 型结构化通道剪枝方法识别冗余通道\cite{liu2017networkslimming,he2017channelpruning,luo2017thinet}；其次结合 C2SASA、C3k2\_QDConv 和 SSConv 的结构约束执行结构化物理剪枝与权重迁移，构建紧凑模型；最后通过微调恢复以及经典软目标蒸馏、基于 ReviewKD 的多阶段特征蒸馏补偿压缩带来的性能损失\cite{hinton2015distilling,chen2021reviewkd}。由此形成“稀疏约束训练 + 结构化通道压缩 + 蒸馏恢复”的轻量化技术路线。
 
 \iffalse
 \begin{figure}[htbp]
@@ -172,7 +172,7 @@ Adapt Segment head according to retained P3, P4, and P5 channels
 \textbf{return} $M_{init}$
 \end{algorithm}
 
-由算法~\ref{alg:module_prune}可见，本文的物理剪枝并不是仅通过修改网络配置文件获得紧凑结构，而是根据保留通道索引对卷积层、归一化层和分割头参数执行切片复制，并对 backbone、neck、head 的相关输入输出通道进行同步映射。由此得到的紧凑模型不仅在结构上完成真实裁剪，而且具备可直接继续微调的初始化权重，这也是其优于仅构造缩小版 YAML 再重新训练方案的重要原因。
+由算法~\ref{alg:module_prune}可见，本文采用的物理剪枝并非仅通过调整模型配置来构造紧凑网络结构，而是依据保留通道索引，对卷积层、归一化层及分割头参数进行切片复制，并对 backbone、neck 和 head 的输入输出通道进行同步映射。因此，所得紧凑模型不仅在结构上实现了真实裁剪，还保留了可直接用于后续微调的初始化权重，这也是其优于仅通过结构缩减后再重新训练方法的重要原因。
 
 \subsection{剪枝流程设计}{Pruning Process Design}
 
