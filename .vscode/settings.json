@@ -36,7 +36,7 @@
     "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
   }
 ],
-"latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+"latex-workshop.latex.recipe.default": "xelatex -> bibtex -> xelatex*2",
 "latex-workshop.latex.autoBuild.run": "onSave",
 "latex-workshop.view.pdf.viewer": "tab"
 // "latex-workshop.view.pdf.viewer": "external"

@@ -1,0 +1,71 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=latex 2026.2.14)  19 APR 2026 03:56
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(./gdutthesis.cls (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2024-05-08 L3 backend support: dvips
+\l__pdf_internal_box=\box52
+\l__pdf_backend_content_box=\box53
+\l__pdf_backend_model_box=\box54
+\g__pdf_backend_annotation_int=\count196
+\g__pdf_backend_link_int=\count197
+\g__pdf_backend_link_sf_int=\count198
+))
+Document Class: gdutthesis 2024/01/19 v0.1f Thesis Template for Guangdong Unive
+rsity of Technology
+(c:/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
+)
+(c:/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+
+./gdutthesis.cls:31: Fatal Package gdutthesis Error: The gdutthesis class requi
+res either XeTeX
+(gdutthesis)                      or LuaTeX.
+(gdutthesis)                      
+(gdutthesis)                      "pdftex" is not supported at present. You
+(gdutthesis)                      must change
+(gdutthesis)                      your typesetting engine to "xelatex" or
+(gdutthesis)                      "lualatex".
+
+Type <return> to continue.
+ ...                                              
+                                                  
+l.31   }
+        
+
+LaTeX does not know anything more about this error, sorry.
+
+Try typing <return> to proceed.
+If that doesn't work, type X <return> to quit.
+
+This is a fatal error: LaTeX will abort.
+
+
+
+./gdutthesis.cls:31: Emergency stop.
+<read *> 
+         
+l.31   }
+        
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 284 strings out of 473191
+ 7981 string characters out of 5720005
+ 395194 words of memory out of 5000000
+ 23618 multiletter control sequences out of 15000+600000
+ 558837 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 65i,0n,79p,201b,42s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.

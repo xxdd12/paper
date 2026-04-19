@@ -1,0 +1,16 @@
+PWD C:/Users/轩哥/Desktop/latex
+INPUT c:/texlive/2025/texmf.cnf
+INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2025/texmf-var/web2c/pdftex/latex.fmt
+INPUT main.tex
+OUTPUT main.log
+INPUT ./gdutthesis.cls
+INPUT gdutthesis.cls
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty

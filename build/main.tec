@@ -1,58 +1,58 @@
 \contentsline {chapter}{ABSTRACT(IN CHINESE)}{I}{chapter*.3}%
 \contentsline {chapter}{ABSTRACT(IN ENGLISH)}{III}{chapter*.4}%
-\contentsline {chapter}{CONTENTS(IN CHINESE)}{V}{chapter*.5}%
-\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VII}{chapter*.6}%
+\contentsline {chapter}{CONTENTS(IN CHINESE)}{VI}{chapter*.5}%
+\contentsline {chapter}{CONTENTS(IN ENGLISH)}{VIII}{chapter*.6}%
 \contentsline {chapter}{\numberline {Chapter\ 1}Introduction}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1} Background and significance of research }{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Analysis of the research status at home and abroad}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}}{3}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}}{5}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}}{6}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}}{8}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Main research content and organizational structure of this article}{9}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}}{9}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}}{11}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Summary}{12}{section.1.4}%
-\contentsline {chapter}{\numberline {Chapter\ 2}Method for Stacked Cargo Inventory Based on Improved YOLO11s-Seg}{14}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Stacked Cargo Detection and Segmentation}{14}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}}{14}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}}{16}{subsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.1}}{18}{subsubsection.2.1.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.2.2}}{20}{subsubsection.2.1.2.2}%
-\contentsline {subsubsection}{\numberline {2.1.2.3}}{22}{subsubsection.2.1.2.3}%
-\contentsline {section}{\numberline {2.2}Post-processing Counting Method}{24}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}}{25}{subsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.1}}{28}{subsubsection.2.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.2.1.2}}{29}{subsubsection.2.2.1.2}%
-\contentsline {section}{\numberline {2.3}Summary}{31}{section.2.3}%
-\contentsline {chapter}{\numberline {Chapter\ 3}Model Compression Method of YOLO11-StackLite for Edge Deployment}{33}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Analysis of Model Compression Requirements}{34}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Lightweight Method Based on Structured Channel Pruning}{35}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Principle of Network Slimming Based Structured Pruning}{35}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Selection of Pruning Targets in YOLO11-StackLite}{36}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}{37}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Pruning Process Design}{40}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Accuracy Recovery Method Based on Knowledge Distillation}{41}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Principle of Knowledge Distillation}{41}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Construction of Teacher and Student Models}{42}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Selection of Distillation Information and Constraint Strategy}{42}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Design of Distillation Loss}{43}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Construction and Training Process of the Compressed Model}{43}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Summary}{44}{section.3.5}%
-\contentsline {chapter}{\numberline {Chapter\ 4}Experiments and Results}{46}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Dataset}{46}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Evaluation Metrics}{47}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experimental Environment and Settings}{48}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Results and Discussion}{49}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Ablation Study}{49}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Comparison of Different Instance Segmentation Models}{52}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Counting Performance Evaluation}{53}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Error Analysis of Counting Results}{57}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Model Compression Experiments}{59}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Analysis of Compression Results}{62}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Feasibility Analysis for Edge Deployment}{63}{subsection.4.4.7}%
-\contentsline {section}{\numberline {4.5}Summary}{64}{section.4.5}%
-\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{65}{chapter.5}%
-\contentsline {chapter}{References}{68}{chapter*.31}%
-\contentsline {chapter}{Publication and patents during study}{75}{chapter*.32}%
-\contentsline {chapter}{Acknowledgements}{76}{chapter*.35}%
+\contentsline {section}{\numberline {1.1} Background and significance of the research }{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Research Status at Home and Abroad}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Object Detection and Instance Segmentation}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Object Counting}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Model Pruning and Knowledge Distillation}{6}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Summary of Existing Studies and Remaining Problems}{7}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Main Research Content and Thesis Organization}{8}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Main Research Content}{8}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Thesis Organization}{11}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Summary}{11}{section.1.4}%
+\contentsline {chapter}{\numberline {Chapter\ 2}Inventory Counting Method for Stacked Goods in Automated Warehouse Based on YOLO11-StackLite}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Stacked Cargo Detection and Segmentation}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}YOLO11s-Seg Architecture}{13}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}YOLO11-StackLite Architecture}{15}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}C2SASA Module}{17}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}SSConv Module}{19}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}C3k2\_QDConv Module}{21}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Post-processing Counting Method}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Main Counting Workflow}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Top-layer Full-load Detection Based on Geometric Relations}{27}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Interlayer Area-ratio Estimation Driven by Mask Keypoints}{28}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Summary}{30}{section.2.3}%
+\contentsline {chapter}{\numberline {Chapter\ 3}Lightweight Compression Method of YOLO11-StackLite for Edge-oriented Application}{32}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Analysis of Model Compression Requirements}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Lightweight Method Based on Structured Channel Pruning}{33}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Principle of Network Slimming Based Structured Pruning}{33}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Selection of Pruning Targets in YOLO11-StackLite}{34}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Channel Importance Evaluation and Pruning Ratio Setting for Customized Modules}{35}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Pruning Process Design}{37}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Accuracy Recovery Method Based on Knowledge Distillation}{39}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Principle of Knowledge Distillation}{39}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Construction of Teacher and Student Models}{40}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Selection of Distillation Information and Constraint Strategy}{40}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Design of Distillation Loss}{41}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Construction and Training Process of the Compressed Model}{41}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Summary}{42}{section.3.5}%
+\contentsline {chapter}{\numberline {Chapter\ 4}Experiments and Results}{44}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset}{44}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluation Metrics}{45}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Environment and Settings}{46}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Experimental Results and Analysis of YOLO11-StackLite}{47}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Ablation Study}{47}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Comparison of Different Instance Segmentation Models}{50}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Counting Performance Evaluation}{51}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Error Analysis of Counting Results}{55}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Experimental Results and Analysis of Model Compression}{57}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Analysis of Compression Results}{60}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Analysis of Lightweight Effect and Deployment Adaptability}{61}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Summary}{63}{section.4.6}%
+\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{64}{chapter.5}%
+\contentsline {chapter}{References}{66}{chapter*.36}%
+\contentsline {chapter}{Publication and patents during study}{73}{chapter*.37}%
+\contentsline {chapter}{Acknowledgements}{74}{chapter*.40}%

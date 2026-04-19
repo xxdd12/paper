@@ -1,0 +1,17 @@
+# Fdb version 4
+["latex"] 1776542215.01078 "main.tex" "main.dvi" "main" 1776542216.28354 2
+  "c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def" 1771006560 35454 e0048b54d7d6f7c79a7bd63a786c3eee ""
+  "c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty" 1771006562 6565 f51d809db6193fae7b06c1bc26ca8f75 ""
+  "c:/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty" 1771006566 4674 22943918cc84173478a588d6efbc800b ""
+  "c:/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty" 1771006566 1308 87acdbdf1ed70c3b07e2090f15bd3635 ""
+  "c:/texlive/2025/texmf-dist/web2c/texmf.cnf" 1771005494 42148 61becc7c670cd061bb319c643c27fdd4 ""
+  "c:/texlive/2025/texmf-var/web2c/pdftex/latex.fmt" 1771008486 3345700 3f3ab327c69b9256656dbf6e60622472 ""
+  "c:/texlive/2025/texmf.cnf" 1771008156 713 e69b156964470283e0530f5060668171 ""
+  "gdutthesis.cls" 1776538744 70981 48b811af74e63f410159e8202d5112af ""
+  "main.aux" 1776542201 41263 2d265f23317c2e26991bd56cd622c6f7 "latex"
+  "main.tex" 1776541830 6319 d52493400b3443d3a28a45590503b508 ""
+  (generated)
+  "main.aux"
+  "main.dvi"
+  "main.log"
+  (rewritten before read)

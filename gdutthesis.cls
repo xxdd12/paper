@@ -896,7 +896,7 @@
 \fancyhf{}
 \fancyfoot[C]{\zihao{-5}\thepage}
 \fancyhead[CO]{\zihao{-5}\gdut@kai\gdutenkai \leftmark}
-\fancyhead[CE]{\zihao{-5}\gdut@kai\gdutenkai 广东工业大学 \__gdut_thesis_type 论文}
+\fancyhead[CE]{\zihao{-5}\gdut@kai\gdutenkai xxx \__gdut_thesis_type 论文}
 \renewcommand{\headrulewidth}{1.5pt}
 \renewcommand{\headruleskip}{6.2pt}
 \newcommand{\myheadrulewidth}{0.8pt}
