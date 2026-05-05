@@ -49,6 +49,26 @@ YOLO11-StackLite 的设计并非对原始网络进行简单模块替换，而是
 
 从整体关系上看，三个模块并非相互独立的局部优化，而是共同服务于“复杂堆叠场景识别与计数”这一目标。C2SASA 主要作用于高层特征的选择性增强，解决注意力冗余和关键区域聚焦不足的问题；SSConv 主要作用于特征融合阶段，解决下采样过程中的计算冗余与局部信息损失问题；C3k2\_QDConv 则着重加强模型对方向性边缘与几何结构的刻画能力，提升在遮挡、重叠和结构相似条件下的识别稳定性。三者在功能上的分工与配合，共同构成了 YOLO11-StackLite 的核心改进路线。
 
+为进一步明确本文模块与常见同类结构的差异，表~\ref{tab:module_compare} 从设计动机、结构特点和任务作用三个角度给出对比。可以看出，本文并非简单引入已有轻量化模块，而是围绕堆叠货物盘点中的关键区域聚焦、边界细节保留和方向性几何表达进行组合设计。
+
+\begin{table}[htbp]
+  \bicaption{YOLO11-StackLite 关键模块与同类结构的功能差异}{Functional differences between key modules in YOLO11-StackLite and related structures}
+  \label{tab:module_compare}
+  \centering
+  \small
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{p{2.5cm}p{3.4cm}p{4.6cm}p{4.7cm}}
+      \toprule
+      模块 & 同类结构侧重点 & 本文结构差异 & 面向盘点任务的作用 \\
+      \midrule
+      C2SASA & C2PSA 等注意力模块通常侧重全局相关性建模 & 采用通道拆分保留基础语义分支，仅对部分通道执行选择性激活与抑制，并引入归一化和可学习温度参数 & 减少无关背景和重复纹理参与注意力计算，增强顶层箱体、层间交界和局部遮挡区域的可分性 \\
+      SSConv & 常规下采样卷积或 ShuffleNet 类结构主要关注轻量化计算 & 在通道拆分基础上融合分组卷积、逐点卷积与标准卷积分支，兼顾轻量重组与局部结构保持 & 降低 Neck 下采样开销，同时保留箱体边界、角点和局部可见区域信息，减少掩膜粘连与缺损 \\
+      C3k2\_QDConv & 标准 Bottleneck 或常规深度卷积主要依赖局部各向同性卷积 & 在 C3k2 结构中引入四向非对称卷积与空间位移分支，显式增强水平和垂直方向的几何变化建模 & 强化规则箱体边缘、层间分界线和遮挡轮廓表达，提高上下层目标区分和几何后处理输入质量 \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
 \par\noindent 1）通道拆分注意力模块 C2SASA：该模块在继承原始注意力结构优势的基础上，通过通道拆分机制与选择性激活抑制策略，降低注意力计算冗余并增强模型对关键区域的表征能力。
 
 \par\noindent 2）重排分组卷积模块 SSConv：该模块面向 Neck 部分的轻量化下采样需求，通过融合通道拆分、分组卷积、逐点卷积与标准卷积分支等设计，在降低计算复杂度的同时提升多尺度特征提取能力。
@@ -260,7 +280,7 @@ c）同时检测到上层与下层目标。该情形为最常见的完整堆叠�
 
 进一步地，顶层满载检测的意义不仅在于选择不同计数公式，更在于降低后续数量推理的不确定性。若将未满载场景误判为满载，则总数量估计会因满层假设而显著偏大；若将满载场景误判为未满载，则会增加不必要的几何估计步骤并引入额外误差。综上可知，满载状态判别的准确性直接影响后处理算法的整体稳定性，也是面积比计数流程中的关键前置环节。
 
-\begin{algorithm}[htbp]
+\begin{algorithm}[H]
   \caption{TopLayerFullLoadCheck}
   \label{alg:full_load}
   \footnotesize
@@ -310,11 +330,11 @@ y
  - {c_2}
 \end{array} \right)
 \end{equation}
-其中，$(x,y)$ 为两条线段的交点坐标。公式\autoref{eq:line-k}和\autoref{eq:line-intersection}用于求解候选边对的交点集合，并为后续面积比估计提供几何基础。
+其中，$(x,y)$ 为两条线段的交点坐标。式~\eqref{eq:line-k} 和式~\eqref{eq:line-intersection} 用于求解候选边对的交点集合，并为后续面积比估计提供几何基础。
 
 交点求解的作用在于确定不同层结构在图像平面中的几何延展关系。通过关键边之间的交点，可以推断顶层与下方层级区域在可见区域上的相对位置，并进一步构建面积估计所需的近似区域。对于规则堆叠的箱体场景而言，这种处理方式虽然属于近似推断，但能够在没有深度信息和多视角图像的条件下较稳定地反映层间结构比例，从而提高数量估计的可操作性。
 
-\begin{algorithm}[htbp]
+\begin{algorithm}[H]
   \caption{MaskKeypointDrivenAreaRatioEstimation}
   \label{alg:area_ratio}
   \footnotesize

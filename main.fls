@@ -517,7 +517,6 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT c:/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT c:/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
-INPUT c:/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
 INPUT ./main.out
 INPUT ./main.out
 INPUT main.out

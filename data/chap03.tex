@@ -92,6 +92,15 @@ L_{\mathrm{sparse}} = L_{\mathrm{task}} + \lambda_s \sum_{l}\sum_{i=1}^{n_l} |\g
 \end{equation}
 其中，$\lambda_s$ 为稀疏约束系数。经过稀疏训练后，各候选层通道的重要性差异会被进一步拉开，从而便于后续按照阈值或预设剪枝率执行结构化裁剪。
 
+从梯度更新角度看，$L_1$ 稀疏项会对 BN 缩放因子产生近似常量方向的收缩作用。对于非零缩放因子，其梯度可写为
+\begin{equation}
+\frac{\partial L_{\mathrm{sparse}}}{\partial \gamma_i^l}
+=
+\frac{\partial L_{\mathrm{task}}}{\partial \gamma_i^l}
++ \lambda_s \mathrm{sign}(\gamma_i^l)
+\end{equation}
+其中，$\mathrm{sign}(\cdot)$ 表示符号函数。该式说明，在任务损失梯度之外，稀疏约束会持续推动低贡献通道的 $\gamma$ 向 0 收缩；而对任务输出仍具有较大贡献的通道，则会受到 $L_{\mathrm{task}}$ 梯度的抵消而保留较大缩放幅度。因此，BN 缩放因子在稀疏训练后能够较好反映通道对当前任务的相对贡献，为后续结构化裁剪提供可解释依据。
+
 若记原始模型参数集合为 $\Theta$，被裁剪的低重要性通道集合为 $\mathcal{P}$，则结构化剪枝的目标可表示为
 \begin{equation}
 \min \; \mathcal{C}(\Theta \setminus \mathcal{P}), \quad
@@ -259,6 +268,8 @@ L_{\mathrm{distill}} = \alpha L_{\mathrm{soft}} + \beta L_{\mathrm{review}}
 其中，$\alpha$ 和 $\beta$ 分别表示输出响应蒸馏和多阶段特征蒸馏的权重系数。
 
 这一损失设计具有两点优势。其一，$L_{\mathrm{soft}}$ 从输出端约束学生模型的判别行为，可有效缓解剪枝后预测分布漂移；其二，$L_{\mathrm{review}}$ 从中间表示层恢复 C2SASA 与三尺度融合特征中的结构信息，有助于提高复杂遮挡场景中的边缘分离和层间关系表达能力。两者结合后，学生模型既能保持原始任务目标不变，又能在较小模型容量下尽量继承完整模型的表示能力。
+
+进一步从反向传播过程分析，蒸馏损失为学生模型提供了除真实标签监督之外的额外优化信号。以软目标蒸馏为例，学生输出 $z_s$ 的梯度主要由教师分布与学生分布之间的差异决定；当学生模型因剪枝导致某些低置信目标或边界相关响应发生偏移时，教师模型的软分布能够对这些非最大类别响应提供连续约束，而不仅仅依赖硬标签中的离散监督。对于多阶段特征蒸馏，$A_k(F_s^k)$ 与 $\phi_k(F_t^1,\ldots,F_t^k)$ 的距离项会将梯度传回学生模型的中间层，使剪枝后容量较小的网络在 P3、P4、P5 等多尺度特征上重新学习教师模型保留的边缘、轮廓和层间结构信息。因此，蒸馏恢复阶段的理论作用并不是简单提高某一项分类置信度，而是在输出响应和中间表示两个层面缓解剪枝造成的结构表达退化。
 
 \section{压缩模型构建与训练流程}{Construction and Training Process of the Compressed Model}
 
