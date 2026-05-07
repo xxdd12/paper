@@ -48,11 +48,11 @@
 \contentsline {subsection}{\numberline {4.4.2}不同实例分割模型性能对比}{49}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}数量计算评估}{52}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}计数误差来源分析}{56}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}模型压缩实验结果与分析}{57}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}压缩结果分析}{61}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.5}模型压缩实验结果与分析}{58}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}压缩结果分析}{60}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}轻量化效果与部署适配分析}{62}{subsection.4.5.2}%
 \contentsline {section}{\numberline {4.6}本章小结}{63}{section.4.6}%
-\contentsline {chapter}{\numberline {第五章}结论与展望}{65}{chapter.5}%
-\contentsline {chapter}{参考文献}{68}{chapter*.36}%
-\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{75}{chapter*.37}%
-\contentsline {chapter}{致谢}{76}{chapter*.40}%
+\contentsline {chapter}{\numberline {第五章}结论与展望}{64}{chapter.5}%
+\contentsline {chapter}{参考文献}{67}{chapter*.36}%
+\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{74}{chapter*.37}%
+\contentsline {chapter}{致谢}{75}{chapter*.40}%

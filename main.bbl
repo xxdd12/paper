@@ -1,4 +1,4 @@
-\begin{thebibliography}{65}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -19,10 +19,17 @@ JIE A~L~K, SWEE S~K, LIANG L~K.
   77-97.
 \newblock DOI: \doi{10.33093/jiwe.2024.3.3.5}.
 
+\bibitem[Tubis et~al.(2023)Tubis and Rohman]{tubis2023intelligentwarehouse}
+TUBIS A~A, ROHMAN J.
+\newblock Intelligent warehouse in industry 4.0: systematic literature
+  review\allowbreak[J/OL].
+\newblock Sensors, 2023, 23\allowbreak (8): 4105.
+\newblock DOI: \doi{10.3390/s23084105}.
+
 \bibitem[Wang et~al.(2010)Wang, Chen, and Xie]{wang2010rfidtobacco}
 WANG H, CHEN S, XIE Y.
-\newblock An rfid-based digital warehouse management system in the tobacco
-  industry: A case study\allowbreak[J/OL].
+\newblock An RFID-based digital warehouse management system in the tobacco
+  industry: a case study\allowbreak[J/OL].
 \newblock International Journal of Production Research, 2010, 48\allowbreak
   (9): 2513-2548.
 \newblock DOI: \doi{10.1080/00207540903564918}.
@@ -82,10 +89,26 @@ ZHAO J, LI B, WEI X, et~al.
 \newblock 制造业自动化, 2026, 48\allowbreak (1): 180-188.
 \newblock DOI: \doi{10.3969/j.issn.1009-0134.2026.01.020}.
 
+\bibitem[Daios et~al.(2024)Daios and Larsen]{daios2024warehousecvrequirements}
+DAIOS A, LARSEN H~S.
+\newblock Mapping requirements and challenges of computer vision in
+  warehouses\allowbreak[J/OL].
+\newblock Procedia Computer Science, 2024, 232: 1777-1786.
+\newblock DOI: \doi{10.1016/j.procs.2024.01.175}.
+
+\bibitem[Tadjine et~al.(2025)Tadjine, Ouafi, Benlamoudi, and
+  Taleb{-}Ahmed]{tadjine2025warehousecvsurvey}
+TADJINE C, OUAFI A, BENLAMOUDI A, et~al.
+\newblock Computer vision in warehouse management automation: a survey on
+  implemented methods with prototyping hardware\allowbreak[J/OL].
+\newblock Engineering Applications of Artificial Intelligence, 2025, 160:
+  111886.
+\newblock DOI: \doi{10.1016/j.engappai.2025.111886}.
+
 \bibitem[Redmon et~al.(2016)Redmon, Divvala, Girshick, and
   Farhadi]{redmon2016yolo}
 REDMON J, DIVVALA S, GIRSHICK R, et~al.
-\newblock You only look once: Unified, real-time object
+\newblock You only look once: unified, real-time object
   detection\allowbreak[C]//\allowbreak
 Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
   (CVPR).
@@ -93,20 +116,20 @@ Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
 
 \bibitem[Redmon et~al.(2017)Redmon and Farhadi]{redmon2017yolo9000}
 REDMON J, FARHADI A.
-\newblock {YOLO9000}: Better, faster, stronger\allowbreak[C]//\allowbreak
+\newblock {YOLO9000}: better, faster, stronger\allowbreak[C]//\allowbreak
 Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
   (CVPR).
 \newblock 2017: 7263-7271.
 
 \bibitem[Redmon et~al.(2018)Redmon and Farhadi]{redmon2018yolov3}
 REDMON J, FARHADI A.
-\newblock {YOLOv3}: An incremental improvement\allowbreak[J/OL].
+\newblock {YOLOv3}: an incremental improvement\allowbreak[J/OL].
 \newblock CoRR, 2018, abs/1804.02767.
 \newblock \url{https://arxiv.org/abs/1804.02767}.
 
 \bibitem[Tan et~al.(2020)Tan, Pang, and Le]{tan2020efficientdet}
 TAN M, PANG R, LE Q~V.
-\newblock Efficientdet: Scalable and efficient object
+\newblock EfficientDet: scalable and efficient object
   detection\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
@@ -114,13 +137,13 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
 
 \bibitem[Ge et~al.(2021)Ge, Liu, Wang, Li, and Sun]{ge2021yolox}
 GE Z, LIU S, WANG F, et~al.
-\newblock {YOLOX}: Exceeding {YOLO} series in 2021\allowbreak[J/OL].
+\newblock {YOLOX}: exceeding {YOLO} series in 2021\allowbreak[J/OL].
 \newblock CoRR, 2021, abs/2107.08430.
 \newblock \url{https://arxiv.org/abs/2107.08430}.
 
 \bibitem[Wang et~al.(2023)Wang, Bochkovskiy, and Liao]{wang2023yolov7}
 WANG C, BOCHKOVSKIY A, LIAO H~M.
-\newblock {YOLOv7}: Trainable bag-of-freebies sets new state-of-the-art for
+\newblock {YOLOv7}: trainable bag-of-freebies sets new state-of-the-art for
   real-time object detectors\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
@@ -145,7 +168,7 @@ Proceedings of the European Conference on Computer Vision (ECCV).
 
 \bibitem[Zhu et~al.(2021)Zhu, Su, Lu, Li, Wang, and Dai]{zhu2021deformable}
 ZHU X, SU W, LU L, et~al.
-\newblock Deformable {DETR}: Deformable transformers for end-to-end object
+\newblock Deformable {DETR}: deformable transformers for end-to-end object
   detection\allowbreak[C/OL]//\allowbreak
 International Conference on Learning Representations (ICLR).
 \newblock 2021.
@@ -153,7 +176,7 @@ International Conference on Learning Representations (ICLR).
 
 \bibitem[Liu et~al.(2022)Liu, Li, Zhang, Cao, Ren, Shen, and Wang]{liu2022dab}
 LIU S, LI F, ZHANG H, et~al.
-\newblock {DAB-DETR}: Dynamic anchor boxes are better queries for
+\newblock {DAB-DETR}: dynamic anchor boxes are better queries for
   {DETR}\allowbreak[C/OL]//\allowbreak
 International Conference on Learning Representations (ICLR).
 \newblock 2022.
@@ -162,14 +185,14 @@ International Conference on Learning Representations (ICLR).
 \bibitem[Zhang et~al.(2022)Zhang, Li, Liu, Zhang, Su, Zhu, Ni, and
   Shum]{zhang2022dino}
 ZHANG H, LI F, LIU S, et~al.
-\newblock {DINO}: {DETR} with improved denoising anchor boxes for end-to-end
+\newblock {DINO}: {DETR} with improved DeNoising anchor boxes for end-to-end
   object detection\allowbreak[J/OL].
 \newblock CoRR, 2022, abs/2203.03605.
 \newblock \url{https://arxiv.org/abs/2203.03605}.
 
 \bibitem[He et~al.(2017)He, Gkioxari, Doll{\'a}r, and Girshick]{he2017maskrcnn}
 HE K, GKIOXARI G, DOLL{\'A}R P, et~al.
-\newblock Mask r-cnn\allowbreak[C]//\allowbreak
+\newblock Mask R-CNN\allowbreak[C]//\allowbreak
 Proceedings of the IEEE International Conference on Computer Vision (ICCV).
 \newblock 2017: 2961-2969.
 
@@ -191,19 +214,19 @@ Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
 
 \bibitem[Bolya et~al.(2019)Bolya, Zhou, Xiao, and Lee]{bolya2019yolact}
 BOLYA D, ZHOU C, XIAO F, et~al.
-\newblock {YOLACT}: Real-time instance segmentation\allowbreak[C]//\allowbreak
+\newblock {YOLACT}: real-time instance segmentation\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV).
 \newblock 2019: 9157-9166.
 
 \bibitem[Wang et~al.(2020)Wang, Kong, Shen, Jiang, and Li]{wang2020solo}
 WANG X, KONG T, SHEN C, et~al.
-\newblock {SOLO}: Segmenting objects by locations\allowbreak[C]//\allowbreak
+\newblock {SOLO}: segmenting objects by locations\allowbreak[C]//\allowbreak
 Proceedings of the European Conference on Computer Vision (ECCV).
 \newblock 2020: 649-665.
 
 \bibitem[Wang et~al.(2020)Wang, Zhang, Kong, Li, and Shen]{wang2020solov2}
 WANG X, ZHANG R, KONG T, et~al.
-\newblock {SOLOv2}: Dynamic and fast instance
+\newblock {SOLOv2}: dynamic and fast instance
   segmentation\allowbreak[C]//\allowbreak
 Advances in Neural Information Processing Systems: Vol.~33.
 \newblock 2020: 17721-17732.
@@ -211,7 +234,7 @@ Advances in Neural Information Processing Systems: Vol.~33.
 \bibitem[Chen et~al.(2020)Chen, Sun, Tian, Shen, Huang, and
   Yan]{chen2020blendmask}
 CHEN H, SUN K, TIAN Z, et~al.
-\newblock Blendmask: Top-down meets bottom-up for instance
+\newblock BlendMask: top-down meets bottom-up for instance
   segmentation\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
@@ -219,7 +242,7 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
 
 \bibitem[Lee et~al.(2020)Lee and Park]{lee2020centermask}
 LEE Y, PARK J.
-\newblock Centermask: Real-time anchor-free instance
+\newblock CenterMask: real-time anchor-free instance
   segmentation\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
@@ -235,14 +258,14 @@ Proceedings of the European Conference on Computer Vision (ECCV).
 \bibitem[Kirillov et~al.(2020)Kirillov, Wu, He, and
   Girshick]{kirillov2020pointrend}
 KIRILLOV A, WU Y, HE K, et~al.
-\newblock Pointrend: Image segmentation as rendering\allowbreak[C]//\allowbreak
+\newblock PointRend: image segmentation as rendering\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
 \newblock 2020: 9799-9808.
 
 \bibitem[Tian et~al.(2021)Tian, Shen, Wang, and Chen]{tian2021boxinst}
 TIAN Z, SHEN C, WANG X, et~al.
-\newblock Boxinst: High-performance instance segmentation with box
+\newblock BoxInst: high-performance instance segmentation with box
   annotations\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
@@ -319,7 +342,7 @@ Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
 
 \bibitem[Li et~al.(2018)Li, Zhang, and Chen]{li2018csrnet}
 LI Y, ZHANG X, CHEN D.
-\newblock {CSRNet}: Dilated convolutional neural networks for understanding the
+\newblock {CSRNet}: dilated convolutional neural networks for understanding the
   highly congested scenes\allowbreak[C]//\allowbreak
 Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
   (CVPR).
@@ -335,7 +358,7 @@ Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV).
 \bibitem[Cohen et~al.(2017)Cohen, Lo, Bengio, and
   Courville]{cohen2017countception}
 COHEN J~P, LO H~Z, BENGIO Y, et~al.
-\newblock Count-ception: Counting by fully convolutional redundant
+\newblock Count-ception: counting by fully convolutional redundant
   counting\allowbreak[J/OL].
 \newblock CoRR, 2017, abs/1703.08710.
 \newblock \url{https://arxiv.org/abs/1703.08710}.
@@ -351,7 +374,7 @@ HU X, WANG B, YANG Z.
 
 \bibitem[Han et~al.(2016)Han, Mao, and Dally]{han2016deepcompression}
 HAN S, MAO H, DALLY W~J.
-\newblock Deep compression: Compressing deep neural networks with pruning,
+\newblock Deep compression: compressing deep neural networks with pruning,
   trained quantization and huffman coding\allowbreak[J/OL].
 \newblock International Conference on Learning Representations (ICLR), 2016.
 \newblock \url{https://arxiv.org/abs/1510.00149}.
@@ -371,7 +394,7 @@ Advances in Neural Information Processing Systems: Vol.~28.
 
 \bibitem[Luo et~al.(2017)Luo, Wu, and Lin]{luo2017thinet}
 LUO J, WU J, LIN W.
-\newblock {ThiNet}: A filter level pruning method for deep neural network
+\newblock {ThiNet}: a filter level pruning method for deep neural network
   compression\allowbreak[C]//\allowbreak
 Proceedings of the IEEE International Conference on Computer Vision (ICCV).
 \newblock 2017: 5058-5066.
@@ -403,7 +426,7 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
 \bibitem[Lin et~al.(2020)Lin, Ji, Wang, Zhang, Zhang, Tian, and
   Shao]{lin2020hrank}
 LIN M, JI R, WANG Y, et~al.
-\newblock {HRank}: Filter pruning using high-rank feature
+\newblock {HRank}: filter pruning using high-rank feature
   map\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
@@ -411,7 +434,7 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
 
 \bibitem[Guo et~al.(2020)Guo, Wang, Li, and Yan]{guo2020dmcp}
 GUO S, WANG Y, LI Q, et~al.
-\newblock {DMCP}: Differentiable markov channel pruning for neural
+\newblock {DMCP}: differentiable markov channel pruning for neural
   networks\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
@@ -436,14 +459,14 @@ Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
 \bibitem[Romero et~al.(2015)Romero, Ballas, Kahou, Chassang, Gatta, and
   Bengio]{romero2015fitnets}
 ROMERO A, BALLAS N, KAHOU S~E, et~al.
-\newblock {FitNets}: Hints for thin deep nets\allowbreak[J/OL].
+\newblock {FitNets}: hints for thin deep nets\allowbreak[J/OL].
 \newblock CoRR, 2015, abs/1412.6550.
 \newblock \url{https://arxiv.org/abs/1412.6550}.
 
 \bibitem[Zagoruyko et~al.(2017)Zagoruyko and
   Komodakis]{zagoruyko2017attentiontransfer}
 ZAGORUYKO S, KOMODAKIS N.
-\newblock Paying more attention to attention: Improving the performance of
+\newblock Paying more attention to attention: improving the performance of
   convolutional neural networks via attention transfer\allowbreak[J/OL].
 \newblock CoRR, 2017, abs/1612.03928.
 \newblock \url{https://arxiv.org/abs/1612.03928}.
@@ -454,6 +477,21 @@ CHEN P, LIU S, ZHAO H, et~al.
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).
 \newblock 2021: 5008-5017.
+
+\bibitem[宁欣\ 等(2024)宁欣, 赵文尧, 宗易昕, 张玉贵, 陈灏,
+  周琦, and 马骏骁]{ning2024compressionjointcn}
+宁欣, 赵文尧, 宗易昕, 等.
+\newblock 神经网络压缩联合优化方法的研究综述\allowbreak[J/OL].
+\newblock 智能系统学报, 2024, 19\allowbreak (1): 36-57.
+\newblock DOI: \doi{10.11992/tis.202306042}.
+
+\bibitem[王硕\ 等(2024)王硕, 余璐, and
+  徐常胜]{wang2024dualteacherkdcn}
+王硕, 余璐, 徐常胜.
+\newblock
+  多层级特征融合与双教师协作的知识蒸馏\allowbreak[J/OL].
+\newblock 中国图象图形学报, 2024, 29\allowbreak (12): 3770-3785.
+\newblock DOI: \doi{10.11834/jig.240104}.
 
 \bibitem[Guo et~al.(2021)Guo, Han, Wang, Wu, Chen, Xu, and Xu]{guo2021defeat}
 GUO J, HAN K, WANG Y, et~al.
@@ -505,7 +543,7 @@ Advances in Neural Information Processing Systems: Vol.~30.
 
 \bibitem[Zhang et~al.(2018)Zhang, Zhou, Lin, and Sun]{zhang2018shufflenet}
 ZHANG X, ZHOU X, LIN M, et~al.
-\newblock {ShuffleNet}: An extremely efficient convolutional neural network for
+\newblock {ShuffleNet}: an extremely efficient convolutional neural network for
   mobile devices\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR).

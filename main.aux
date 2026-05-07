@@ -29,9 +29,9 @@
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\citation{low2024asrs}
+\citation{low2024asrs,tubis2023intelligentwarehouse}
 \citation{wang2010rfidtobacco,liu2013cigarettewms,vis2006agv,xu2018dronebarcode,radacsi2022droneinventory,yang2025pointcloudinventory}
-\citation{zhao2022rgbdwarehouse,xu2018dronebarcode,li2026warehousevisualinventory}
+\citation{zhao2022rgbdwarehouse,xu2018dronebarcode,li2026warehousevisualinventory,daios2024warehousecvrequirements,tadjine2025warehousecvsurvey}
 \citation{li2026warehousevisualinventory,yang2025pointcloudinventory}
 \HyPL@Entry{14<</S/D>>}
 \@writefile{toc}{\contentsline {chapter}{\numberline {第一章}绪论}{1}{chapter.1}\protected@file@percent }
@@ -68,6 +68,7 @@
 \citation{liu2017networkslimming,guo2020dmcp,luo2020curl}
 \citation{hinton2015distilling}
 \citation{romero2015fitnets,zagoruyko2017attentiontransfer,chen2021reviewkd}
+\citation{ning2024compressionjointcn,wang2024dualteacherkdcn}
 \citation{guo2021defeat,dai2021gid,yang2022fgd,zhao2022dkd,zheng2022ld}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}模型剪枝与模型蒸馏}{6}{subsection.1.2.3}\protected@file@percent }
 \@writefile{tec}{\contentsline {subsection}{\numberline {1.2.3}Model Pruning and Knowledge Distillation}{6}{subsection.1.2.3}\protected@file@percent }
@@ -281,9 +282,9 @@
 \@writefile{lot}{\contentsline {table}{\numberline {4-5}{\ignorespaces 不同装载状态图像在验证集各折中的数量分布}}{54}{table.caption.26}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-5}{\ignorespaces Distribution of images with different loading states in each fold of the validation set}}{54}{table.caption.26}\protected@file@percent }
 \newlabel{tab:data_distribution}{{4-5}{54}{不同装载状态图像在验证集各折中的数量分布}{table.caption.26}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4-6}{\ignorespaces 各模型在验证集中“空货物图像”与“顶满图像”上的检测准确率对比}}{54}{table.caption.27}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4-6}{\ignorespaces Comparison of detection accuracy on empty-cargo and top-full images in the validation set}}{54}{table.caption.27}\protected@file@percent }
-\newlabel{tab:empty_full_accuracy}{{4-6}{54}{各模型在验证集中“空货物图像”与“顶满图像”上的检测准确率对比}{table.caption.27}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4-6}{\ignorespaces 各模型在验证集中“空货物图像”与“顶满图像”上的检测准确率对比}}{55}{table.caption.27}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4-6}{\ignorespaces Comparison of detection accuracy on empty-cargo and top-full images in the validation set}}{55}{table.caption.27}\protected@file@percent }
+\newlabel{tab:empty_full_accuracy}{{4-6}{55}{各模型在验证集中“空货物图像”与“顶满图像”上的检测准确率对比}{table.caption.27}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4-7}{\ignorespaces 各模型在顶层未满载有效计数图像中的盘点准确率（CA）与检测准确率（DA）}}{55}{table.caption.28}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-7}{\ignorespaces Counting accuracy (CA) and detection accuracy (DA) of different models on effective counting images with non-full top layer}}{55}{table.caption.28}\protected@file@percent }
 \newlabel{tab:count_accuracy}{{4-7}{55}{各模型在顶层未满载有效计数图像中的盘点准确率（CA）与检测准确率（DA）}{table.caption.28}{}}
@@ -292,11 +293,11 @@
 \@writefile{lot}{\contentsline {table}{\numberline {4-8}{\ignorespaces 典型计数误差案例及其影响分析}}{57}{table.caption.29}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-8}{\ignorespaces Analysis of typical counting error cases and their effects}}{57}{table.caption.29}\protected@file@percent }
 \newlabel{tab:error_cases}{{4-8}{57}{典型计数误差案例及其影响分析}{table.caption.29}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}模型压缩实验结果与分析}{57}{section.4.5}\protected@file@percent }
-\@writefile{tec}{\contentsline {section}{\numberline {4.5}Experimental Results and Analysis of Model Compression}{57}{section.4.5}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-9}{\ignorespaces 压缩前后模型复杂度与性能比较}}{58}{table.caption.30}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-9}{\ignorespaces Comparison of model complexity and performance before and after compression}}{58}{table.caption.30}\protected@file@percent }
 \newlabel{tab:compression_compare}{{4-9}{58}{压缩前后模型复杂度与性能比较}{table.caption.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}模型压缩实验结果与分析}{58}{section.4.5}\protected@file@percent }
+\@writefile{tec}{\contentsline {section}{\numberline {4.5}Experimental Results and Analysis of Model Compression}{58}{section.4.5}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-10}{\ignorespaces 不同压缩模型的推理速度对比}}{59}{table.caption.31}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4-10}{\ignorespaces Comparison of inference speed for different compressed models}}{59}{table.caption.31}\protected@file@percent }
 \newlabel{tab:inference_speed}{{4-10}{59}{不同压缩模型的推理速度对比}{table.caption.31}{}}
@@ -306,96 +307,101 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4-2}{\ignorespaces 不同压缩率下模型复杂度与任务指标变化}}{60}{figure.caption.33}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4-2}{\ignorespaces Variation of model complexity and task metrics under different compression ratios}}{60}{figure.caption.33}\protected@file@percent }
 \newlabel{fig:compression_trend}{{4-2}{60}{不同压缩率下模型复杂度与任务指标变化}{figure.caption.33}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}压缩结果分析}{61}{subsection.4.5.1}\protected@file@percent }
-\@writefile{tec}{\contentsline {subsection}{\numberline {4.5.1}Analysis of Compression Results}{61}{subsection.4.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}压缩结果分析}{60}{subsection.4.5.1}\protected@file@percent }
+\@writefile{tec}{\contentsline {subsection}{\numberline {4.5.1}Analysis of Compression Results}{60}{subsection.4.5.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}轻量化效果与部署适配分析}{62}{subsection.4.5.2}\protected@file@percent }
 \@writefile{tec}{\contentsline {subsection}{\numberline {4.5.2}Analysis of Lightweight Effect and Deployment Adaptability}{62}{subsection.4.5.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.6}本章小结}{63}{section.4.6}\protected@file@percent }
 \@writefile{tec}{\contentsline {section}{\numberline {4.6}Summary}{63}{section.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {第五章}结论与展望}{65}{chapter.5}\protected@file@percent }
-\@writefile{tec}{\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{65}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第五章}结论与展望}{64}{chapter.5}\protected@file@percent }
+\@writefile{tec}{\contentsline {chapter}{\numberline {Chapter\ 5}Conclusion and prospect}{64}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
 \bibdata{ref/reference.bib}
 \bibcite{low2024asrs}{{1}{2024}{{Jie et~al.}}{{Jie, Swee, and Liang}}}
-\bibcite{wang2010rfidtobacco}{{2}{2010}{{Wang et~al.}}{{Wang, Chen, and Xie}}}
-\bibcite{liu2013cigarettewms}{{3}{2013}{{Liu et~al.}}{{Liu, Feng, Zhong, and Du}}}
-\bibcite{vis2006agv}{{4}{2006}{{Vis}}{{}}}
-\bibcite{xu2018dronebarcode}{{5}{2018}{{Xu et~al.}}{{Xu, Kamat, and Menassa}}}
-\bibcite{radacsi2022droneinventory}{{6}{2022}{{Rad{\'a}csi et~al.}}{{Rad{\'a}csi, Gub{\'a}n, Szab{\'o}, and Udvaros}}}
-\bibcite{yang2025pointcloudinventory}{{7}{2025}{{杨晓军\ 等}}{{杨晓军, 张杰, and 霍超}}}
-\bibcite{zhao2022rgbdwarehouse}{{8}{2022}{{Zhao et~al.}}{{Zhao, Li, Wei, Lu, L{\"u}, and Zhou}}}
-\bibcite{li2026warehousevisualinventory}{{9}{2026}{{李佳顺\ 等}}{{李佳顺, 宋榕榕, 赵尔迅, 周泽丽, and 刘吉翰}}}
-\bibcite{redmon2016yolo}{{10}{2016}{{Redmon et~al.}}{{Redmon, Divvala, Girshick, and Farhadi}}}
-\@writefile{toc}{\contentsline {chapter}{参考文献}{68}{chapter*.36}\protected@file@percent }
-\@writefile{tec}{\contentsline {chapter}{References}{68}{chapter*.36}\protected@file@percent }
+\bibcite{tubis2023intelligentwarehouse}{{2}{2023}{{Tubis et~al.}}{{Tubis and Rohman}}}
+\bibcite{wang2010rfidtobacco}{{3}{2010}{{Wang et~al.}}{{Wang, Chen, and Xie}}}
+\bibcite{liu2013cigarettewms}{{4}{2013}{{Liu et~al.}}{{Liu, Feng, Zhong, and Du}}}
+\bibcite{vis2006agv}{{5}{2006}{{Vis}}{{}}}
+\bibcite{xu2018dronebarcode}{{6}{2018}{{Xu et~al.}}{{Xu, Kamat, and Menassa}}}
+\bibcite{radacsi2022droneinventory}{{7}{2022}{{Rad{\'a}csi et~al.}}{{Rad{\'a}csi, Gub{\'a}n, Szab{\'o}, and Udvaros}}}
+\bibcite{yang2025pointcloudinventory}{{8}{2025}{{杨晓军\ 等}}{{杨晓军, 张杰, and 霍超}}}
+\bibcite{zhao2022rgbdwarehouse}{{9}{2022}{{Zhao et~al.}}{{Zhao, Li, Wei, Lu, L{\"u}, and Zhou}}}
+\bibcite{li2026warehousevisualinventory}{{10}{2026}{{李佳顺\ 等}}{{李佳顺, 宋榕榕, 赵尔迅, 周泽丽, and 刘吉翰}}}
+\bibcite{daios2024warehousecvrequirements}{{11}{2024}{{Daios et~al.}}{{Daios and Larsen}}}
+\@writefile{toc}{\contentsline {chapter}{参考文献}{67}{chapter*.36}\protected@file@percent }
+\@writefile{tec}{\contentsline {chapter}{References}{67}{chapter*.36}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\bibcite{redmon2017yolo9000}{{11}{2017}{{Redmon et~al.}}{{Redmon and Farhadi}}}
-\bibcite{redmon2018yolov3}{{12}{2018}{{Redmon et~al.}}{{Redmon and Farhadi}}}
-\bibcite{tan2020efficientdet}{{13}{2020}{{Tan et~al.}}{{Tan, Pang, and Le}}}
-\bibcite{ge2021yolox}{{14}{2021}{{Ge et~al.}}{{Ge, Liu, Wang, Li, and Sun}}}
-\bibcite{wang2023yolov7}{{15}{2023}{{Wang et~al.}}{{Wang, Bochkovskiy, and Liao}}}
-\bibcite{zhao2024rtdetr}{{16}{2024}{{Zhao et~al.}}{{Zhao, Lv, Xu, Wei, Wang, Dang, Liu, and Chen}}}
-\bibcite{carion2020detr}{{17}{2020}{{Carion et~al.}}{{Carion, Massa, Synnaeve, Usunier, Kirillov, and Zagoruyko}}}
-\bibcite{zhu2021deformable}{{18}{2021}{{Zhu et~al.}}{{Zhu, Su, Lu, Li, Wang, and Dai}}}
-\bibcite{liu2022dab}{{19}{2022}{{Liu et~al.}}{{Liu, Li, Zhang, Cao, Ren, Shen, and Wang}}}
-\bibcite{zhang2022dino}{{20}{2022}{{Zhang et~al.}}{{Zhang, Li, Liu, Zhang, Su, Zhu, Ni, and Shum}}}
-\bibcite{he2017maskrcnn}{{21}{2017}{{He et~al.}}{{He, Gkioxari, Doll{\'a}r, and Girshick}}}
-\bibcite{li2017fcis}{{22}{2017}{{Li et~al.}}{{Li, Qi, Dai, Ji, and Wei}}}
-\bibcite{liu2018panet}{{23}{2018}{{Liu et~al.}}{{Liu, Qi, Qin, Shi, and Jia}}}
-\bibcite{bolya2019yolact}{{24}{2019}{{Bolya et~al.}}{{Bolya, Zhou, Xiao, and Lee}}}
-\bibcite{wang2020solo}{{25}{2020}{{Wang et~al.}}{{Wang, Kong, Shen, Jiang, and Li}}}
-\bibcite{wang2020solov2}{{26}{2020}{{Wang et~al.}}{{Wang, Zhang, Kong, Li, and Shen}}}
-\bibcite{chen2020blendmask}{{27}{2020}{{Chen et~al.}}{{Chen, Sun, Tian, Shen, Huang, and Yan}}}
-\bibcite{lee2020centermask}{{28}{2020}{{Lee et~al.}}{{Lee and Park}}}
-\bibcite{tian2020condinst}{{29}{2020}{{Tian et~al.}}{{Tian, Shen, and Chen}}}
-\bibcite{kirillov2020pointrend}{{30}{2020}{{Kirillov et~al.}}{{Kirillov, Wu, He, and Girshick}}}
-\bibcite{tian2021boxinst}{{31}{2021}{{Tian et~al.}}{{Tian, Shen, Wang, and Chen}}}
-\bibcite{fang2021queryinst}{{32}{2021}{{Fang et~al.}}{{Fang, Peng, Zhang, Liu, Fu, Peng, Zhou, Zhou, Wang, and Lu}}}
-\bibcite{cheng2022sparseinst}{{33}{2022}{{Cheng et~al.}}{{Cheng, Wang, Chen, Zhang, and Liu}}}
-\bibcite{cheng2022mask2former}{{34}{2022}{{Cheng et~al.}}{{Cheng, Misra, Schwing, Kirillov, and Girdhar}}}
-\bibcite{ultralytics2025yolo11}{{35}{2025}{{Ultralytics}}{{}}}
-\bibcite{su2022instancesegsurveycn}{{36}{2022}{{苏丽\ 等}}{{苏丽, 孙雨鑫, and 苑守正}}}
-\bibcite{chattopadhyay2017counting}{{37}{2017}{{Chattopadhyay et~al.}}{{Chattopadhyay, Girshick, Ramanathan, Mahajan, Perona, and Fei{-}Fei}}}
-\bibcite{lempitsky2010count}{{38}{2010}{{Lempitsky et~al.}}{{Lempitsky and Zisserman}}}
-\bibcite{zhang2015crossscene}{{39}{2015}{{Zhang et~al.}}{{Zhang, Li, Wang, and Yang}}}
-\bibcite{zhang2016mcnn}{{40}{2016}{{Zhang et~al.}}{{Zhang, Zhou, Chen, Gao, and Ma}}}
-\bibcite{li2018csrnet}{{41}{2018}{{Li et~al.}}{{Li, Zhang, and Chen}}}
-\bibcite{ma2019bayesiancrowd}{{42}{2019}{{Ma et~al.}}{{Ma, Wei, Hong, and Gong}}}
-\bibcite{cohen2017countception}{{43}{2017}{{Cohen et~al.}}{{Cohen, Lo, Bengio, and Courville}}}
-\bibcite{hu2025area}{{44}{2025}{{Hu et~al.}}{{Hu, Wang, and Yang}}}
-\bibcite{han2016deepcompression}{{45}{2016}{{Han et~al.}}{{Han, Mao, and Dally}}}
-\bibcite{hinton2015distilling}{{46}{2015}{{Hinton et~al.}}{{Hinton, Vinyals, and Dean}}}
-\bibcite{han2015learning}{{47}{2015}{{Han et~al.}}{{Han, Pool, Tran, and Dally}}}
-\bibcite{luo2017thinet}{{48}{2017}{{Luo et~al.}}{{Luo, Wu, and Lin}}}
-\bibcite{he2017channelpruning}{{49}{2017}{{He et~al.}}{{He, Zhang, and Sun}}}
-\bibcite{liu2017networkslimming}{{50}{2017}{{Liu et~al.}}{{Liu, Li, Shen, Huang, Yan, and Zhang}}}
-\bibcite{he2019fpgm}{{51}{2019}{{He et~al.}}{{He, Liu, Wang, Hu, and Yang}}}
-\bibcite{lin2020hrank}{{52}{2020}{{Lin et~al.}}{{Lin, Ji, Wang, Zhang, Zhang, Tian, and Shao}}}
-\bibcite{guo2020dmcp}{{53}{2020}{{Guo et~al.}}{{Guo, Wang, Li, and Yan}}}
-\bibcite{he2020lfpc}{{54}{2020}{{He et~al.}}{{He, Ding, Liu, Zhu, Zhang, and Yang}}}
-\bibcite{luo2020curl}{{55}{2020}{{Luo et~al.}}{{Luo and Wu}}}
-\bibcite{romero2015fitnets}{{56}{2015}{{Romero et~al.}}{{Romero, Ballas, Kahou, Chassang, Gatta, and Bengio}}}
-\bibcite{zagoruyko2017attentiontransfer}{{57}{2017}{{Zagoruyko et~al.}}{{Zagoruyko and Komodakis}}}
-\bibcite{chen2021reviewkd}{{58}{2021}{{Chen et~al.}}{{Chen, Liu, Zhao, and Jia}}}
-\bibcite{guo2021defeat}{{59}{2021}{{Guo et~al.}}{{Guo, Han, Wang, Wu, Chen, Xu, and Xu}}}
-\bibcite{dai2021gid}{{60}{2021}{{Dai et~al.}}{{Dai, Jiang, Wu, Bao, Wang, Liu, and Zhou}}}
-\bibcite{yang2022fgd}{{61}{2022}{{Yang et~al.}}{{Yang, Li, Jiang, Gong, Yuan, Zhao, and Yuan}}}
-\bibcite{zhao2022dkd}{{62}{2022}{{Zhao et~al.}}{{Zhao, Cui, Song, Qiu, and Liang}}}
-\bibcite{zheng2022ld}{{63}{2022}{{Zheng et~al.}}{{Zheng, Ye, Wang, Ren, Zuo, Hou, and Cheng}}}
-\bibcite{vaswani2017attention}{{64}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
-\bibcite{zhang2018shufflenet}{{65}{2018}{{Zhang et~al.}}{{Zhang, Zhou, Lin, and Sun}}}
-\@writefile{toc}{\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{75}{chapter*.37}\protected@file@percent }
-\@writefile{tec}{\contentsline {chapter}{Publication and patents during study}{75}{chapter*.37}\protected@file@percent }
+\bibcite{tadjine2025warehousecvsurvey}{{12}{2025}{{Tadjine et~al.}}{{Tadjine, Ouafi, Benlamoudi, and Taleb{-}Ahmed}}}
+\bibcite{redmon2016yolo}{{13}{2016}{{Redmon et~al.}}{{Redmon, Divvala, Girshick, and Farhadi}}}
+\bibcite{redmon2017yolo9000}{{14}{2017}{{Redmon et~al.}}{{Redmon and Farhadi}}}
+\bibcite{redmon2018yolov3}{{15}{2018}{{Redmon et~al.}}{{Redmon and Farhadi}}}
+\bibcite{tan2020efficientdet}{{16}{2020}{{Tan et~al.}}{{Tan, Pang, and Le}}}
+\bibcite{ge2021yolox}{{17}{2021}{{Ge et~al.}}{{Ge, Liu, Wang, Li, and Sun}}}
+\bibcite{wang2023yolov7}{{18}{2023}{{Wang et~al.}}{{Wang, Bochkovskiy, and Liao}}}
+\bibcite{zhao2024rtdetr}{{19}{2024}{{Zhao et~al.}}{{Zhao, Lv, Xu, Wei, Wang, Dang, Liu, and Chen}}}
+\bibcite{carion2020detr}{{20}{2020}{{Carion et~al.}}{{Carion, Massa, Synnaeve, Usunier, Kirillov, and Zagoruyko}}}
+\bibcite{zhu2021deformable}{{21}{2021}{{Zhu et~al.}}{{Zhu, Su, Lu, Li, Wang, and Dai}}}
+\bibcite{liu2022dab}{{22}{2022}{{Liu et~al.}}{{Liu, Li, Zhang, Cao, Ren, Shen, and Wang}}}
+\bibcite{zhang2022dino}{{23}{2022}{{Zhang et~al.}}{{Zhang, Li, Liu, Zhang, Su, Zhu, Ni, and Shum}}}
+\bibcite{he2017maskrcnn}{{24}{2017}{{He et~al.}}{{He, Gkioxari, Doll{\'a}r, and Girshick}}}
+\bibcite{li2017fcis}{{25}{2017}{{Li et~al.}}{{Li, Qi, Dai, Ji, and Wei}}}
+\bibcite{liu2018panet}{{26}{2018}{{Liu et~al.}}{{Liu, Qi, Qin, Shi, and Jia}}}
+\bibcite{bolya2019yolact}{{27}{2019}{{Bolya et~al.}}{{Bolya, Zhou, Xiao, and Lee}}}
+\bibcite{wang2020solo}{{28}{2020}{{Wang et~al.}}{{Wang, Kong, Shen, Jiang, and Li}}}
+\bibcite{wang2020solov2}{{29}{2020}{{Wang et~al.}}{{Wang, Zhang, Kong, Li, and Shen}}}
+\bibcite{chen2020blendmask}{{30}{2020}{{Chen et~al.}}{{Chen, Sun, Tian, Shen, Huang, and Yan}}}
+\bibcite{lee2020centermask}{{31}{2020}{{Lee et~al.}}{{Lee and Park}}}
+\bibcite{tian2020condinst}{{32}{2020}{{Tian et~al.}}{{Tian, Shen, and Chen}}}
+\bibcite{kirillov2020pointrend}{{33}{2020}{{Kirillov et~al.}}{{Kirillov, Wu, He, and Girshick}}}
+\bibcite{tian2021boxinst}{{34}{2021}{{Tian et~al.}}{{Tian, Shen, Wang, and Chen}}}
+\bibcite{fang2021queryinst}{{35}{2021}{{Fang et~al.}}{{Fang, Peng, Zhang, Liu, Fu, Peng, Zhou, Zhou, Wang, and Lu}}}
+\bibcite{cheng2022sparseinst}{{36}{2022}{{Cheng et~al.}}{{Cheng, Wang, Chen, Zhang, and Liu}}}
+\bibcite{cheng2022mask2former}{{37}{2022}{{Cheng et~al.}}{{Cheng, Misra, Schwing, Kirillov, and Girdhar}}}
+\bibcite{ultralytics2025yolo11}{{38}{2025}{{Ultralytics}}{{}}}
+\bibcite{su2022instancesegsurveycn}{{39}{2022}{{苏丽\ 等}}{{苏丽, 孙雨鑫, and 苑守正}}}
+\bibcite{chattopadhyay2017counting}{{40}{2017}{{Chattopadhyay et~al.}}{{Chattopadhyay, Girshick, Ramanathan, Mahajan, Perona, and Fei{-}Fei}}}
+\bibcite{lempitsky2010count}{{41}{2010}{{Lempitsky et~al.}}{{Lempitsky and Zisserman}}}
+\bibcite{zhang2015crossscene}{{42}{2015}{{Zhang et~al.}}{{Zhang, Li, Wang, and Yang}}}
+\bibcite{zhang2016mcnn}{{43}{2016}{{Zhang et~al.}}{{Zhang, Zhou, Chen, Gao, and Ma}}}
+\bibcite{li2018csrnet}{{44}{2018}{{Li et~al.}}{{Li, Zhang, and Chen}}}
+\bibcite{ma2019bayesiancrowd}{{45}{2019}{{Ma et~al.}}{{Ma, Wei, Hong, and Gong}}}
+\bibcite{cohen2017countception}{{46}{2017}{{Cohen et~al.}}{{Cohen, Lo, Bengio, and Courville}}}
+\bibcite{hu2025area}{{47}{2025}{{Hu et~al.}}{{Hu, Wang, and Yang}}}
+\bibcite{han2016deepcompression}{{48}{2016}{{Han et~al.}}{{Han, Mao, and Dally}}}
+\bibcite{hinton2015distilling}{{49}{2015}{{Hinton et~al.}}{{Hinton, Vinyals, and Dean}}}
+\bibcite{han2015learning}{{50}{2015}{{Han et~al.}}{{Han, Pool, Tran, and Dally}}}
+\bibcite{luo2017thinet}{{51}{2017}{{Luo et~al.}}{{Luo, Wu, and Lin}}}
+\bibcite{he2017channelpruning}{{52}{2017}{{He et~al.}}{{He, Zhang, and Sun}}}
+\bibcite{liu2017networkslimming}{{53}{2017}{{Liu et~al.}}{{Liu, Li, Shen, Huang, Yan, and Zhang}}}
+\bibcite{he2019fpgm}{{54}{2019}{{He et~al.}}{{He, Liu, Wang, Hu, and Yang}}}
+\bibcite{lin2020hrank}{{55}{2020}{{Lin et~al.}}{{Lin, Ji, Wang, Zhang, Zhang, Tian, and Shao}}}
+\bibcite{guo2020dmcp}{{56}{2020}{{Guo et~al.}}{{Guo, Wang, Li, and Yan}}}
+\bibcite{he2020lfpc}{{57}{2020}{{He et~al.}}{{He, Ding, Liu, Zhu, Zhang, and Yang}}}
+\bibcite{luo2020curl}{{58}{2020}{{Luo et~al.}}{{Luo and Wu}}}
+\bibcite{romero2015fitnets}{{59}{2015}{{Romero et~al.}}{{Romero, Ballas, Kahou, Chassang, Gatta, and Bengio}}}
+\bibcite{zagoruyko2017attentiontransfer}{{60}{2017}{{Zagoruyko et~al.}}{{Zagoruyko and Komodakis}}}
+\bibcite{chen2021reviewkd}{{61}{2021}{{Chen et~al.}}{{Chen, Liu, Zhao, and Jia}}}
+\bibcite{ning2024compressionjointcn}{{62}{2024}{{宁欣\ 等}}{{宁欣, 赵文尧, 宗易昕, 张玉贵, 陈灏, 周琦, and 马骏骁}}}
+\bibcite{wang2024dualteacherkdcn}{{63}{2024}{{王硕\ 等}}{{王硕, 余璐, and 徐常胜}}}
+\bibcite{guo2021defeat}{{64}{2021}{{Guo et~al.}}{{Guo, Han, Wang, Wu, Chen, Xu, and Xu}}}
+\bibcite{dai2021gid}{{65}{2021}{{Dai et~al.}}{{Dai, Jiang, Wu, Bao, Wang, Liu, and Zhou}}}
+\bibcite{yang2022fgd}{{66}{2022}{{Yang et~al.}}{{Yang, Li, Jiang, Gong, Yuan, Zhao, and Yuan}}}
+\bibcite{zhao2022dkd}{{67}{2022}{{Zhao et~al.}}{{Zhao, Cui, Song, Qiu, and Liang}}}
+\bibcite{zheng2022ld}{{68}{2022}{{Zheng et~al.}}{{Zheng, Ye, Wang, Ren, Zuo, Hou, and Cheng}}}
+\bibcite{vaswani2017attention}{{69}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{zhang2018shufflenet}{{70}{2018}{{Zhang et~al.}}{{Zhang, Zhou, Lin, and Sun}}}
+\@writefile{toc}{\contentsline {chapter}{攻读学位期间取得与学位论文相关的成果}{74}{chapter*.37}\protected@file@percent }
+\@writefile{tec}{\contentsline {chapter}{Publication and patents during study}{74}{chapter*.37}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{致谢}{76}{chapter*.40}\protected@file@percent }
-\@writefile{tec}{\contentsline {chapter}{Acknowledgements}{76}{chapter*.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{致谢}{75}{chapter*.40}\protected@file@percent }
+\@writefile{tec}{\contentsline {chapter}{Acknowledgements}{75}{chapter*.40}\protected@file@percent }
 \@writefile{lof}{\addvspace {10.0pt}}
 \@writefile{lot}{\addvspace {10.0pt}}
 \@writefile{loa}{\addvspace {10\p@ }}
-\gdef \@abspage@last{90}
+\gdef \@abspage@last{89}
