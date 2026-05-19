@@ -113,33 +113,20 @@ b）Params（Parameters），表示模型中可训练参数的总数，用于衡
 
 \begin{figure}[htbp]
   \centering
-  \subfloat[]{\label{subfig:fig11a}
-    \includegraphics[width=0.31\textwidth]{fig11-1.png}
-  }
-  \hfill
-  \subfloat[]{\label{subfig:fig11b}
-    \includegraphics[width=0.29\textwidth]{fig11-2.png}
-  }
-  \hfill
-  \subfloat[]{\label{subfig:fig11c}
-    \includegraphics[width=0.31\textwidth]{fig11-3.png}
-  }\\[6pt]
-  \subfloat[]{\label{subfig:fig11d}
-    \includegraphics[width=0.31\textwidth]{fig11-4.png}
-  }
-  \hfill
-  \subfloat[YOLO11s-Seg]{\label{subfig:fig11e}
-    \includegraphics[width=0.31\textwidth]{fig11-5.png}
-  }
-  \hfill
-  \subfloat[YOLO11-StackLite]{\label{subfig:fig11f}
-    \includegraphics[width=0.31\textwidth]{fig11-6.png}
-  }
+  \begin{tabular}{@{}c@{\hspace{1.0cm}}c@{}}
+    \subfloat[]{\label{subfig:fig11a}\includegraphics[width=0.29\textwidth]{fig11-1.png}} &
+    \subfloat[]{\label{subfig:fig11b}\includegraphics[width=0.29\textwidth]{fig11-2.png}} \\[4pt]
+    \subfloat[]{\label{subfig:fig11c}\includegraphics[width=0.29\textwidth]{fig11-3.png}} &
+    \subfloat[]{\label{subfig:fig11d}\includegraphics[width=0.29\textwidth]{fig11-4.png}} \\[4pt]
+    \subfloat[]{\label{subfig:fig11e}\includegraphics[width=0.29\textwidth]{fig11-5.png}} &
+    \subfloat[]{\label{subfig:fig11f}\includegraphics[width=0.29\textwidth]{fig11-6.png}} \\[3pt]
+    YOLO11s-Seg & YOLO11-StackLite
+  \end{tabular}
   \bicaption{改进前后模型实例分割效果对比}{Comparison of instance segmentation results before and after improvement}
   \label{fig:fig11}
 \end{figure}
 
-从图~\ref{fig:fig11} 可以看出，YOLO11s-Seg 在部分复杂场景下存在漏检和误检现象。例如，图~\ref{fig:fig11}中的(a)对应场景中，基线模型较改进模型漏检了一个顶层箱体；图~\ref{fig:fig11}中的(c)对应样例中，某顶层箱体置信度较低而被阈值过滤，同时还出现了底层误检；图~\ref{fig:fig11}中的(e)所示基线结果在掩膜完整性方面也明显弱于图~\ref{fig:fig11}中的(f)所示结果。整体来看，改进后的模型在复杂堆叠场景中的检测稳定性与分割完整性均优于基线模型，这与表~\ref{tab:ablation} 中的定量结果保持一致。
+从图~\ref{fig:fig11} 可以看出，YOLO11s-Seg 在部分复杂场景下存在漏检和误检现象。例如，图~\ref{subfig:fig11a} 与图~\ref{subfig:fig11b} 对应的第1组样例中，基线模型较改进模型漏检了一个顶层箱体；图~\ref{subfig:fig11c} 与图~\ref{subfig:fig11d} 对应的第2组样例中，某顶层箱体置信度较低而被阈值过滤，同时还出现了底层误检；图~\ref{subfig:fig11e} 与图~\ref{subfig:fig11f} 对应的第3组样例中，基线结果在掩膜完整性方面也明显弱于改进模型结果。整体来看，改进后的模型在复杂堆叠场景中的检测稳定性与分割完整性均优于基线模型，这与表~\ref{tab:ablation} 中的定量结果保持一致。
 
 \subsection{不同实例分割模型性能对比}{Comparison of Different Instance Segmentation Models}
 本节实验旨在验证 YOLO11-StackLite 相对于当前主流实例分割方法的综合性能优势。为保证实验条件的一致性，所有模型均在 TCSD 数据集上采用五折交叉验证进行评估，其中 SOLOv2、QueryInst 和 SparseInst 基于 MMDetection 框架训练，并采用官方推荐配置。对比结果如表~\ref{tab:model_compare} 所示。
