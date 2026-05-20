@@ -153,10 +153,10 @@
 \tl_const:Nn \c__gdut_auth_decl_text_tl
   {
     本学位论文作者完全了解学校有关保存、使用学位论文的规定：“研究生在
-    xxx学习和工作期间参与xxx研究项目或承担xxx安排的任务所完成的发明创
-    造及其他技术成果，除另有协议外，归xxx享有或特有”。同意授权xxx保留
+    广东工业大学学习和工作期间参与广东工业大学研究项目或承担广东工业大学安排的任务所完成的发明创
+    造及其他技术成果，除另有协议外，归广东工业大学享有或特有”。同意授权广东工业大学保留
     并向国家有关部门或机构送交该论文的印刷本和电子版本，允许该论文被查
-    阅和借阅。同意授权xxx可以将本学位论文的全部或部分内容编入有关数据库进行检索，可
+    阅和借阅。同意授权广东工业大学可以将本学位论文的全部或部分内容编入有关数据库进行检索，可
     以采用影印、缩印、扫描或数字化等其他复制手段保存和汇编本学位论文。
     保密论文在解密后遵守此规定。
   }
@@ -896,7 +896,7 @@
 \fancyhf{}
 \fancyfoot[C]{\zihao{-5}\thepage}
 \fancyhead[CO]{\zihao{-5}\gdut@kai\gdutenkai \leftmark}
-\fancyhead[CE]{\zihao{-5}\gdut@kai\gdutenkai xxx \__gdut_thesis_type 论文}
+\fancyhead[CE]{\zihao{-5}\gdut@kai\gdutenkai 广东工业大学\__gdut_thesis_type 论文}
 \renewcommand{\headrulewidth}{1.5pt}
 \renewcommand{\headruleskip}{6.2pt}
 \newcommand{\myheadrulewidth}{0.8pt}
@@ -1944,12 +1944,12 @@
     \vspace*{0.4\baselineskip-1.5pt}
     \begingroup \centering
       \begin{tabular}{>{\zihao{4}}r@{\hspace*{7\ccwd}}>{\zihao{4}\raggedright\arraybackslash}p{6\ccwd}@{\hspace*{5\ccwd}}>{\zihao{4}}p{12\ccwd}}
-        中图分类号：  &        & 学校代号：XXX \\[5pt]
+        中图分类号：  &        & 学校代号：11845 \\[5pt]
         UDC：         & 密级：\bool_if:NT \l__gdut_secret_bool {\l__gdut_info_secret_level_tl} & 学\hspace*{2\ccwd}号：\l__gdut_info_student_id_tl
       \end{tabular}
     \par \endgroup
     \vspace*{1.5\baselineskip+4pt}
-    \begingroup \centering\bfseries\zihao{-2} XXX大学 \__gdut_thesis_type 论文\par \endgroup
+    \begingroup \centering\bfseries\zihao{-2} 广东工业大学 \__gdut_thesis_type 论文\par \endgroup
     \begingroup \centering\zihao{4} （ \l__gdut_info_degree_tl ） \par \endgroup
     \vspace*{0.8\baselineskip+0.75pt}
     \begingroup \centering\sffamily\zihao{2} \l__gdut_info_title_tl\par \endgroup
@@ -2026,13 +2026,13 @@
       \cline{2-2}
       & \l__gdut_info_chairman_clist \\
       \cline{2-2}
-      & xxx \\
+      & 2026年5月22日 \\
       \cline{2-2}
     \end{tabular}
     \par \endgroup
     \newpage
     \begingroup \centering\zihao{3}
-      A~Dissertation~Submitted~to~XXX~University\\[-0.15\baselineskip]
+      A~Dissertation~Submitted~to~Guangdong~University~of~Technology\\[-0.15\baselineskip]
       in~Partial~Fulfillment~of~the~Requirement\\[-0.15\baselineskip]
       for~the~Degree~of~\l__gdut_info_degree_en_tl
     \par \endgroup
@@ -2049,7 +2049,7 @@
     \begingroup \centering\zihao{-4}\sffamily\linespread{1.15}\selectfont
       \exp_args:No \engdate{\l__gdut_info_date_tl}\\
       School~of~\l__gdut_info_department_en_tl\\
-      XXX~University
+      Guangdong~University~of~Technology
     \par \endgroup
     \clearpage
     \pagestyle{fancy}
