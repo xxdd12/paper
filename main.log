@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.14)  21 MAY 2026 06:46
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.2.14)  21 MAY 2026 12:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1730,4 +1730,431 @@ Package bicaption Info: Main language is not set on input line 168.
  (c:/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2021-04-17 v2.8e siunitx: Abbreviated units
 ) (c:/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
-Dictionary: translator-basic-dictionary, Lan
+Dictionary: translator-basic-dictionary, Language: English 
+)
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+Package hyperref Info: Link coloring OFF on input line 168.
+(./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 12.04628pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 9.03471pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 7.22777pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 12.0437pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 9.03278pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 7.22623pt on input line 168.
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolHei-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolHei(0)' created for font 'FandolHei'
+(fontspec)             with options
+(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldItalicFont={*-Bold},BoldFont={*-Bold},ItalicFont={*-Regular}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[FandolHei-Bold.otf]/OT:script=hani;language=dflt;"
+
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 14.05399pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 10.54048pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 7.52892pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 14.05098pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 10.53824pt on input line 168.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 7.52731pt on input line 168.
+
+
+[1
+
+
+]
+
+[2]
+
+[3
+
+
+] (./data/abstract.tex
+
+
+Package fontspec Info: 
+(fontspec)             Script 'CJK' not explicitly supported within font
+(fontspec)             'FandolKai-Regular'. Check the typeset output, and if
+(fontspec)             it is okay then ignore this warning. Otherwise a
+(fontspec)             different font should be chosen.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FandolKai(1)' created for font 'FandolKai'
+(fontspec)             with options
+(fontspec)             [Script={CJK},Extension={.otf},UprightFont={*-Regular},BoldItalicFont={*-Regular},BoldFont={*-Regular},ItalicFont={*-Regular}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[FandolKai-Regular.otf]/OT:script=hani;language=dflt;"
+
+[1
+
+]
+
+[2]
+
+[3
+
+]
+Underfull \hbox (badness 2277) in paragraph at lines 24--25
+[]\TU/TimesNewRoman(0)/m/n/12.045 (2) An integrated workflow combining instance segmentation outputs with post-
+ []
+
+
+
+[4]) (./data/notation.tex)
+
+[5] (./main.toc
+
+[6
+
+]
+
+[7])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+
+[8] (./main.tec
+
+[9
+
+]
+
+[10])
+\tf@tec=\write6
+\openout6 = `main.tec'.
+
+
+
+[11] (./data/chap01.tex
+第一章
+
+
+[1
+
+
+]
+
+[2]
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11]) (./data/chap02.tex
+
+[12]
+第二章
+
+
+[13
+
+]
+File: figure/fig2.png Graphic file (type bmp)
+<figure/fig2.png>
+
+
+[14]
+File: figure/fig3.png Graphic file (type bmp)
+<figure/fig3.png>
+
+
+[15]
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 69.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 69.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 69.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 69.
+
+Underfull \hbox (badness 6741) in paragraph at lines 69--69
+[]|\TU/FandolSong(0)/m/n/10.53937 常 规 下 采 样 卷 积 或
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 69--69
+\TU/TimesNewRoman(0)/m/n/10.53937 ShuffleNet \TU/FandolSong(0)/m/n/10.53937 类 结 构 主
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 69--69
+\TU/FandolSong(0)/m/n/10.53937 对 称 卷 积 与 空 间 位 移 分 支，|
+ []
+
+
+
+[16]
+
+[17]
+File: figure/fig4.pdf Graphic file (type pdf)
+<use figure/fig4.pdf>
+
+
+[18]
+
+[19]
+File: figure/fig5.pdf Graphic file (type pdf)
+<use figure/fig5.pdf>
+
+
+[20]
+
+[21]
+
+[22]
+File: figure/fig6.pdf Graphic file (type pdf)
+<use figure/fig6.pdf>
+
+
+[23]
+File: figure/fig7-1.png Graphic file (type bmp)
+<figure/fig7-1.png>
+File: figure/fig7-2.png Graphic file (type bmp)
+<figure/fig7-2.png>
+
+
+[24]
+File: figure/fig8.pdf Graphic file (type pdf)
+<use figure/fig8.pdf>
+
+
+[25]
+
+[26]
+File: figure/9-1.png Graphic file (type bmp)
+<figure/9-1.png>
+File: figure/9-2.png Graphic file (type bmp)
+<figure/9-2.png>
+File: figure/9-3.png Graphic file (type bmp)
+<figure/9-3.png>
+
+
+[27]
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 9.0347pt on input line 303.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(2)/m/n' will be
+(Font)              scaled to size 6.00064pt on input line 303.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 9.03276pt on input line 303.
+LaTeX Font Info:    Font shape `TU/XITSMath-Regular.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 303.
+
+
+[28]
+
+[29]
+
+[30]
+File: figure/fig10.png Graphic file (type bmp)
+<figure/fig10.png>
+) (./data/chap03.tex
+
+[31]
+第三章
+
+
+[32
+
+]
+
+[33]
+
+[34]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42]) (./data/chap04.tex
+
+[43]
+第四章
+
+
+[44
+
+]
+
+[45]
+
+[46]
+
+[47]
+
+[48]
+File: figure/fig11-1.png Graphic file (type bmp)
+<figure/fig11-1.png>
+File: figure/fig11-2.png Graphic file (type bmp)
+<figure/fig11-2.png>
+File: figure/fig11-3.png Graphic file (type bmp)
+<figure/fig11-3.png>
+File: figure/fig11-4.png Graphic file (type bmp)
+<figure/fig11-4.png>
+File: figure/fig11-5.png Graphic file (type bmp)
+<figure/fig11-5.png>
+File: figure/fig11-6.png Graphic file (type bmp)
+<figure/fig11-6.png>
+
+
+[49]
+
+[50]
+
+[51]
+
+[52]
+
+[53]
+Underfull \hbox (badness 1552) in paragraph at lines 278--279
+[]\TU/FandolSong(0)/m/n/12.045 从 表 []\TU/TimesNewRoman(0)/m/n/12.045 4-6[] \TU/FandolSong(0)/m/n/12.045 可 以 看 出，| \TU/TimesNewRoman(0)/m/n/12.045 YOLO \TU/FandolSong(0)/m/n/12.045 系 列 模 型 在 该 类 状 态 判 别 任 务 中 整 体 较 为 稳 定。|
+ []
+
+
+
+[54]
+Underfull \hbox (badness 1005) in paragraph at lines 314--315
+[]\TU/FandolSong(0)/m/n/12.045 由 表 []\TU/TimesNewRoman(0)/m/n/12.045 4-7[] \TU/FandolSong(0)/m/n/12.045 可 见，|  在 仅 保 留 顶 层 未 满 载 有 效 计 数 图 像 的 评 估 条 件 下，| \TU/TimesNewRoman(0)/m/n/12.045 YOLO11-
+ []
+
+
+
+[55]
+
+[56]
+
+[57]
+
+[58]
+
+[59]
+
+[60]
+
+[61]
+
+[62]) (./data/conclusion.tex
+
+[63]
+第五章
+
+
+[64
+
+]) (./main.bbl
+
+[65]
+
+[66]
+
+[67
+
+]
+
+[68]
+
+[69]
+
+[70]
+
+[71]
+
+[72]) (./data/result.tex
+
+[73]) (./data/acknowledgement.tex
+
+[74
+
+]) (./data/appendix.tex)
+
+[75
+
+]
+
+Package glossaries Warning: No \printnoidxglossary or \printnoidxglossaries
+ found. (Remove \makenoidxglossaries if you don't want any glossaries.)
+This document will not have a glossary.
+
+(./main.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2020/04/10>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: BB089BA83D061ADE4EEAF1DE93CCB9A8;9033.
+ ) 
+Here is how much of TeX's memory you used:
+ 65243 strings out of 473832
+ 1509689 string characters out of 5733158
+ 2349702 words of memory out of 5000000
+ 87237 multiletter control sequences out of 15000+600000
+ 567645 words of font info for 214 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 118i,19n,131p,2785b,2768s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (89 pages).
